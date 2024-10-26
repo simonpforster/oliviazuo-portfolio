@@ -11,7 +11,7 @@ on:
 env:
   REGION: europe-west2
   PROJECT: listen-and-learn-411214
-  REPO: oliviazuo-portfolio
+  REPO: production
   IMAGE: oliviazuo-portfolio
 
 jobs:
