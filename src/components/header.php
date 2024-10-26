@@ -1,4 +1,3 @@
-<div id="small-screen">
     <div class="header">
         <div class="wide-4 dropdown fill" id="index">
             <a class="title heading" href="./">OLIVIA ZUO</a>
@@ -89,4 +88,3 @@
     <div class="highlight" style="align-self: flex-end; text-wrap: nowrap;">
         <a href="#offscreen">ARCHIVE ↓</a>
     </div>
-</div>
