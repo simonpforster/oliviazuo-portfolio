@@ -14,7 +14,7 @@
 
 @media screen and (max-width: 700px) {
     .header #commercial {
-        height: 65%;
+        height: 70%;
     }
 
     .header .dropdown:not(#commercial) {

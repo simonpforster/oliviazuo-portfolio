@@ -1,7 +1,7 @@
 <div id="small-screen">
     <div class="header">
         <div class="wide-4 dropdown fill" id="index">
-            <a class="title" href="./">OLIVIA ZUO</a>
+            <a class="title heading" href="./">OLIVIA ZUO</a>
             <br>
             <div class="dropdown-content">
                 <p>
@@ -21,7 +21,7 @@
             </div>
         </div>
         <div class="wide-4 dropdown fill" id="personal">
-            <a href="./personal.php">PERSONAL PROJECTS</a>
+            <a class="heading" href="./personal.php">PERSONAL PROJECTS</a>
             <div class="dropdown-content">
                 <p>
                     <a>2023</a><br>
@@ -46,7 +46,7 @@
             </div>
         </div>
         <div class="wide-4 dropdown fill" id="commercial">
-            <a href="./commercial.php">COMMERCIAL PROJECTS</a>
+            <a class="heading" href="./commercial.php">COMMERCIAL PROJECTS</a>
             <div class="dropdown-content">
                 <p>
                     <a>NIKE</a><br>
@@ -78,11 +78,10 @@
             </div>
         </div>
         <div class="slim-4 dropdown fill">
-            <a>CONTACT</a>
+            <a class="heading">CONTACT</a>
             <div style="flex-grow: 1; overflow-wrap: break-word;">
                 <p>
-                    oliviazuo0428@gmail.com<br><br>
-                    +44 07551561860
+                    oliviazuo0428@gmail.com
                 </p>
             </div>
         </div>
