@@ -1,4 +1,6 @@
-FROM ubuntu:latest
-LABEL authors="sfe34"
+FROM php:8.3-apache
+LABEL authors="simonpforster"
 
-ENTRYPOINT ["top", "-b"]
+RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
+
+COPY src/ /var/www/html/
