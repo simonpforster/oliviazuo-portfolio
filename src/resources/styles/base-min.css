@@ -178,6 +178,10 @@ img.pixel {
     image-rendering: pixelated;
 }
 
+/*#new-balance img {*/
+/*    object-fit: cover;*/
+/*}*/
+
 img {
     border-style: none;
     object-fit: contain;

@@ -1,8 +1,7 @@
 import {checkForUpdateImageSrc} from "./image.js";
 
 function isLoaded(image) {
-    let loadedAttribute = image.getAttribute("loaded");
-    return (loadedAttribute === "blur" || loadedAttribute === "true");
+    return (image.classList.contains("pixel") || image.classList.contains("loaded"));
 }
 
 function initSlides(id, transitionDelay, widthFix = true) {
@@ -50,7 +49,7 @@ function initSlides(id, transitionDelay, widthFix = true) {
             check = isLoaded(slides[0]);
         }
         if (check) {
-            if (slides[index].getAttribute("loaded") === "true") {
+            if (slides[index].classList.contains("loaded")) {
                 checkForUpdateImageSrc(slides[index]) // todo, check against current block image in gallery
             }
             for (let i = 0; i < slides.length; i++) {
@@ -67,13 +66,14 @@ function initSlides(id, transitionDelay, widthFix = true) {
     }
 
 
-    window.onresize = (event) => {
+    window.addEventListener("resize", () => {
         widthFix ? sizeFrameWidth() : sizeFrameHeight();
-    };
+        console.log("fixed gallery size");
+    })
 
-    window.ondeviceorientation = (event) => {
+    window.addEventListener("orientationchange", () => {
         widthFix ? sizeFrameWidth() : sizeFrameHeight();
-    };
+    })
 
     setInterval(() => showSlide(index), transitionDelay);
 }

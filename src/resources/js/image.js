@@ -38,6 +38,7 @@ function updateImageSrc(image, pixel = false) {
             }, {once: true})
         } else {
             image.addEventListener("load", () => {
+                image.classList.add("loaded")
                 image.classList.remove("pixel");
             }, {once: true})
         }

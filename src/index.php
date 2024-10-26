@@ -99,28 +99,22 @@
             <div class="normal-1-6">
                 <!-- Personal: The Visitor -->
                 <figure>
-                    <img
-                            path="/personal/2022/the-visitor/picture-booklet-1.jpg"
-                            fix="width">
+                    <img path="/personal/2022/the-visitor/picture-booklet-1.jpg"
+                         fix="width">
                     <div class="gallery" id="the-visitor">
                         <img style="display: block;"
                              path="/personal/2022/the-visitor/drawing-board-2-2.jpg"
                              fix="width">
-                        <img
-                                path="/personal/2022/the-visitor/drawing-board-3.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2022/the-visitor/drawing-board-4.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2022/the-visitor/drawing-board-5.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2022/the-visitor/drawing-board-6.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2022/the-visitor/drawing-board-7.jpg"
-                                fix="width">
+                        <img path="/personal/2022/the-visitor/drawing-board-3.jpg"
+                             fix="width">
+                        <img path="/personal/2022/the-visitor/drawing-board-4.jpg"
+                             fix="width">
+                        <img path="/personal/2022/the-visitor/drawing-board-5.jpg"
+                             fix="width">
+                        <img path="/personal/2022/the-visitor/drawing-board-6.jpg"
+                             fix="width">
+                        <img path="/personal/2022/the-visitor/drawing-board-7.jpg"
+                             fix="width">
                     </div>
                     <img
                             path="/personal/2022/the-visitor/picture-booklet-1.jpg"
@@ -133,19 +127,15 @@
                         <img style="display: block;"
                              path="/personal/2020/utopia/artboard-1-copy-1.jpg"
                              fix="width">
-                        <img
-                                path="/personal/2020/utopia/artboard-1-copy-2.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2020/utopia/artboard-1-copy-3.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2020/utopia/artboard-1-copy-4.jpg"
-                                fix="width">
+                        <img path="/personal/2020/utopia/artboard-1-copy-2.jpg"
+                             fix="width">
+                        <img path="/personal/2020/utopia/artboard-1-copy-3.jpg"
+                             fix="width">
+                        <img path="/personal/2020/utopia/artboard-1-copy-4.jpg"
+                             fix="width">
                     </div>
-                    <img
-                            path="/personal/2020/utopia/artboard-2.jpg"
-                            fix="width">
+                    <img path="/personal/2020/utopia/artboard-2.jpg"
+                         fix="width">
                     <figcaption>Utopia</figcaption>
                 </figure>
             </div>
@@ -181,12 +171,10 @@
                         <img style="display: block;"
                              path="/commercial/new-balance/picture-shoe.jpg"
                              fix="width">
-                        <img
-                                path="/commercial/new-balance/picture-stand-stickers.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/new-balance/picture-garnish-station.jpg"
-                                fix="width">
+                        <img path="/commercial/new-balance/picture-stand-stickers.jpg"
+                             fix="width">
+                        <img path="/commercial/new-balance/picture-garnish-station.jpg"
+                             fix="width">
                     </div>
                     <img
                             path="/commercial/new-balance/picture-shoot.jpg"
