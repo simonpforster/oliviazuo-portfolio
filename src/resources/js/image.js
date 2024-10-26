@@ -2,7 +2,7 @@ let collection = document.getElementsByTagName("img");
 
 const SOURCE = "https://image-resizer.simonpforster.com/oliviazuo-portfolio"
 
-function updateImageSrc(image, blur = false) {
+function updateImageSrc(image, pixel = false) {
     let fix = image.getAttribute("fix");
     let path = image.getAttribute("path");
 
@@ -11,11 +11,11 @@ function updateImageSrc(image, blur = false) {
         if (fix != null) {
             switch (fix.toLowerCase()) {
                 case 'width':
-                    let width = blur ? 4 : parseInt(window.getComputedStyle(image.parentElement).width) * 2;
+                    let width = pixel ? 4 : parseInt(window.getComputedStyle(image.parentElement).width) * 2;
                     url += "?width=" + width;
                     break;
                 case 'height':
-                    let height = blur ? 4 : parseInt(window.getComputedStyle(image.parentElement).height) * 2;
+                    let height = pixel ? 4 : parseInt(window.getComputedStyle(image.parentElement).height) * 2;
                     url += "?height=" + height;
                     break;
                 default:
@@ -24,9 +24,10 @@ function updateImageSrc(image, blur = false) {
         }
         image.src = url;
 
-        if (blur) {
+        if (pixel) {
             image.addEventListener("load", () => {
-                image.setAttribute("loaded", "blur");
+                console.log("updating classilist");
+                image.classList.add("pixel");
                 if (checkAllBlurred()) {
                     let captions = document.getElementsByTagName("figcaption")
                     for (let i = 0; i < captions.length; i++) {
@@ -37,7 +38,7 @@ function updateImageSrc(image, blur = false) {
             }, {once: true})
         } else {
             image.addEventListener("load", () => {
-                image.setAttribute("loaded", "true");
+                image.classList.remove("pixel");
             }, {once: true})
         }
     }
@@ -66,7 +67,9 @@ function allImages(thing) {
 function checkAllBlurred() {
     let blurred = true;
     allImages(function (image) {
-        image.getAttribute("loaded") !== "blur" ? blurred = false : null;
+        if (!image.classList.contains("pixel")) {
+            blurred = false;
+        }
     })
     return blurred;
 }
