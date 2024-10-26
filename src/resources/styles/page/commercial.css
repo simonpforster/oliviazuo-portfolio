@@ -1,0 +1,31 @@
+#commercial a {
+    color: rgb(0, 0, 255);
+    text-decoration-color: rgb(0, 0, 255);
+}
+
+.highlight a {
+    color: rgb(0, 0, 255);
+    text-decoration-color: rgb(0, 0, 255);
+}
+
+#commercial .dropdown-content {
+    visibility: visible;
+}
+
+@media screen and (max-width: 700px) {
+    .header #commercial {
+        height: 65%;
+    }
+
+    .header .dropdown:not(#commercial) {
+        height: 10%;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    #commercial .dropdown-content {
+        display: block;
+    }
+}

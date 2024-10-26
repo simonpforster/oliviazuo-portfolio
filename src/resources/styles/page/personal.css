@@ -1,0 +1,31 @@
+#personal a {
+    color: rgba(29, 200, 177, 0.85);
+    text-decoration-color: rgba(29, 200, 177, 0.85);
+}
+
+.highlight a {
+    color: rgba(29, 200, 177, 0.85);
+    text-decoration-color: rgba(29, 200, 177, 0.85);
+}
+
+#personal .dropdown-content {
+    visibility: visible;
+}
+
+@media screen and (max-width: 700px) {
+    .header #personal {
+        height: 65%;
+    }
+
+    .header .dropdown:not(#personal) {
+        height: 10%;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    #personal .dropdown-content {
+        display: block;
+    }
+}
