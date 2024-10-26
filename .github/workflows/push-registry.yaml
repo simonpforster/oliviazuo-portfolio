@@ -9,7 +9,7 @@ on:
       - 'main'
 
 env:
-  REGION: europe-west2
+  REGION: europe-west1
   PROJECT: listen-and-learn-411214
   REPO: prod
   IMAGE: oliviazuo-portfolio
