@@ -1,18 +1,29 @@
-#personal a {
+#personal .highlight {
     color: rgba(29, 200, 177, 0.85);
     text-decoration-color: rgba(29, 200, 177, 0.85);
 }
 
-.highlight a {
+#offscreen .highlight {
     color: rgba(29, 200, 177, 0.85);
     text-decoration-color: rgba(29, 200, 177, 0.85);
 }
+
 
 #personal .dropdown-content {
     visibility: visible;
 }
 
+@media screen and (min-width: 701px) {
+    #screen {
+        height: 70svh;
+    }
+}
+
 @media screen and (max-width: 700px) {
+    #screen {
+        height: 100svh;
+    }
+
     .header #personal {
         height: 70%;
     }

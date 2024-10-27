@@ -34,6 +34,9 @@
 <body>
 <div id="screen">
     <?php include 'components/header.php' ?>
+    <div class="highlight" style="align-self: flex-end; text-wrap: nowrap;">
+        <a href="#offscreen" id="archive-arrow">ARCHIVE ↓</a>
+    </div>
 </div>
 <div id="offscreen">
     <div class="column-container">
@@ -43,24 +46,18 @@
                 <!-- Personal: Spectral Archive -->
                 <figure>
                     <div class="gallery" id="spectral-archive">
-                        <img style="display: block;"
-                             path="/personal/2023/spectral-archive/day-3-1.jpg"
+                        <img style="display: block;" path="/personal/2023/spectral-archive/day-3-1.jpg"
                              fix="width">
-                        <img
-                                path="/personal/2023/spectral-archive/day-3-2.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2023/spectral-archive/day-3-3.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2023/spectral-archive/day-6-1.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2023/spectral-archive/day-6-2.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2023/spectral-archive/day-6-3.jpg"
-                                fix="width">
+                        <img path="/personal/2023/spectral-archive/day-3-2.jpg"
+                             fix="width">
+                        <img path="/personal/2023/spectral-archive/day-3-3.jpg"
+                             fix="width">
+                        <img path="/personal/2023/spectral-archive/day-6-1.jpg"
+                             fix="width">
+                        <img path="/personal/2023/spectral-archive/day-6-2.jpg"
+                             fix="width">
+                        <img path="/personal/2023/spectral-archive/day-6-3.jpg"
+                             fix="width">
                     </div>
                     <img
                             path="/personal/2023/spectral-archive/archive.jpg"

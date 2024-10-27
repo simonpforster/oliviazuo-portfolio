@@ -1,9 +1,9 @@
-#commercial a {
+#commercial .highlight {
     color: rgb(0, 0, 255);
     text-decoration-color: rgb(0, 0, 255);
 }
 
-.highlight a {
+#offscreen .highlight {
     color: rgb(0, 0, 255);
     text-decoration-color: rgb(0, 0, 255);
 }
@@ -12,7 +12,17 @@
     visibility: visible;
 }
 
+@media screen and (min-width: 701px) {
+    #screen {
+        height: 100svh;
+    }
+}
+
 @media screen and (max-width: 700px) {
+    #screen {
+        height: 100svh;
+    }
+
     .header #commercial {
         height: 70%;
     }

@@ -1,9 +1,14 @@
-#index a {
+#index .highlight {
     color: rgb(255, 59, 228);
     text-decoration-color: rgb(255, 59, 228);
 }
 
-.highlight a {
+#offscreen .highlight {
+    color: rgb(255, 59, 228);
+    text-decoration-color: rgb(255, 59, 228);
+}
+
+#archive-arrow {
     color: rgb(255, 59, 228);
     text-decoration-color: rgb(255, 59, 228);
 }
@@ -12,7 +17,17 @@
     visibility: visible;
 }
 
+@media screen and (min-width: 701px) {
+    #screen {
+        height: 100svh;
+    }
+}
+
 @media screen and (max-width: 700px) {
+    #screen {
+        height: 100svh;
+    }
+
     .header  #index {
         height: 70%;
     }

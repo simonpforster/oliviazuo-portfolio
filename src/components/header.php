@@ -1,6 +1,6 @@
     <div class="header">
         <div class="wide-4 dropdown fill" id="index">
-            <a class="title heading" href="./">OLIVIA ZUO</a>
+            <a class="title heading highlight" href="./">OLIVIA ZUO</a>
             <br>
             <div class="dropdown-content">
                 <p>
@@ -20,57 +20,57 @@
             </div>
         </div>
         <div class="wide-4 dropdown fill" id="personal">
-            <a class="heading" href="./personal.php">PERSONAL PROJECTS</a>
+            <a class="heading highlight" href="./personal.php">PERSONAL PROJECTS</a>
             <div class="dropdown-content">
                 <p>
-                    <a>2023</a><br>
-                    Spectral Archive<br>
-                    Invisible Feast<br>
+                    <a class="highlight" href="./personal.php#spectral-archive">2023</a><br>
+                    <a href="./personal.php#spectral-archive">Spectral Archive</a><br>
+                    <a href="./personal.php#invisible-feast">Invisible Feast</a><br>
                 </p>
                 <p>
-                    <a>2022</a><br>
+                    <a class="highlight">2022</a><br>
                     The Visitor<br>
                     Gutter and Soul<br>
                     Dialogue<br>
                 </p>
                 <p>
-                    <a>2021</a><br>
+                    <a class="highlight">2021</a><br>
                     Another Romance<br>
                     Obloom<br>
                 </p>
                 <p>
-                    <a>2020</a><br>
+                    <a class="highlight">2020</a><br>
                     Utopia<br>
                 </p>
             </div>
         </div>
         <div class="wide-4 dropdown fill" id="commercial">
-            <a class="heading" href="./commercial.php">COMMERCIAL PROJECTS</a>
+            <a class="heading highlight" href="./commercial.php">COMMERCIAL PROJECTS</a>
             <div class="dropdown-content">
                 <p>
-                    <a>NIKE</a><br>
+                    <a class="highlight">NIKE</a><br>
                     The Big Bang Network<br>
                 </p>
                 <p>
-                    <a>NEW BALANCE</a><br>
+                    <a class="highlight">NEW BALANCE</a><br>
                     Shanghai Content Factory<br>
                 </p>
                 <p>
-                    <a>BUDWEISWER</a><br>
+                    <a class="highlight">BUDWEISWER</a><br>
                     Annual Creative-X Awards Ceremony<br>
                     Umet Gala<br>
                 </p>
                 <p>
-                    <a>NYU SHANGHAI</a><br>
+                    <a class="highlight">NYU SHANGHAI</a><br>
                     Opening Fall 2022<br>
                     10th Anniversary Special Edition<br>
                 </p>
                 <p>
-                    <a>OMO</a><br>
+                    <a class="highlight">OMO</a><br>
                     Floor Cleaning Formula<br>
                 </p>
                 <p>
-                    <a>PEET’S COFFEE</a><br>
+                    <a class="highlight">PEET’S COFFEE</a><br>
                     Pure Blend Packaging<br>
                     Peet’s Coffee x ARC’TERYX Pop-up<br>
                 </p>
@@ -85,7 +85,4 @@
                 </p>
             </div>
         </div>
-    </div>
-    <div class="highlight" style="align-self: flex-end; text-wrap: nowrap;">
-        <a href="#offscreen">ARCHIVE ↓</a>
     </div>
