@@ -46,7 +46,7 @@ function updateImageSrc(image, pixel = false) {
 
 function updateImageSrcBlur(image) {
     updateImageSrc(image, true)
-    image.addEventListener("click" , () => {
+    image.addEventListener("click", () => {
         openModal(image.getAttribute("path"));
     })
 }
@@ -92,6 +92,7 @@ function closeModal() {
 function openModal(path) {
     modal.style.display = "block";
     modalImage.setAttribute("path", path);
+    modalImage.classList.add("pixel");
     updateModalSrc(4)
 }
 
@@ -100,8 +101,18 @@ function updateModalSrc(width) {
     if (path != null) {
         modalImage.src = SOURCE + path + "?width=" + width;
         modalImage.addEventListener("load", () => {
-             modalImage.naturalWidth > parseInt(window.getComputedStyle(modalImage).width) ? modalImage.src = SOURCE + path : updateModalSrc(width * 2)
-        }, {once: true})
+                if (modalImage.naturalWidth > parseInt(window.getComputedStyle(modalImage).width)) {
+                    modalImage.classList.remove("pixel");
+                    modalImage.src = SOURCE + path
+                } else {
+                    updateModalSrc(width * 2)
+                }
+            }
+            ,
+            {
+                once: true
+            }
+        )
     }
 }
 
