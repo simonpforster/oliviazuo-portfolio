@@ -101,12 +101,11 @@ function updateModalSrc(width) {
     if (path != null) {
         modalImage.src = SOURCE + path + "?width=" + width;
         modalImage.addEventListener("load", () => {
-                if (modalImage.naturalWidth > parseInt(window.getComputedStyle(modalImage).width)) {
+                if (modalImage.naturalWidth > parseInt(window.getComputedStyle(modalImage).width)
+                    || modalImage.naturalWidth < width) {
                     modalImage.classList.remove("pixel");
                     modalImage.src = SOURCE + path
-                } else {
-                    updateModalSrc(width * 2)
-                }
+                } else { updateModalSrc(width * 2) }
             }
             ,
             {
