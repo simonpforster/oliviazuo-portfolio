@@ -80,7 +80,8 @@
             <a class="heading">CONTACT</a>
             <div style="flex-grow: 1; overflow-wrap: break-word;">
                 <p>
-                    oliviazuo0428@gmail.com
+                    oliviazuo0428@gmail.com<br>
+                    @l1v.isliving
                 </p>
             </div>
         </div>
