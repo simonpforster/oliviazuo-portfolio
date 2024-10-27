@@ -26,7 +26,6 @@ function updateImageSrc(image, pixel = false) {
 
         if (pixel) {
             image.addEventListener("load", () => {
-                console.log("updating classilist");
                 image.classList.add("pixel");
                 if (checkAllBlurred()) {
                     let captions = document.getElementsByTagName("figcaption")
@@ -47,6 +46,9 @@ function updateImageSrc(image, pixel = false) {
 
 function updateImageSrcBlur(image) {
     updateImageSrc(image, true)
+    image.addEventListener("click" , () => {
+        openModal(image.getAttribute("path"));
+    })
 }
 
 function checkForUpdateImageSrc(image) {
@@ -74,6 +76,35 @@ function checkAllBlurred() {
     })
     return blurred;
 }
+
+var modal = document.getElementById("modal");
+
+modal.addEventListener("click", closeModal)
+
+var modalImage = document.getElementById("modal-image");
+
+function closeModal() {
+    modal.style.display = "none";
+    modalImage.setAttribute("path", "");
+    modalImage.src = "";
+}
+
+function openModal(path) {
+    modal.style.display = "block";
+    modalImage.setAttribute("path", path);
+    updateModalSrc(4)
+}
+
+function updateModalSrc(width) {
+    let path = modalImage.getAttribute("path");
+    if (path != null) {
+        modalImage.src = SOURCE + path + "?width=" + width;
+        modalImage.addEventListener("load", () => {
+             modalImage.naturalWidth > parseInt(window.getComputedStyle(modalImage).width) ? modalImage.src = SOURCE + path : updateModalSrc(width * 2)
+        }, {once: true})
+    }
+}
+
 
 export {
     updateImageSrc,

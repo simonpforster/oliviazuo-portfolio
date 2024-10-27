@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="./resources/styles/base-min.css">
     <link rel="stylesheet" href="./resources/styles/section.css">
+    <link rel="stylesheet" href="./resources/styles/modal.css">
     <link rel="stylesheet" href="./resources/styles/page/personal.css">
     <link rel="stylesheet" href="./resources/styles/grids-min.css">
     <link rel="stylesheet" href="./resources/styles/custom-grids-min.css">
@@ -32,6 +33,7 @@
     </script>
 </head>
 <body>
+<?php include 'components/modal.php' ?>
 <div id="screen">
     <?php include 'components/header.php' ?>
 </div>
@@ -73,6 +75,7 @@
                 </figure>
             </div>
         </div>
+        <div class="section-divider"></div>
         <div class="section" id="invisible-feast">
             <div class="normal-1-2">
                 <figure>
@@ -120,46 +123,8 @@
                 <img path="/personal/2023/invisible-feast/3-desert.png" fix="width">
             </div>
         </div>
-        <div class="slider">
-            <ul>
-                <li>
-                    <p class="slidedesc">
-                        Appetizer
-                    </p>
-                    <img path="/personal/2023/invisible-feast/appetizer.png"
-                         fix="width">
-                </li>
-                <li>
-                    <p class="slidedesc">
-                        Dessert
-                    </p>
-                    <img path="/personal/2023/invisible-feast/dessert.png"
-                         fix="width">
-                </li>
-                <li>
-                    <p class="slidedesc">
-                        Main course
-                    </p>
-                    <img path="/personal/2023/invisible-feast/main-course.png"
-                         fix="width">
-                </li>
-                <li>
-                    <p class="slidedesc">
-                        Salad
-                    </p>
-                    <img path="/personal/2023/invisible-feast/salad.png"
-                         fix="width">
-                </li>
-                <li>
-                    <p class="slidedesc">
-                        Staple food
-                    </p>
-                    <img path="/personal/2023/invisible-feast/staple-food.png"
-                         fix="width">
-                </li>
-            </ul>
-        </div>
     </div>
-    <?php include 'components/footer.php' ?>
+</div>
+<?php include 'components/footer.php' ?>
 </body>
 </html>
