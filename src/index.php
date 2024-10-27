@@ -115,9 +115,8 @@
                         <img path="/personal/2022/the-visitor/drawing-board-7.jpg"
                              fix="width">
                     </div>
-                    <img
-                            path="/personal/2022/the-visitor/picture-booklet-1.jpg"
-                            fix="width">
+                    <img path="/personal/2022/the-visitor/picture-booklet-2.jpg"
+                         fix="width">
                     <figcaption>The Visitor</figcaption>
                 </figure>
                 <!-- Personal: Utopia -->
