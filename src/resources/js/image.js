@@ -101,7 +101,6 @@ function updateModalSrc(width) {
     if (path != null) {
         modalImage.src = SOURCE + path + "?width=" + width;
         modalImage.addEventListener("load", () => {
-                console.log(modalImage.naturalWidth + "|" + width);
                 if (modalImage.naturalWidth > parseInt(window.getComputedStyle(modalImage).width)
                     || (modalImage.width > 0 && modalImage.width < width)) {
                     modalImage.classList.remove("pixel");
