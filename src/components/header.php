@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="slim-4 dropdown fill">
-            <a class="heading">CONTACT</a>
+            <a class="heading" href="mailto:oliviazuo0428@gmail.com">CONTACT</a>
             <div style="flex-grow: 1; overflow-wrap: break-word;">
                 <p>
                     oliviazuo0428@gmail.com<br>
