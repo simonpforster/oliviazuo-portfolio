@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="./resources/styles/base-min.css">
     <link rel="stylesheet" href="./resources/styles/page/commercial.css">
+    <link rel="stylesheet" href="./resources/styles/modal.css">
     <link rel="stylesheet" href="./resources/styles/grids-min.css">
     <link rel="stylesheet" href="./resources/styles/custom-grids-min.css">
 
@@ -29,6 +30,7 @@
     </script>
 </head>
 <body>
+<?php include 'components/modal.php' ?>
 <div id="screen">
     <?php include 'components/header.php' ?>
 </div>

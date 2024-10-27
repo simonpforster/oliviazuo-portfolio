@@ -9,6 +9,7 @@
 
     <link rel="stylesheet" href="./resources/styles/base-min.css">
     <link rel="stylesheet" href="./resources/styles/page/index.css">
+    <link rel="stylesheet" href="./resources/styles/modal.css">
     <link rel="stylesheet" href="./resources/styles/gallery-slider.css">
     <link rel="stylesheet" href="./resources/styles/grids-min.css">
     <link rel="stylesheet" href="./resources/styles/custom-grids-min.css">
@@ -32,6 +33,7 @@
 
 </head>
 <body>
+<?php include 'components/modal.php' ?>
 <div id="screen">
     <?php include 'components/header.php' ?>
     <div class="highlight" style="align-self: flex-end; text-wrap: nowrap;">
