@@ -108,11 +108,7 @@ function updateModalSrc(width) {
                 } else {
                     updateModalSrc(width * 2)
                 }
-            }
-            ,
-            {
-                once: true
-            }
+            }, {once: true}
         )
     }
 }
