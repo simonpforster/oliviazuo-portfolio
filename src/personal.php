@@ -10,8 +10,8 @@
     <meta name="viewport" content="width=device-width, height=device-height">
 
     <link rel="stylesheet" href="./resources/styles/base-min.css">
-    <link rel="stylesheet" href="./resources/styles/section.css">
     <link rel="stylesheet" href="./resources/styles/modal.css">
+    <link rel="stylesheet" href="./resources/styles/section.css">
     <link rel="stylesheet" href="./resources/styles/page/personal.css">
     <link rel="stylesheet" href="./resources/styles/grids-min.css">
     <link rel="stylesheet" href="./resources/styles/custom-grids-min.css">
