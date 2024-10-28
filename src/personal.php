@@ -120,6 +120,7 @@
                     </ul>
                     <div class="overlay"></div>
                 </div>
+                <div class="highlight" style="margin-left: auto; padding: 0.75rem 0 0.75rem;">SLIDE →</div>
                 <img path="/personal/2023/invisible-feast/3-desert.png" fix="width">
             </div>
         </div>
