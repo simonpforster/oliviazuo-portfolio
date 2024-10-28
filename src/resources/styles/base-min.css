@@ -99,6 +99,7 @@ a:hover {
 #offscreen {
     box-sizing: border-box;
     padding: 0 0 0;
+    width: 100%;
 }
 
 #footer {

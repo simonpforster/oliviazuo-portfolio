@@ -1,16 +1,14 @@
 .section {
-    width: 100%;
     box-sizing: border-box;
     display: inline-flex;
     padding: 0 0 0;
+    width: 100%;
 }
 
 .section-divider {
     height: 8rem;
     width: 100%;
 }
-
-
 
 figcaption div.highlight {
     padding: 0.75rem 0 0.75rem;
@@ -37,10 +35,10 @@ figcaption div:not(.highlight) {
     padding: 0.75rem;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 @media screen and (min-width: 701px) {
-
     .normal-1-2 {
         width: 50%;
     }
