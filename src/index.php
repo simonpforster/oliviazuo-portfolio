@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <title>OLIVIA ZUO</title>
-    <meta name=description content="Olivia Zuo's portfolio.">
+    <meta name=description content="Olivia Zuo's design portfolio.">
 
     <link rel="icon" type="image/x-icon"
           href="https://storage.googleapis.com/oliviazuo-portfolio/elements/element-pink.png">
