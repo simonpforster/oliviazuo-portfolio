@@ -1,7 +1,7 @@
 .section {
     box-sizing: border-box;
     display: inline-flex;
-    padding: 0 0 0;
+    padding: 0;
     width: 100%;
 }
 
@@ -41,6 +41,10 @@ figcaption div:not(.highlight) {
 @media screen and (min-width: 701px) {
     .normal-1-2 {
         width: 50%;
+    }
+
+    .section-reverse {
+        flex-direction: row-reverse;
     }
 }
 

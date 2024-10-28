@@ -41,24 +41,7 @@
 </div>
 <div id="offscreen">
     <div class="column-container">
-        <div class="section" id="spectral-archive">
-            <div class="normal-1-2">
-                <div class="gallery" id="spectral-archive-gallery" style="width: 70%; margin-left: auto;">
-                    <img style="display: block;"
-                         path="/personal/2023/spectral-archive/day-3-1.jpg"
-                         fix="width">
-                    <img path="/personal/2023/spectral-archive/day-3-2.jpg"
-                         fix="width">
-                    <img path="/personal/2023/spectral-archive/day-3-3.jpg"
-                         fix="width">
-                    <img path="/personal/2023/spectral-archive/day-6-1.jpg"
-                         fix="width">
-                    <img path="/personal/2023/spectral-archive/day-6-2.jpg"
-                         fix="width">
-                    <img path="/personal/2023/spectral-archive/day-6-3.jpg"
-                         fix="width">
-                </div>
-            </div>
+        <div class="section section-reverse" id="spectral-archive">
             <div class="normal-1-2">
                 <figure>
                     <img path="/personal/2023/spectral-archive/archive.jpg" fix="width"
@@ -75,6 +58,23 @@
                         </div>
                     </figcaption>
                 </figure>
+            </div>
+            <div class="normal-1-2">
+                <div class="gallery" id="spectral-archive-gallery" style="width: 70%; margin-left: auto;">
+                    <img style="display: block;"
+                         path="/personal/2023/spectral-archive/day-3-1.jpg"
+                         fix="width">
+                    <img path="/personal/2023/spectral-archive/day-3-2.jpg"
+                         fix="width">
+                    <img path="/personal/2023/spectral-archive/day-3-3.jpg"
+                         fix="width">
+                    <img path="/personal/2023/spectral-archive/day-6-1.jpg"
+                         fix="width">
+                    <img path="/personal/2023/spectral-archive/day-6-2.jpg"
+                         fix="width">
+                    <img path="/personal/2023/spectral-archive/day-6-3.jpg"
+                         fix="width">
+                </div>
             </div>
         </div>
         <div class="section-divider"></div>
