@@ -2,7 +2,7 @@
     width: 100%;
     box-sizing: border-box;
     display: inline-flex;
-    padding: 0 0 0rem;
+    padding: 0 0 0;
 }
 
 .section-divider {
@@ -34,7 +34,7 @@ figcaption div:not(.highlight) {
 }
 
 .normal-1-2 {
-    padding: 0 0.75rem 0;
+    padding: 0.75rem;
     display: flex;
     flex-direction: column;
 }

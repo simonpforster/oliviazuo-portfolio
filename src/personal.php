@@ -82,14 +82,16 @@
                     <img path="/personal/2023/invisible-feast/web-index.png" fix="width"
                          style="">
                     <figcaption>
-                        <div class="highlight">SPECTRAL ARCHIVE, 2023</div>
+                        <div class="highlight">INVISIBLE FEAST, 2023</div>
                         <div>
-                            is about the process of memory reconstruction by bridging the gap between my digital and
-                            physical recollections.
+                            discusses the diversity and possibilities of future dietary structures in the current
+                            context of the food crisis.
+
                         </div>
                         <div>
-                            it draws upon knowledge from memory-based records-keeping, aiming to interrogate the
-                            significance of archival documentation in the act of “recalling.”
+                            by simulating a future in which extinct animals and sustainable protein sources are used as
+                            ingredients, efforts towards a “future-proof” diet are re-examined from an ironic
+                            perspective.
                         </div>
                     </figcaption>
                 </figure>
