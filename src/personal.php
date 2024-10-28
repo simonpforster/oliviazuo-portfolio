@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <title>OLIVIA ZUO - PERSONAL</title>
+    <meta name=description content="Olivia Zuo's portfolio of personal projects.">
+
     <link rel="icon" type="image/x-icon"
           href="https://storage.googleapis.com/oliviazuo-portfolio/elements/element-cyan.png">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
