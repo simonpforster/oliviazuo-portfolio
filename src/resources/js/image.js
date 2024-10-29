@@ -1,12 +1,12 @@
 let collection = document.getElementsByTagName("img");
 
-const SOURCE = "https://image-resizer.simonpforster.com/oliviazuo-portfolio"
+const SOURCE = "https://image-resizer.simonpforster.com/oliviazuo-portfolio";
 
 function updateImageSrc(image, pixel = false) {
     let fix = image.getAttribute("fix");
     let path = image.getAttribute("path");
 
-    if (path != null) {
+    if (path !== null) {
         let url = SOURCE + path;
         if (fix != null) {
             switch (fix.toLowerCase()) {
@@ -56,7 +56,6 @@ function checkForUpdateImageSrc(image) {
     let ratioHeight = image.naturalHeight / parseInt(window.getComputedStyle(image).height);
     if ((ratioWidth < 2 && ratioHeight !== 0 && !isNaN(ratioHeight))
         || (ratioWidth < 2 && ratioWidth !== 0 && !isNaN(ratioWidth))) {
-        console.info("requesting a higher resolution image");
         updateImageSrc(image);
     }
 }
@@ -77,11 +76,11 @@ function checkAllBlurred() {
     return blurred;
 }
 
-var modal = document.getElementById("modal");
+let modal = document.getElementById("modal");
 
 modal.addEventListener("click", closeModal)
 
-var modalImage = document.getElementById("modal-image");
+let modalImage = document.getElementById("modal-image");
 
 function closeModal() {
     modal.style.display = "none";
@@ -126,13 +125,13 @@ document.readyState === "loading"
     })
     : allImages(updateImageSrcBlur)
 
-window.onload = (event) => {
+window.onload = () => {
 
-    window.onresize = (event) => {
+    window.onresize = () => {
         allImages(checkForUpdateImageSrc);
     };
 
-    window.ondeviceorientation = (event) => {
+    window.ondeviceorientation = () => {
         allImages(checkForUpdateImageSrc);
     }
 };
