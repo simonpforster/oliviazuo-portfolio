@@ -1,11 +1,11 @@
-FROM node:current-alpine3.20 as packages
+FROM node:current-alpine3.20 AS packages
 
 RUN npm i -g uglify-js
 RUN npm i -g css-minify
 
 RUN apk add util-linux
 
-FROM packages as minifier
+FROM packages AS minifier
 
 COPY src/resources/js/**.js src/js/
 COPY src/resources/styles/**.css src/styles/
