@@ -41,13 +41,9 @@
 </div>
 <div id="offscreen">
     <div class="column-container">
-        <div class="section section-reverse" id="spectral-archive">
+        <div class="section" id="spectral-archive">
             <div class="normal-1-2">
-                <img path="/personal/2023/spectral-archive/archive.jpg" fix="width"
-                     style="aspect-ratio: 1.15; object-fit: cover;">
-            </div>
-            <div class="normal-1-2">
-                <div class="gallery" id="spectral-archive-gallery" style="width: 70%; margin-left: auto;">
+                <div class="gallery shrink-right" id="spectral-archive-gallery">
                     <img style="display: block;"
                          path="/personal/2023/spectral-archive/day-3-1.jpg"
                          fix="width">
@@ -63,23 +59,39 @@
                          fix="width">
                 </div>
             </div>
-            <div class="normal-1-2">
-                <div class="highlight">SPECTRAL ARCHIVE, 2023</div>
+            <div class="normal-1-2 text">
+                <img path="/personal/2023/spectral-archive/archive.jpg" fix="width"
+                     style="aspect-ratio: 1.15; object-fit: cover;">
                 <div>
-                    is about the process of memory reconstruction by bridging the gap between my digital and
-                    physical recollections.
-                </div>
-                <div>
-                    it draws upon knowledge from memory-based records-keeping, aiming to interrogate the
-                    significance of archival documentation in the act of “recalling.”
+                    <div class="highlight">SPECTRAL ARCHIVE, 2023</div>
+                    <div>
+                        is about the process of memory reconstruction by bridging the gap between my digital and
+                        physical recollections.
+                    </div>
+                    <div>
+                        it draws upon knowledge from memory-based records-keeping, aiming to interrogate the
+                        significance of archival documentation in the act of “recalling.”
+                    </div>
                 </div>
             </div>
+
         </div>
         <div class="section-divider"></div>
-        <div class="section">
-            <div class="normal-1-2">
+        <div class="section" id="invisible-feast">
+            <div class="normal-1-2 text">
                 <img path="/personal/2023/invisible-feast/web-index.png" fix="width"
                      style="">
+                <div class="highlight">INVISIBLE FEAST, 2023</div>
+                <div>
+                    discusses the diversity and possibilities of future dietary structures in the current
+                    context of the food crisis.
+
+                </div>
+                <div>
+                    by simulating a future in which extinct animals and sustainable protein sources are used as
+                    ingredients, efforts towards a “future-proof” diet are re-examined from an ironic
+                    perspective.
+                </div>
             </div>
             <div class="normal-1-2">
                 <div class="slider shaded-sides">
@@ -107,25 +119,9 @@
                     </ul>
                     <div class="overlay"></div>
                 </div>
-                <div class="highlight" style="margin-left: auto; padding: 0rem 0 0rem;">SLIDE →</div>
-            </div>
-        </div>
-        <div class="section section-reverse" id="invisible-feast">
-            <div class="normal-1-2">
+                <div class="highlight" style="margin-left: auto; horiz-align: right;">SLIDE →</div>
                 <img path="/personal/2023/invisible-feast/3-desert.png" fix="width">
             </div>
-            <div class="normal-1-2">
-                <div class="highlight">INVISIBLE FEAST, 2023</div>
-                <div>
-                    discusses the diversity and possibilities of future dietary structures in the current
-                    context of the food crisis.
-
-                </div>
-                <div>
-                    by simulating a future in which extinct animals and sustainable protein sources are used as
-                    ingredients, efforts towards a “future-proof” diet are re-examined from an ironic
-                    perspective.
-                </div>
             </div>
         </div>
     </div>
