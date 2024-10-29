@@ -10,12 +10,17 @@
     width: 100%;
 }
 
-figcaption div.highlight {
+div.highlight {
     padding: 0.75rem 0 0.75rem;
 }
 
-figcaption div:not(.highlight) {
+.section div {
+    font-size: 0.85rem;
+}
+
+.section .normal-1-2 div:not(.highlight) {
     text-indent: 1rem;
+    color: rgba(0, 0, 0, 0.5);
 }
 
 .overlay {
@@ -41,6 +46,10 @@ figcaption div:not(.highlight) {
 @media screen and (min-width: 701px) {
     .normal-1-2 {
         width: 50%;
+    }
+
+    .section {
+        flex-wrap: wrap ;
     }
 
     .section-reverse {
