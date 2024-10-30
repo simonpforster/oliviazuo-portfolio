@@ -42,7 +42,8 @@
 <div id="offscreen">
     <div class="column-container">
         <div class="section" id="spectral-archive">
-            <div class="normal-1-2">
+            <div class="desktop-15 empty"></div>
+            <div class="desktop-35">
                 <div class="gallery shrink-right" id="spectral-archive-gallery">
                     <img style="display: block;"
                          path="/personal/2023/spectral-archive/day-3-1.jpg"
@@ -59,7 +60,7 @@
                          fix="width">
                 </div>
             </div>
-            <div class="normal-1-2 text">
+            <div class="desktop-1-2 text">
                 <img path="/personal/2023/spectral-archive/archive.jpg" fix="width"
                      style="aspect-ratio: 1.15; object-fit: cover;">
                 <div>
