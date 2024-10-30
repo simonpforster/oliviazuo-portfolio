@@ -47,7 +47,9 @@ function updateImageSrc(image, pixel = false) {
 function updateImageSrcBlur(image) {
     updateImageSrc(image, true)
     image.addEventListener("click", () => {
-        openModal(image.getAttribute("path"));
+        if (image.getAttribute("id") !== "modal-image") {
+            openModal(image.getAttribute("path"));
+        }
     })
 }
 

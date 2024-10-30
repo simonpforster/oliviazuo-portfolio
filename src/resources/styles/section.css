@@ -18,7 +18,7 @@ div.highlight {
     font-size: 0.85rem;
 }
 
-.section .normal-1-2 div:not(.highlight) {
+.section div {
     text-indent: 1rem;
     color: rgba(0, 0, 0, 0.5);
 }
@@ -36,14 +36,22 @@ div.highlight {
     pointer-events: none; /* Ensure clicks go through to the image */
 }
 
-.normal-1-2 {
+.section > *:not(.empty) {
     padding: 0.5rem 0.75rem 0.5rem;
     box-sizing: border-box;
 }
 
+.section > .empty {
+    padding: 0;
+    box-sizing: border-box;
+}
+
 @media screen and (min-width: 701px) {
-    .normal-1-2 {
+    .normal-1-2, .desktop-1-2 {
         width: 50%;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
     }
 
     .text {
@@ -58,14 +66,12 @@ div.highlight {
         flex-direction: row-reverse;
     }
 
-    .normal-1-2 {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
+    .desktop-35 {
+        width: 35%;
     }
 
-    .shrink-right {
-        width: 70%; margin-left: auto;
+    .desktop-15 {
+        width: 15%;
     }
 }
 
