@@ -46,11 +46,11 @@ function updateImageSrc(image, pixel = false) {
 
 function updateImageSrcBlur(image) {
     updateImageSrc(image, true)
-    image.addEventListener("click", () => {
-        if (image.getAttribute("id") !== "modal-image") {
+    if (image.getAttribute("id") !== "modal-image") {
+        image.addEventListener("click", () => {
             openModal(image.getAttribute("path"));
-        }
-    })
+        })
+    }
 }
 
 function checkForUpdateImageSrc(image) {
@@ -83,8 +83,11 @@ let modal = document.getElementById("modal");
 modal.addEventListener("click", closeModal)
 
 let modalImage = document.getElementById("modal-image");
+let modalController = new AbortController();
 
 function closeModal() {
+    modalController.abort();
+    modalController = new AbortController();
     modal.style.display = "none";
     modalImage.setAttribute("path", "");
     modalImage.src = "";
@@ -94,10 +97,10 @@ function openModal(path) {
     modal.style.display = "block";
     modalImage.setAttribute("path", path);
     modalImage.classList.add("pixel");
-    updateModalSrc(4)
+    updateModalSrc(4, modalController)
 }
 
-function updateModalSrc(width) {
+function updateModalSrc(width, controller) {
     let path = modalImage.getAttribute("path");
     if (path != null) {
         modalImage.src = SOURCE + path + "?width=" + width;
@@ -107,9 +110,9 @@ function updateModalSrc(width) {
                     modalImage.classList.remove("pixel");
                     modalImage.src = SOURCE + path
                 } else {
-                    updateModalSrc(width * 2)
+                    updateModalSrc(width * 2, controller)
                 }
-            }, {once: true}
+            }, {once: true, signal: controller.signal }
         )
     }
 }
