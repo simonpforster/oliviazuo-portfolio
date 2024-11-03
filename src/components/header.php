@@ -28,19 +28,19 @@
                     <a href="./personal.php#invisible-feast">Invisible Feast</a><br>
                 </p>
                 <p>
-                    <a class="highlight">2022</a><br>
-                    The Visitor<br>
-                    Gutter and Soul<br>
-                    Dialogue<br>
+                    <a class="highlight" href="./personal.php#the-visitor">2022</a><br>
+                    <a href="./personal.php#the-visitor">The Visitor</a>a<br>
+                    <a href="./personal.php#gutter-and-soul">Gutter and Soul</a><br>
+                    <a href="./personal.php#dialogue">Dialogue</a><br>
                 </p>
                 <p>
-                    <a class="highlight">2021</a><br>
-                    Another Romance<br>
-                    Obloom<br>
+                    <a class="highlight" href="./personal.php#another-romance">2021</a><br>
+                    <a href="./personal.php#another-romance">Another Romance</a><br>
+                    <a href="./personal.php#obloom">Obloom</a><br>
                 </p>
                 <p>
-                    <a class="highlight">2020</a><br>
-                    Utopia<br>
+                    <a class="highlight" href="./personal.php#utopia">2020</a><br>
+                    <a href="./personal.php#utopia">Utopia</a><br>
                 </p>
             </div>
         </div>

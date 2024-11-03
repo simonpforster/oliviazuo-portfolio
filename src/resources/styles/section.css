@@ -70,8 +70,20 @@ div.highlight {
         width: 35%;
     }
 
+    .desktop-30 {
+        width: 30%;
+    }
+
+    .desktop-25 {
+        width: 25%;
+    }
+
     .desktop-15 {
         width: 15%;
+    }
+
+    .desktop-20 {
+        width: 20%;
     }
 }
 
