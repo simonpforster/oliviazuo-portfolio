@@ -19,6 +19,8 @@
 
     <script src="./resources/js/image.js" type="module"></script>
     <script src="./resources/js/solid-gallery.js" type="module"></script>
+    <script src="https://player.vimeo.com/api/player.js" type="module"></script>
+
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MV5EDGJ2R9"></script>
@@ -234,7 +236,115 @@
             <div class="desktop-15 empty"></div>
         </div>
         <div class="section-divider"></div>
-
+        <div class="section" id="another-romance">
+            <div class="desktop-15 empty"></div>
+            <div class="desktop-35 text">
+                <div class="gallery" id="another-romance-gallery">
+                    <img style="display: block;"
+                         path="/personal/2021/another-romance/installation-render-1.jpg"
+                         fix="width">
+                    <img path="/personal/2021/another-romance/installation-render-3.jpg"
+                         fix="width">
+                </div>
+                <div class="spacing" style="height: 1.5rem;"></div>
+                <img path="/personal/2021/another-romance/installation-picture.jpg"
+                     fix="width">
+                <div class="text">
+                    <div class="highlight">ANOTHER ROMANCE, 2022</div>
+                    <div>
+                        explores the essence of intimate relationships and the invisible and explicit links (emotions
+                        and space etc.) among them: a 'cocoon' woven and constructed from secrets of just between
+                        couples.
+                    </div>
+                    <div>
+                        gestures, emotions and unspoken messages gradually become the mainstay of their communication
+                        within it, to the point of creating a “language system” that is incomprehensible to others.
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-1-2">
+                <div style="padding:56.25% 0 0 0;position:relative;">
+                    <iframe src="https://player.vimeo.com/video/664246920?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+                            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
+                            title="Another Romance"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section" id="obloom">
+            <div class="desktop-1-2">
+                <div class="gallery" id="obloom-gallery-1">
+                    <img style="display: block;"
+                         path="/personal/2021/obloom/interface-1.jpg"
+                         fix="width">
+                    <img path="/personal/2021/obloom/interface-2.jpg"
+                         fix="width">
+                    <img path="/personal/2021/obloom/interface-3.jpg"
+                         fix="width">
+                    <img path="/personal/2021/obloom/interface-4.jpg"
+                         fix="width">
+                </div>
+            </div>
+            <div class="desktop-25">
+                <img path="/personal/2021/obloom/compact-disc.jpg"
+                     fix="width">
+                <img path="/personal/2021/obloom/floppy-disc.jpg"
+                     fix="width">
+                <div class="spacing" style="height: 1.5rem;"></div>
+                <div class="gallery" id="obloom-gallery-2">
+                    <img style="display: block;"
+                         path="/personal/2022/dialogue/installation-1.jpg"
+                         fix="width">
+                    <img path="/personal/2022/dialogue/installation-2.jpg"
+                         fix="width">
+                </div>
+            </div>
+            <div class="desktop-25 text">
+                <div class="text">
+                    <div class="highlight">OBLOOM, 2021</div>
+                    <div>
+                        discusses the unnoticed moments that play an important role in life.
+                    </div>
+                    <div>
+                        six growth phases of plants are used as analogies representing these moments. Corresponding
+                        solutions are also proposed so that users will be reminded of the fragmented moments that were
+                        once forgotten through these supplies.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section" id="utopia">
+            <div class="desktop-15 empty"></div>
+            <div class="desktop-1-2 text">
+                <img path="/personal/2020/utopia/artboard-2.jpg"
+                     fix="width">
+                <div class="text">
+                    <div class="highlight">UTOPIA, 2020</div>
+                    <div>
+                        is about childhood trauma and utopian aspirations. It seeks to understand and express the
+                        lasting impact of adverse family experiences on growth.
+                    </div>
+                    <div>
+                        it explores personal narratives through four chapters, drawing knowledge from media memory
+                        theories. Through material and textual experimentation, it aims to challenge societal norms and
+                        envision a utopian future free from violence and pain.
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-35">
+                <div class="gallery" id="utopia-gallery">
+                    <img style="display: block;"
+                         path="/personal/2020/utopia/artboard-1-copy-2.jpg"
+                         fix="width">
+                    <img path="/personal/2020/utopia/artboard-1-copy-1.jpg"
+                         fix="width">
+                    <img path="/personal/2020/utopia/artboard-1-copy-5.jpg"
+                         fix="width">
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 </div>

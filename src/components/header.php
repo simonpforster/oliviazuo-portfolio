@@ -39,8 +39,8 @@
                     <a href="./personal.php#obloom">Obloom</a><br>
                 </p>
                 <p>
-                    <a class="highlight">2020</a><br>
-                    Utopia<br>
+                    <a class="highlight" href="./personal.php#utopia">2020</a><br>
+                    <a href="./personal.php#utopia">Utopia</a><br>
                 </p>
             </div>
         </div>
