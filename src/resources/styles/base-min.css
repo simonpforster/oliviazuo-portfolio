@@ -293,9 +293,6 @@ template {
 }
 
 @media screen and (max-width: 700px) {
-    html {
-        text-wrap: balance;
-    }
     figcaption {
         overflow-wrap: break-word;
     }

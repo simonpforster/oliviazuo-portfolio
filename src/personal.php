@@ -176,11 +176,9 @@
         <div class="section" id="gutter-and-soul">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35">
-                <div class="gallery shrink-right" id="gutter-and-soul-gallery">
+                <div class="gallery" id="gutter-and-soul-gallery">
                     <img style="display: block;"
                          path="/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg"
-                         fix="width">
-                    <img path="/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg"
                          fix="width">
                     <img path="/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg"
                          fix="width">
