@@ -14,13 +14,8 @@ div.highlight {
     padding: 0.75rem 0 0.75rem;
 }
 
-.section div {
-    font-size: 0.85rem;
-}
-
-.section div {
-    text-indent: 1rem;
-    color: rgba(0, 0, 0, 0.5);
+div.text > div.text > div:not(div.highlight) {
+    text-indent: 2rem;
 }
 
 .overlay {
