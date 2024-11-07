@@ -11,11 +11,13 @@
 
     <link rel="stylesheet" href="./resources/styles/base-min.css">
     <link rel="stylesheet" href="./resources/styles/modal.css">
+    <link rel="stylesheet" href="./resources/styles/section.css">
     <link rel="stylesheet" href="./resources/styles/page/commercial.css">
     <link rel="stylesheet" href="./resources/styles/grids-min.css">
     <link rel="stylesheet" href="./resources/styles/custom-grids-min.css">
 
     <script src="./resources/js/image.js" type="module"></script>
+    <script src="./resources/js/solid-gallery.js" type="module"></script>
 
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MV5EDGJ2R9"></script>
@@ -37,26 +39,35 @@
     <?php include 'components/header.php' ?>
 </div>
 <div id="offscreen">
-    <div class="pure-g" id="gallery">
-        <div class="normal-1-6">
-            img
+    <div class="section" id="nike-big-bang">
+        <div class="desktop-15 empty"></div>
+        <div class="desktop-1-2 text">
+            <div class="gallery" id="gallery-nike">
+                <img style="display: block;"
+                     path="/commercial/nike/background-2.jpg"
+                     fix="width">
+                <img path="/commercial/nike/background-1.jpg"
+                     fix="width">
+                <img path="/commercial/nike/background-3.jpg"
+                     fix="width">
+            </div>
+            <div class="text">
+                <div class="highlight">NIKE</div>
+                <div>
+                    The Big Bang Network, 2022
+                </div>
+            </div>
         </div>
-        <div class="normal-1-6">
-            img
-        </div>
-        <div class="normal-1-6">
-            img
-        </div>
-        <div class="normal-1-6">
-            img
-        </div>
-        <div class="normal-1-6">
-            img
-        </div>
-        <div class="normal-1-6">
-            img
+        <div class="desktop-35">
+            <img path="/commercial/nike/icon-2.png"
+                 fix="width">
+            <img path="/commercial/nike/icon-1.png"
+                 fix="width">
+            <img path="/commercial/nike/icon-3.png"
+                 fix="width">
         </div>
     </div>
+    <div class="section-divider"></div>
 </div>
 <?php include 'components/footer.php' ?>
 </body>

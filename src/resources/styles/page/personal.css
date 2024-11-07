@@ -13,6 +13,10 @@
     visibility: visible;
 }
 
+div.text > div.text > div:not(div.highlight) {
+    text-indent: 2rem;
+}
+
 @media screen and (min-width: 701px) {
     #screen {
         height: 70svh;

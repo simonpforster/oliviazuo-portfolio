@@ -14,10 +14,6 @@ div.highlight {
     padding: 0.75rem 0 0.75rem;
 }
 
-div.text > div.text > div:not(div.highlight) {
-    text-indent: 2rem;
-}
-
 .overlay {
     position: absolute;
     top: 0;
