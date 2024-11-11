@@ -58,7 +58,7 @@
                 <p>
                     <a class="highlight" href="./commercial.php#budweiser-creative-x">BUDWEISWER</a><br>
                     <a href="./commercial.php#budweiser-creative-x">Annual Creative-X Awards Ceremony</a><br>
-                    Unmet Gala<br>
+                    <a href="./commercial.php#budweiser-unmet-gala">Unmet Gala<br>
                 </p>
                 <p>
                     <a class="highlight" href="./commercial.php#nyu-shanghai-opening-fall">NYU SHANGHAI</a><br>
