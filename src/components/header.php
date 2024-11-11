@@ -56,23 +56,23 @@
                     <a href="./commercial.php#new-balance">Shanghai Content Factory</a><br>
                 </p>
                 <p>
-                    <a class="highlight">BUDWEISWER</a><br>
-                    Annual Creative-X Awards Ceremony<br>
-                    Umet Gala<br>
+                    <a class="highlight" href="./commercial.php#budweiser-creative-x">BUDWEISWER</a><br>
+                    <a href="./commercial.php#budweiser-creative-x">Annual Creative-X Awards Ceremony</a><br>
+                    Unmet Gala<br>
                 </p>
                 <p>
-                    <a class="highlight">NYU SHANGHAI</a><br>
-                    Opening Fall 2022<br>
-                    10th Anniversary Special Edition<br>
+                    <a class="highlight" href="./commercial.php#nyu-shanghai-opening-fall">NYU SHANGHAI</a><br>
+                    <a href="./commercial.php#nyu-shanghai-opening-fall">Opening Fall 2022</a><br>
+                    <a href="./commercial.php#nyu-shanghai-10th-anniversary">10th Anniversary Special Edition</a><br>
                 </p>
                 <p>
-                    <a class="highlight">OMO</a><br>
-                    Floor Cleaning Formula<br>
+                    <a class="highlight" href="./commercial.php#omo">OMO</a><br>
+                    <a href="./commercial.php#omo">Floor Cleaning Formula</a><br>
                 </p>
                 <p>
-                    <a class="highlight">PEET’S COFFEE</a><br>
-                    Pure Blend Packaging<br>
-                    Peet’s Coffee x ARC’TERYX Pop-up<br>
+                    <a class="highlight" href="./commercial.php#peets-coffee-pure-blend">PEET’S COFFEE</a><br>
+                    <a href="./commercial.php#peets-coffee-pure-blend">Pure Blend Packaging</a><br>
+                    <a href="./commercial.php#peets-coffee-arcteryx">Peet’s Coffee x ARC’TERYX Pop-up</a><br>
                 </p>
             </div>
         </div>
