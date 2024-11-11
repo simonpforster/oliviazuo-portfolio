@@ -167,7 +167,6 @@ img.pixel {
 
 img {
     border-style: none;
-    object-fit: contain;
     overflow-clip-margin: border-box;
     max-width: 100%;
     width: 100%;

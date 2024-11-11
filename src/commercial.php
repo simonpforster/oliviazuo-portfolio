@@ -139,6 +139,74 @@
         </div>
         <div class="desktop-25 empty"></div>
     </div>
+    <div class="section-divider"></div>
+    <div class="section" id="nyu-shanghai-opening-fall">
+        <div class="desktop-40">
+            <img path="/commercial/nyu-shanghai/opening-fall-2022/cover.jpg"
+                 fix="width">
+        </div>
+        <div class="desktop-1-2 text">
+            <div class="gallery" id="nyu-shanghai-opening-fall-gallery">
+                <img style="display: block;"
+                     path="/commercial/nyu-shanghai/opening-fall-2022/pages-18-19.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/opening-fall-2022/pages-spread-21.png"
+                     fix="width">
+            </div>
+            <div class="highlight">NYU SHANGHAI</div>
+            <div>
+                Opening Fall, 2022
+            </div>
+        </div>
+        <div class="desktop-10 empty"></div>
+    </div>
+    <div class="section-divider"></div>
+    <div class="section" id="nyu-shanghai-10th-anniversary">
+        <div class="desktop-25 text">
+            <img path="/commercial/nyu-shanghai/10th-anniversary/cover.png"
+                 fix="width">
+            <div class="highlight">NYU SHANGHAI</div>
+            <div>
+                10th Anniversary Special Edition, 2022
+            </div>
+        </div>
+        <div class="desktop-55 ">
+            <div class="gallery" id="nyu-shanghai-10th-anniversary-gallery">
+                <img style="display: block;"
+                     path="/commercial/nyu-shanghai/10th-anniversary/development-spread.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/10th-anniversary/development-pages.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/10th-anniversary/research-spread.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/10th-anniversary/research-pages.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/10th-anniversary/education-spread.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/10th-anniversary/education-pages.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/10th-anniversary/exchange-spread.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/10th-anniversary/exchange-pages.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/10th-anniversary/exchange-spread.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/10th-anniversary/exchange-pages.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/10th-anniversary/prospects-spread.png"
+                     fix="width">
+                <img path="/commercial/nyu-shanghai/10th-anniversary/prospects-pages.png"
+                     fix="width">
+            </div>
+        </div>
+        <div class="desktop-20 empty"></div>
+    </div>
+    <div class="section-divider"></div>
+
+    <div class="section-divider"></div>
+
+    <div class="section-divider"></div>
+
     <?php include 'components/footer.php' ?>
 </body>
 </html>

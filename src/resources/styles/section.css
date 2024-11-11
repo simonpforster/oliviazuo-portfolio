@@ -65,6 +65,18 @@ div.highlight {
         width: 60%;
     }
 
+    .desktop-55 {
+        width: 55%;
+    }
+
+    .desktop-45 {
+        width: 45%;
+    }
+
+    .desktop-40 {
+        width: 40%;
+    }
+
     .desktop-35 {
         width: 35%;
     }
@@ -86,7 +98,11 @@ div.highlight {
     }
 
     .desktop-10 {
-        width:10%
+        width: 10%
+    }
+
+    .desktop-5 {
+        width: 5%;
     }
 }
 
