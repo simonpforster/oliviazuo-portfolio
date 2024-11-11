@@ -202,11 +202,64 @@
         <div class="desktop-20 empty"></div>
     </div>
     <div class="section-divider"></div>
-
+    <div class="section" id="omo">
+        <div class="desktop-40 text">
+            <img path="/commercial/omo/packaging-grey-bg.jpg"
+                 fix="width">
+            <div class="highlight">OMO</div>
+            <div>
+                Floor Cleaner Machine Formula
+            </div>
+        </div>
+        <div class="desktop-30 ">
+            <img path="/commercial/omo/ad.jpg"
+                 fix="width">
+        </div>
+        <div class="desktop-30 empty"></div>
+    </div>
     <div class="section-divider"></div>
-
+    <div class="section" id="peets-coffee-pure-blend">
+        <div class="desktop-40 empty"></div>
+        <div class="desktop-35 text">
+            <img path="/commercial/peets-coffee/pure-blend/PET-packaging-picture.jpg"
+                 fix="width">
+            <div class="text">
+                <div class="highlight">Peet's Coffee</div>
+                <div>
+                    Pure Blend, 2022
+                </div>
+            </div>
+        </div>
+        <div class="desktop-25">
+            <img path="/commercial/peets-coffee/pure-blend/PET-packaging-schematic-2.png"
+                 fix="width" style="padding-bottom:1.5rem;">
+            <img path="/commercial/peets-coffee/pure-blend/PET-packaging-schematic-1.png"
+                 fix="width" style="width:80%;">
+        </div>
+    </div>
     <div class="section-divider"></div>
-
+    <div class="section" id="peets-coffee-arcteryx">
+        <div class="desktop-35 text">
+            <img path="/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg"
+                 fix="width">
+            <div class="text">
+                <div class="highlight">PEET’S COFFEE x ARC’TERYX</div>
+                <div>
+                    Pop-up, 2023
+                </div>
+            </div>
+        </div>
+        <div class="desktop-25">
+            <div class="gallery" id="peets-coffee-arcteryx-gallery">
+                <img style="display: block;"
+                     path="/commercial/peets-coffee/peets-coffee-x-arcteryx/1-cans.jpg"
+                     fix="width">
+                <img path="//commercial/peets-coffee/peets-coffee-x-arcteryx/2-cans.jpg"
+                     fix="width">
+            </div>
+        </div>
+        <div class="desktop-40 empty"></div>
+    </div>
     <?php include 'components/footer.php' ?>
 </body>
 </html>
