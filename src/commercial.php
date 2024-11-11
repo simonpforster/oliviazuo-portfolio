@@ -108,7 +108,6 @@
     <div class="section-divider"></div>
     <div class="section" id="budweiser-creative-x">
         <div class="desktop-1-2 text">
-
             <div class="text">
                 <div class="highlight">BUDWEISER</div>
                 <div>
@@ -153,9 +152,11 @@
                 <img path="/commercial/nyu-shanghai/opening-fall-2022/pages-spread-21.png"
                      fix="width">
             </div>
-            <div class="highlight">NYU SHANGHAI</div>
-            <div>
-                Opening Fall, 2022
+            <div class="text">
+                <div class="highlight">NYU SHANGHAI</div>
+                <div>
+                    Opening Fall, 2022
+                </div>
             </div>
         </div>
         <div class="desktop-10 empty"></div>
@@ -165,9 +166,11 @@
         <div class="desktop-25 text">
             <img path="/commercial/nyu-shanghai/10th-anniversary/cover.png"
                  fix="width">
-            <div class="highlight">NYU SHANGHAI</div>
-            <div>
-                10th Anniversary Special Edition, 2022
+            <div class="text">
+                <div class="highlight">NYU SHANGHAI</div>
+                <div>
+                    10th Anniversary Special Edition, 2022
+                </div>
             </div>
         </div>
         <div class="desktop-55 ">
@@ -206,9 +209,11 @@
         <div class="desktop-40 text">
             <img path="/commercial/omo/packaging-grey-bg.jpg"
                  fix="width">
-            <div class="highlight">OMO</div>
-            <div>
-                Floor Cleaner Machine Formula
+            <div class="text">
+                <div class="highlight">OMO</div>
+                <div>
+                    Floor Cleaner Machine Formula
+                </div>
             </div>
         </div>
         <div class="desktop-30 ">
