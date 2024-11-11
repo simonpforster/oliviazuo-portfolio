@@ -43,8 +43,10 @@ figure {
     width: 100%;
 }
 
-figure .gallery img {
+.gallery img {
     display: none;
+    max-width: 100%;
+    max-height: 100%;
 }
 
 hr {
@@ -295,5 +297,9 @@ template {
 @media screen and (max-width: 700px) {
     figcaption {
         overflow-wrap: break-word;
+    }
+
+    #offscreen {
+        max-width: 900px;
     }
 }

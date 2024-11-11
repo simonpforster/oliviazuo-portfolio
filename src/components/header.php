@@ -48,12 +48,12 @@
             <a class="heading highlight" href="./commercial.php">COMMERCIAL PROJECTS</a>
             <div class="dropdown-content">
                 <p>
-                    <a class="highlight">NIKE</a><br>
-                    The Big Bang Network<br>
+                    <a class="highlight" href="./commercial.php#nike-big-bang">NIKE</a><br>
+                    <a href="./commercial.php#nike-big-bang">The Big Bang Network</a><br>
                 </p>
                 <p>
-                    <a class="highlight">NEW BALANCE</a><br>
-                    Shanghai Content Factory<br>
+                    <a class="highlight" href="./commercial.php#new-balance">NEW BALANCE</a><br>
+                    <a href="./commercial.php#new-balance">Shanghai Content Factory</a><br>
                 </p>
                 <p>
                     <a class="highlight">BUDWEISWER</a><br>

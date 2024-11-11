@@ -57,6 +57,14 @@ div.highlight {
         flex-direction: row-reverse;
     }
 
+    .desktop-70 {
+        width: 70%;
+    }
+
+    .desktop-60 {
+        width: 60%;
+    }
+
     .desktop-35 {
         width: 35%;
     }
@@ -69,12 +77,16 @@ div.highlight {
         width: 25%;
     }
 
+    .desktop-20 {
+        width: 20%;
+    }
+
     .desktop-15 {
         width: 15%;
     }
 
-    .desktop-20 {
-        width: 20%;
+    .desktop-10 {
+        width:10%
     }
 }
 

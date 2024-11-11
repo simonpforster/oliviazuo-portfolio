@@ -13,13 +13,16 @@
 }
 
 .modal-content {
-    margin: auto;
     text-align: center;
+    width: 100dvw;
+    height: 100dvh;
+    align-content: center;
 }
 
 #modal-image {
     display: inline-block;
     object-fit: contain;
-    height: 100dvh;
-    width: auto;
+    width: 95dvw;
+    height: 95dvh;
+    margin: auto;
 }

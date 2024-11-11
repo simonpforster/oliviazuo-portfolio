@@ -176,9 +176,8 @@
                         <img path="/commercial/new-balance/picture-garnish-station.jpg"
                              fix="width">
                     </div>
-                    <img
-                            path="/commercial/new-balance/picture-shoot.jpg"
-                            fix="width">
+                    <img path="/commercial/new-balance/picture-shoot.jpg"
+                        fix="width">
                     <figcaption>New Balance SCF</figcaption>
                 </figure>
             </div>
