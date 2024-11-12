@@ -111,7 +111,7 @@
                 </div>
             </div>
             <div class="normal-1-2">
-                <div class="slider shaded-sides">
+                <div class="slider">
                     <ul>
                         <li>
                             <img path="/personal/2023/invisible-feast/appetizer.png"
@@ -134,7 +134,7 @@
                                  fix="width">
                         </li>
                     </ul>
-                    <div class="overlay"></div>
+                    <div class="overlay-x"></div>
                 </div>
                 <div class="highlight" style="margin-left: auto; horiz-align: right;">SLIDE →</div>
                 <img path="/personal/2023/invisible-feast/3-desert.png" fix="width">

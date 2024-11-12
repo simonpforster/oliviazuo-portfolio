@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="./resources/styles/page/commercial.css">
     <link rel="stylesheet" href="./resources/styles/grids-min.css">
     <link rel="stylesheet" href="./resources/styles/custom-grids-min.css">
+    <link rel="stylesheet" href="./resources/styles/mobile-gallery-slider.css">
 
     <script src="./resources/js/image.js" type="module"></script>
     <script src="./resources/js/solid-gallery.js" type="module"></script>
@@ -70,17 +71,30 @@
     <div class="section-divider"></div>
     <div class="section" id="new-balance">
         <div class="desktop-30 empty"></div>
-        <div class="desktop-10" id="new-balance-illustrations">
-            <img path="/commercial/new-balance/illustration-monitor.png"
-                 fix="width">
-            <img path="/commercial/new-balance/illustration-megaphone.png"
-                 fix="width">
-            <img path="/commercial/new-balance/illustration-clapperboard.png"
-                 fix="width">
-            <img path="/commercial/new-balance/illustration-laptop.png"
-                 fix="width">
-            <img path="/commercial/new-balance/illustration-lightbulb.png"
-                 fix="width">
+        <div class="desktop-10 mobile-slider-x" id="new-balance-illustrations">
+            <ul>
+                <li>
+                    <img path="/commercial/new-balance/illustration-monitor.png"
+                         fix="width">
+                </li>
+                <li>
+                    <img path="/commercial/new-balance/illustration-megaphone.png"
+                         fix="width">
+                </li>
+                <li>
+                    <img path="/commercial/new-balance/illustration-clapperboard.png"
+                         fix="width">
+                </li>
+                <li>
+                    <img path="/commercial/new-balance/illustration-laptop.png"
+                         fix="width">
+                </li>
+                <li>
+                    <img path="/commercial/new-balance/illustration-lightbulb.png"
+                         fix="width">
+                </li>
+            </ul>
+            <div class="mobile-overlay-x"></div>
         </div>
         <div class="desktop-60 text">
             <div class="gallery" id="gallery-new-balance" fix="height">
