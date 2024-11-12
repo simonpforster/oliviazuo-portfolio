@@ -31,6 +31,5 @@
 }
 
 .slider ul li::marker {
-    content: '✝ ';
-    font-size: 1.2rem;
+    display: none;
 }

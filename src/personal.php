@@ -46,7 +46,7 @@
         <div class="section" id="spectral-archive">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35">
-                <div class="gallery shrink-right" id="spectral-archive-gallery">
+                <div class="gallery" id="spectral-archive-gallery">
                     <img style="display: block;"
                          path="/personal/2023/spectral-archive/day-3-1.jpg"
                          fix="width">
@@ -81,8 +81,21 @@
         <div class="section-divider"></div>
         <div class="section" id="invisible-feast">
             <div class="normal-1-2 text">
-                <img path="/personal/2023/invisible-feast/web-index.png" fix="width"
-                     style="">
+                <div class="gallery" id="invisible-feast-gallery">
+                    <img style="display: block;"
+                         path="/personal/2023/invisible-feast/web-index.png"
+                         fix="width">
+                    <img path="/personal/2023/invisible-feast/web-projects.png"
+                         fix="width">
+                    <img path="/personal/2023/invisible-feast/web-journal.png"
+                         fix="width">
+                    <img path="/personal/2023/invisible-feast/web-recipes-1.png"
+                         fix="width">
+                    <img path="/personal/2023/invisible-feast/web-recipes-2.png"
+                         fix="width">
+                    <img path="/personal/2023/invisible-feast/web-about.png"
+                         fix="width">
+                </div>
                 <div class="text">
                     <div class="highlight">INVISIBLE FEAST, 2023</div>
                     <div>
@@ -98,7 +111,7 @@
                 </div>
             </div>
             <div class="normal-1-2">
-                <div class="slider shaded-sides">
+                <div class="slider">
                     <ul>
                         <li>
                             <img path="/personal/2023/invisible-feast/appetizer.png"
@@ -121,7 +134,7 @@
                                  fix="width">
                         </li>
                     </ul>
-                    <div class="overlay"></div>
+                    <div class="overlay-x"></div>
                 </div>
                 <div class="highlight" style="margin-left: auto; horiz-align: right;">SLIDE →</div>
                 <img path="/personal/2023/invisible-feast/3-desert.png" fix="width">
