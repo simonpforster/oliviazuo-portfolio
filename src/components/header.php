@@ -80,8 +80,8 @@
             <a class="heading" href="mailto:oliviazuo0428@gmail.com">CONTACT</a>
             <div style="flex-grow: 1; overflow-wrap: break-word;">
                 <p>
-                    oliviazuo0428@gmail.com<br>
-                    @l1v.isliving
+                    <a href="mailto:oliviazuo0428@gmail.com">oliviazuo0428@gmail.com</a><br>
+                    <a href="https://www.instagram.com/l1v.isliving/">@l1v.isliving</a>
                 </p>
             </div>
         </div>
