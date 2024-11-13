@@ -84,6 +84,7 @@ a:hover {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 #offscreen {
