@@ -24,15 +24,27 @@ div.text > div.text > div:not(div.highlight) {
 }
 
 @media screen and (max-width: 700px) {
+
+    .title {
+        text-wrap: nowrap;
+        top: 1.5rem;
+        right: 1.5rem;
+        padding: inherit;
+    }
+
+    .header #index {
+        height: 0;
+    }
+
     #screen {
         height: 100svh;
     }
 
     .header #personal {
-        height: 70%;
+        height: 80%;
     }
 
-    .header .dropdown:not(#personal) {
+    .header .dropdown:not(#personal, #index) {
         height: 10%;
     }
 

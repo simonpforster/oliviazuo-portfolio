@@ -23,15 +23,27 @@
 }
 
 @media screen and (max-width: 700px) {
+
+    .title {
+        text-wrap: nowrap;
+        top: 1.5rem;
+        right: 1.5rem;
+        padding: inherit;
+    }
+
     #screen {
         height: 100svh;
     }
 
-    .header #commercial {
-        height: 70%;
+    .header #index {
+        height: 0;
     }
 
-    .header .dropdown:not(#commercial) {
+    .header #commercial {
+        height: 80%;
+    }
+
+    .header .dropdown:not(#commercial, #index) {
         height: 10%;
     }
 
