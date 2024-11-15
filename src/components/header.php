@@ -29,7 +29,7 @@
                 </p>
                 <p>
                     <a class="highlight" href="./personal.php#the-visitor">2022</a><br>
-                    <a href="./personal.php#the-visitor">The Visitor</a>a<br>
+                    <a href="./personal.php#the-visitor">The Visitor</a><br>
                     <a href="./personal.php#gutter-and-soul">Gutter and Soul</a><br>
                     <a href="./personal.php#dialogue">Dialogue</a><br>
                 </p>
@@ -76,7 +76,7 @@
                 </p>
             </div>
         </div>
-        <div class="slim-4 dropdown fill">
+        <div class="slim-4 dropdown fill" id="contact">
             <a class="heading" href="mailto:oliviazuo0428@gmail.com">CONTACT</a>
             <div style="flex-grow: 1; overflow-wrap: break-word;">
                 <p>

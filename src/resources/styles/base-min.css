@@ -64,7 +64,6 @@ a {
     -webkit-text-stroke: 0.2rem #fff;
     paint-order: stroke fill markers;
     font-size: calc(var(--font-scale) * var(--font-size));
-    line-height: 1.15;
     font-weight: 400;
     margin: 0;
     background-color: transparent;
