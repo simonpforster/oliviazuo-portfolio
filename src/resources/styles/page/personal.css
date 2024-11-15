@@ -37,15 +37,16 @@ div.text > div.text > div:not(div.highlight) {
     }
 
     #screen {
-        height: 100svh;
+        height: 80svh;
     }
 
     .header #personal {
-        height: 80%;
+        height: 100%;
+        order: 0;
     }
 
     .header .dropdown:not(#personal, #index) {
-        height: 10%;
+        height: fit-content;
     }
 
     .dropdown-content {
@@ -54,5 +55,9 @@ div.text > div.text > div:not(div.highlight) {
 
     #personal .dropdown-content {
         display: block;
+    }
+
+    #contact > div {
+        display: none;
     }
 }

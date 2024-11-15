@@ -29,11 +29,11 @@
     }
 
     .header  #index {
-        height: 70%;
+        height: 100%;
     }
 
     .header .dropdown:not(#index) {
-        height: 10%;
+        height: fit-content;
     }
 
     .dropdown-content {
