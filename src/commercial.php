@@ -296,7 +296,7 @@
                     <img style="display: block;"
                          path="/commercial/peets-coffee/peets-coffee-x-arcteryx/1-cans.jpg"
                          fix="width">
-                    <img path="//commercial/peets-coffee/peets-coffee-x-arcteryx/2-cans.jpg"
+                    <img path="/commercial/peets-coffee/peets-coffee-x-arcteryx/2-cans.jpg"
                          fix="width">
                 </div>
             </div>
