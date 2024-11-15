@@ -5,7 +5,7 @@
     <meta name=description content="Olivia Zuo's portfolio of personal projects.">
 
     <link rel="icon" type="image/x-icon"
-          href="https://storage.googleapis.com/oliviazuo-portfolio/elements/element-cyan.png">
+          href="https://image-resizer.simonpforster.com/oliviazuo-portfolio/elements/element-cyan.png">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, height=device-height">
 
