@@ -1,4 +1,5 @@
 <div id="footer">
+    <div class="section-divider"></div>
     <div class="column-container">
         <hr>
         <div id="rail" class="pure-g">
