@@ -39,8 +39,9 @@
 <?php include 'components/modal.php' ?>
 <div id="screen">
     <?php include 'components/header.php' ?>
-    <div class="highlight" style="text-wrap: nowrap; position: absolute; bottom: 0; right: 0; padding: inherit;">
-        <a href="#offscreen" id="archive-arrow">ARCHIVE ↓</a>
+    <div class="highlight" style="text-wrap: nowrap; position: absolute; bottom: 0; right: 0; padding: inherit; display: flex; flex-direction: column; width: min-content;">
+        <img style="width: inherit;" path="/elements/element-pink.png" fix="width">
+        <a href="#offscreen" style="width: fit-content;" id="archive-arrow">ARCHIVE ↓</a>
     </div>
 </div>
 <div id="offscreen">
