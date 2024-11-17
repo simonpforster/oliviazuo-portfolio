@@ -19,25 +19,11 @@
 
     <script src="./resources/js/image.js" type="module"></script>
     <script src="./resources/js/solid-gallery.js" type="module"></script>
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MV5EDGJ2R9"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'G-MV5EDGJ2R9');
-    </script>
 </head>
 <body>
-<?php include 'components/modal.php' ?>
+<?php include "components/modal.php"; ?>
 <div id="screen">
-    <?php include 'components/header.php' ?>
+    <?php include "components/header.php"; ?>
 </div>
 <div id="offscreen">
     <div class="column-container">
@@ -303,6 +289,6 @@
             <div class="desktop-40 empty"></div>
         </div>
     </div>
-    <?php include 'components/footer.php' ?>
+    <?php include "components/footer.php"; ?>
 </body>
 </html>
