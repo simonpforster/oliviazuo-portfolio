@@ -16,7 +16,9 @@ html {
     font-weight: 420;
     font-style: normal;
     font-family: "Font", sans-serif;
-    font-variation-settings: 'slnt' 0, 'MONO' 0.25;
+    font-variation-settings:
+        "slnt" 0,
+        "MONO" 0.25;
     scroll-behavior: smooth;
 }
 
@@ -50,13 +52,13 @@ figure {
 }
 
 hr {
-    margin: 0 .75rem 0
+    margin: 0 0.75rem 0;
 }
 
 figcaption {
     font-size: 0.85rem;
     color: rgba(0, 0, 0, 0.5);
-    margin: .25rem 0 .25rem;
+    margin: 0.25rem 0 0.25rem;
     display: none;
 }
 
@@ -101,11 +103,11 @@ a:hover {
 }
 
 #footer #trademark {
-    color: rgba(0, 0, 0, 0.5)
+    color: rgba(0, 0, 0, 0.5);
 }
 
 main {
-    display: block
+    display: block;
 }
 
 .fill {
@@ -121,40 +123,44 @@ p {
 hr {
     box-sizing: content-box;
     height: 0;
-    overflow: visible
+    overflow: visible;
 }
 
 pre {
     font-family: monospace, monospace;
-    font-size: 1em
+    font-size: 1em;
 }
 
-b, strong {
-    font-weight: bolder
+b,
+strong {
+    font-weight: bolder;
 }
 
-code, kbd, samp {
+code,
+kbd,
+samp {
     font-family: monospace, monospace;
-    font-size: 1em
+    font-size: 1em;
 }
 
 small {
-    font-size: 80%
+    font-size: 80%;
 }
 
-sub, sup {
+sub,
+sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 sub {
-    bottom: -.25em
+    bottom: -0.25em;
 }
 
 sup {
-    h1: -.5em
+    h1: -0.5em;
 }
 
 img.pixel {
@@ -171,40 +177,55 @@ img {
     max-width: 100%;
     width: 100%;
     height: auto;
+    object-fit: contain;
     display: block;
 }
 
-
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
     font-family: inherit;
     font-size: 100%;
     line-height: 1.15;
-    margin: 0
+    margin: 0;
 }
 
-button, input {
-    overflow: visible
+button,
+input {
+    overflow: visible;
 }
 
-button, select {
-    text-transform: none
+button,
+select {
+    text-transform: none;
 }
 
-[type=button], [type=reset], [type=submit], button {
-    -webkit-appearance: button
+[type="button"],
+[type="reset"],
+[type="submit"],
+button {
+    -webkit-appearance: button;
 }
 
-[type=button]::-moz-focus-inner, [type=reset]::-moz-focus-inner, [type=submit]::-moz-focus-inner, button::-moz-focus-inner {
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner,
+button::-moz-focus-inner {
     border-style: none;
-    padding: 0
+    padding: 0;
 }
 
-[type=button]:-moz-focusring, [type=reset]:-moz-focusring, [type=submit]:-moz-focusring, button:-moz-focusring {
-    outline: 1px dotted ButtonText
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring,
+button:-moz-focusring {
+    outline: 1px dotted ButtonText;
 }
 
 fieldset {
-    padding: .35em .75em .625em
+    padding: 0.35em 0.75em 0.625em;
 }
 
 legend {
@@ -213,58 +234,61 @@ legend {
     display: table;
     max-width: 100%;
     padding: 0;
-    white-space: normal
+    white-space: normal;
 }
 
 progress {
-    vertical-align: baseline
+    vertical-align: baseline;
 }
 
 textarea {
-    overflow: auto
+    overflow: auto;
 }
 
-[type=checkbox], [type=radio] {
+[type="checkbox"],
+[type="radio"] {
     box-sizing: border-box;
-    padding: 0
+    padding: 0;
 }
 
-[type=number]::-webkit-inner-spin-button, [type=number]::-webkit-outer-spin-button {
-    height: auto
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+    height: auto;
 }
 
-[type=search] {
+[type="search"] {
     -webkit-appearance: textfield;
-    outline-offset: -2px
+    outline-offset: -2px;
 }
 
-[type=search]::-webkit-search-decoration {
-    -webkit-appearance: none
+[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
 }
 
 ::-webkit-file-upload-button {
     -webkit-appearance: button;
-    font: inherit
+    font: inherit;
 }
 
 details {
-    display: block
+    display: block;
 }
 
 summary {
-    display: list-item
+    display: list-item;
 }
 
 template {
-    display: none
+    display: none;
 }
 
 [hidden] {
-    display: none
+    display: none;
 }
 
-.hidden, [hidden] {
-    display: none !important
+.hidden,
+[hidden] {
+    display: none !important;
 }
 
 .highlight .dropdown-content {
@@ -281,9 +305,7 @@ template {
     height: 100%;
 }
 
-
 @media screen and (min-width: 700px) {
-
     .dropdown-content {
         visibility: hidden;
     }
