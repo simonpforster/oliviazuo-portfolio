@@ -20,21 +20,6 @@
     <script src="./resources/js/image.js" type="module"></script>
     <script src="./resources/js/solid-gallery.js" type="module"></script>
     <script src="https://player.vimeo.com/api/player.js" type="module"></script>
-
-
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MV5EDGJ2R9"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-
-        gtag('config', 'G-MV5EDGJ2R9');
-    </script>
 </head>
 <body>
 <?php include "components/modal.php"; ?>
