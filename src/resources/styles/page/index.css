@@ -17,6 +17,10 @@
     visibility: visible;
 }
 
+#new-balance > img {
+    object-fit: cover;
+}
+
 @media screen and (min-width: 701px) {
     #screen {
         height: 100svh;
@@ -28,7 +32,7 @@
         height: 100svh;
     }
 
-    .header  #index {
+    .header #index {
         height: 100%;
     }
 
