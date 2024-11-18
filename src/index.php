@@ -19,12 +19,14 @@
 
     <script src="./resources/js/image.js" type="module"></script>
     <script src="./resources/js/solid-gallery.js" type="module"></script>
+    <?php require 'components/gallery.php'; ?>
 </head>
 <body>
 <?php include "components/modal.php"; ?>
 <div id="screen">
     <?php include "components/header.php"; ?>
-    <div class="highlight" style="text-wrap: nowrap; position: absolute; bottom: 0; right: 0; padding: inherit; display: flex; flex-direction: column; width: min-content;">
+    <div class="highlight"
+         style="text-wrap: nowrap; position: absolute; bottom: 0; right: 0; padding: inherit; display: flex; flex-direction: column; width: min-content;">
         <img path="/elements/element-pink.png" fix="width">
         <a href="#offscreen" style="width: fit-content;" id="archive-arrow">ARCHIVE ↓</a>
     </div>
@@ -36,50 +38,38 @@
             <div class="normal-1-6">
                 <!-- Personal: Spectral Archive -->
                 <figure>
-                    <div class="gallery" id="spectral-archive">
-                        <img style="display: block;" path="/personal/2023/spectral-archive/day-3-1.jpg"
-                             fix="width">
-                        <img path="/personal/2023/spectral-archive/day-3-2.jpg"
-                             fix="width">
-                        <img path="/personal/2023/spectral-archive/day-3-3.jpg"
-                             fix="width">
-                        <img path="/personal/2023/spectral-archive/day-6-1.jpg"
-                             fix="width">
-                        <img path="/personal/2023/spectral-archive/day-6-2.jpg"
-                             fix="width">
-                        <img path="/personal/2023/spectral-archive/day-6-3.jpg"
-                             fix="width">
-                    </div>
-                    <img
-                            path="/personal/2023/spectral-archive/archive.jpg"
-                            fix="width">
+                    <?php gallery("spectral-archive", [
+                        "/personal/2023/spectral-archive/day-3-1.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-3-2.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-3-3.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-6-1.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-6-2.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-6-3.jpg" => "width"
+                    ]); ?>
+                    <img path="/personal/2023/spectral-archive/archive.jpg"
+                         fix="width">
                     <figcaption>Spectral Archive</figcaption>
                 </figure>
                 <!-- Commercial: Nike Big Bang Network -->
                 <figure>
-                    <img
-                            path="/commercial/nike/background-1.jpg"
-                            fix="width">
-                    <img
-                            path="/commercial/nike/background-2.jpg"
-                            fix="width">
-                    <img
-                            path="/commercial/nike/background-3.jpg"
-                            fix="width">
+                    <img path="/commercial/nike/background-1.jpg"
+                         fix="width">
+                    <img path="/commercial/nike/background-2.jpg"
+                         fix="width">
+                    <img path="/commercial/nike/background-3.jpg"
+                         fix="width">
                     <figcaption>Nike Big Bang Network</figcaption>
                 </figure>
                 <!-- Commercial: NYU Shanghai Opening Fall 2022 -->
                 <figure>
-                    <img
-                            path="/commercial/nyu-shanghai/opening-fall-2022/cover.jpg"
-                            fix="width">
+                    <img path="/commercial/nyu-shanghai/opening-fall-2022/cover.jpg"
+                         fix="width">
                     <figcaption>NYU SH Opening Fall 2022</figcaption>
                 </figure>
                 <!-- Commercial: NYU SH 10th Anniversary -->
                 <figure>
-                    <img
-                            path="/commercial/nyu-shanghai/10th-anniversary/cover.png"
-                            fix="width">
+                    <img path="/commercial/nyu-shanghai/10th-anniversary/cover.png"
+                         fix="width">
                     <figcaption>NYU SH 10th Anniversary</figcaption>
                 </figure>
             </div>
@@ -89,38 +79,25 @@
                 <figure>
                     <img path="/personal/2022/the-visitor/picture-booklet-1.jpg"
                          fix="width">
-                    <div class="gallery" id="the-visitor">
-                        <img style="display: block;"
-                             path="/personal/2022/the-visitor/drawing-board-2-2.jpg"
-                             fix="width">
-                        <img path="/personal/2022/the-visitor/drawing-board-3.jpg"
-                             fix="width">
-                        <img path="/personal/2022/the-visitor/drawing-board-4.jpg"
-                             fix="width">
-                        <img path="/personal/2022/the-visitor/drawing-board-5.jpg"
-                             fix="width">
-                        <img path="/personal/2022/the-visitor/drawing-board-6.jpg"
-                             fix="width">
-                        <img path="/personal/2022/the-visitor/drawing-board-7.jpg"
-                             fix="width">
-                    </div>
+                    <?php gallery("the-visitor", [
+                        "/personal/2022/the-visitor/drawing-board-2-2.jpg" => "width",
+                        "/personal/2022/the-visitor/drawing-board-3.jpg" => "width",
+                        "/personal/2022/the-visitor/drawing-board-4.jpg" => "width",
+                        "/personal/2022/the-visitor/drawing-board-5.jpg" => "width",
+                        "/personal/2022/the-visitor/drawing-board-6.jpg" => "width",
+                        "/personal/2022/the-visitor/drawing-board-7.jpg" => "width",
+                    ]); ?>
                     <img path="/personal/2022/the-visitor/picture-booklet-2.jpg"
                          fix="width">
                     <figcaption>The Visitor</figcaption>
                 </figure>
                 <!-- Personal: Utopia -->
                 <figure>
-                    <div class="gallery" id="utopia">
-                        <img style="display: block;"
-                             path="/personal/2020/utopia/artboard-1-copy-1.jpg"
-                             fix="width">
-                        <img path="/personal/2020/utopia/artboard-1-copy-2.jpg"
-                             fix="width">
-                        <img path="/personal/2020/utopia/artboard-1-copy-3.jpg"
-                             fix="width">
-                        <img path="/personal/2020/utopia/artboard-1-copy-4.jpg"
-                             fix="width">
-                    </div>
+                    <?php gallery("utopia", [
+                        "/personal/2020/utopia/artboard-1-copy-2.jpg" => "width",
+                        "/personal/2020/utopia/artboard-1-copy-3.jpg" => "width",
+                        "/personal/2020/utopia/artboard-1-copy-4.jpg" => "width",
+                    ]); ?>
                     <img path="/personal/2020/utopia/artboard-2.jpg"
                          fix="width">
                     <figcaption>Utopia</figcaption>
@@ -154,17 +131,13 @@
                 </figure>
                 <!-- Commercial: New Balance SCF -->
                 <figure>
-                    <div class="gallery" id="new-balance" fix="height">
-                        <img style="display: block;"
-                             path="/commercial/new-balance/picture-shoe.jpg"
-                             fix="width">
-                        <img path="/commercial/new-balance/picture-stand-stickers.jpg"
-                             fix="width">
-                        <img path="/commercial/new-balance/picture-garnish-station.jpg"
-                             fix="width">
-                    </div>
+                    <?php gallery("new-balance", [
+                        "/commercial/new-balance/picture-shoe.jpg" => "width",
+                        "/commercial/new-balance/picture-stand-stickers.jpg" => "width",
+                        "/commercial/new-balance/picture-garnish-station.jpg" => "width",
+                    ], false); ?>
                     <img path="/commercial/new-balance/picture-shoot.jpg"
-                        fix="width">
+                         fix="width">
                     <figcaption>New Balance SCF</figcaption>
                 </figure>
             </div>
@@ -201,77 +174,43 @@
             <div class="normal-1-6">
                 <!-- Personal: Dialogue -->
                 <figure>
-                    <div class="gallery" id="dialogue">
-                        <img style="display: block;"
-                             path="/personal/2023/spectral-archive/day-3-1.jpg"
-                             fix="width">
-                        <img
-                                path="/personal/2023/spectral-archive/day-3-2.jpg"
-                                fix="width">
-                    </div>
-                    <img
-                            path="/personal/2023/spectral-archive/archive.jpg"
-                            fix="width">
+                    <?php gallery("dialogue", [
+                        "/personal/2023/spectral-archive/day-3-1.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-3-2.jpg" => "width",
+                    ]); ?>
+                    <img path="/personal/2023/spectral-archive/archive.jpg"
+                         fix="width">
                     <figcaption>Dialogue</figcaption>
                 </figure>
                 <!-- Personal: Obloom -->
                 <figure>
-                    <div class="gallery" id="obloom">
-                        <img style="display: block;"
-                             path="/personal/2021/obloom/interface-1.jpg"
-                             fix="width">
-                        <img
-                                path="/personal/2021/obloom/interface-2.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2021/obloom/interface-3.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2021/obloom/interface-4.jpg"
-                                fix="width">
-                    </div>
-                    <img
-                            path="/personal/2021/obloom/compact-disc.jpg"
-                            fix="width">
-                    <img
-                            path="/personal/2021/obloom/floppy-disc.jpg"
-                            fix="width">
-                    <img
-                            path="/personal/2021/obloom/cassette-tape.jpg"
-                            fix="width">
+                    <?php gallery("obloom", [
+                        "/personal/2021/obloom/interface-1.jpg" => "width",
+                        "/personal/2021/obloom/interface-2.jpg" => "width",
+                        "/personal/2021/obloom/interface-3.jpg" => "width",
+                        "/personal/2021/obloom/interface-4.jpg" => "width",
+                    ]); ?>
+                    <img path="/personal/2021/obloom/compact-disc.jpg"
+                         fix="width">
+                    <img path="/personal/2021/obloom/floppy-disc.jpg"
+                         fix="width">
+                    <img path="/personal/2021/obloom/cassette-tape.jpg"
+                         fix="width">
                     <figcaption>Obloom</figcaption>
                 </figure>
                 <!-- Commercial: Budweiser Annual Creative-X Awards Ceremony -->
                 <figure>
-                    <div class="gallery" id="bacac">
-                        <img style="display: block;"
-                             path="/commercial/budweiser/annual-creative-x-awards/1-creative-brand-strategy.jpg"
-                             fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/1-scale-and-adapt.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/2-creative-execution.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/2-entertainment.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/3-better-world.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/3-smart-drinking.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/4-creative-partner.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/4-draftline-of-the-year.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/4-grand-prix.jpg"
-                                fix="width">
-                    </div>
+                    <?php gallery("bacac", [
+                        "/commercial/budweiser/annual-creative-x-awards/1-creative-brand-strategy.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/1-scale-and-adapt.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/2-creative-execution.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/2-entertainment.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/3-better-world.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/3-smart-drinking.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/4-creative-partner.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/4-draftline-of-the-year.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/4-grand-prix.jpg" => "width",
+                    ]); ?>
                     <img
                             path="/commercial/budweiser/annual-creative-x-awards/picture.jpg"
                             fix="width">
