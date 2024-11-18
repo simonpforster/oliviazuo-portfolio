@@ -24,7 +24,8 @@
 <?php include "components/modal.php"; ?>
 <div id="screen">
     <?php include "components/header.php"; ?>
-    <div class="highlight" style="text-wrap: nowrap; position: absolute; bottom: 0; right: 0; padding: inherit; display: flex; flex-direction: column; width: min-content;">
+    <div class="highlight"
+         style="text-wrap: nowrap; position: absolute; bottom: 0; right: 0; padding: inherit; display: flex; flex-direction: column; width: min-content;">
         <img path="/elements/element-pink.png" fix="width">
         <a href="#offscreen" style="width: fit-content;" id="archive-arrow">ARCHIVE ↓</a>
     </div>
@@ -57,29 +58,24 @@
                 </figure>
                 <!-- Commercial: Nike Big Bang Network -->
                 <figure>
-                    <img
-                            path="/commercial/nike/background-1.jpg"
-                            fix="width">
-                    <img
-                            path="/commercial/nike/background-2.jpg"
-                            fix="width">
-                    <img
-                            path="/commercial/nike/background-3.jpg"
-                            fix="width">
+                    <img path="/commercial/nike/background-1.jpg"
+                         fix="width">
+                    <img path="/commercial/nike/background-2.jpg"
+                         fix="width">
+                    <img path="/commercial/nike/background-3.jpg"
+                         fix="width">
                     <figcaption>Nike Big Bang Network</figcaption>
                 </figure>
                 <!-- Commercial: NYU Shanghai Opening Fall 2022 -->
                 <figure>
-                    <img
-                            path="/commercial/nyu-shanghai/opening-fall-2022/cover.jpg"
-                            fix="width">
+                    <img path="/commercial/nyu-shanghai/opening-fall-2022/cover.jpg"
+                         fix="width">
                     <figcaption>NYU SH Opening Fall 2022</figcaption>
                 </figure>
                 <!-- Commercial: NYU SH 10th Anniversary -->
                 <figure>
-                    <img
-                            path="/commercial/nyu-shanghai/10th-anniversary/cover.png"
-                            fix="width">
+                    <img path="/commercial/nyu-shanghai/10th-anniversary/cover.png"
+                         fix="width">
                     <figcaption>NYU SH 10th Anniversary</figcaption>
                 </figure>
             </div>
@@ -164,7 +160,7 @@
                              fix="width">
                     </div>
                     <img path="/commercial/new-balance/picture-shoot.jpg"
-                        fix="width">
+                         fix="width">
                     <figcaption>New Balance SCF</figcaption>
                 </figure>
             </div>
