@@ -184,29 +184,18 @@
                 </figure>
                 <!-- Personal: Obloom -->
                 <figure>
-                    <div class="gallery" id="obloom">
-                        <img style="display: block;"
-                             path="/personal/2021/obloom/interface-1.jpg"
-                             fix="width">
-                        <img
-                                path="/personal/2021/obloom/interface-2.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2021/obloom/interface-3.jpg"
-                                fix="width">
-                        <img
-                                path="/personal/2021/obloom/interface-4.jpg"
-                                fix="width">
-                    </div>
-                    <img
-                            path="/personal/2021/obloom/compact-disc.jpg"
-                            fix="width">
-                    <img
-                            path="/personal/2021/obloom/floppy-disc.jpg"
-                            fix="width">
-                    <img
-                            path="/personal/2021/obloom/cassette-tape.jpg"
-                            fix="width">
+                    <?php gallery("obloom", [
+                        "/personal/2021/obloom/interface-1.jpg" => "width",
+                        "/personal/2021/obloom/interface-2.jpg" => "width",
+                        "/personal/2021/obloom/interface-3.jpg" => "width",
+                        "/personal/2021/obloom/interface-4.jpg" => "width",
+                    ]); ?>
+                    <img path="/personal/2021/obloom/compact-disc.jpg"
+                         fix="width">
+                    <img path="/personal/2021/obloom/floppy-disc.jpg"
+                         fix="width">
+                    <img path="/personal/2021/obloom/cassette-tape.jpg"
+                         fix="width">
                     <figcaption>Obloom</figcaption>
                 </figure>
                 <!-- Commercial: Budweiser Annual Creative-X Awards Ceremony -->
