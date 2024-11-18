@@ -131,7 +131,7 @@
                 </figure>
                 <!-- Commercial: New Balance SCF -->
                 <figure>
-                    <?php gallery("new-balance" , [
+                    <?php gallery("new-balance", [
                         "/commercial/new-balance/picture-shoe.jpg" => "width",
                         "/commercial/new-balance/picture-stand-stickers.jpg" => "width",
                         "/commercial/new-balance/picture-garnish-station.jpg" => "width",
@@ -174,17 +174,12 @@
             <div class="normal-1-6">
                 <!-- Personal: Dialogue -->
                 <figure>
-                    <div class="gallery" id="dialogue">
-                        <img style="display: block;"
-                             path="/personal/2023/spectral-archive/day-3-1.jpg"
-                             fix="width">
-                        <img
-                                path="/personal/2023/spectral-archive/day-3-2.jpg"
-                                fix="width">
-                    </div>
-                    <img
-                            path="/personal/2023/spectral-archive/archive.jpg"
-                            fix="width">
+                    <?php gallery("dialogue", [
+                        "/personal/2023/spectral-archive/day-3-1.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-3-2.jpg" => "width",
+                    ]); ?>
+                    <img path="/personal/2023/spectral-archive/archive.jpg"
+                         fix="width">
                     <figcaption>Dialogue</figcaption>
                 </figure>
                 <!-- Personal: Obloom -->
