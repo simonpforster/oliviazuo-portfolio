@@ -19,6 +19,7 @@
 
     <script src="./resources/js/image.js" type="module"></script>
     <script src="./resources/js/solid-gallery.js" type="module"></script>
+    <?php require 'components/gallery.php'; ?>
 </head>
 <body>
 <?php include "components/modal.php"; ?>
@@ -37,23 +38,16 @@
             <div class="normal-1-6">
                 <!-- Personal: Spectral Archive -->
                 <figure>
-                    <div class="gallery" id="spectral-archive">
-                        <img style="display: block;" path="/personal/2023/spectral-archive/day-3-1.jpg"
-                             fix="width">
-                        <img path="/personal/2023/spectral-archive/day-3-2.jpg"
-                             fix="width">
-                        <img path="/personal/2023/spectral-archive/day-3-3.jpg"
-                             fix="width">
-                        <img path="/personal/2023/spectral-archive/day-6-1.jpg"
-                             fix="width">
-                        <img path="/personal/2023/spectral-archive/day-6-2.jpg"
-                             fix="width">
-                        <img path="/personal/2023/spectral-archive/day-6-3.jpg"
-                             fix="width">
-                    </div>
-                    <img
-                            path="/personal/2023/spectral-archive/archive.jpg"
-                            fix="width">
+                    <?php gallery("spectral-archive", [
+                        "/personal/2023/spectral-archive/day-3-1.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-3-2.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-3-3.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-6-1.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-6-2.jpg" => "width",
+                        "/personal/2023/spectral-archive/day-6-3.jpg" => "width"
+                    ]); ?>
+                    <img path="/personal/2023/spectral-archive/archive.jpg"
+                         fix="width">
                     <figcaption>Spectral Archive</figcaption>
                 </figure>
                 <!-- Commercial: Nike Big Bang Network -->
