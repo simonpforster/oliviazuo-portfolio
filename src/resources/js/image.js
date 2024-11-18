@@ -28,11 +28,16 @@ function updateImageSrc(image, pixel = false) {
             image.addEventListener("load", () => {
                 image.classList.add("pixel");
                 if (checkAllBlurred()) {
-                    let captions = document.getElementsByTagName("figcaption")
-                    for (let i = 0; i < captions.length; i++) {
-                        captions[i].style.display = "block";
+                    if (document.readyState === 'complete') {
+                        console.log("bing");
+                        updateAllImageClear();
+                    } else {
+                        console.log("bong");
+                        window.addEventListener("load", () => {
+                            console.log("bang")
+                            updateAllImageClear();
+                        });
                     }
-                    allImages(updateImageSrc)
                 }
             }, {once: true})
         } else {
@@ -52,6 +57,15 @@ function updateImageSrcBlur(image) {
         })
     }
 }
+
+function updateAllImageClear()  {
+    let captions = document.getElementsByTagName("figcaption")
+    for (let i = 0; i < captions.length; i++) {
+        captions[i].style.display = "block";
+    }
+    allImages(updateImageSrc);
+}
+
 
 function checkForUpdateImageSrc(image) {
     let ratioWidth = image.naturalWidth / parseInt(window.getComputedStyle(image).width);
