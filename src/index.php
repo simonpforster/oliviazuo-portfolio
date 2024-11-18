@@ -200,35 +200,17 @@
                 </figure>
                 <!-- Commercial: Budweiser Annual Creative-X Awards Ceremony -->
                 <figure>
-                    <div class="gallery" id="bacac">
-                        <img style="display: block;"
-                             path="/commercial/budweiser/annual-creative-x-awards/1-creative-brand-strategy.jpg"
-                             fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/1-scale-and-adapt.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/2-creative-execution.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/2-entertainment.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/3-better-world.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/3-smart-drinking.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/4-creative-partner.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/4-draftline-of-the-year.jpg"
-                                fix="width">
-                        <img
-                                path="/commercial/budweiser/annual-creative-x-awards/4-grand-prix.jpg"
-                                fix="width">
-                    </div>
+                    <?php gallery("bacac", [
+                        "/commercial/budweiser/annual-creative-x-awards/1-creative-brand-strategy.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/1-scale-and-adapt.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/2-creative-execution.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/2-entertainment.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/3-better-world.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/3-smart-drinking.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/4-creative-partner.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/4-draftline-of-the-year.jpg" => "width",
+                        "/commercial/budweiser/annual-creative-x-awards/4-grand-prix.jpg" => "width",
+                    ]); ?>
                     <img
                             path="/commercial/budweiser/annual-creative-x-awards/picture.jpg"
                             fix="width">
