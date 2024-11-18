@@ -79,38 +79,25 @@
                 <figure>
                     <img path="/personal/2022/the-visitor/picture-booklet-1.jpg"
                          fix="width">
-                    <div class="gallery" id="the-visitor">
-                        <img style="display: block;"
-                             path="/personal/2022/the-visitor/drawing-board-2-2.jpg"
-                             fix="width">
-                        <img path="/personal/2022/the-visitor/drawing-board-3.jpg"
-                             fix="width">
-                        <img path="/personal/2022/the-visitor/drawing-board-4.jpg"
-                             fix="width">
-                        <img path="/personal/2022/the-visitor/drawing-board-5.jpg"
-                             fix="width">
-                        <img path="/personal/2022/the-visitor/drawing-board-6.jpg"
-                             fix="width">
-                        <img path="/personal/2022/the-visitor/drawing-board-7.jpg"
-                             fix="width">
-                    </div>
+                    <?php gallery("the-visitor", [
+                        "/personal/2022/the-visitor/drawing-board-2-2.jpg" => "width",
+                        "/personal/2022/the-visitor/drawing-board-3.jpg" => "width",
+                        "/personal/2022/the-visitor/drawing-board-4.jpg" => "width",
+                        "/personal/2022/the-visitor/drawing-board-5.jpg" => "width",
+                        "/personal/2022/the-visitor/drawing-board-6.jpg" => "width",
+                        "/personal/2022/the-visitor/drawing-board-7.jpg" => "width",
+                    ]); ?>
                     <img path="/personal/2022/the-visitor/picture-booklet-2.jpg"
                          fix="width">
                     <figcaption>The Visitor</figcaption>
                 </figure>
                 <!-- Personal: Utopia -->
                 <figure>
-                    <div class="gallery" id="utopia">
-                        <img style="display: block;"
-                             path="/personal/2020/utopia/artboard-1-copy-1.jpg"
-                             fix="width">
-                        <img path="/personal/2020/utopia/artboard-1-copy-2.jpg"
-                             fix="width">
-                        <img path="/personal/2020/utopia/artboard-1-copy-3.jpg"
-                             fix="width">
-                        <img path="/personal/2020/utopia/artboard-1-copy-4.jpg"
-                             fix="width">
-                    </div>
+                    <?php gallery("utopia", [
+                        "/personal/2020/utopia/artboard-1-copy-2.jpg" => "width",
+                        "/personal/2020/utopia/artboard-1-copy-3.jpg" => "width",
+                        "/personal/2020/utopia/artboard-1-copy-4.jpg" => "width",
+                    ]); ?>
                     <img path="/personal/2020/utopia/artboard-2.jpg"
                          fix="width">
                     <figcaption>Utopia</figcaption>
@@ -144,15 +131,11 @@
                 </figure>
                 <!-- Commercial: New Balance SCF -->
                 <figure>
-                    <div class="gallery" id="new-balance" fix="height">
-                        <img style="display: block;"
-                             path="/commercial/new-balance/picture-shoe.jpg"
-                             fix="width">
-                        <img path="/commercial/new-balance/picture-stand-stickers.jpg"
-                             fix="width">
-                        <img path="/commercial/new-balance/picture-garnish-station.jpg"
-                             fix="width">
-                    </div>
+                    <?php gallery("new-balance" , [
+                        "/commercial/new-balance/picture-shoe.jpg" => "width",
+                        "/commercial/new-balance/picture-stand-stickers.jpg" => "width",
+                        "/commercial/new-balance/picture-garnish-station.jpg" => "width",
+                    ], false); ?>
                     <img path="/commercial/new-balance/picture-shoot.jpg"
                          fix="width">
                     <figcaption>New Balance SCF</figcaption>
