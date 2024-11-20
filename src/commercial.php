@@ -9,16 +9,16 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, height=device-height">
 
-    <link rel="stylesheet" href="./resources/styles/base-min.css">
-    <link rel="stylesheet" href="./resources/styles/modal.css">
-    <link rel="stylesheet" href="./resources/styles/section.css">
-    <link rel="stylesheet" href="./resources/styles/page/commercial.css">
-    <link rel="stylesheet" href="./resources/styles/grids-min.css">
-    <link rel="stylesheet" href="./resources/styles/custom-grids-min.css">
-    <link rel="stylesheet" href="./resources/styles/mobile-gallery-slider.css">
+    <link rel="stylesheet" href="resources/styles/base-min.css">
+    <link rel="stylesheet" href="resources/styles/modal.css">
+    <link rel="stylesheet" href="resources/styles/section.css">
+    <link rel="stylesheet" href="resources/styles/page/commercial.css">
+    <link rel="stylesheet" href="resources/styles/grids-min.css">
+    <link rel="stylesheet" href="resources/styles/custom-grids-min.css">
+    <link rel="stylesheet" href="resources/styles/mobile-gallery-slider.css">
 
-    <script src="./resources/js/image.js" type="module"></script>
-    <script src="./resources/js/solid-gallery.js" type="module"></script>
+    <script src="resources/js/image.js" type="module"></script>
+    <script src="resources/js/solid-gallery.js" type="module"></script>
 </head>
 <body>
 <?php include "components/modal.php"; ?>

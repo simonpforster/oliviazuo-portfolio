@@ -29,12 +29,9 @@ function updateImageSrc(image, pixel = false) {
                 image.classList.add("pixel");
                 if (checkAllBlurred()) {
                     if (document.readyState === 'complete') {
-                        console.log("bing");
                         updateAllImageClear();
                     } else {
-                        console.log("bong");
                         window.addEventListener("load", () => {
-                            console.log("bang")
                             updateAllImageClear();
                         });
                     }
