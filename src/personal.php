@@ -31,6 +31,24 @@
         <div class="section" id="spectral-archive">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35">
+                <img path="/personal/2024/rerendered-memory/combine-scan.jpg" fix="width">
+                <div class="spacing" style="height: 1.5rem;"></div>
+                <img path="/personal/2024/rerendered-memory/poster-picture-printer.jpg" fix="width">
+            </div>
+            <div class="desktop-1-2 text">
+                <img path="/personal/2024/rerendered-memory/poster-scan.jpg" fix="width">
+                <div class="text">
+                    <div class="highlight">RERENDERED MEMORY, 2024</div>
+                    <div>
+                        WIP
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-divider"></div>
+        <div class="section" id="spectral-archive">
+            <div class="desktop-15 empty"></div>
+            <div class="desktop-35">
                 <div class="gallery" id="spectral-archive-gallery">
                     <img style="display: block;"
                          path="/personal/2023/spectral-archive/day-3-1.jpg"

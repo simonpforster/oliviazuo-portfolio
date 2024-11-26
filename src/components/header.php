@@ -23,6 +23,10 @@
             <a class="heading highlight" href="./personal.php">PERSONAL PROJECTS</a>
             <div class="dropdown-content">
                 <p>
+                    <a class="highlight" href="./personal.php#rerendered-memory">2024</a><br>
+                    <a href="./personal.php#rerendered-memory">Rerendered Memory</a><br>
+                </p>
+                <p>
                     <a class="highlight" href="./personal.php#spectral-archive">2023</a><br>
                     <a href="./personal.php#spectral-archive">Spectral Archive</a><br>
                     <a href="./personal.php#invisible-feast">Invisible Feast</a><br>
