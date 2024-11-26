@@ -10,9 +10,7 @@ html {
     line-height: 1.25;
     letter-spacing: 0;
     color: rgba(0, 0, 0, 0.85);
-    font-size: calc(var(--font-scale) * var(--font-size));
-    --font-scale: 0.95;
-    --font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 420;
     font-style: normal;
     font-family: "Font", sans-serif;
@@ -65,7 +63,7 @@ figcaption {
 a {
     -webkit-text-stroke: 0.2rem #fff;
     paint-order: stroke fill markers;
-    font-size: calc(var(--font-scale) * var(--font-size));
+    font-size: 0.95rem;
     font-weight: 400;
     margin: 0;
     background-color: transparent;
