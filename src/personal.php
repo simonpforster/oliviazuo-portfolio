@@ -28,9 +28,8 @@
 </div>
 <div id="offscreen">
     <div class="column-container">
-        <div class="section" id="spectral-archive">
-            <div class="desktop-15 empty"></div>
-            <div class="desktop-35">
+        <div class="section" id="rerendered-memory">
+            <div class="desktop-25">
                 <img path="/personal/2024/rerendered-memory/combine-scan.jpg" fix="width">
                 <div class="spacing" style="height: 1.5rem;"></div>
                 <img path="/personal/2024/rerendered-memory/poster-picture-printer.jpg" fix="width">
@@ -44,6 +43,7 @@
                     </div>
                 </div>
             </div>
+            <div class="desktop-25 empty"></div>
         </div>
         <div class="section-divider"></div>
         <div class="section" id="spectral-archive">
