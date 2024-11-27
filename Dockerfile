@@ -7,9 +7,9 @@ RUN apk add util-linux
 
 FROM packages AS minifier
 
-COPY src/resources/js/**.js src/js/
-COPY src/resources/styles/**.css src/styles/
-COPY src/resources/styles/page/**.css src/styles/page/
+COPY src/html/resources/js/**.js src/js/
+COPY src/html/resources/styles/**.css src/styles/
+COPY src/html/resources/styles/page/**.css src/styles/page/
 
 RUN chmod 755 src/js/**.js
 RUN chmod 755 src/styles/**.css
@@ -29,7 +29,7 @@ LABEL authors="simonpforster"
 
 RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
 
-COPY src/ /var/www/html/
+COPY src/ /var/www/
 COPY --from=minifier **.js /var/www/html/resources/js/
 COPY --from=minifier styles/**.css /var/www/html/resources/styles/
 COPY --from=minifier styles/page/**.css /var/www/html/resources/styles/page/
