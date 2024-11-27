@@ -1,0 +1,28 @@
+#offscreen .highlight {
+    color: rgb(255, 59, 228);
+    text-decoration-color: rgb(255, 59, 228);
+}
+
+@media screen and (min-width: 701px) {
+    #screen {
+        height: 70svh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #screen {
+        height: 100svh;
+    }
+
+    .header #index {
+        height: 100%;
+    }
+
+    .header .dropdown:not(#index) {
+        height: fit-content;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+}

@@ -8,7 +8,6 @@
     text-decoration-color: rgba(29, 200, 177, 0.85);
 }
 
-
 #personal .dropdown-content {
     visibility: visible;
 }
@@ -24,7 +23,6 @@ div.text > div.text > div:not(div.highlight) {
 }
 
 @media screen and (max-width: 700px) {
-
     .title {
         text-wrap: nowrap;
         top: 1.5rem;
@@ -57,7 +55,7 @@ div.text > div.text > div:not(div.highlight) {
         display: block;
     }
 
-    #contact > div {
+    #shop > div {
         display: none;
     }
 }
