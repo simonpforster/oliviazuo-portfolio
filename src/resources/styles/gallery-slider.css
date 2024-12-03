@@ -1,9 +1,11 @@
 .slider {
     position: relative;
+    height: 20dvh;
 }
 .slider ul {
     display: flex;
     flex-direction: row;
+    height: 100%;
     margin: 0 auto;
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
@@ -25,9 +27,15 @@
     display: flex;
     flex-direction: column;
     flex-shrink: 0;
-    width: 25vw;
+    height: 100%;
     justify-content: flex-end;
 }
+
+.slider ul li img {
+    height: 100%;
+}
+
+
 
 .slider ul li::marker {
     display: none;
