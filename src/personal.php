@@ -39,7 +39,19 @@
                 <div class="text">
                     <div class="highlight">RERENDERED MEMORY, 2024</div>
                     <div>
-                        WIP
+                        Today, digital technologies are considered as a means of stepping backward - whether physically
+                        reconstructing obsolete hardware or digitally regurgitating public information films, a
+                        fascination with capturing media of today in a net of the past is becoming more prevalent. The
+                        attraction to old technologies and the resurrection of faux-vintage aesthetics through new
+                        mediums, often referred to as "tech-nostalgia".
+                    </div>
+                    <div>
+                        By investigating the iterative process of digital images in screen devices, my aim is to explore
+                        the transition from "technologies of memory" to "memory of technologies" within the context of
+                        the reminiscence of past media technologies in contemporary memory practices. And these
+                        manifestations of tech-nostalgia reflect a new kind of memory practice which is not driven by
+                        nostalgia in the classical sense as a longing for the past but rather mediates between the past
+                        and the present, the analogue and the digital the archival and the performative.
                     </div>
                 </div>
             </div>
