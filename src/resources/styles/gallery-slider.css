@@ -1,7 +1,7 @@
 .slider {
     position: relative;
-    height: 20dvh;
 }
+
 .slider ul {
     display: flex;
     flex-direction: row;
@@ -16,6 +16,7 @@
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: none;
 }
+
 .slider ul::-webkit-scrollbar {
     display: none;
 }
@@ -35,8 +36,18 @@
     height: 100%;
 }
 
-
-
 .slider ul li::marker {
     display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .slider {
+        height: 20dvh;
+    }
+}
+
+@media screen and (min-width: 701px) {
+    .slider ul li {
+        width: 20dvw;
+    }
 }
