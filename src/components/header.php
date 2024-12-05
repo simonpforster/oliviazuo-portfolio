@@ -80,8 +80,8 @@
                 </p>
             </div>
         </div>
-        <div class="slim-4 dropdown fill" id="contact">
-            <a class="heading" href="mailto:oliviazuo0428@gmail.com">CONTACT</a>
+        <div class="slim-4 dropdown fill" id="shop">
+            <a class="heading" href="./shop.php">SHOP</a>
             <div style="flex-grow: 1; overflow-wrap: break-word;">
                 <p>
                     <a href="mailto:oliviazuo0428@gmail.com">oliviazuo0428@gmail.com</a><br>

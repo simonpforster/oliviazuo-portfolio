@@ -1,1 +1,4 @@
 .idea/*
+
+# All composer dependencies
+src/vendor/*

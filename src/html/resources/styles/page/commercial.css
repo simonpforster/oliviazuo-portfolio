@@ -1,20 +1,19 @@
-#personal .highlight {
-    color: rgba(29, 200, 177, 0.85);
-    text-decoration-color: rgba(29, 200, 177, 0.85);
+#commercial .highlight {
+    color: rgb(0, 0, 255);
+    text-decoration-color: rgb(0, 0, 255);
 }
 
 #offscreen .highlight {
-    color: rgba(29, 200, 177, 0.85);
-    text-decoration-color: rgba(29, 200, 177, 0.85);
+    color: rgb(0, 0, 255);
+    text-decoration-color: rgb(0, 0, 255);
 }
 
-
-#personal .dropdown-content {
+#commercial .dropdown-content {
     visibility: visible;
 }
 
-div.text > div.text > div:not(div.highlight) {
-    text-indent: 2rem;
+#new-balance-illustrations > img {
+    padding-bottom: 1.5rem;
 }
 
 @media screen and (min-width: 701px) {
@@ -24,7 +23,6 @@ div.text > div.text > div:not(div.highlight) {
 }
 
 @media screen and (max-width: 700px) {
-
     .title {
         text-wrap: nowrap;
         top: 1.5rem;
@@ -32,20 +30,20 @@ div.text > div.text > div:not(div.highlight) {
         padding: inherit;
     }
 
-    .header #index {
-        height: 0;
-    }
-
     #screen {
         height: 80svh;
     }
 
-    .header #personal {
-        height: 100%;
-        order: 0;
+    .header #index {
+        height: 0;
     }
 
-    .header .dropdown:not(#personal, #index) {
+    .header #commercial {
+        height: 100%;
+        order: -1;
+    }
+
+    .header .dropdown:not(#commercial, #index) {
         height: fit-content;
     }
 
@@ -53,11 +51,11 @@ div.text > div.text > div:not(div.highlight) {
         display: none;
     }
 
-    #personal .dropdown-content {
+    #commercial .dropdown-content {
         display: block;
     }
 
-    #contact > div {
+    #shop > div {
         display: none;
     }
 }
