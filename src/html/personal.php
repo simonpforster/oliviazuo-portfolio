@@ -23,9 +23,9 @@
     <?php require 'components/gallery.php'; ?>
 </head>
 <body>
-<?php include "components/modal.php"; ?>
+<?php include "../components/modal.php"; ?>
 <div id="screen">
-    <?php include "components/header.php"; ?>
+    <?php include "../components/header.php"; ?>
 </div>
 <div id="offscreen">
     <div class="column-container">
@@ -367,6 +367,6 @@
     </div>
 </div>
 </div>
-<?php include "components/footer.php"; ?>
+<?php include "../components/footer.php"; ?>
 </body>
 </html>
