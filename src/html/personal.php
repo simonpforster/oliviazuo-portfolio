@@ -20,7 +20,7 @@
     <script src="./resources/js/image.js" type="module"></script>
     <script src="./resources/js/solid-gallery.js" type="module"></script>
     <script src="https://player.vimeo.com/api/player.js" type="module"></script>
-    <?php require 'components/gallery.php'; ?>
+    <?php require "../components/gallery.php"; ?>
 </head>
 <body>
 <?php include "../components/modal.php"; ?>
@@ -99,10 +99,13 @@
             <div class="normal-1-2 text">
                 <?php gallery("invisible-feast-gallery", [
                     "/personal/2023/invisible-feast/web-index.png" => "width",
-                    "/personal/2023/invisible-feast/web-projects.png" => "width",
+                    "/personal/2023/invisible-feast/web-projects.png" =>
+                        "width",
                     "/personal/2023/invisible-feast/web-journal.png" => "width",
-                    "/personal/2023/invisible-feast/web-recipes-1.png" => "width",
-                    "/personal/2023/invisible-feast/web-recipes-2.png" => "width",
+                    "/personal/2023/invisible-feast/web-recipes-1.png" =>
+                        "width",
+                    "/personal/2023/invisible-feast/web-recipes-2.png" =>
+                        "width",
                     "/personal/2023/invisible-feast/web-about.png" => "width",
                 ]); ?>
                 <div class="text">
