@@ -8,7 +8,7 @@ You can find it at https://www.oliviazuo.com
 
 
 ### Standalone PHP server
-`export IMAGE_RESIZER="https://image-resizer-dev-386756380530.europe-west1.run.app/oliviazuo-portfolio"`
+`export IMAGE_RESIZER="image-host"`
 Run `php -S 0.0.0.0:8000` inside the `/src/html` folder.
 
 ### Docker compose
