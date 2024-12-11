@@ -40,6 +40,7 @@ figure {
 }
 
 .gallery {
+    position: relative;
     width: 100%;
 }
 
@@ -47,6 +48,28 @@ figure {
     display: none;
     max-width: 100%;
     max-height: 100%;
+}
+
+.gallery .arrow-left,
+.gallery .arrow-right {
+    position: absolute;
+    padding: 0.25dvw;
+    width: 1dvw;
+    top: calc(50% - 1dvh);
+    background-color: grey;
+    opacity: 0.5;
+    z-index: 2;
+    border-radius: 50%;
+}
+
+.gallery .arrow-left {
+    left: 5%;
+    transform: rotate(-90deg);
+}
+
+.gallery .arrow-right {
+    right: 5%;
+    transform: rotate(90deg);
 }
 
 hr {
