@@ -2,3 +2,4 @@
 
 # All composer dependencies
 src/vendor/*
+*.DS_Store
