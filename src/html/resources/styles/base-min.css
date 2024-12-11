@@ -52,6 +52,7 @@ figure {
 
 .gallery .arrow-left,
 .gallery .arrow-right {
+    display: none;
     position: absolute;
     padding: 0.25dvw;
     width: 1dvw;
@@ -60,6 +61,10 @@ figure {
     opacity: 0.5;
     z-index: 2;
     border-radius: 50%;
+}
+.gallery:hover .arrow-left,
+.gallery:hover .arrow-right {
+    display: block;
 }
 
 .gallery .arrow-left {
