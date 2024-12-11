@@ -316,9 +316,9 @@
                 <div class="spacing" style="height: 1.5rem;"></div>
                 <div class="gallery" id="obloom-gallery-2">
                     <img style="display: block;"
-                         path="/personal/2022/dialogue/installation-1.jpg"
+                         path="/personal/2021/obloom/posters-1.jpg"
                          fix="width">
-                    <img path="/personal/2022/dialogue/installation-2.jpg"
+                    <img path="/personal/2021/obloom/posters-2.jpg"
                          fix="width">
                 </div>
             </div>

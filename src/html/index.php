@@ -196,12 +196,12 @@
                 <!-- Personal: Dialogue -->
                 <figure>
                     <?php gallery("dialogue", [
-                        "/personal/2023/spectral-archive/day-3-1.jpg" =>
-                            "width",
-                        "/personal/2023/spectral-archive/day-3-2.jpg" =>
-                            "width",
+                        "/personal/2022/dialogue/poster-1-cyan.png" => "width",
+                        "/personal/2022/dialogue/poster-2-black.png" => "width",
+                        "/personal/2022/dialogue/poster-3-red.png" => "width",
+                        "/personal/2022/dialogue/poster-4-pink.png" => "width",
                     ]); ?>
-                    <img path="/personal/2023/spectral-archive/archive.jpg"
+                    <img path="/personal/2022/dialogue/picture.jpeg"
                          fix="width">
                     <figcaption>Dialogue</figcaption>
                 </figure>
@@ -252,7 +252,13 @@
             <!-- Column 6/6 -->
             <div class="normal-1-6">
                 <!-- Personal: Another Romance -->
-
+                <figure>
+                    <img path="/personal/2021/another-romance/marble-screen.jpg"
+                         fix="width">
+                    <img path="/personal/2021/another-romance/installation-picture.jpg"
+                         fix="width">
+                    <figcaption>Another Romance</figcaption>
+                </figure>
                 <!-- Commercial: Budweiser Unmet Gala -->
                 <figure>
                     <img path="/commercial/budweiser/unmet-gala/invitation.jpg" fix="width">
