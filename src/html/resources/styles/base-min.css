@@ -54,13 +54,10 @@ figure {
 .gallery .arrow-right {
     display: none;
     position: absolute;
-    padding: 0.25dvw;
-    width: 1dvw;
-    top: calc(50% - 1dvh);
-    background-color: grey;
-    opacity: 0.5;
+    width: 5%;
+    top: calc(47%);
+    opacity: 0.9;
     z-index: 2;
-    border-radius: 50%;
 }
 .gallery:hover .arrow-left,
 .gallery:hover .arrow-right {
@@ -68,12 +65,12 @@ figure {
 }
 
 .gallery .arrow-left {
-    left: 5%;
+    left: 0;
     transform: rotate(-90deg);
 }
 
 .gallery .arrow-right {
-    right: 5%;
+    right: 0;
     transform: rotate(90deg);
 }
 
