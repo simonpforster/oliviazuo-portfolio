@@ -63,21 +63,14 @@
         <div class="section" id="spectral-archive">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35">
-                <div class="gallery" id="spectral-archive-gallery">
-                    <img style="display: block;"
-                         path="/personal/2023/spectral-archive/day-3-1.jpg"
-                         fix="width">
-                    <img path="/personal/2023/spectral-archive/day-3-2.jpg"
-                         fix="width">
-                    <img path="/personal/2023/spectral-archive/day-3-3.jpg"
-                         fix="width">
-                    <img path="/personal/2023/spectral-archive/day-6-1.jpg"
-                         fix="width">
-                    <img path="/personal/2023/spectral-archive/day-6-2.jpg"
-                         fix="width">
-                    <img path="/personal/2023/spectral-archive/day-6-3.jpg"
-                         fix="width">
-                </div>
+                <?php gallery("spectral-archive-gallery", [
+                    "/personal/2023/spectral-archive/day-3-1.jpg" => "width",
+                    "/personal/2023/spectral-archive/day-3-2.jpg" => "width",
+                    "/personal/2023/spectral-archive/day-3-3.jpg" => "width",
+                    "/personal/2023/spectral-archive/day-6-1.jpg" => "width",
+                    "/personal/2023/spectral-archive/day-6-2.jpg" => "width",
+                    "/personal/2023/spectral-archive/day-6-3.jpg" => "width",
+                ]); ?>
             </div>
             <div class="desktop-1-2 text">
                 <img path="/personal/2023/spectral-archive/archive.jpg" fix="width"
@@ -155,32 +148,25 @@
         <div class="section-divider"></div>
         <div class="section" id="the-visitor">
             <div class="desktop-30">
-                <div class="gallery" id="the-visitor-gallery-1">
-                    <img style="display: block;"
-                         path="/personal/2022/the-visitor/drawing-board-7.jpg"
-                         fix="width">
-                    <img path="/personal/2022/the-visitor/drawing-board-6.jpg"
-                         fix="width">
-                    <img path="/personal/2022/the-visitor/drawing-board-5.jpg"
-                         fix="width">
-                    <img path="/personal/2022/the-visitor/drawing-board-4.jpg"
-                         fix="width">
-                    <img path="/personal/2022/the-visitor/drawing-board-3.jpg"
-                         fix="width">
-                    <img path="/personal/2022/the-visitor/drawing-board-2-2.jpg"
-                         fix="width">
-                </div>
+                <?php gallery("the-visitor-gallery-1", [
+                    "/personal/2022/the-visitor/drawing-board-7.jpg" => "width",
+                    "/personal/2022/the-visitor/drawing-board-6.jpg" => "width",
+                    "/personal/2022/the-visitor/drawing-board-5.jpg" => "width",
+                    "/personal/2022/the-visitor/drawing-board-4.jpg" => "width",
+                    "/personal/2022/the-visitor/drawing-board-3.jpg" => "width",
+                    "/personal/2022/the-visitor/drawing-board-2-2.jpg" =>
+                        "width",
+                ]); ?>
             </div>
             <div class="desktop-1-2 text">
-                <div class="gallery" id="the-visitor-gallery-2">
-                    <img style="display: block;"
-                         path="/personal/2022/the-visitor/picture-booklet-1.jpg"
-                         fix="width">
-                    <img path="/personal/2022/the-visitor/picture-booklet-2.jpg"
-                         fix="width">
-                    <img path="/personal/2022/the-visitor/picture-booklet-3.jpg"
-                         fix="width">
-                </div>
+                <?php gallery("the-visitor-gallery-2", [
+                    "/personal/2022/the-visitor/picture-booklet-1.jpg" =>
+                        "width",
+                    "/personal/2022/the-visitor/picture-booklet-2.jpg" =>
+                        "width",
+                    "/personal/2022/the-visitor/picture-booklet-3.jpg" =>
+                        "width",
+                ]); ?>
                 <div class="text">
                     <div class="highlight">THE VISITOR, 2022</div>
                     <div>
@@ -201,13 +187,12 @@
         <div class="section" id="gutter-and-soul">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35">
-                <div class="gallery" id="gutter-and-soul-gallery">
-                    <img style="display: block;"
-                         path="/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg"
-                         fix="width">
-                    <img path="/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg"
-                         fix="width">
-                </div>
+                <?php gallery("gutter-and-soul-gallery", [
+                    "/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg" =>
+                        "width",
+                    "/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg" =>
+                        "width",
+                ]); ?>
             </div>
             <div class="desktop-1-2 text">
                 <img path="/personal/2022/gutter-and-soul/phase-3-the-dive.jpg"
@@ -228,13 +213,10 @@
         <div class="section-divider"></div>
         <div class="section" id="dialogue">
             <div class="desktop-1-2 text">
-                <div class="gallery" id="dialogue-gallery-1">
-                    <img style="display: block;"
-                         path="/personal/2022/dialogue/alphabet.jpg"
-                         fix="width">
-                    <img path="/personal/2022/dialogue/poster-mockups.jpg"
-                         fix="width">
-                </div>
+                <?php gallery("dialogue-gallery-1", [
+                    "/personal/2022/dialogue/alphabet.jpg" => "width",
+                    "/personal/2022/dialogue/poster-mockups.jpg" => "width",
+                ]); ?>
                 <div class="text">
                     <div class="highlight">DIALOGUE, 2022</div>
                     <div>
@@ -248,13 +230,10 @@
                 </div>
             </div>
             <div class="desktop-35">
-                <div class="gallery" id="dialogue-gallery-2">
-                    <img style="display: block;"
-                         path="/personal/2022/dialogue/installation-1.jpg"
-                         fix="width">
-                    <img path="/personal/2022/dialogue/installation-2.jpg"
-                         fix="width">
-                </div>
+                <?php gallery("dialogue-gallery-2", [
+                    "/personal/2022/dialogue/installation-1.jpg" => "width",
+                    "/personal/2022/dialogue/installation-2.jpg" => "width",
+                ]); ?>
             </div>
             <div class="desktop-15 empty"></div>
         </div>
@@ -262,13 +241,12 @@
         <div class="section" id="another-romance">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35 text">
-                <div class="gallery" id="another-romance-gallery">
-                    <img style="display: block;"
-                         path="/personal/2021/another-romance/installation-render-1.jpg"
-                         fix="width">
-                    <img path="/personal/2021/another-romance/installation-render-3.jpg"
-                         fix="width">
-                </div>
+                <?php gallery("another-romance-gallery", [
+                    "/personal/2021/another-romance/installation-render-1.jpg" =>
+                        "width",
+                    "/personal/2021/another-romance/installation-render-3.jpg" =>
+                        "width",
+                ]); ?>
                 <div class="spacing" style="height: 1.5rem;"></div>
                 <img path="/personal/2021/another-romance/installation-picture.jpg"
                      fix="width">
@@ -297,17 +275,12 @@
         <div class="section-divider"></div>
         <div class="section" id="obloom">
             <div class="desktop-1-2">
-                <div class="gallery" id="obloom-gallery-1">
-                    <img style="display: block;"
-                         path="/personal/2021/obloom/interface-1.jpg"
-                         fix="width">
-                    <img path="/personal/2021/obloom/interface-2.jpg"
-                         fix="width">
-                    <img path="/personal/2021/obloom/interface-3.jpg"
-                         fix="width">
-                    <img path="/personal/2021/obloom/interface-4.jpg"
-                         fix="width">
-                </div>
+                <?php gallery("obloom-gallery-1", [
+                    "/personal/2021/obloom/interface-1.jpg" => "width",
+                    "/personal/2021/obloom/interface-2.jpg" => "width",
+                    "/personal/2021/obloom/interface-3.jpg" => "width",
+                    "/personal/2021/obloom/interface-4.jpg" => "width",
+                ]); ?>
             </div>
             <div class="desktop-25">
                 <img path="/personal/2021/obloom/compact-disc.jpg"
@@ -315,13 +288,10 @@
                 <img path="/personal/2021/obloom/floppy-disc.jpg"
                      fix="width">
                 <div class="spacing" style="height: 1.5rem;"></div>
-                <div class="gallery" id="obloom-gallery-2">
-                    <img style="display: block;"
-                         path="/personal/2021/obloom/posters-1.jpg"
-                         fix="width">
-                    <img path="/personal/2021/obloom/posters-2.jpg"
-                         fix="width">
-                </div>
+                <?php gallery("obloom-gallery-2", [
+                    "/personal/2021/obloom/posters-1.jpg" => "width",
+                    "/personal/2021/obloom/posters-2.jpg" => "width",
+                ]); ?>
             </div>
             <div class="desktop-25 text">
                 <div class="text">
@@ -357,15 +327,11 @@
                 </div>
             </div>
             <div class="desktop-35">
-                <div class="gallery" id="utopia-gallery">
-                    <img style="display: block;"
-                         path="/personal/2020/utopia/artboard-1-copy-2.jpg"
-                         fix="width">
-                    <img path="/personal/2020/utopia/artboard-1-copy-1.jpg"
-                         fix="width">
-                    <img path="/personal/2020/utopia/artboard-1-copy-5.jpg"
-                         fix="width">
-                </div>
+                <?php gallery("utopia-gallery", [
+                    "/personal/2020/utopia/artboard-1-copy-2.jpg" => "width",
+                    "/personal/2020/utopia/artboard-1-copy-1.jpg" => "width",
+                    "/personal/2020/utopia/artboard-1-copy-5.jpg" => "width",
+                ]); ?>
             </div>
         </div>
     </div>
