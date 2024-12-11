@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="./resources/styles/custom-grids-min.css">
     <link rel="stylesheet" href="./resources/styles/mobile-gallery-slider.css">
 
+    <?php require "../components/config.php"; ?>
     <script src="./resources/js/image.js" type="module"></script>
     <script src="./resources/js/solid-gallery.js" type="module"></script>
 </head>
