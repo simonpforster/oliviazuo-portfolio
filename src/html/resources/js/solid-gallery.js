@@ -12,6 +12,7 @@ function initSlides(id, transitionDelay, widthFix = true) {
   let slides = gallery.querySelectorAll("img:not(.static)");
   let arrowLeft = gallery.getElementsByClassName("arrow-left")[0];
   let arrowRight = gallery.getElementsByClassName("arrow-right")[0];
+  let lastArrowPressed = Date.now();
 
   slides[0].style.display = "block";
   for (let i = 1; i < slides.length; i++) {
@@ -61,7 +62,7 @@ function initSlides(id, transitionDelay, widthFix = true) {
     } else {
       check = isLoaded(slides[0]);
     }
-    if (check) {
+    if (check && Date.now() - lastArrowPressed > 2000) {
       if (slides[index].classList.contains("loaded")) {
         checkForUpdateImageSrc(slides[index]); // todo, check against current block image in gallery
       }
@@ -83,13 +84,13 @@ function initSlides(id, transitionDelay, widthFix = true) {
   });
 
   arrowLeft.addEventListener("click", () => {
-    console.log("click");
+    lastArrowPressed = Date.now();
     index >= 1 ? index-- : (index = slides.length - 1);
     renderIndex();
   });
 
   arrowRight.addEventListener("click", () => {
-    console.log("click");
+    lastArrowPressed = Date.now();
     index < slides.length - 1 ? index++ : (index = 0);
     renderIndex();
   });
