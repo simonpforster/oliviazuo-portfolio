@@ -11,3 +11,5 @@ function gallery(string $id, array $paths, bool $fix_width = true): void
     }
     echo "</div>";
 }
+
+echo '<script src="./resources/js/solid-gallery.js" type="module"></script>';

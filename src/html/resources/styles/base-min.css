@@ -73,9 +73,12 @@ figure {
     z-index: 2;
     width: 50%;
 }
-.gallery:hover .arrow-left,
-.gallery:hover .arrow-right {
-    display: block;
+
+@media screen and (min-width: 701px) {
+    .gallery:hover .arrow-left,
+    .gallery:hover .arrow-right {
+        display: block;
+    }
 }
 
 .gallery .arrow-left {
