@@ -10,8 +10,8 @@ function initSlides(id, transitionDelay, widthFix = true) {
   console.log("init: " + id);
   let gallery = document.getElementById(id);
   let slides = gallery.querySelectorAll("img:not(.static)");
-  let arrowLeft = gallery.getElementsByClassName("arrow-left")[0];
-  let arrowRight = gallery.getElementsByClassName("arrow-right")[0];
+  let arrowLeft = gallery.getElementsByClassName("arrow-left-container")[0];
+  let arrowRight = gallery.getElementsByClassName("arrow-right-container")[0];
   let lastArrowPressed = Date.now();
 
   slides[0].style.display = "block";
