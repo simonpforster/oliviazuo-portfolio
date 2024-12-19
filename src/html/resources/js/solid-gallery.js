@@ -9,7 +9,10 @@ function isLoaded(image) {
 function initSlides(id, transitionDelay, widthFix = true) {
   console.log("init: " + id);
   let gallery = document.getElementById(id);
-  let slides = gallery.getElementsByTagName("img");
+  let slides = gallery.querySelectorAll("img:not(.static)");
+  let arrowLeft = gallery.getElementsByClassName("arrow-left-container")[0];
+  let arrowRight = gallery.getElementsByClassName("arrow-right-container")[0];
+  let lastArrowPressed = Date.now();
 
   slides[0].style.display = "block";
   for (let i = 1; i < slides.length; i++) {
@@ -44,8 +47,13 @@ function initSlides(id, transitionDelay, widthFix = true) {
 
   let index = 0;
 
-  // show a specific slide
-  function showSlide(slideNumber) {
+  function renderIndex() {
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = i === index ? "block" : "none";
+    }
+  }
+
+  function showSlide() {
     widthFix ? sizeFrameWidth() : sizeFrameHeight();
     let check = false;
     if (index < slides.length - 1) {
@@ -54,17 +62,12 @@ function initSlides(id, transitionDelay, widthFix = true) {
     } else {
       check = isLoaded(slides[0]);
     }
-    if (check) {
+    if (check && Date.now() - lastArrowPressed > 2000) {
       if (slides[index].classList.contains("loaded")) {
         checkForUpdateImageSrc(slides[index]); // todo, check against current block image in gallery
       }
-      for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = i === slideNumber ? "block" : "none";
-      }
-
-      // next index
+      renderIndex();
       index++;
-      // go back to 0 if at the end of slides
       if (index >= slides.length) {
         index = 0;
       }
@@ -80,7 +83,19 @@ function initSlides(id, transitionDelay, widthFix = true) {
     widthFix ? sizeFrameWidth() : sizeFrameHeight();
   });
 
-  setInterval(() => showSlide(index), transitionDelay);
+  arrowLeft.addEventListener("click", () => {
+    lastArrowPressed = Date.now();
+    index >= 1 ? index-- : (index = slides.length - 1);
+    renderIndex();
+  });
+
+  arrowRight.addEventListener("click", () => {
+    lastArrowPressed = Date.now();
+    index < slides.length - 1 ? index++ : (index = 0);
+    renderIndex();
+  });
+
+  setInterval(() => showSlide(), transitionDelay);
 }
 
 let galleries = document.getElementsByClassName("gallery");
