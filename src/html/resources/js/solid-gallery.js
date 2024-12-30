@@ -1,9 +1,7 @@
 import { checkForUpdateImageSrc } from "./image.js";
 
 function isLoaded(image) {
-  return (
-    image.classList.contains("pixel") || image.classList.contains("loaded")
-  );
+  return image.classList.contains("loaded");
 }
 
 function initSlides(
