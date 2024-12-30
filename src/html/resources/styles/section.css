@@ -20,10 +20,11 @@ div.highlight {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.0);
+    background: rgba(255, 255, 255, 0);
     /*box-shadow: inset 0 0 10px rgba(255, 255, 255, 1); !* Inset shadow *!*/
-    box-shadow: inset 3rem 0 3rem white,
-                inset -3rem 0 3rem white; /* Inset shadow */
+    box-shadow:
+        inset 3rem 0 3rem white,
+        inset -3rem 0 3rem white; /* Inset shadow */
     pointer-events: none; /* Ensure clicks go through to the image */
 }
 
@@ -33,13 +34,17 @@ div.highlight {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(255, 255, 255, 0.0);
+    background: rgba(255, 255, 255, 0);
     /*box-shadow: inset 0 0 10px rgba(255, 255, 255, 1); !* Inset shadow *!*/
-    box-shadow: inset 0 3rem 3rem white,
-    inset 0 -3rem 3rem white;
+    box-shadow:
+        inset 0 3rem 3rem white,
+        inset 0 -3rem 3rem white;
     pointer-events: none;
 }
 
+.section .text .text {
+    display: none;
+}
 
 .section > *:not(.empty) {
     padding: 0.5rem 0.75rem 0.5rem;
@@ -52,7 +57,8 @@ div.highlight {
 }
 
 @media screen and (min-width: 701px) {
-    .normal-1-2, .desktop-1-2 {
+    .normal-1-2,
+    .desktop-1-2 {
         width: 50%;
         display: flex;
         flex-direction: column;
@@ -64,7 +70,7 @@ div.highlight {
     }
 
     .section {
-        flex-wrap: wrap ;
+        flex-wrap: wrap;
     }
 
     .section-reverse {
@@ -112,7 +118,7 @@ div.highlight {
     }
 
     .desktop-10 {
-        width: 10%
+        width: 10%;
     }
 
     .desktop-5 {
