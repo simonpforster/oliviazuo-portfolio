@@ -40,6 +40,7 @@ figure {
 }
 
 .gallery {
+    position: relative;
     width: 100%;
 }
 
@@ -47,6 +48,47 @@ figure {
     display: none;
     max-width: 100%;
     max-height: 100%;
+}
+
+.gallery .arrow-left-container,
+.gallery .arrow-right-container {
+    width: 10%;
+    height: 100%;
+    position: absolute;
+}
+
+.gallery .arrow-left-container {
+    left: 0;
+}
+.gallery .arrow-right-container {
+    right: 0;
+}
+
+.gallery .arrow-left,
+.gallery .arrow-right {
+    display: none;
+    position: absolute;
+    top: 47%;
+    opacity: 0.9;
+    z-index: 2;
+    width: 50%;
+}
+
+@media screen and (min-width: 701px) {
+    .gallery:hover .arrow-left,
+    .gallery:hover .arrow-right {
+        display: block;
+    }
+}
+
+.gallery .arrow-left {
+    left: 0;
+    transform: rotate(-90deg);
+}
+
+.gallery .arrow-right {
+    right: 0;
+    transform: rotate(90deg);
 }
 
 hr {

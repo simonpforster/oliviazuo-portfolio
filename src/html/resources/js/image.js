@@ -1,4 +1,4 @@
-let collection = document.getElementsByTagName("img");
+let collection = document.querySelectorAll("img:not(.static)");
 
 function updateImageSrc(image, pixel = false) {
   let fix = image.getAttribute("fix");
