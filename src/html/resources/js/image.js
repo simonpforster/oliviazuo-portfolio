@@ -70,8 +70,12 @@ function updateImageSrcBlur(image) {
 
 function updateAllImageClear() {
   let captions = document.getElementsByTagName("figcaption");
+  let textFields = document.querySelectorAll(".section .text .text");
   for (let i = 0; i < captions.length; i++) {
     captions[i].style.display = "block";
+  }
+  for (let i = 0; i < textFields.length; i++) {
+    textFields[i].style.display = "block";
   }
   allImages(updateImageSrc);
 }
