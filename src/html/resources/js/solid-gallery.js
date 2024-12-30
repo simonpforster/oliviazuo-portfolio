@@ -6,7 +6,12 @@ function isLoaded(image) {
   );
 }
 
-function initSlides(id, transitionDelay, widthFix = true) {
+function initSlides(
+  id,
+  transitionDelay,
+  widthFix = true,
+  contentCover = false,
+) {
   console.log("init: " + id);
   let gallery = document.getElementById(id);
   let slides = gallery.querySelectorAll("img:not(.static)");
@@ -17,6 +22,9 @@ function initSlides(id, transitionDelay, widthFix = true) {
   slides[0].style.display = "block";
   for (let i = 1; i < slides.length; i++) {
     slides[i].style.display = "none";
+    if (contentCover) {
+      slides[i].style.objectFit = "cover";
+    }
   }
 
   function sizeFrameWidth() {
@@ -102,13 +110,16 @@ let galleries = document.getElementsByClassName("gallery");
 
 for (let i = 0; i < galleries.length; i++) {
   let fix = galleries[i].getAttribute("fix");
+  let contentCover = galleries[i].getAttribute("cover");
   if (fix != null) {
-    if (fix === "height") {
-      initSlides(galleries[i].id, 700, false);
+    if (fix === "height" && contentCover == 1) {
+      initSlides(galleries[i].id, 700, false, true);
+    } else if (fix === "height") {
+      initSlides(galleries[i].id, 700, false, false);
+    } else if (contentCover == 1) {
+      initSlides(galleries[i].id, 700, true, false);
     } else {
       initSlides(galleries[i].id, 700);
     }
-  } else {
-    initSlides(galleries[i].id, 700);
   }
 }

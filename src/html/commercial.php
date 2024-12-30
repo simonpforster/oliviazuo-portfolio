@@ -81,7 +81,6 @@
                 <div class="mobile-overlay-x"></div>
             </div>
             <div class="desktop-60 text">
-                <!-- TODO fix covering -->
                 <?php gallery(
                     "gallery-new-balance",
                     [
@@ -90,7 +89,8 @@
                             "width",
                         "/commercial/new-balance/picture-shoe.jpg" => "width",
                     ],
-                    false
+                    false,
+                    true
                 ); ?>
                 <div class="text">
                     <div class="highlight">
