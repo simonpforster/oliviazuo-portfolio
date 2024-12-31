@@ -34,7 +34,8 @@ class ShopDb
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     name TEXT NOT NULL UNIQUE,
                     description TEXT NOT NULL,
-                    price INTEGER NOT NULL
+                    price INTEGER NOT NULL,
+                    image TEXT NOT NULL
                 );
             ");
         } catch (\Exception $e) {

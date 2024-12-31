@@ -58,7 +58,7 @@
             </div>
             <div class="desktop-25 empty"></div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="spectral-archive">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35">
@@ -87,7 +87,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="invisible-feast">
             <div class="normal-1-2 text">
                 <?php gallery("invisible-feast-gallery", [
@@ -144,7 +144,7 @@
                 <img path="/personal/2023/invisible-feast/3-desert.png" fix="width">
             </div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="the-visitor">
             <div class="desktop-30">
                 <?php gallery("the-visitor-gallery-1", [
@@ -182,7 +182,7 @@
             </div>
             <div class="desktop-20 empty"></div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="gutter-and-soul">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35">
@@ -209,7 +209,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="dialogue">
             <div class="desktop-1-2 text">
                 <?php gallery("dialogue-gallery-1", [
@@ -236,7 +236,7 @@
             </div>
             <div class="desktop-15 empty"></div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="another-romance">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35 text">
@@ -271,7 +271,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="obloom">
             <div class="desktop-1-2">
                 <?php gallery("obloom-gallery-1", [
@@ -306,7 +306,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="utopia">
             <div class="desktop-15 empty"></div>
             <div class="desktop-1-2 text">

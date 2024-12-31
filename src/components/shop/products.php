@@ -12,7 +12,8 @@ foreach ($data as &$row) {
         $row["id"],
         $row["name"],
         $row["description"],
-        $row["price"]
+        $row["price"],
+        $row["image"]
     );
 
     echo $prod->render();
