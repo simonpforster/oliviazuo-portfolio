@@ -34,7 +34,6 @@ RUN set -eux; \
     apk update; \
     apk add libffi-dev; \
     docker-php-ext-install ffi
-RUN php -m > /tmp/php.txt
 
 RUN composer install
 
