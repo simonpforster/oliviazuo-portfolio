@@ -10,18 +10,23 @@ class Product
     ) {
     }
 
+    public function decimalPrice()
+    {
+        return $this->price / 100;
+    }
+
     public function render()
     {
-        echo '<div class="product">';
-        echo '<img path="' .
-            $this->image .
-            '" fix="width" style="aspect-ratio:1; object-fit: cover;">';
-        echo '<div class="head">';
-        echo '<div class="name">' . $this->name . "</div>";
-        echo '<div class="price">£' . $this->price / 100 . "</div>";
-        echo "</div>";
-        echo '<div class="description">' . $this->description . "</div>";
-        echo "<button>Add to cart</button>";
-        echo "</div>";
+        echo <<<HTML
+<div class="product">
+    <img path="{$this->image}" fix="width" style="aspect-ratio:1; object-fit: cover;">
+    <div class="head">
+        <div class="name">{$this->name}</div>
+        <div class="price">£{$this->decimalPrice()}</div>
+    </div>
+    <div class="description">{$this->description}</div>
+    <button>Add to cart</button>
+</div>
+HTML;
     }
 }
