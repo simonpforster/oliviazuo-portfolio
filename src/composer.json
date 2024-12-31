@@ -1,5 +1,7 @@
 {
-    "require": {
-        "turso/libsql": "^0.1.1"
-    }
+  "name": "simonpforster/oliviazuo-portfolio",
+  "require": {
+    "turso/libsql": "^0.2.0"
+  },
+  "autoload": {}
 }

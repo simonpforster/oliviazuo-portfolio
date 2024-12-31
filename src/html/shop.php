@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="./resources/styles/gallery-slider.css">
     <link rel="stylesheet" href="./resources/styles/grids-min.css">
     <link rel="stylesheet" href="./resources/styles/custom-grids-min.css">
+    <link rel="stylesheet" href="./resources/styles/shop.css">
 
     <?php require "../components/config.php"; ?>
     <script src="./resources/js/image.js" type="module"></script>
@@ -30,11 +31,10 @@
     <div class="column-container">
         <div class="section">
             <div class="desktop-25 empty">
+                                SHOP STILL WIP
             </div>
-            <div class="desktop-1-2 text">
-                <div class="text">
-                    Coming soon
-                </div>
+            <div id="products" class="desktop-1-2 text">
+                <?php require "../components/shop/products.php"; ?>
             </div>
             <div class="desktop-25 empty"></div>
         </div>
