@@ -1,12 +1,7 @@
 .section {
     box-sizing: border-box;
     display: inline-flex;
-    padding: 0;
-    width: 100%;
-}
-
-.section-divider {
-    height: 8rem;
+    padding: 0 0 8rem;
     width: 100%;
 }
 

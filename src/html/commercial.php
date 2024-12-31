@@ -52,7 +52,7 @@
                      fix="width">
             </div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="new-balance">
             <div class="desktop-30 empty"></div>
             <div class="desktop-10 mobile-slider-x" id="new-balance-illustrations">
@@ -102,7 +102,7 @@
                 </div>
             </div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="budweiser-creative-x">
             <div class="desktop-1-2 text">
                 <div class="text">
@@ -134,7 +134,7 @@
             </div>
             <div class="desktop-25 empty"></div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="budweiser-unmet-gala">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35 text">
@@ -156,7 +156,7 @@
                      fix="width">
             </div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="nyu-shanghai-opening-fall">
             <div class="desktop-40">
                 <img path="/commercial/nyu-shanghai/opening-fall-2022/cover.jpg"
@@ -178,7 +178,7 @@
             </div>
             <div class="desktop-10 empty"></div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="nyu-shanghai-10th-anniversary">
             <div class="desktop-25 text">
                 <img path="/commercial/nyu-shanghai/10th-anniversary/cover.png"
@@ -216,7 +216,7 @@
             </div>
             <div class="desktop-20 empty"></div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="omo">
             <div class="desktop-40 text">
                 <img path="/commercial/omo/packaging-grey-bg.jpg"
@@ -234,7 +234,7 @@
             </div>
             <div class="desktop-30 empty"></div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="peets-coffee-pure-blend">
             <div class="desktop-40 empty"></div>
             <div class="desktop-35 text">
@@ -254,7 +254,7 @@
                      fix="width" style="width:80%;">
             </div>
         </div>
-        <div class="section-divider"></div>
+
         <div class="section" id="peets-coffee-arcteryx">
             <div class="desktop-35 text">
                 <img path="/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg"
