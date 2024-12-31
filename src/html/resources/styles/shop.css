@@ -1,0 +1,35 @@
+#products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.product {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0.75rem;
+}
+
+.product .head {
+    display: flex;
+    flex-direction: row;
+    padding-top: 0.75rem;
+}
+
+.product .head .name {
+    text-transform: uppercase;
+}
+
+.product .head .price {
+    text-align: right;
+    flex-grow: 2;
+}
+
+.product button {
+    position: absolute;
+    bottom: 0;
+}
+
+.product .description {
+    padding: 0.75rem 0 0.75rem;
+}

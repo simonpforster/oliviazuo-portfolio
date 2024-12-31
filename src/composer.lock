@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c323a6b9dc3c6df7a3e7a587b227c2cb",
+    "content-hash": "e8e6d439da82bfbab539968c718ad83c",
     "packages": [
         {
             "name": "turso/libsql",
-            "version": "v0.1.1",
+            "version": "v0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/tursodatabase/libsql-php.git",
-                "reference": "e36391f539f8cbcb2b52e77650acd50ac4c1f7a7"
+                "reference": "7f1efa726d6fb8262bb14e85ad22f1c2acc3431a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tursodatabase/libsql-php/zipball/e36391f539f8cbcb2b52e77650acd50ac4c1f7a7",
-                "reference": "e36391f539f8cbcb2b52e77650acd50ac4c1f7a7",
+                "url": "https://api.github.com/repos/tursodatabase/libsql-php/zipball/7f1efa726d6fb8262bb14e85ad22f1c2acc3431a",
+                "reference": "7f1efa726d6fb8262bb14e85ad22f1c2acc3431a",
                 "shasum": ""
             },
             "require": {
@@ -26,10 +26,14 @@
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^3.64",
+                "phpstan/phpstan": "2.0.x-dev",
                 "phpunit/phpunit": "^11"
             },
             "type": "library",
             "autoload": {
+                "files": [
+                    "src/functions.php"
+                ],
                 "psr-4": {
                     "Libsql\\": "src/",
                     "Libsql\\Tests\\": "tests/"
@@ -51,9 +55,9 @@
             "description": "libSQL bindings for PHP",
             "support": {
                 "issues": "https://github.com/tursodatabase/libsql-php/issues",
-                "source": "https://github.com/tursodatabase/libsql-php/tree/v0.1.1"
+                "source": "https://github.com/tursodatabase/libsql-php/tree/v0.2.0"
             },
-            "time": "2024-10-25T18:57:47+00:00"
+            "time": "2024-12-28T03:52:32+00:00"
         }
     ],
     "packages-dev": [],
