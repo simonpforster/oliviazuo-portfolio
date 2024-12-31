@@ -20,68 +20,68 @@
             </div>
         </div>
         <div class="wide-4 dropdown fill" id="personal">
-            <a class="heading highlight" href="./personal.php">PERSONAL PROJECTS</a>
+            <a class="heading highlight" href="./personal">PERSONAL PROJECTS</a>
             <div class="dropdown-content">
                 <p>
-                    <a class="highlight" href="./personal.php#rerendered-memory">2024</a><br>
-                    <a href="./personal.php#rerendered-memory">Rerendered Memory</a><br>
+                    <a class="highlight" href="./personal#rerendered-memory">2024</a><br>
+                    <a href="./personal#rerendered-memory">Rerendered Memory</a><br>
                 </p>
                 <p>
-                    <a class="highlight" href="./personal.php#spectral-archive">2023</a><br>
-                    <a href="./personal.php#spectral-archive">Spectral Archive</a><br>
-                    <a href="./personal.php#invisible-feast">Invisible Feast</a><br>
+                    <a class="highlight" href="./personal#spectral-archive">2023</a><br>
+                    <a href="./personal#spectral-archive">Spectral Archive</a><br>
+                    <a href="./personal#invisible-feast">Invisible Feast</a><br>
                 </p>
                 <p>
-                    <a class="highlight" href="./personal.php#the-visitor">2022</a><br>
-                    <a href="./personal.php#the-visitor">The Visitor</a><br>
-                    <a href="./personal.php#gutter-and-soul">Gutter and Soul</a><br>
-                    <a href="./personal.php#dialogue">Dialogue</a><br>
+                    <a class="highlight" href="./personal#the-visitor">2022</a><br>
+                    <a href="./personal#the-visitor">The Visitor</a><br>
+                    <a href="./personal#gutter-and-soul">Gutter and Soul</a><br>
+                    <a href="./personal#dialogue">Dialogue</a><br>
                 </p>
                 <p>
-                    <a class="highlight" href="./personal.php#another-romance">2021</a><br>
-                    <a href="./personal.php#another-romance">Another Romance</a><br>
-                    <a href="./personal.php#obloom">Obloom</a><br>
+                    <a class="highlight" href="./personal#another-romance">2021</a><br>
+                    <a href="./personal#another-romance">Another Romance</a><br>
+                    <a href="./personal#obloom">Obloom</a><br>
                 </p>
                 <p>
-                    <a class="highlight" href="./personal.php#utopia">2020</a><br>
-                    <a href="./personal.php#utopia">Utopia</a><br>
+                    <a class="highlight" href="./personal#utopia">2020</a><br>
+                    <a href="./personal#utopia">Utopia</a><br>
                 </p>
             </div>
         </div>
         <div class="wide-4 dropdown fill" id="commercial">
-            <a class="heading highlight" href="./commercial.php">COMMERCIAL PROJECTS</a>
+            <a class="heading highlight" href="./commercial">COMMERCIAL PROJECTS</a>
             <div class="dropdown-content">
                 <p>
-                    <a class="highlight" href="./commercial.php#nike-big-bang">NIKE</a><br>
-                    <a href="./commercial.php#nike-big-bang">The Big Bang Network</a><br>
+                    <a class="highlight" href="./commercial#nike-big-bang">NIKE</a><br>
+                    <a href="./commercial#nike-big-bang">The Big Bang Network</a><br>
                 </p>
                 <p>
-                    <a class="highlight" href="./commercial.php#new-balance">NEW BALANCE</a><br>
-                    <a href="./commercial.php#new-balance">Shanghai Content Factory</a><br>
+                    <a class="highlight" href="./commercial#new-balance">NEW BALANCE</a><br>
+                    <a href="./commercial#new-balance">Shanghai Content Factory</a><br>
                 </p>
                 <p>
-                    <a class="highlight" href="./commercial.php#budweiser-creative-x">BUDWEISWER</a><br>
-                    <a href="./commercial.php#budweiser-creative-x">Annual Creative-X Awards Ceremony</a><br>
-                    <a href="./commercial.php#budweiser-unmet-gala">Unmet Gala<br>
+                    <a class="highlight" href="./commercial#budweiser-creative-x">BUDWEISWER</a><br>
+                    <a href="./commercial#budweiser-creative-x">Annual Creative-X Awards Ceremony</a><br>
+                    <a href="./commercial#budweiser-unmet-gala">Unmet Gala<br>
                 </p>
                 <p>
-                    <a class="highlight" href="./commercial.php#nyu-shanghai-opening-fall">NYU SHANGHAI</a><br>
-                    <a href="./commercial.php#nyu-shanghai-opening-fall">Opening Fall 2022</a><br>
-                    <a href="./commercial.php#nyu-shanghai-10th-anniversary">10th Anniversary Special Edition</a><br>
+                    <a class="highlight" href="./commercial#nyu-shanghai-opening-fall">NYU SHANGHAI</a><br>
+                    <a href="./commercial#nyu-shanghai-opening-fall">Opening Fall 2022</a><br>
+                    <a href="./commercial#nyu-shanghai-10th-anniversary">10th Anniversary Special Edition</a><br>
                 </p>
                 <p>
-                    <a class="highlight" href="./commercial.php#omo">OMO</a><br>
-                    <a href="./commercial.php#omo">Floor Cleaning Formula</a><br>
+                    <a class="highlight" href="./commercial#omo">OMO</a><br>
+                    <a href="./commercial#omo">Floor Cleaning Formula</a><br>
                 </p>
                 <p>
-                    <a class="highlight" href="./commercial.php#peets-coffee-pure-blend">PEET’S COFFEE</a><br>
-                    <a href="./commercial.php#peets-coffee-pure-blend">Pure Blend Packaging</a><br>
-                    <a href="./commercial.php#peets-coffee-arcteryx">Peet’s Coffee x ARC’TERYX Pop-up</a><br>
+                    <a class="highlight" href="./commercial#peets-coffee-pure-blend">PEET’S COFFEE</a><br>
+                    <a href="./commercial#peets-coffee-pure-blend">Pure Blend Packaging</a><br>
+                    <a href="./commercial#peets-coffee-arcteryx">Peet’s Coffee x ARC’TERYX Pop-up</a><br>
                 </p>
             </div>
         </div>
         <div class="slim-4 dropdown fill" id="shop">
-            <a class="heading" href="./shop.php">SHOP</a>
+            <a class="heading" href="./shop">SHOP</a>
             <div style="flex-grow: 1; overflow-wrap: break-word;">
                 <p>
                     <a href="mailto:oliviazuo0428@gmail.com">oliviazuo0428@gmail.com</a><br>

@@ -48,6 +48,7 @@ FROM runnerbase AS runner
 LABEL authors="simonpforster"
 
 COPY php.ini "$PHP_INI_DIR/php.ini"
+COPY apache2.conf /etc/apache2/apache2.conf
 
 COPY src/ /var/www/
 COPY --from=precomposer oliviazuo-portfolio/src/vendor /var/www/vendor/
@@ -55,6 +56,7 @@ COPY --from=minifier **.js /var/www/html/resources/js/
 COPY --from=minifier styles/**.css /var/www/html/resources/styles/
 COPY --from=minifier styles/page/**.css /var/www/html/resources/styles/page/
 
+RUN a2enmod rewrite
 RUN mkdir /var/database
 RUN chown -R root:root /var/database
 RUN chmod 777 /var/database
