@@ -31,6 +31,7 @@
     <div class="column-container">
         <div class="section">
             <div class="desktop-25 empty">
+                                SHOP STILL WIP
             </div>
             <div id="products" class="desktop-1-2 text">
                 <?php require "../components/shop/products.php"; ?>

@@ -38,14 +38,15 @@ RUN php -m > /tmp/php.txt
 
 RUN composer install
 
-FROM php:8.3-apache AS runner
-LABEL authors="simonpforster"
-
+FROM php:8.3-apache AS runnerbase
 RUN set -eux; \
     apt-get update; \
     apt-get install libffi-dev; \
     rm -rf /var/lib/apt/lists/*; \
     docker-php-ext-install ffi
+
+FROM runnerbase AS runner
+LABEL authors="simonpforster"
 
 COPY php.ini "$PHP_INI_DIR/php.ini"
 
@@ -56,5 +57,5 @@ COPY --from=minifier styles/**.css /var/www/html/resources/styles/
 COPY --from=minifier styles/page/**.css /var/www/html/resources/styles/page/
 
 
-RUN mkdir /var/www/database/
-RUN chown -R root:root /var/www/database/
+RUN chown -R root:root /var/www/database
+RUN chmod 777 /var/www/database

@@ -14,7 +14,7 @@ class ShopDb
             path: "../database/portfolio.db",
             url: getenv("TURSO_URL"),
             authToken: getenv("TURSO_AUTH_TOKEN"),
-            syncInterval: 6000 // every minute
+            syncInterval: 100 // every second
         );
     }
 
