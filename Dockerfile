@@ -56,6 +56,6 @@ COPY --from=minifier **.js /var/www/html/resources/js/
 COPY --from=minifier styles/**.css /var/www/html/resources/styles/
 COPY --from=minifier styles/page/**.css /var/www/html/resources/styles/page/
 
-
-RUN chown -R root:root /var/www/database
-RUN chmod 777 /var/www/database
+RUN mkdir /var/database
+RUN chown -R root:root /var/database
+RUN chmod 777 /var/database

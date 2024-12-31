@@ -1,6 +1,6 @@
 .idea/*
 .env
-src/database/*
+database/*
 # All composer dependencies
 src/vendor/*
 *.DS_Store

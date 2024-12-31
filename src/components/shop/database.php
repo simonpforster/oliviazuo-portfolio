@@ -11,7 +11,7 @@ class ShopDb
     final private function __construct()
     {
         $this->db = new Database(
-            path: "../database/portfolio.db",
+            path: "../../database/portfolio.db",
             url: getenv("TURSO_URL"),
             authToken: getenv("TURSO_AUTH_TOKEN"),
             syncInterval: 100 // every second
