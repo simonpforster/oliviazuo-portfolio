@@ -31,10 +31,13 @@
     <div class="column-container">
         <div class="section">
             <div class="desktop-25 empty">
-                                SHOP STILL WIP
+                SHOP STILL WIP<br>
+                SHOPPING CART:
             </div>
-            <div id="products" class="desktop-1-2 text">
-                <?php require "../components/shop/products.php"; ?>
+            <div class="desktop-1-2 text">
+                <div id="products">
+                    <?php require "../components/shop/products.php"; ?>
+                </div>
             </div>
             <div class="desktop-25 empty"></div>
         </div>
