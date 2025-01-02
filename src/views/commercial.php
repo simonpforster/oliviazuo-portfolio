@@ -16,9 +16,10 @@
     <link rel="stylesheet" href="./resources/styles/grids.css">
     <link rel="stylesheet" href="./resources/styles/mobile-gallery-slider.css">
 
-    <?php require "../components/config.php"; ?>
+    <?php require_once "../components/config.php"; jsConfig(); ?>
     <script src="./resources/js/image.js" type="module"></script>
-    <?php require "../components/gallery.php"; ?>
+    <?php require_once (__DIR__ . "/../components/image.php"); ?>
+    <?php require_once (__DIR__ . "/../components/gallery.php"); galleryScript(); ?>
 </head>
 <body>
 <?php include "../components/modal.php"; ?>
@@ -30,7 +31,7 @@
         <div class="section" id="nike-big-bang">
             <div class="desktop-20 empty"></div>
             <div class="desktop-1-2 text">
-                <?php gallery("nike-big-bang-gallery", [
+                <?php echo gallery("nike-big-bang-gallery", [
                     "/commercial/nike/background-2.jpg" => "width",
                     "/commercial/nike/background-1.jpg" => "width",
                     "/commercial/nike/background-3.jpg" => "width",
@@ -112,7 +113,7 @@
                 </div>
             </div>
             <div class="desktop-25">
-                <?php gallery("budweiser-creative-x-gallery", [
+                <?php echo gallery("budweiser-creative-x-gallery", [
                     "/commercial/budweiser/annual-creative-x-awards/1-creative-brand-strategy.jpg" =>
                         "width",
                     "/commercial/budweiser/annual-creative-x-awards/1-scale-and-adapt.jpg" =>
@@ -137,7 +138,7 @@
         <div class="section" id="budweiser-unmet-gala">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35 text">
-                <?php gallery("budweiser-creative-unmet-gala", [
+                <?php echo gallery("budweiser-creative-unmet-gala", [
                     "/commercial/budweiser/unmet-gala/zoom-bg-balcony.png" =>
                         "width",
                     "/commercial/budweiser/unmet-gala/zoom-bg-kitchen.png" =>
@@ -162,7 +163,7 @@
                      fix="width">
             </div>
             <div class="desktop-1-2 text">
-                <?php gallery("nyu-shanghai-opening-fall-gallery", [
+                <?php echo gallery("nyu-shanghai-opening-fall-gallery", [
                     "/commercial/nyu-shanghai/opening-fall-2022/pages-18-19.png" =>
                         "width",
                     "/commercial/nyu-shanghai/opening-fall-2022/pages-spread-21.png" =>
@@ -190,7 +191,7 @@
                 </div>
             </div>
             <div class="desktop-55 ">
-                <?php gallery("nyu-shanghai-10th-anniversary-gallery", [
+                <?php echo gallery("nyu-shanghai-10th-anniversary-gallery", [
                     "/commercial/nyu-shanghai/10th-anniversary/development-spread.png" =>
                         "width",
                     "/commercial/nyu-shanghai/10th-anniversary/development-pages.png" =>
@@ -266,7 +267,7 @@
                 </div>
             </div>
             <div class="desktop-25">
-                <?php gallery("peets-coffee-arcteryx-gallery", [
+                <?php echo gallery("peets-coffee-arcteryx-gallery", [
                     "/commercial/peets-coffee/peets-coffee-x-arcteryx/1-cans.jpg" =>
                         "width",
                     "/commercial/peets-coffee/peets-coffee-x-arcteryx/2-cans.jpg" =>

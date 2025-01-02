@@ -27,6 +27,11 @@
     flex-grow: 2;
 }
 
+.product img {
+    aspect-ratio:1;
+    object-fit: cover;
+}
+
 .product button {
     margin-top: auto;
 }

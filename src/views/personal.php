@@ -16,9 +16,10 @@
     <link rel="stylesheet" href="./resources/styles/grids.css">
     <link rel="stylesheet" href="./resources/styles/gallery-slider.css">
 
-    <?php require "../components/config.php"; ?>
+    <?php require_once "../components/config.php"; jsConfig(); ?>
     <script src="./resources/js/image.js" type="module"></script>
-    <?php require "../components/gallery.php"; ?>
+    <?php require_once (__DIR__ . "/../components/image.php"); ?>
+    <?php require_once (__DIR__ . "/../components/gallery.php"); galleryScript(); ?>
     <script src="https://player.vimeo.com/api/player.js" type="module"></script>
 </head>
 <body>
@@ -61,7 +62,7 @@
         <div class="section" id="spectral-archive">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35">
-                <?php gallery("spectral-archive-gallery", [
+                <?php echo gallery("spectral-archive-gallery", [
                     "/personal/2023/spectral-archive/day-3-1.jpg" => "width",
                     "/personal/2023/spectral-archive/day-3-2.jpg" => "width",
                     "/personal/2023/spectral-archive/day-3-3.jpg" => "width",
@@ -89,7 +90,7 @@
 
         <div class="section" id="invisible-feast">
             <div class="normal-1-2 text">
-                <?php gallery("invisible-feast-gallery", [
+                <?php echo gallery("invisible-feast-gallery", [
                     "/personal/2023/invisible-feast/web-index.png" => "width",
                     "/personal/2023/invisible-feast/web-projects.png" =>
                         "width",
@@ -146,7 +147,7 @@
 
         <div class="section" id="the-visitor">
             <div class="desktop-30">
-                <?php gallery("the-visitor-gallery-1", [
+                <?php echo gallery("the-visitor-gallery-1", [
                     "/personal/2022/the-visitor/drawing-board-7.jpg" => "width",
                     "/personal/2022/the-visitor/drawing-board-6.jpg" => "width",
                     "/personal/2022/the-visitor/drawing-board-5.jpg" => "width",
@@ -157,7 +158,7 @@
                 ]); ?>
             </div>
             <div class="desktop-1-2 text">
-                <?php gallery("the-visitor-gallery-2", [
+                <?php echo gallery("the-visitor-gallery-2", [
                     "/personal/2022/the-visitor/picture-booklet-1.jpg" =>
                         "width",
                     "/personal/2022/the-visitor/picture-booklet-2.jpg" =>
@@ -185,7 +186,7 @@
         <div class="section" id="gutter-and-soul">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35">
-                <?php gallery("gutter-and-soul-gallery", [
+                <?php echo gallery("gutter-and-soul-gallery", [
                     "/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg" =>
                         "width",
                     "/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg" =>
@@ -211,7 +212,7 @@
 
         <div class="section" id="dialogue">
             <div class="desktop-1-2 text">
-                <?php gallery("dialogue-gallery-1", [
+                <?php echo gallery("dialogue-gallery-1", [
                     "/personal/2022/dialogue/alphabet.jpg" => "width",
                     "/personal/2022/dialogue/poster-mockups.jpg" => "width",
                 ]); ?>
@@ -228,7 +229,7 @@
                 </div>
             </div>
             <div class="desktop-35">
-                <?php gallery("dialogue-gallery-2", [
+                <?php echo gallery("dialogue-gallery-2", [
                     "/personal/2022/dialogue/installation-1.jpg" => "width",
                     "/personal/2022/dialogue/installation-2.jpg" => "width",
                 ]); ?>
@@ -239,7 +240,7 @@
         <div class="section" id="another-romance">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35 text">
-                <?php gallery("another-romance-gallery", [
+                <?php echo gallery("another-romance-gallery", [
                     "/personal/2021/another-romance/installation-render-1.jpg" =>
                         "width",
                     "/personal/2021/another-romance/installation-render-3.jpg" =>
@@ -273,7 +274,7 @@
 
         <div class="section" id="obloom">
             <div class="desktop-1-2">
-                <?php gallery("obloom-gallery-1", [
+                <?php echo gallery("obloom-gallery-1", [
                     "/personal/2021/obloom/interface-1.jpg" => "width",
                     "/personal/2021/obloom/interface-2.jpg" => "width",
                     "/personal/2021/obloom/interface-3.jpg" => "width",
@@ -286,7 +287,7 @@
                 <img path="/personal/2021/obloom/floppy-disc.jpg"
                      fix="width">
                 <div class="spacing" style="height: 1.5rem;"></div>
-                <?php gallery("obloom-gallery-2", [
+                <?php echo gallery("obloom-gallery-2", [
                     "/personal/2021/obloom/posters-1.jpg" => "width",
                     "/personal/2021/obloom/posters-2.jpg" => "width",
                 ]); ?>
@@ -325,7 +326,7 @@
                 </div>
             </div>
             <div class="desktop-35">
-                <?php gallery("utopia-gallery", [
+                <?php echo gallery("utopia-gallery", [
                     "/personal/2020/utopia/artboard-1-copy-2.jpg" => "width",
                     "/personal/2020/utopia/artboard-1-copy-1.jpg" => "width",
                     "/personal/2020/utopia/artboard-1-copy-5.jpg" => "width",

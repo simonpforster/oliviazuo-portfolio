@@ -17,10 +17,10 @@
     <link rel="stylesheet" href="./resources/styles/grids.css">
     <link rel="stylesheet" href="./resources/styles/products.css">
 
-    <?php require "../components/config.php"; ?>
+    <?php require_once "../components/config.php"; jsConfig(); ?>
     <script src="./resources/js/image.js" type="module"></script>
-    <?php require "../components/gallery.php"; ?>
-</head>
+    <?php require_once (__DIR__ . "/../components/image.php"); ?>
+    <?php require_once (__DIR__ . "/../components/gallery.php"); galleryScript(); ?></head>
 <body>
 <?php include "../components/modal.php"; ?>
 <div id="screen">
