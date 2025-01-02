@@ -14,7 +14,6 @@
     <link rel="stylesheet" href="./resources/styles/section.css">
     <link rel="stylesheet" href="./resources/styles/page/index.css">
     <link rel="stylesheet" href="./resources/styles/gallery-slider.css">
-    <link rel="stylesheet" href="./resources/styles/grids-min.css">
     <link rel="stylesheet" href="./resources/styles/custom-grids-min.css">
 
     <?php require "../components/config.php"; ?>
