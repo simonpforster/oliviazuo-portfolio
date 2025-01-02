@@ -1,9 +1,4 @@
-#commercial .highlight {
-    color: rgb(0, 0, 255);
-    text-decoration-color: rgb(0, 0, 255);
-}
-
-#offscreen .highlight {
+#commercial .highlight, #offscreen .highlight{
     color: rgb(0, 0, 255);
     text-decoration-color: rgb(0, 0, 255);
 }

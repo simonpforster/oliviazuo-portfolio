@@ -1,9 +1,4 @@
-#personal .highlight {
-    color: rgba(29, 200, 177, 0.85);
-    text-decoration-color: rgba(29, 200, 177, 0.85);
-}
-
-#offscreen .highlight {
+#personal .highlight, #offscreen .highlight  {
     color: rgba(29, 200, 177, 0.85);
     text-decoration-color: rgba(29, 200, 177, 0.85);
 }
