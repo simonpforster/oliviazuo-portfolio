@@ -40,15 +40,17 @@ function updateAllImages() {
 }
 
 function checkForUpdateImageSrc(image) {
-    let ratioWidth =
-        image.naturalWidth / parseInt(window.getComputedStyle(image).width);
-    let ratioHeight =
-        image.naturalHeight / parseInt(window.getComputedStyle(image).height);
-    if (
-        (ratioWidth < 2 && ratioHeight !== 0 && !isNaN(ratioHeight)) ||
-        (ratioWidth < 2 && ratioWidth !== 0 && !isNaN(ratioWidth))
-    ) {
-        updateImageSrc(image);
+    if (image.classList.contains("loaded")) {
+        let ratioWidth =
+            image.naturalWidth / parseInt(window.getComputedStyle(image).width);
+        let ratioHeight =
+            image.naturalHeight / parseInt(window.getComputedStyle(image).height);
+        if (
+            (ratioWidth < 2 && ratioHeight !== 0 && !isNaN(ratioHeight)) ||
+            (ratioWidth < 2 && ratioWidth !== 0 && !isNaN(ratioWidth))
+        ) {
+            updateImageSrc(image);
+        }
     }
 }
 
