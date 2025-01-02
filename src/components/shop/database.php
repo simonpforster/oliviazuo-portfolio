@@ -17,6 +17,7 @@ class ShopDb
                 authToken: getenv("TURSO_AUTH_TOKEN"),
                 syncInterval: 300 // every 3 seconds
             );
+            $this->db->sync();
         } catch (\Exception $e) {
             error_log("Database connection error: " . $e->getMessage());
             throw new \RuntimeException(
