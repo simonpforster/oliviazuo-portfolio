@@ -254,6 +254,7 @@
                 </figure>
             </div>
         </div>
+        <div style="height: 8rem;"></div>
     </div>
 </div>
 <?php include "../components/footer.php"; ?>
