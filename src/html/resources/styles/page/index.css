@@ -1,14 +1,4 @@
-#index .highlight {
-    color: rgb(255, 59, 228);
-    text-decoration-color: rgb(255, 59, 228);
-}
-
-#offscreen .highlight {
-    color: rgb(255, 59, 228);
-    text-decoration-color: rgb(255, 59, 228);
-}
-
-#archive-arrow {
+#index .highlight, #offscreen .highlight, #archive-arrow {
     color: rgb(255, 59, 228);
     text-decoration-color: rgb(255, 59, 228);
 }

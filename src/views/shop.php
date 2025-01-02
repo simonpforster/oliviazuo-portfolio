@@ -14,8 +14,7 @@
     <link rel="stylesheet" href="./resources/styles/section.css">
     <link rel="stylesheet" href="./resources/styles/page/shop.css">
     <link rel="stylesheet" href="./resources/styles/gallery-slider.css">
-    <link rel="stylesheet" href="./resources/styles/grids-min.css">
-    <link rel="stylesheet" href="./resources/styles/custom-grids-min.css">
+    <link rel="stylesheet" href="./resources/styles/grids.css">
     <link rel="stylesheet" href="./resources/styles/products.css">
 
     <?php require "../components/config.php"; ?>
@@ -31,10 +30,13 @@
     <div class="column-container">
         <div class="section">
             <div class="desktop-25 empty">
-                                SHOP STILL WIP
+                SHOP STILL WIP<br>
+                SHOPPING CART:
             </div>
-            <div id="products" class="desktop-1-2 text">
-                <?php require "../components/shop/products.php"; ?>
+            <div class="desktop-1-2 text">
+                <div id="products">
+                    <?php require "../components/shop/products.php"; ?>
+                </div>
             </div>
             <div class="desktop-25 empty"></div>
         </div>

@@ -4,18 +4,18 @@
         <hr>
         <div id="rail" class="pure-g">
             <div class="footer-1-2">
-                <div class="footer-left" id="mailto-footer">
+                <div id="mailto-footer" class="footer-left">
                     <a href="mailto:oliviazuo0428@gmail.com">EMAIL</a>
                 </div>
-                <div class="footer-right">
+                <div id="instagram-footer" class="footer-right">
                     <a href="https://www.instagram.com/l1v.isliving/">INSTAGRAM</a>
                 </div>
             </div>
             <div class="footer-1-2">
-                <div class="footer-left">
+                <div id="vimeo-footer" class="footer-left">
                     <a href="https://vimeo.com/user146109949">VIMEO</a>
                 </div>
-                <div id="trademark" class="footer-right">
+                <div id="trademark-footer" class="footer-right">
                     © OLIVIA ZUO, 2024
                 </div>
             </div>

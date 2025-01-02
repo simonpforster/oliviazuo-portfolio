@@ -65,7 +65,10 @@
 
     .footer-right {
         box-sizing: border-box;
-        width: 33.33%;
+    }
+
+    #instagram-footer {
+        width: 33.3%;
     }
 
     #mailto-footer {

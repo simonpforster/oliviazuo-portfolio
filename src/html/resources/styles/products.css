@@ -1,13 +1,15 @@
 #products {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    display: grid;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .product {
-    width: 50%;
     box-sizing: border-box;
     padding: 0.75rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 }
 
 .product .head {
@@ -26,8 +28,7 @@
 }
 
 .product button {
-    position: absolute;
-    bottom: 0;
+    margin-top: auto;
 }
 
 .product .description {
