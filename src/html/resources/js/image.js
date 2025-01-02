@@ -65,7 +65,7 @@ function allImages(thing) {
 function checkAllBlurred() {
     let blurred = true;
     allImages(function (image) {
-        if (!image.classList.contains("pixel")) { blurred = false; }
+        if (!image.complete) { blurred = false; }
     });
     return blurred;
 }
@@ -132,7 +132,6 @@ allImages(
         image.addEventListener(
             "load",
             () => {
-                image.classList.add("pixel");
                 if (checkAllBlurred()) {
                     if (document.readyState === "complete") {
                         updateAllImages();
