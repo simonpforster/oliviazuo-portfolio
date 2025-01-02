@@ -16,10 +16,12 @@
     <link rel="stylesheet" href="./resources/styles/grids.css">
     <link rel="stylesheet" href="./resources/styles/mobile-gallery-slider.css">
 
-    <?php require_once "../components/config.php"; jsConfig(); ?>
+    <?php require_once "../components/config.php";
+    jsConfig(); ?>
     <script src="./resources/js/image.js" type="module"></script>
-    <?php require_once (__DIR__ . "/../components/image.php"); ?>
-    <?php require_once (__DIR__ . "/../components/gallery.php"); galleryScript(); ?>
+    <?php require_once(__DIR__ . "/../components/image.php"); ?>
+    <?php require_once(__DIR__ . "/../components/gallery.php");
+    galleryScript(); ?>
 </head>
 <body>
 <?php include "../components/modal.php"; ?>
@@ -44,12 +46,9 @@
                 </div>
             </div>
             <div class="desktop-30">
-                <img path="/commercial/nike/icon-1.png"
-                     fix="width">
-                <img path="/commercial/nike/icon-3.png"
-                     fix="width">
-                <img path="/commercial/nike/icon-2.png"
-                     fix="width">
+                <?php echo image("/commercial/nike/icon-1.png"); ?>
+                <?php echo image("/commercial/nike/icon-3.png"); ?>
+                <?php echo image("/commercial/nike/icon-2.png"); ?>
             </div>
         </div>
 
@@ -58,30 +57,25 @@
             <div class="desktop-10 mobile-slider-x" id="new-balance-illustrations">
                 <ul>
                     <li>
-                        <img path="/commercial/new-balance/illustration-monitor.png"
-                             fix="width">
+                        <?php echo image("/commercial/new-balance/illustration-monitor.png"); ?>
                     </li>
                     <li>
-                        <img path="/commercial/new-balance/illustration-megaphone.png"
-                             fix="width">
+                        <?php echo image("/commercial/new-balance/illustration-megaphone.png"); ?>
                     </li>
                     <li>
-                        <img path="/commercial/new-balance/illustration-clapperboard.png"
-                             fix="width">
+                        <?php echo image("/commercial/new-balance/illustration-clapperboard.png"); ?>
                     </li>
                     <li>
-                        <img path="/commercial/new-balance/illustration-laptop.png"
-                             fix="width">
+                        <?php echo image("/commercial/new-balance/illustration-laptop.png"); ?>
                     </li>
                     <li>
-                        <img path="/commercial/new-balance/illustration-lightbulb.png"
-                             fix="width">
+                        <?php echo image("/commercial/new-balance/illustration-lightbulb.png"); ?>
                     </li>
                 </ul>
                 <div class="mobile-overlay-x"></div>
             </div>
             <div class="desktop-60 text">
-                <?php gallery(
+                <?php echo gallery(
                     "gallery-new-balance",
                     [
                         "/commercial/new-balance/picture-shoot.jpg" => "width",
@@ -152,15 +146,13 @@
                 </div>
             </div>
             <div class="desktop-1-2">
-                <img path="/commercial/budweiser/unmet-gala/zoom-bg-bedroom.png"
-                     fix="width">
+                <?php echo image("/commercial/budweiser/unmet-gala/zoom-bg-bedroom.png"); ?>
             </div>
         </div>
 
         <div class="section" id="nyu-shanghai-opening-fall">
             <div class="desktop-40">
-                <img path="/commercial/nyu-shanghai/opening-fall-2022/cover.jpg"
-                     fix="width">
+                <?php echo image("/commercial/nyu-shanghai/opening-fall-2022/cover.jpg"); ?>
             </div>
             <div class="desktop-1-2 text">
                 <?php echo gallery("nyu-shanghai-opening-fall-gallery", [
@@ -181,8 +173,7 @@
 
         <div class="section" id="nyu-shanghai-10th-anniversary">
             <div class="desktop-25 text">
-                <img path="/commercial/nyu-shanghai/10th-anniversary/cover.png"
-                     fix="width">
+                <?php echo image("/commercial/nyu-shanghai/10th-anniversary/cover.png"); ?>
                 <div class="text">
                     <div class="highlight">NYU SHANGHAI</div>
                     <div>
@@ -219,8 +210,7 @@
 
         <div class="section" id="omo">
             <div class="desktop-40 text">
-                <img path="/commercial/omo/packaging-grey-bg.jpg"
-                     fix="width">
+                <?php echo image("/commercial/omo/packaging-grey-bg.jpg"); ?>
                 <div class="text">
                     <div class="highlight">OMO</div>
                     <div>
@@ -229,8 +219,7 @@
                 </div>
             </div>
             <div class="desktop-30 ">
-                <img path="/commercial/omo/ad.jpg"
-                     fix="width">
+                <?php echo image("/commercial/omo/ad.jpg"); ?>
             </div>
             <div class="desktop-30 empty"></div>
         </div>
@@ -238,8 +227,7 @@
         <div class="section" id="peets-coffee-pure-blend">
             <div class="desktop-40 empty"></div>
             <div class="desktop-35 text">
-                <img path="/commercial/peets-coffee/pure-blend/PET-packaging-picture.jpg"
-                     fix="width">
+                <?php echo image("/commercial/peets-coffee/pure-blend/PET-packaging-picture.jpg"); ?>
                 <div class="text">
                     <div class="highlight">Peet's Coffee</div>
                     <div>
@@ -248,17 +236,16 @@
                 </div>
             </div>
             <div class="desktop-25">
-                <img path="/commercial/peets-coffee/pure-blend/PET-packaging-schematic-2.png"
-                     fix="width" style="padding-bottom:1.5rem;">
-                <img path="/commercial/peets-coffee/pure-blend/PET-packaging-schematic-1.png"
-                     fix="width" style="width:80%;">
+                <?php
+                    echo image("/commercial/peets-coffee/pure-blend/PET-packaging-schematic-2.png");
+                    echo image("/commercial/peets-coffee/pure-blend/PET-packaging-schematic-1.png");
+                ?>
             </div>
         </div>
 
         <div class="section" id="peets-coffee-arcteryx">
             <div class="desktop-35 text">
-                <img path="/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg"
-                     fix="width">
+                <?php echo image("/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg"); ?>
                 <div class="text">
                     <div class="highlight">PEET’S COFFEE x ARC’TERYX</div>
                     <div>

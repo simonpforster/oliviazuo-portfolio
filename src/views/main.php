@@ -118,8 +118,8 @@
                 <!-- Personal: Invisible Feast-->
                 <figure>
                     <?php
-                        echo image("/personal/2023/invisible-feast/3-desert.png");
-                        echo image("/personal/2023/invisible-feast/collection-web.png");
+                    echo image("/personal/2023/invisible-feast/3-desert.png");
+                    echo image("/personal/2023/invisible-feast/collection-web.png");
                     ?>
                     <figcaption>Invisible Feast</figcaption>
                 </figure>
@@ -136,18 +136,18 @@
                 <!-- Commercial: New Balance SCF -->
                 <figure>
                     <?php
-                        gallery("new-balance",
-                            [
-                                "/commercial/new-balance/picture-shoe.jpg" =>
-                                    "width",
-                                "/commercial/new-balance/picture-stand-stickers.jpg" =>
-                                    "width",
-                                "/commercial/new-balance/picture-garnish-station.jpg" =>
-                                    "width",
-                            ],
-                            false
-                        );
-                        echo image("/commercial/new-balance/picture-shoot.jpg");
+                    gallery("new-balance",
+                        [
+                            "/commercial/new-balance/picture-shoe.jpg" =>
+                                "width",
+                            "/commercial/new-balance/picture-stand-stickers.jpg" =>
+                                "width",
+                            "/commercial/new-balance/picture-garnish-station.jpg" =>
+                                "width",
+                        ],
+                        false
+                    );
+                    echo image("/commercial/new-balance/picture-shoot.jpg");
                     ?>
                     <figcaption>New Balance SCF</figcaption>
                 </figure>
@@ -157,11 +157,11 @@
                 <!-- Personal: Gutter and Soul -->
                 <figure>
                     <?php
-                        echo image("/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg");
-                        echo image("/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg");
-                        echo image("/personal/2022/gutter-and-soul/phase-3-the-dive.jpg");
-                        echo image("/personal/2022/gutter-and-soul/phase-4-wishful-thinking.jpg");
-                        echo image("/personal/2022/gutter-and-soul/phase-5-dream-comes-true.jpg");
+                    echo image("/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg");
+                    echo image("/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg");
+                    echo image("/personal/2022/gutter-and-soul/phase-3-the-dive.jpg");
+                    echo image("/personal/2022/gutter-and-soul/phase-4-wishful-thinking.jpg");
+                    echo image("/personal/2022/gutter-and-soul/phase-5-dream-comes-true.jpg");
                     ?>
                     <figcaption>Gutter and Soul</figcaption>
                 </figure>
@@ -187,42 +187,42 @@
                 <!-- Personal: Obloom -->
                 <figure>
                     <?php
-                        echo gallery("obloom", [
-                            "/personal/2021/obloom/interface-1.jpg" => "width",
-                            "/personal/2021/obloom/interface-2.jpg" => "width",
-                            "/personal/2021/obloom/interface-3.jpg" => "width",
-                            "/personal/2021/obloom/interface-4.jpg" => "width",
-                        ]);
-                        echo image("/personal/2021/obloom/compact-disc.jpg");
-                        echo image("/personal/2021/obloom/floppy-disc.jpg");
-                        echo image("/personal/2021/obloom/cassette-tape.jpg");
+                    echo gallery("obloom", [
+                        "/personal/2021/obloom/interface-1.jpg" => "width",
+                        "/personal/2021/obloom/interface-2.jpg" => "width",
+                        "/personal/2021/obloom/interface-3.jpg" => "width",
+                        "/personal/2021/obloom/interface-4.jpg" => "width",
+                    ]);
+                    echo image("/personal/2021/obloom/compact-disc.jpg");
+                    echo image("/personal/2021/obloom/floppy-disc.jpg");
+                    echo image("/personal/2021/obloom/cassette-tape.jpg");
                     ?>
                     <figcaption>Obloom</figcaption>
                 </figure>
                 <!-- Commercial: Budweiser Annual Creative-X Awards Ceremony -->
                 <figure>
                     <?php
-                        echo gallery("bacac", [
-                            "/commercial/budweiser/annual-creative-x-awards/1-creative-brand-strategy.jpg" =>
-                                "width",
-                            "/commercial/budweiser/annual-creative-x-awards/1-scale-and-adapt.jpg" =>
-                                "width",
-                            "/commercial/budweiser/annual-creative-x-awards/2-creative-execution.jpg" =>
-                                "width",
-                            "/commercial/budweiser/annual-creative-x-awards/2-entertainment.jpg" =>
-                                "width",
-                            "/commercial/budweiser/annual-creative-x-awards/3-better-world.jpg" =>
-                                "width",
-                            "/commercial/budweiser/annual-creative-x-awards/3-smart-drinking.jpg" =>
-                                "width",
-                            "/commercial/budweiser/annual-creative-x-awards/4-creative-partner.jpg" =>
-                                "width",
-                            "/commercial/budweiser/annual-creative-x-awards/4-draftline-of-the-year.jpg" =>
-                                "width",
-                            "/commercial/budweiser/annual-creative-x-awards/4-grand-prix.jpg" =>
-                                "width",
-                        ]);
-                        echo image("/commercial/budweiser/annual-creative-x-awards/picture.jpg");
+                    echo gallery("bacac", [
+                        "/commercial/budweiser/annual-creative-x-awards/1-creative-brand-strategy.jpg" =>
+                            "width",
+                        "/commercial/budweiser/annual-creative-x-awards/1-scale-and-adapt.jpg" =>
+                            "width",
+                        "/commercial/budweiser/annual-creative-x-awards/2-creative-execution.jpg" =>
+                            "width",
+                        "/commercial/budweiser/annual-creative-x-awards/2-entertainment.jpg" =>
+                            "width",
+                        "/commercial/budweiser/annual-creative-x-awards/3-better-world.jpg" =>
+                            "width",
+                        "/commercial/budweiser/annual-creative-x-awards/3-smart-drinking.jpg" =>
+                            "width",
+                        "/commercial/budweiser/annual-creative-x-awards/4-creative-partner.jpg" =>
+                            "width",
+                        "/commercial/budweiser/annual-creative-x-awards/4-draftline-of-the-year.jpg" =>
+                            "width",
+                        "/commercial/budweiser/annual-creative-x-awards/4-grand-prix.jpg" =>
+                            "width",
+                    ]);
+                    echo image("/commercial/budweiser/annual-creative-x-awards/picture.jpg");
                     ?>
                     <figcaption>Budweiser Annual Creative-X Awards Ceremony</figcaption>
                 </figure>
@@ -232,8 +232,8 @@
                 <!-- Personal: Another Romance -->
                 <figure>
                     <?php
-                        echo image("/personal/2021/another-romance/marble-screen.jpg");
-                        echo image("/personal/2021/another-romance/installation-picture.jpg");
+                    echo image("/personal/2021/another-romance/marble-screen.jpg");
+                    echo image("/personal/2021/another-romance/installation-picture.jpg");
                     ?>
                     <figcaption>Another Romance</figcaption>
                 </figure>
@@ -245,10 +245,10 @@
                 <!-- Commercial: Budweiser Zoom Background -->
                 <figure>
                     <?php
-                        echo image("/commercial/budweiser/unmet-gala/zoom-bg-kitchen.png");
-                        echo image("/commercial/budweiser/unmet-gala/zoom-bg-bedroom.png");
-                        echo image("/commercial/budweiser/unmet-gala/zoom-bg-living-room.png");
-                        echo image("/commercial/budweiser/unmet-gala/zoom-bg-balcony.png");
+                    echo image("/commercial/budweiser/unmet-gala/zoom-bg-kitchen.png");
+                    echo image("/commercial/budweiser/unmet-gala/zoom-bg-bedroom.png");
+                    echo image("/commercial/budweiser/unmet-gala/zoom-bg-living-room.png");
+                    echo image("/commercial/budweiser/unmet-gala/zoom-bg-balcony.png");
                     ?>
                     <figcaption>Budweiser Zoom Background</figcaption>
                 </figure>

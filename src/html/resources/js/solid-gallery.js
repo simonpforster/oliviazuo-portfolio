@@ -115,7 +115,7 @@ for (let i = 0; i < galleries.length; i++) {
     } else if (fix === "height") {
       initSlides(galleries[i].id, 700, false, false);
     } else if (contentCover == 1) {
-      initSlides(galleries[i].id, 700, true, false);
+      initSlides(galleries[i].id, 700, true, true);
     } else {
       initSlides(galleries[i].id, 700);
     }
