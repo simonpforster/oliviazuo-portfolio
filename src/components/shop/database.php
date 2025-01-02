@@ -10,12 +10,19 @@ class ShopDb
 
     final private function __construct()
     {
-        $this->db = new Database(
-            path: "../../database/portfolio.db",
-            url: getenv("TURSO_URL"),
-            authToken: getenv("TURSO_AUTH_TOKEN"),
-            syncInterval: 100 // every second
-        );
+        try {
+            $this->db = new Database(
+                path: "../../database/portfolio.db",
+                url: getenv("TURSO_URL"),
+                authToken: getenv("TURSO_AUTH_TOKEN"),
+                syncInterval: 100 // every second
+            );
+        } catch (\Exception $e) {
+            error_log("Database connection error: " . $e->getMessage());
+            throw new \RuntimeException(
+                "Failed to connect to database: " . $e->getMessage()
+            );
+        }
     }
 
     public static function get(): ShopDb
