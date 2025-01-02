@@ -15,7 +15,7 @@ class ShopDb
                 path: "../../database/portfolio.db",
                 url: getenv("TURSO_URL"),
                 authToken: getenv("TURSO_AUTH_TOKEN"),
-                syncInterval: 100 // every second
+                syncInterval: 300 // every 3 seconds
             );
         } catch (\Exception $e) {
             error_log("Database connection error: " . $e->getMessage());
@@ -38,10 +38,10 @@ class ShopDb
         try {
             $this->db->execute("
                 CREATE TABLE IF NOT EXISTS products (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                    id INT PRIMARY KEY AUTOINCREMENT,
                     name TEXT NOT NULL UNIQUE,
                     description TEXT NOT NULL,
-                    price INTEGER NOT NULL,
+                    price INT NOT NULL,
                     image TEXT NOT NULL
                 );
             ");
