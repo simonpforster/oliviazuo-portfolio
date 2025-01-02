@@ -1,4 +1,6 @@
 <?php
+require_once (__DIR__ . "/../image.php");
+
 class Product
 {
     final public function __construct(
@@ -10,21 +12,22 @@ class Product
     ) {
     }
 
-    public function decimalPrice()
+    public function decimalPrice(): float|int
     {
         return $this->price / 100;
     }
 
-    public function render()
+    public function render(): string
     {
-        echo <<<HTML
+        $imageFn = 'image';
+        return <<<HTML
 <div class="product">
-    <img path="{$this->image}" fix="width" style="aspect-ratio:1; object-fit: cover;">
+    {$imageFn($this->image)}
     <div class="head">
-        <div class="name">{$this->name}</div>
+        <div class="name">$this->name</div>
         <div class="price">£{$this->decimalPrice()}</div>
     </div>
-    <div class="description">{$this->description}</div>
+    <div class="description">$this->description</div>
     <button>Add to cart</button>
 </div>
 HTML;

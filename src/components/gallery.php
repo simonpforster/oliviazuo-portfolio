@@ -1,25 +1,27 @@
 <?php
+require_once (__DIR__ . "/image.php");
 
 function gallery(
     string $id,
     array $paths,
-    bool $fix_width = true,
+    bool $widthFix = false,
     bool $contentCover = false
-): void {
-    $fix = $fix_width ? "width" : "height";
-    echo '<div class="gallery" id="' .
-        $id .
-        '" fix="' .
-        $fix .
-        '" cover="' .
-        $contentCover .
-        '">';
-    echo '<div class="arrow-left-container"><img class="static arrow-left" src="./resources/icons/arrow.svg"></img></div>';
-    echo '<div class="arrow-right-container"><img class="static arrow-right" src="./resources/icons/arrow.svg"></img></div>';
+): string {
+    $fixValue = $widthFix ? "width" : "height";
+    $images = "";
     foreach ($paths as $path => $fix) {
-        echo '<img path="' . $path . '" fix="' . $fix . '"/>';
+        $images = $images . image($path);
     }
-    echo "</div>";
+    return <<<HTML
+<div class="gallery" id="$id" fix="$fixValue" cover="$contentCover">
+    <div class="arrow-left-container"><img class="static arrow-left" src="./resources/icons/arrow.svg"></div>
+    <div class="arrow-right-container"><img class="static arrow-right" src="./resources/icons/arrow.svg"></div>
+    $images
+</div>
+HTML;
+
 }
 
-echo '<script src="./resources/js/solid-gallery.js" type="module"></script>';
+function galleryScript(): void {
+    echo '<script src="./resources/js/solid-gallery.js" type="module"></script>';
+}

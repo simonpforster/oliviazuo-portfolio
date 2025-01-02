@@ -16,9 +16,10 @@
     <link rel="stylesheet" href="./resources/styles/grids.css">
     <link rel="stylesheet" href="./resources/styles/gallery-slider.css">
 
-    <?php require "../components/config.php"; ?>
+    <?php require_once "../components/config.php"; jsConfig(); ?>
     <script src="./resources/js/image.js" type="module"></script>
-    <?php require "../components/gallery.php"; ?>
+    <?php require_once (__DIR__ . "/../components/image.php"); ?>
+    <?php require_once (__DIR__ . "/../components/gallery.php"); galleryScript(); ?>
     <script src="https://player.vimeo.com/api/player.js" type="module"></script>
 </head>
 <body>
@@ -30,12 +31,12 @@
     <div class="column-container">
         <div class="section" id="rerendered-memory">
             <div class="desktop-25">
-                <img path="/personal/2024/rerendered-memory/combine-scan.jpg" fix="width">
+                <?php echo image("/personal/2024/rerendered-memory/combine-scan.jpg"); ?>
                 <div class="spacing" style="height: 1.5rem;"></div>
-                <img path="/personal/2024/rerendered-memory/poster-picture-printer.jpg" fix="width">
+                <?php echo image("/personal/2024/rerendered-memory/poster-picture-printer.jpg"); ?>
             </div>
             <div class="desktop-1-2 text">
-                <img path="/personal/2024/rerendered-memory/poster-scan.jpg" fix="width">
+                <?php echo image("/personal/2024/rerendered-memory/poster-scan.jpg"); ?>
                 <div class="text">
                     <div class="highlight">RERENDERED MEMORY, 2024</div>
                     <div>
@@ -61,7 +62,7 @@
         <div class="section" id="spectral-archive">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35">
-                <?php gallery("spectral-archive-gallery", [
+                <?php echo gallery("spectral-archive-gallery", [
                     "/personal/2023/spectral-archive/day-3-1.jpg" => "width",
                     "/personal/2023/spectral-archive/day-3-2.jpg" => "width",
                     "/personal/2023/spectral-archive/day-3-3.jpg" => "width",
@@ -71,8 +72,7 @@
                 ]); ?>
             </div>
             <div class="desktop-1-2 text">
-                <img path="/personal/2023/spectral-archive/archive.jpg" fix="width"
-                     style="aspect-ratio: 1.15; object-fit: cover;">
+                <?php echo image("/personal/2023/spectral-archive/archive.jpg"); ?>
                 <div class="text">
                     <div class="highlight">SPECTRAL ARCHIVE, 2023</div>
                     <div>
@@ -89,7 +89,7 @@
 
         <div class="section" id="invisible-feast">
             <div class="normal-1-2 text">
-                <?php gallery("invisible-feast-gallery", [
+                <?php echo gallery("invisible-feast-gallery", [
                     "/personal/2023/invisible-feast/web-index.png" => "width",
                     "/personal/2023/invisible-feast/web-projects.png" =>
                         "width",
@@ -117,36 +117,31 @@
                 <div class="slider">
                     <ul>
                         <li>
-                            <img path="/personal/2023/invisible-feast/appetizer.png"
-                                 fix="width">
+                            <?php echo image("/personal/2023/invisible-feast/appetizer.png"); ?>
                         </li>
                         <li>
-                            <img path="/personal/2023/invisible-feast/dessert.png"
-                                 fix="width">
+                            <?php echo image("/personal/2023/invisible-feast/dessert.png"); ?>
                         </li>
                         <li>
-                            <img path="/personal/2023/invisible-feast/main-course.png"
-                                 fix="width">
+                            <?php echo image("/personal/2023/invisible-feast/main-course.png"); ?>
                         </li>
                         <li>
-                            <img path="/personal/2023/invisible-feast/salad.png"
-                                 fix="width">
+                            <?php echo image("/personal/2023/invisible-feast/salad.png"); ?>
                         </li>
                         <li>
-                            <img path="/personal/2023/invisible-feast/staple-food.png"
-                                 fix="width">
+                            <?php echo image("/personal/2023/invisible-feast/staple-food.png"); ?>
                         </li>
                     </ul>
                     <div class="overlay-x"></div>
                 </div>
                 <div class="highlight" style="margin-left: auto; horiz-align: right;">SLIDE →</div>
-                <img path="/personal/2023/invisible-feast/3-desert.png" fix="width">
+                <?php echo image("/personal/2023/invisible-feast/3-desert.png"); ?>
             </div>
         </div>
 
         <div class="section" id="the-visitor">
             <div class="desktop-30">
-                <?php gallery("the-visitor-gallery-1", [
+                <?php echo gallery("the-visitor-gallery-1", [
                     "/personal/2022/the-visitor/drawing-board-7.jpg" => "width",
                     "/personal/2022/the-visitor/drawing-board-6.jpg" => "width",
                     "/personal/2022/the-visitor/drawing-board-5.jpg" => "width",
@@ -157,7 +152,7 @@
                 ]); ?>
             </div>
             <div class="desktop-1-2 text">
-                <?php gallery("the-visitor-gallery-2", [
+                <?php echo gallery("the-visitor-gallery-2", [
                     "/personal/2022/the-visitor/picture-booklet-1.jpg" =>
                         "width",
                     "/personal/2022/the-visitor/picture-booklet-2.jpg" =>
@@ -185,7 +180,7 @@
         <div class="section" id="gutter-and-soul">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35">
-                <?php gallery("gutter-and-soul-gallery", [
+                <?php echo gallery("gutter-and-soul-gallery", [
                     "/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg" =>
                         "width",
                     "/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg" =>
@@ -193,8 +188,7 @@
                 ]); ?>
             </div>
             <div class="desktop-1-2 text">
-                <img path="/personal/2022/gutter-and-soul/phase-3-the-dive.jpg"
-                     fix="width">
+                <?php echo image("/personal/2022/gutter-and-soul/phase-3-the-dive.jpg"); ?>
                 <div class="text">
                     <div class="highlight">GUTTER AND SOUL, 2022</div>
                     <div>
@@ -211,7 +205,7 @@
 
         <div class="section" id="dialogue">
             <div class="desktop-1-2 text">
-                <?php gallery("dialogue-gallery-1", [
+                <?php echo gallery("dialogue-gallery-1", [
                     "/personal/2022/dialogue/alphabet.jpg" => "width",
                     "/personal/2022/dialogue/poster-mockups.jpg" => "width",
                 ]); ?>
@@ -228,7 +222,7 @@
                 </div>
             </div>
             <div class="desktop-35">
-                <?php gallery("dialogue-gallery-2", [
+                <?php echo gallery("dialogue-gallery-2", [
                     "/personal/2022/dialogue/installation-1.jpg" => "width",
                     "/personal/2022/dialogue/installation-2.jpg" => "width",
                 ]); ?>
@@ -239,15 +233,14 @@
         <div class="section" id="another-romance">
             <div class="desktop-15 empty"></div>
             <div class="desktop-35 text">
-                <?php gallery("another-romance-gallery", [
+                <?php echo gallery("another-romance-gallery", [
                     "/personal/2021/another-romance/installation-render-1.jpg" =>
                         "width",
                     "/personal/2021/another-romance/installation-render-3.jpg" =>
                         "width",
                 ]); ?>
                 <div class="spacing" style="height: 1.5rem;"></div>
-                <img path="/personal/2021/another-romance/installation-picture.jpg"
-                     fix="width">
+                <?php echo image("/personal/2021/another-romance/installation-picture.jpg"); ?>
                 <div class="text">
                     <div class="highlight">ANOTHER ROMANCE, 2022</div>
                     <div>
@@ -263,17 +256,17 @@
             </div>
             <div class="desktop-1-2">
                 <div style="padding:56.25% 0 0 0;position:relative;">
-                    <iframe src="https://player.vimeo.com/video/664246920?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
-                            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-                            title="Another Romance"></iframe>
+<!--                    <iframe src="https://player.vimeo.com/video/664246920?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"-->
+<!--                            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"-->
+<!--                            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"-->
+<!--                            title="Another Romance"></iframe>-->
                 </div>
             </div>
         </div>
 
         <div class="section" id="obloom">
             <div class="desktop-1-2">
-                <?php gallery("obloom-gallery-1", [
+                <?php echo gallery("obloom-gallery-1", [
                     "/personal/2021/obloom/interface-1.jpg" => "width",
                     "/personal/2021/obloom/interface-2.jpg" => "width",
                     "/personal/2021/obloom/interface-3.jpg" => "width",
@@ -281,12 +274,10 @@
                 ]); ?>
             </div>
             <div class="desktop-25">
-                <img path="/personal/2021/obloom/compact-disc.jpg"
-                     fix="width">
-                <img path="/personal/2021/obloom/floppy-disc.jpg"
-                     fix="width">
+                <?php echo image("/personal/2021/obloom/compact-disc.jpg"); ?>
+                <?php echo image("/personal/2021/obloom/floppy-disc.jpg"); ?>
                 <div class="spacing" style="height: 1.5rem;"></div>
-                <?php gallery("obloom-gallery-2", [
+                <?php echo gallery("obloom-gallery-2", [
                     "/personal/2021/obloom/posters-1.jpg" => "width",
                     "/personal/2021/obloom/posters-2.jpg" => "width",
                 ]); ?>
@@ -309,8 +300,7 @@
         <div class="section" id="utopia">
             <div class="desktop-15 empty"></div>
             <div class="desktop-1-2 text">
-                <img path="/personal/2020/utopia/artboard-2.jpg"
-                     fix="width">
+                <?php echo image("/personal/2020/utopia/artboard-2.jpg"); ?>
                 <div class="text">
                     <div class="highlight">UTOPIA, 2020</div>
                     <div>
@@ -325,7 +315,7 @@
                 </div>
             </div>
             <div class="desktop-35">
-                <?php gallery("utopia-gallery", [
+                <?php echo gallery("utopia-gallery", [
                     "/personal/2020/utopia/artboard-1-copy-2.jpg" => "width",
                     "/personal/2020/utopia/artboard-1-copy-1.jpg" => "width",
                     "/personal/2020/utopia/artboard-1-copy-5.jpg" => "width",

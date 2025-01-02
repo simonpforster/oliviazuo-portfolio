@@ -4,7 +4,7 @@ class Config
 {
     private static $obj;
 
-    public $imageResizer;
+    public string $imageResizer;
 
     final private function __construct()
     {
@@ -20,8 +20,10 @@ class Config
     }
 }
 
-echo '<script type="text/javascript">const config = ' .
-    json_encode(Config::get()) .
-    "</script>";
+function jsConfig(): void {
+    $json = json_encode(Config::get());
+    echo <<<HTML
+<script type="text/javascript">const config = $json</script>
+HTML;
+}
 
-?>
