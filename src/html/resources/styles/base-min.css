@@ -72,6 +72,11 @@ figure {
     opacity: 0.9;
     z-index: 2;
     width: 25%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 @media screen and (min-width: 701px) {

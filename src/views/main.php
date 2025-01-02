@@ -16,12 +16,16 @@
     <link rel="stylesheet" href="./resources/styles/gallery-slider.css">
     <link rel="stylesheet" href="./resources/styles/grids.css">
 
-    <?php require_once(__DIR__ . "/../components/config.php");
-    jsConfig(); ?>
+    <?php
+    require_once __DIR__ . "/../components/config.php";
+    jsConfig();
+    ?>
     <script src="./resources/js/image.js" type="module"></script>
-    <?php require_once(__DIR__ . "/../components/image.php"); ?>
-    <?php require_once(__DIR__ . "/../components/gallery.php");
-    galleryScript(); ?>
+    <?php require_once __DIR__ . "/../components/image.php"; ?>
+    <?php
+    require_once __DIR__ . "/../components/gallery.php";
+    galleryScript();
+    ?>
 </head>
 <body>
 <?php include "../components/modal.php"; ?>
@@ -54,7 +58,9 @@
                         "/personal/2023/spectral-archive/day-6-3.jpg" =>
                             "width",
                     ]); ?>
-                    <?php echo image("/personal/2023/spectral-archive/archive.jpg"); ?>
+                    <?php echo image(
+                        "/personal/2023/spectral-archive/archive.jpg"
+                    ); ?>
                     <figcaption>Spectral Archive</figcaption>
                 </figure>
                 <!-- Commercial: Nike Big Bang Network -->
@@ -68,12 +74,16 @@
                 </figure>
                 <!-- Commercial: NYU Shanghai Opening Fall 2022 -->
                 <figure>
-                    <?php echo image("/commercial/nyu-shanghai/opening-fall-2022/cover.jpg"); ?>
+                    <?php echo image(
+                        "/commercial/nyu-shanghai/opening-fall-2022/cover.jpg"
+                    ); ?>
                     <figcaption>NYU SH Opening Fall 2022</figcaption>
                 </figure>
                 <!-- Commercial: NYU SH 10th Anniversary -->
                 <figure>
-                    <?php echo image("/commercial/nyu-shanghai/10th-anniversary/cover.png"); ?>
+                    <?php echo image(
+                        "/commercial/nyu-shanghai/10th-anniversary/cover.png"
+                    ); ?>
                     <figcaption>NYU SH 10th Anniversary</figcaption>
                 </figure>
             </div>
@@ -81,7 +91,9 @@
             <div class="normal-1-6">
                 <!-- Personal: The Visitor -->
                 <figure>
-                    <?php echo image("/personal/2022/the-visitor/picture-booklet-1.jpg"); ?>
+                    <?php echo image(
+                        "/personal/2022/the-visitor/picture-booklet-1.jpg"
+                    ); ?>
                     <?php echo gallery("the-visitor", [
                         "/personal/2022/the-visitor/drawing-board-2-2.jpg" =>
                             "width",
@@ -96,7 +108,9 @@
                         "/personal/2022/the-visitor/drawing-board-7.jpg" =>
                             "width",
                     ]); ?>
-                    <?php echo image("/personal/2022/the-visitor/picture-booklet-2.jpg"); ?>
+                    <?php echo image(
+                        "/personal/2022/the-visitor/picture-booklet-2.jpg"
+                    ); ?>
                     <figcaption>The Visitor</figcaption>
                 </figure>
                 <!-- Personal: Utopia -->
@@ -119,24 +133,31 @@
                 <figure>
                     <?php
                     echo image("/personal/2023/invisible-feast/3-desert.png");
-                    echo image("/personal/2023/invisible-feast/collection-web.png");
+                    echo image(
+                        "/personal/2023/invisible-feast/collection-web.png"
+                    );
                     ?>
                     <figcaption>Invisible Feast</figcaption>
                 </figure>
                 <!-- Commercial: Peet's Coffee Pure Blend-->
                 <figure>
-                    <?php echo image("/commercial/peets-coffee/pure-blend/PET-packaging-picture.jpg"); ?>
+                    <?php echo image(
+                        "/commercial/peets-coffee/pure-blend/PET-packaging-picture.jpg"
+                    ); ?>
                     <figcaption>Peet's Coffee Pure Blend</figcaption>
                 </figure>
                 <!-- Commercial: Peet's Coffee x ARC'TERYX-->
                 <figure>
-                    <?php echo image("/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg"); ?>
+                    <?php echo image(
+                        "/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg"
+                    ); ?>
                     <figcaption>Peet's Coffee x ARC'TERYX</figcaption>
                 </figure>
                 <!-- Commercial: New Balance SCF -->
                 <figure>
                     <?php
-                    gallery("new-balance",
+                    gallery(
+                        "new-balance",
                         [
                             "/commercial/new-balance/picture-shoe.jpg" =>
                                 "width",
@@ -157,17 +178,29 @@
                 <!-- Personal: Gutter and Soul -->
                 <figure>
                     <?php
-                    echo image("/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg");
-                    echo image("/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg");
-                    echo image("/personal/2022/gutter-and-soul/phase-3-the-dive.jpg");
-                    echo image("/personal/2022/gutter-and-soul/phase-4-wishful-thinking.jpg");
-                    echo image("/personal/2022/gutter-and-soul/phase-5-dream-comes-true.jpg");
+                    echo image(
+                        "/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg"
+                    );
+                    echo image(
+                        "/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg"
+                    );
+                    echo image(
+                        "/personal/2022/gutter-and-soul/phase-3-the-dive.jpg"
+                    );
+                    echo image(
+                        "/personal/2022/gutter-and-soul/phase-4-wishful-thinking.jpg"
+                    );
+                    echo image(
+                        "/personal/2022/gutter-and-soul/phase-5-dream-comes-true.jpg"
+                    );
                     ?>
                     <figcaption>Gutter and Soul</figcaption>
                 </figure>
                 <!-- Commercial: OMO Floor Cleaner Machine Formula -->
                 <figure>
-                    <?php echo image("/commercial/omo/packaging-white-bg.jpg"); ?>
+                    <?php echo image(
+                        "/commercial/omo/packaging-white-bg.jpg"
+                    ); ?>
                     <figcaption>OMO Floor Cleaner Machine Formula</figcaption>
                 </figure>
             </div>
@@ -222,7 +255,9 @@
                         "/commercial/budweiser/annual-creative-x-awards/4-grand-prix.jpg" =>
                             "width",
                     ]);
-                    echo image("/commercial/budweiser/annual-creative-x-awards/picture.jpg");
+                    echo image(
+                        "/commercial/budweiser/annual-creative-x-awards/picture.jpg"
+                    );
                     ?>
                     <figcaption>Budweiser Annual Creative-X Awards Ceremony</figcaption>
                 </figure>
@@ -232,23 +267,37 @@
                 <!-- Personal: Another Romance -->
                 <figure>
                     <?php
-                    echo image("/personal/2021/another-romance/marble-screen.jpg");
-                    echo image("/personal/2021/another-romance/installation-picture.jpg");
+                    echo image(
+                        "/personal/2021/another-romance/marble-screen.jpg"
+                    );
+                    echo image(
+                        "/personal/2021/another-romance/installation-picture.jpg"
+                    );
                     ?>
                     <figcaption>Another Romance</figcaption>
                 </figure>
                 <!-- Commercial: Budweiser Unmet Gala -->
                 <figure>
-                    <?php echo image("/commercial/budweiser/unmet-gala/invitation.jpg"); ?>
+                    <?php echo image(
+                        "/commercial/budweiser/unmet-gala/invitation.jpg"
+                    ); ?>
                     <figcaption>Budweiser Unmet Gala</figcaption>
                 </figure>
                 <!-- Commercial: Budweiser Zoom Background -->
                 <figure>
                     <?php
-                    echo image("/commercial/budweiser/unmet-gala/zoom-bg-kitchen.png");
-                    echo image("/commercial/budweiser/unmet-gala/zoom-bg-bedroom.png");
-                    echo image("/commercial/budweiser/unmet-gala/zoom-bg-living-room.png");
-                    echo image("/commercial/budweiser/unmet-gala/zoom-bg-balcony.png");
+                    echo image(
+                        "/commercial/budweiser/unmet-gala/zoom-bg-kitchen.png"
+                    );
+                    echo image(
+                        "/commercial/budweiser/unmet-gala/zoom-bg-bedroom.png"
+                    );
+                    echo image(
+                        "/commercial/budweiser/unmet-gala/zoom-bg-living-room.png"
+                    );
+                    echo image(
+                        "/commercial/budweiser/unmet-gala/zoom-bg-balcony.png"
+                    );
                     ?>
                     <figcaption>Budweiser Zoom Background</figcaption>
                 </figure>
