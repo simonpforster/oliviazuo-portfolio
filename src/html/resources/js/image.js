@@ -125,34 +125,34 @@ function updateModalSrc(width, controller) {
     }
 }
 
+function checkTrigger() {
+    if (checkAllBlurred()) {
+        if (document.readyState === "complete") {
+            updateAllImages();
+        } else {
+            window.addEventListener("load", () => {
+                updateAllImages();
+            });
+        }
+    }
+}
 
 
 allImages(
     function (image) {
-        image.addEventListener(
-            "load",
-            () => {
-                if (checkAllBlurred()) {
-                    if (document.readyState === "complete") {
-                        updateAllImages();
-                    } else {
-                        window.addEventListener("load", () => {
-                            updateAllImages();
-                        });
-                    }
-                }
-            },
-            {once: true},
-        );
+        image.addEventListener("load", () => { checkTrigger(); }, {once: true});
     }
 )
 
 // Do all init stuff
-document.readyState === "loading"
-    ? document.addEventListener("DOMContentLoaded", function () {
-        allImages(modalEvent);
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", function () {
+        checkTrigger();
     })
-    : allImages(modalEvent);
+} else {
+    allImages(modalEvent);
+    checkTrigger();
+}
 
 // Change image resolution if display changes
 window.onload = () => {
