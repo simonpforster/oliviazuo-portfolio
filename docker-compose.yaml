@@ -3,8 +3,28 @@ services:
     platform: linux/amd64
     build:
       context: .
+      dockerfile: ./container/deployment/Dockerfile
     ports:
       - "8080:80"
     env_file: ".env"
     volumes:
       - /var/database
+    profiles:
+      - deployment
+
+  local-php-development:
+    platform: linux/amd64
+    build:
+      context: .
+      dockerfile: ./container/dev/Dockerfile
+    ports:
+      - "8000:80"
+    env_file: ".env"
+    volumes:
+      - ./src/components:/var/www/components
+      - ./src/html:/var/www/html
+      - ./src/views:/var/www/views
+      - /var/database
+    profiles:
+      - dev
+

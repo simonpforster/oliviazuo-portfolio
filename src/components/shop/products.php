@@ -3,7 +3,7 @@ require "database.php";
 require "product.php";
 
 $singleton = ShopDb::get();
-//$singleton->db->sync();
+$singleton->db->sync();
 $conn = $singleton->db->connect();
 $data = $conn->query("SELECT * FROM products")->fetchArray();
 
