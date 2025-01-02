@@ -34,7 +34,7 @@ function updateImageSrc(image) {
 function updateAllImages() {
     let captions = document.getElementsByTagName("figcaption");
     for (let i = 0; i < captions.length; i++) {
-        captions[i].style.display = "block";
+        captions[i].style.visibility = "visible";
     }
     allImages(updateImageSrc);
 }
