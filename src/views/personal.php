@@ -16,10 +16,16 @@
     <link rel="stylesheet" href="./resources/styles/grids.css">
     <link rel="stylesheet" href="./resources/styles/gallery-slider.css">
 
-    <?php require_once "../components/config.php"; jsConfig(); ?>
+    <?php
+    require_once "../components/config.php";
+    jsConfig();
+    ?>
     <script src="./resources/js/image.js" type="module"></script>
-    <?php require_once (__DIR__ . "/../components/image.php"); ?>
-    <?php require_once (__DIR__ . "/../components/gallery.php"); galleryScript(); ?>
+    <?php require_once __DIR__ . "/../components/image.php"; ?>
+    <?php
+    require_once __DIR__ . "/../components/gallery.php";
+    galleryScript();
+    ?>
     <script src="https://player.vimeo.com/api/player.js" type="module"></script>
 </head>
 <body>
@@ -31,12 +37,18 @@
     <div class="column-container">
         <div class="section" id="rerendered-memory">
             <div class="desktop-25">
-                <?php echo image("/personal/2024/rerendered-memory/combine-scan.jpg"); ?>
+                <?php echo image(
+                    "/personal/2024/rerendered-memory/combine-scan.jpg"
+                ); ?>
                 <div class="spacing" style="height: 1.5rem;"></div>
-                <?php echo image("/personal/2024/rerendered-memory/poster-picture-printer.jpg"); ?>
+                <?php echo image(
+                    "/personal/2024/rerendered-memory/poster-picture-printer.jpg"
+                ); ?>
             </div>
             <div class="desktop-1-2 text">
-                <?php echo image("/personal/2024/rerendered-memory/poster-scan.jpg"); ?>
+                <?php echo image(
+                    "/personal/2024/rerendered-memory/poster-scan.jpg"
+                ); ?>
                 <div class="text">
                     <div class="highlight">RERENDERED MEMORY, 2024</div>
                     <div>
@@ -72,7 +84,9 @@
                 ]); ?>
             </div>
             <div class="desktop-1-2 text">
-                <?php echo image("/personal/2023/spectral-archive/archive.jpg"); ?>
+                <?php echo image(
+                    "/personal/2023/spectral-archive/archive.jpg"
+                ); ?>
                 <div class="text">
                     <div class="highlight">SPECTRAL ARCHIVE, 2023</div>
                     <div>
@@ -90,7 +104,7 @@
         <div class="section" id="invisible-feast">
             <div class="normal-1-2 text">
                 <?php echo gallery("invisible-feast-gallery", [
-                    "/personal/2023/invisible-feast/web-index.png" => "width",
+                    "/personal/2023/invisible-feast/web-index.jpg" => "width",
                     "/personal/2023/invisible-feast/web-projects.png" =>
                         "width",
                     "/personal/2023/invisible-feast/web-journal.png" => "width",
@@ -117,25 +131,37 @@
                 <div class="slider">
                     <ul>
                         <li>
-                            <?php echo image("/personal/2023/invisible-feast/appetizer.png"); ?>
+                            <?php echo image(
+                                "/personal/2023/invisible-feast/appetizer.png"
+                            ); ?>
                         </li>
                         <li>
-                            <?php echo image("/personal/2023/invisible-feast/dessert.png"); ?>
+                            <?php echo image(
+                                "/personal/2023/invisible-feast/dessert.png"
+                            ); ?>
                         </li>
                         <li>
-                            <?php echo image("/personal/2023/invisible-feast/main-course.png"); ?>
+                            <?php echo image(
+                                "/personal/2023/invisible-feast/main-course.png"
+                            ); ?>
                         </li>
                         <li>
-                            <?php echo image("/personal/2023/invisible-feast/salad.png"); ?>
+                            <?php echo image(
+                                "/personal/2023/invisible-feast/salad.png"
+                            ); ?>
                         </li>
                         <li>
-                            <?php echo image("/personal/2023/invisible-feast/staple-food.png"); ?>
+                            <?php echo image(
+                                "/personal/2023/invisible-feast/staple-food.png"
+                            ); ?>
                         </li>
                     </ul>
                     <div class="overlay-x"></div>
                 </div>
                 <div class="highlight" style="margin-left: auto; horiz-align: right;">SLIDE →</div>
-                <?php echo image("/personal/2023/invisible-feast/3-desert.png"); ?>
+                <?php echo image(
+                    "/personal/2023/invisible-feast/3-desert.png"
+                ); ?>
             </div>
         </div>
 
@@ -188,7 +214,9 @@
                 ]); ?>
             </div>
             <div class="desktop-1-2 text">
-                <?php echo image("/personal/2022/gutter-and-soul/phase-3-the-dive.jpg"); ?>
+                <?php echo image(
+                    "/personal/2022/gutter-and-soul/phase-3-the-dive.jpg"
+                ); ?>
                 <div class="text">
                     <div class="highlight">GUTTER AND SOUL, 2022</div>
                     <div>
@@ -240,7 +268,9 @@
                         "width",
                 ]); ?>
                 <div class="spacing" style="height: 1.5rem;"></div>
-                <?php echo image("/personal/2021/another-romance/installation-picture.jpg"); ?>
+                <?php echo image(
+                    "/personal/2021/another-romance/installation-picture.jpg"
+                ); ?>
                 <div class="text">
                     <div class="highlight">ANOTHER ROMANCE, 2022</div>
                     <div>
