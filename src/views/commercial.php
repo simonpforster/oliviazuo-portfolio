@@ -113,9 +113,7 @@
 
         <div class="section" id="budweiser-creative-x">
             <div class="desktop-1-2 text">
-                <?php echo image(
-                    "/commercial/budweiser/annual-creative-x-awards/target.gif"
-                ); ?>
+                <img clas="static" src="https://storage.googleapis.com/image-resizer_europe-west1/oliviazuo-portfolio/commercial/budweiser/annual-creative-x-awards/target.gif">
                 <div class="text">
                     <div class="highlight">BUDWEISER</div>
                     <div>
