@@ -17,10 +17,16 @@
     <link rel="stylesheet" href="./resources/styles/grids.css">
     <link rel="stylesheet" href="./resources/styles/products.css">
 
-    <?php require_once "../components/config.php"; jsConfig(); ?>
+    <?php
+    require_once "../components/config.php";
+    jsConfig();
+    ?>
     <script src="./resources/js/image.js" type="module"></script>
-    <?php require_once (__DIR__ . "/../components/image.php"); ?>
-    <?php require_once (__DIR__ . "/../components/gallery.php"); galleryScript(); ?></head>
+    <?php require_once __DIR__ . "/../components/image.php"; ?>
+    <?php
+    require_once __DIR__ . "/../components/gallery.php";
+    galleryScript();
+    ?></head>
 <body>
 <?php include "../components/modal.php"; ?>
 <div id="screen">
@@ -35,7 +41,11 @@
             </div>
             <div class="desktop-1-2 text">
                 <div id="products">
-                    <?php require "../components/shop/products.php"; ?>
+                    <?php if (Config::get()->shopOpen == "true") {
+                        require "../components/shop/products.php";
+                    } else {
+                        echo "Shop is closed.";
+                    } ?>
                 </div>
             </div>
             <div class="desktop-25 empty"></div>

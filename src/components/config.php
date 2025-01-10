@@ -1,14 +1,14 @@
-<?php
-
-class Config
+<?php class Config
 {
     private static $obj;
 
     public string $imageResizer;
+    public string $shopOpen;
 
     final private function __construct()
     {
         $this->imageResizer = getenv("IMAGE_RESIZER");
+        $this->shopOpen = getenv("SHOP_OPEN");
     }
 
     public static function get(): Config
@@ -20,10 +20,10 @@ class Config
     }
 }
 
-function jsConfig(): void {
+function jsConfig(): void
+{
     $json = json_encode(Config::get());
     echo <<<HTML
 <script type="text/javascript">const config = $json</script>
 HTML;
 }
-
