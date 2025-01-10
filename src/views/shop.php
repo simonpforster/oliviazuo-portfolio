@@ -5,7 +5,7 @@
     <meta name=description content="Olivia Zuo's shop.">
 
     <link rel="icon" type="image/x-icon"
-          href="https://image-resizer.simonpforster.com/oliviazuo-portfolio/elements/element-pink.png">
+        href="https://image-resizer.simonpforster.com/oliviazuo-portfolio/elements/element-pink.png?width=480">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, height=device-height">
 
