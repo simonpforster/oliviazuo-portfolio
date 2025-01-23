@@ -95,7 +95,7 @@ function openModal(path) {
 }
 
 function modalEvent(image) {
-    if (image.getAttribute("id") !== "modal-image") {
+    if (image.getAttribute("id") !== "modal-image" && image.parentElement.getAttribute("id") !== "archive-arrow") {
         image.addEventListener("click", () => {
             openModal(image.getAttribute("path"));
         });
