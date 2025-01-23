@@ -33,8 +33,7 @@
     <?php include "../components/header.php"; ?>
     <div class="highlight"
          style="text-wrap: nowrap; position: absolute; bottom: 0; right: 0; padding: inherit; display: flex; flex-direction: column; width: min-content;">
-        <?php echo image("/elements/element-pink.png"); ?>
-        <a href="#offscreen" style="width: fit-content;" id="archive-arrow">ARCHIVE ↓</a>
+        <a href="#offscreen" style="width: fit-content;" id="archive-arrow"><?php echo image("/elements/element-pink.png"); ?>ARCHIVE ↓</a>
     </div>
 </div>
 <div id="offscreen">
