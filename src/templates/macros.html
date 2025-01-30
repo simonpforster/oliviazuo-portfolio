@@ -1,0 +1,18 @@
+{% macro image(path, fix = "width") %}
+
+<img id="{{ path }}" src="{{ image_resizer + path  + '?width=4' }}"  path= "{{ path }}" fix="width" class="pixel">
+
+{% endmacro %}
+
+
+{% macro gallery(id, paths, fix = "width", cover = "false") %}
+
+<div class="gallery" id="{{ id }}" fix="width" cover="{{ cover }}">
+    <div class="arrow-left-container"><img class="static arrow-left" src="{{ url_for('static', filename='icons/arrow.svg') }}"></div>
+    <div class="arrow-right-container"><img class="static arrow-right" src="{{ url_for('static', filename='icons/arrow.svg') }}"></div>
+    {% for path in paths %}
+        {{ image(path) }}
+    {% endfor %}
+</div>
+
+{% endmacro %}

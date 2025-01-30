@@ -1,0 +1,56 @@
+#commercial .highlight, #offscreen .highlight{
+    color: rgb(0, 0, 255);
+    text-decoration-color: rgb(0, 0, 255);
+}
+
+#commercial .dropdown-content {
+    visibility: visible;
+}
+
+#new-balance-illustrations > img {
+    padding-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 701px) {
+    #screen {
+        height: 70svh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .title {
+        text-wrap: nowrap;
+        top: 1.5rem;
+        right: 1.5rem;
+        padding: inherit;
+    }
+
+    #screen {
+        height: 80svh;
+    }
+
+    .header #index {
+        height: 0;
+    }
+
+    .header #commercial {
+        height: 100%;
+        order: -1;
+    }
+
+    .header .dropdown:not(#commercial, #index) {
+        height: fit-content;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    #commercial .dropdown-content {
+        display: block;
+    }
+
+    #shop > div {
+        display: none;
+    }
+}

@@ -3,7 +3,7 @@ require_once (__DIR__ . "/config.php");
 
 
 
-function image(string $path, bool $widthFix = true, string $styling = ""): string
+function image(string $path, bool $widthFix = true): string
 {
     $fix = $widthFix ? "width" : "height";
     $uri = Config::get()->imageResizer . $path . '?' . $fix . '=4';

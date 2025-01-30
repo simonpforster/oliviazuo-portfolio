@@ -1,0 +1,40 @@
+#index .highlight, #offscreen .highlight, #archive-arrow {
+    color: rgb(255, 59, 228);
+    text-decoration-color: rgb(255, 59, 228);
+}
+
+#index .dropdown-content {
+    visibility: visible;
+}
+
+#new-balance > img {
+    object-fit: cover;
+}
+
+@media screen and (min-width: 701px) {
+    #screen {
+        height: 100svh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #screen {
+        height: 100svh;
+    }
+
+    .header #index {
+        height: 100%;
+    }
+
+    .header .dropdown:not(#index) {
+        height: fit-content;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    #index .dropdown-content {
+        display: block;
+    }
+}

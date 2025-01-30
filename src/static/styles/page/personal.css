@@ -1,0 +1,56 @@
+#personal .highlight, #offscreen .highlight  {
+    color: rgba(29, 200, 177, 0.85);
+    text-decoration-color: rgba(29, 200, 177, 0.85);
+}
+
+#personal .dropdown-content {
+    visibility: visible;
+}
+
+div.text > div.text > div:not(div.highlight) {
+    text-indent: 2rem;
+}
+
+@media screen and (min-width: 701px) {
+    #screen {
+        height: 70svh;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .title {
+        text-wrap: nowrap;
+        top: 1.5rem;
+        right: 1.5rem;
+        padding: inherit;
+    }
+
+    .header #index {
+        height: 0;
+    }
+
+    #screen {
+        height: 80svh;
+    }
+
+    .header #personal {
+        height: 100%;
+        order: 0;
+    }
+
+    .header .dropdown:not(#personal, #index) {
+        height: fit-content;
+    }
+
+    .dropdown-content {
+        display: none;
+    }
+
+    #personal .dropdown-content {
+        display: block;
+    }
+
+    #shop > div {
+        display: none;
+    }
+}

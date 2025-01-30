@@ -1,6 +1,6 @@
 .idea/*
 .env
 database/*
-# All composer dependencies
-src/vendor/*
 *.DS_Store
+.venv
+__pycache__

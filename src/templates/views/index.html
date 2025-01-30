@@ -1,0 +1,199 @@
+{% extends 'base.html' %}
+
+
+{% from "macros.html" import image, gallery %}
+
+{% block head %}
+<title>OLIVIA ZUO</title>
+<link rel="icon" type="image/x-icon"
+      href="https://image-resizer.simonpforster.com/oliviazuo-portfolio/elements/element-pink.png?width=480">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/page/index.css') }}">
+{% endblock %}
+
+{% block screen %}
+<div class="highlight"
+     style="text-wrap: nowrap; position: absolute; bottom: 0; right: 0; padding: inherit; display: flex; flex-direction: column; width: min-content;">
+    <a href="#offscreen" style="width: fit-content;"
+       id="archive-arrow">{{ image('/elements/element-pink.png') }}ARCHIVE ↓</a>
+</div>
+{% endblock %}
+
+{% block offscreen %}
+<div class="column-container">
+    <div class="pure-g">
+        <!-- Column 1/6 -->
+        <div class="normal-1-6">
+            <!-- Personal: Spectral Archive -->
+            <figure>
+                {{ gallery("spectral-archive", [
+                "/personal/2023/spectral-archive/day-3-1.jpg",
+                "/personal/2023/spectral-archive/day-3-2.jpg",
+                "/personal/2023/spectral-archive/day-3-3.jpg",
+                "/personal/2023/spectral-archive/day-6-1.jpg",
+                "/personal/2023/spectral-archive/day-6-2.jpg",
+                "/personal/2023/spectral-archive/day-6-3.jpg"
+                ]) }}
+                {{ image("/personal/2023/spectral-archive/archive.jpg") }}
+                <figcaption>Spectral Archive</figcaption>
+            </figure>
+            <!-- Commercial: Nike Big Bang Network -->
+            <figure>
+                {{ image("/commercial/nike/background-1.jpg") }}
+                {{ image("/commercial/nike/background-2.jpg") }}
+                {{ image("/commercial/nike/background-3.jpg") }}
+                <figcaption>Nike Big Bang Network</figcaption>
+            </figure>
+            <!-- Commercial: NYU Shanghai Opening Fall 2022 -->
+            <figure>
+                {{ image("/commercial/nyu-shanghai/opening-fall-2022/cover.jpg") }}
+                <figcaption>NYU SH Opening Fall 2022</figcaption>
+            </figure>
+            <!-- Commercial: NYU SH 10th Anniversary -->
+            <figure>
+                 {{ image("/commercial/nyu-shanghai/10th-anniversary/cover.png") }}
+                <figcaption>NYU SH 10th Anniversary</figcaption>
+            </figure>
+        </div>
+        <!-- Column 2/6 -->
+        <div class="normal-1-6">
+            <!-- Personal: The Visitor -->
+            <figure>
+                {{ image("/personal/2022/the-visitor/picture-booklet-1.jpg") }}
+                {{ gallery("the-visitor", [
+                    "/personal/2022/the-visitor/drawing-board-2-2.jpg",
+                    "/personal/2022/the-visitor/drawing-board-3.jpg",
+                    "/personal/2022/the-visitor/drawing-board-4.jpg",
+                    "/personal/2022/the-visitor/drawing-board-5.jpg",
+                    "/personal/2022/the-visitor/drawing-board-6.jpg",
+                    "/personal/2022/the-visitor/drawing-board-7.jpg"
+                ]) }}
+                {{ image("/personal/2022/the-visitor/picture-booklet-2.jpg") }}
+                <figcaption>The Visitor</figcaption>
+            </figure>
+            <!-- Personal: Utopia -->
+            <figure>
+                 {{ gallery("utopia", [
+                    "/personal/2020/utopia/artboard-1-copy-2.jpg",
+                    "/personal/2020/utopia/artboard-1-copy-3.jpg",
+                    "/personal/2020/utopia/artboard-1-copy-4.jpg",
+                ]) }}
+                {{ image("/personal/2020/utopia/artboard-2.jpg") }}
+                <figcaption>Utopia</figcaption>
+            </figure>
+        </div>
+        <!-- Column 3/6 -->
+        <div class="normal-1-6">
+            <!-- Personal: Invisible Feast-->
+            <figure>
+                {{ image("/personal/2023/invisible-feast/3-desert.png") }}
+                {{ image("/personal/2023/invisible-feast/collection-web.png") }}
+                <figcaption>Invisible Feast</figcaption>
+            </figure>
+            <!-- Commercial: Peet's Coffee Pure Blend-->
+            <figure>
+                {{ image("/commercial/peets-coffee/pure-blend/PET-packaging-picture.jpg") }}
+                <figcaption>Peet's Coffee Pure Blend</figcaption>
+            </figure>
+            <!-- Commercial: Peet's Coffee x ARC'TERYX-->
+            <figure>
+                {{ image("/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg") }}
+                <figcaption>Peet's Coffee x ARC'TERYX</figcaption>
+            </figure>
+            <!-- Commercial: New Balance SCF -->
+            <figure>
+                 {{ gallery("new-balance",[
+                    "/commercial/new-balance/picture-shoe.jpg",
+                "/commercial/new-balance/picture-stand-stickers.jpg",
+                "/commercial/new-balance/picture-garnish-station.jpg"
+                ], "width", "true" ) }}
+                {{ image("/commercial/new-balance/picture-shoot.jpg") }}
+                <figcaption>New Balance SCF</figcaption>
+            </figure>
+        </div>
+        <!-- Column 4/6 -->
+        <div class="normal-1-6">
+            <!-- Personal: Gutter and Soul -->
+            <figure>
+                {{ image("/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg") }}
+                {{ image("/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg") }}
+                {{ image("/personal/2022/gutter-and-soul/phase-3-the-dive.jpg") }}
+                {{ image("/personal/2022/gutter-and-soul/phase-4-wishful-thinking.jpg") }}
+                {{ image("/personal/2022/gutter-and-soul/phase-5-dream-comes-true.jpg") }}
+                <figcaption>Gutter and Soul</figcaption>
+            </figure>
+            <!-- Commercial: OMO Floor Cleaner Machine Formula -->
+            <figure>
+                 {{ image("/commercial/omo/packaging-white-bg.jpg") }}
+                <figcaption>OMO Floor Cleaner Machine Formula</figcaption>
+            </figure>
+        </div>
+        <!-- Column 5/6 -->
+        <div class="normal-1-6">
+            <!-- Personal: Dialogue -->
+            <figure>
+                {{ gallery("dialogue", [
+                    "/personal/2022/dialogue/poster-1-cyan.png",
+                    "/personal/2022/dialogue/poster-2-black.png",
+                    "/personal/2022/dialogue/poster-3-red.png",
+                    "/personal/2022/dialogue/poster-4-pink.png"
+                ]) }}
+                {{ image("/personal/2022/dialogue/picture.jpeg") }}
+                <figcaption>Dialogue</figcaption>
+            </figure>
+            <!-- Personal: Obloom -->
+            <figure>
+                {{ gallery("obloom", [
+                    "/personal/2021/obloom/interface-1.jpg",
+                    "/personal/2021/obloom/interface-2.jpg",
+                    "/personal/2021/obloom/interface-3.jpg",
+                    "/personal/2021/obloom/interface-4.jpg",
+                ]) }}
+                {{ image("/personal/2021/obloom/compact-disc.jpg") }}
+                {{ image("/personal/2021/obloom/floppy-disc.jpg") }}
+                {{ image("/personal/2021/obloom/cassette-tape.jpg") }}
+                <figcaption>Obloom</figcaption>
+            </figure>
+            <!-- Commercial: Budweiser Annual Creative-X Awards Ceremony -->
+            <figure>
+                {{ gallery("bacac", [
+                    "/commercial/budweiser/annual-creative-x-awards/1-creative-brand-strategy.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/1-scale-and-adapt.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/2-creative-execution.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/2-entertainment.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/3-better-world.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/3-smart-drinking.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/4-creative-partner.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/4-draftline-of-the-year.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/4-grand-prix.jpg",
+                ]) }}
+                {{ image("/commercial/budweiser/annual-creative-x-awards/picture.jpg") }}
+                <figcaption>Budweiser Annual Creative-X Awards Ceremony</figcaption>
+            </figure>
+        </div>
+        <!-- Column 6/6 -->
+        <div class="normal-1-6">
+            <!-- Personal: Another Romance -->
+            <figure>
+                {{ image("/personal/2021/another-romance/marble-screen.jpg") }}
+                {{ image("/personal/2021/another-romance/installation-picture.jpg") }}
+                <figcaption>Another Romance</figcaption>
+            </figure>
+            <!-- Commercial: Budweiser Unmet Gala -->
+            <figure>
+                {{ image("/commercial/budweiser/unmet-gala/invitation.jpg") }}
+                <figcaption>Budweiser Unmet Gala</figcaption>
+            </figure>
+            <!-- Commercial: Budweiser Zoom Background -->
+            <figure>
+                {{ image("/commercial/budweiser/unmet-gala/zoom-bg-kitchen.png") }}
+                {{ image("/commercial/budweiser/unmet-gala/zoom-bg-bedroom.png") }}
+                {{ image("/commercial/budweiser/unmet-gala/zoom-bg-living-room.png") }}
+                {{ image("/commercial/budweiser/unmet-gala/zoom-bg-balcony.png") }}
+                <figcaption>Budweiser Zoom Background</figcaption>
+            </figure>
+        </div>
+    </div>
+    <div style="height: 8rem;"></div>
+</div>
+{% endblock %}
