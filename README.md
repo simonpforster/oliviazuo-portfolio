@@ -5,7 +5,10 @@ You can find it at https://www.oliviazuo.com
 # Running the server
 
 ## Locally
-Set up the `.env` file in the root directory.
+```
+source .env
+flask --app "src/router" --debug run
+```
 
 ### Local docker development container
 Run `docker compose --profile dev up -d`.

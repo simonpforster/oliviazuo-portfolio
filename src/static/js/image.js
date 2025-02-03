@@ -84,6 +84,7 @@ function closeModal() {
     modalController = new AbortController();
     modal.style.display = "none";
     modalImage.setAttribute("path", "");
+    modalImage.classList.add("pixel");
     modalImage.src = "";
 }
 
