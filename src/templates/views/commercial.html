@@ -1,13 +1,228 @@
 {% extends 'base.html' %}
 
+{% from "macros.html" import image, gallery %}
+
 {% block head %}
     <title>OLIVIA ZUO - COMMERCIAL</title>
     <link rel="icon" type="image/x-icon"
           href="https://image-resizer.simonpforster.com/oliviazuo-portfolio/elements/element-blue.png?width=480">
 
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/page/commercial.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/mobile-gallery-slider.css') }}">
+
 {% endblock %}
 
-{% block body %}
+{% block screen %}
 
+{% endblock %}
+
+{% block offscreen %}
+<div id="offscreen">
+    <div class="column-container">
+        <div class="section" id="nike-big-bang">
+            <div class="desktop-20 empty"></div>
+            <div class="desktop-1-2 text">
+                {{ gallery("nike-big-bang-gallery", [
+                    "/commercial/nike/background-2.jpg",
+                    "/commercial/nike/background-1.jpg",
+                    "/commercial/nike/background-3.jpg",
+                ]) }}
+                <div class="text">
+                    <div class="highlight">NIKE</div>
+                    <div>
+                        The Big Bang Network, 2022
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-30">
+                {{ image("/commercial/nike/icon-1.png") }}
+                {{ image("/commercial/nike/icon-3.png") }}
+                {{ image("/commercial/nike/icon-2.png") }}
+            </div>
+        </div>
+
+        <div class="section" id="new-balance">
+            <div class="desktop-30 empty"></div>
+            <div class="desktop-10 mobile-slider-x" id="new-balance-illustrations">
+                <ul>
+                    <li>
+                        {{ image("/commercial/new-balance/illustration-monitor.png") }}
+                    </li>
+                    <li>
+                        {{ image("/commercial/new-balance/illustration-megaphone.png") }}
+                    </li>
+                    <li>
+                        {{ image("/commercial/new-balance/illustration-clapperboard.png") }}
+                    </li>
+                    <li>
+                        {{ image("/commercial/new-balance/illustration-laptop.png") }}
+                    </li>
+                    <li>
+                        {{ image("/commercial/new-balance/illustration-lightbulb.png") }}
+                    </li>
+                </ul>
+                <div class="mobile-overlay-x"></div>
+            </div>
+            <div class="desktop-60 text">
+                {{ gallery("gallery-new-balance", [
+                    "/commercial/new-balance/picture-shoot.jpg",
+                    "/commercial/new-balance/picture-box-stickers.jpg",
+                    "/commercial/new-balance/picture-shoe.jpg",
+                ], "height") }}
+                <div class="text">
+                    <div class="highlight">
+                        NEW BALANCE
+                    </div>
+                    <div>
+                        Shanghai Content Factory, 2023
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="budweiser-creative-x">
+            <div class="desktop-1-2 text">
+                <img class="static" src="https://storage.googleapis.com/image-resizer_europe-west1/oliviazuo-portfolio/commercial/budweiser/annual-creative-x-awards/target.gif">
+                <div class="text">
+                    <div class="highlight">BUDWEISER</div>
+                    <div>
+                        Annual Creative-X Awards Ceremoy, 2021
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-25">
+                {{ gallery("budweiser-creative-x-gallery", [
+                    "/commercial/budweiser/annual-creative-x-awards/1-creative-brand-strategy.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/1-scale-and-adapt.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/2-creative-execution.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/2-entertainment.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/3-better-world.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/3-smart-drinking.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/4-draftline-of-the-year.jpg",
+                    "/commercial/budweiser/annual-creative-x-awards/4-grand-prix.jpg",
+                ]) }}
+            </div>
+            <div class="desktop-25 empty"></div>
+        </div>
+
+        <div class="section" id="budweiser-unmet-gala">
+            <div class="desktop-15 empty"></div>
+            <div class="desktop-35 text">
+                {{ gallery("budweiser-creative-unmet-gala", [
+                    "/commercial/budweiser/unmet-gala/zoom-bg-balcony.png",
+                    "/commercial/budweiser/unmet-gala/zoom-bg-kitchen.png",
+                ]) }}
+                <div class="text">
+                    <div class="highlight">BUDWEISER</div>
+                    <div>
+                        Unmet Gala, 2022
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-1-2">
+                {{ image(
+                    "/commercial/budweiser/unmet-gala/zoom-bg-bedroom.png"
+                ) }}
+            </div>
+        </div>
+
+        <div class="section" id="nyu-shanghai-opening-fall">
+            <div class="desktop-40">
+                {{ image("/commercial/nyu-shanghai/opening-fall-2022/cover.jpg") }}
+            </div>
+            <div class="desktop-1-2 text">
+                {{ gallery("nyu-shanghai-opening-fall-gallery", [
+                    "/commercial/nyu-shanghai/opening-fall-2022/pages-18-19.png",
+                    "/commercial/nyu-shanghai/opening-fall-2022/pages-spread-21.png",
+                ]) }}
+                <div class="text">
+                    <div class="highlight">NYU SHANGHAI</div>
+                    <div>
+                        Opening Fall, 2022
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-10 empty"></div>
+        </div>
+
+        <div class="section" id="nyu-shanghai-10th-anniversary">
+            <div class="desktop-25 text">
+                {{ image("/commercial/nyu-shanghai/10th-anniversary/cover.png") }}
+                <div class="text">
+                    <div class="highlight">NYU SHANGHAI</div>
+                    <div>
+                        10th Anniversary Special Edition, 2022
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-55 ">
+                {{ gallery("nyu-shanghai-10th-anniversary-gallery", [
+                    "/commercial/nyu-shanghai/10th-anniversary/development-spread.png",
+                    "/commercial/nyu-shanghai/10th-anniversary/development-pages.png",
+                    "/commercial/nyu-shanghai/10th-anniversary/research-spread.png",
+                    "/commercial/nyu-shanghai/10th-anniversary/research-pages.png",
+                    "/commercial/nyu-shanghai/10th-anniversary/education-spread.png",
+                    "/commercial/nyu-shanghai/10th-anniversary/education-pages.png",
+                    "/commercial/nyu-shanghai/10th-anniversary/exchange-spread.png",
+                    "/commercial/nyu-shanghai/10th-anniversary/exchange-pages.png",
+                    "/commercial/nyu-shanghai/10th-anniversary/prospects-spread.png",
+                    "/commercial/nyu-shanghai/10th-anniversary/prospects-pages.png",
+                ]) }}
+            </div>
+            <div class="desktop-20 empty"></div>
+        </div>
+
+        <div class="section" id="omo">
+            <div class="desktop-40 text">
+                {{ image("/commercial/omo/packaging-grey-bg.jpg") }}
+                <div class="text">
+                    <div class="highlight">OMO</div>
+                    <div>
+                        Floor Cleaner Machine Formula
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-30 ">
+                {{ image("/commercial/omo/ad.jpg") }}
+            </div>
+            <div class="desktop-30 empty"></div>
+        </div>
+
+        <div class="section" id="peets-coffee-pure-blend">
+            <div class="desktop-40 empty"></div>
+            <div class="desktop-35 text">
+                {{ image("/commercial/peets-coffee/pure-blend/PET-packaging-picture.jpg") }}
+                <div class="text">
+                    <div class="highlight">Peet's Coffee</div>
+                    <div>
+                        Pure Blend, 2022
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-25">
+                {{ image("/commercial/peets-coffee/pure-blend/PET-packaging-schematic-2.png") }}
+                {{ image("/commercial/peets-coffee/pure-blend/PET-packaging-schematic-1.png") }}
+            </div>
+        </div>
+
+        <div class="section" id="peets-coffee-arcteryx">
+            <div class="desktop-35 text">
+                {{ image("/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg") }}
+                <div class="text">
+                    <div class="highlight">PEET’S COFFEE x ARC’TERYX</div>
+                    <div>
+                        Pop-up, 2023
+                    </div>
+                </div>
+            </div>
+            <div class="desktop-25">
+                {{ gallery("peets-coffee-arcteryx-gallery", [
+                    "/commercial/peets-coffee/peets-coffee-x-arcteryx/1-cans.jpg",
+                    "/commercial/peets-coffee/peets-coffee-x-arcteryx/2-cans.jpg",
+                ]) }}
+            </div>
+            <div class="desktop-40 empty"></div>
+        </div>
+    </div>
+</div>
 {% endblock %}

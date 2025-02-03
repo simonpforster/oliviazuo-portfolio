@@ -75,7 +75,7 @@ figure {
         -ms-user-select: none;
     }
 
-    &#new-balance img:not(.static) {
+    &#gallery-new-balance img:not(.static) {
         object-fit: cover;
         height: 100%;
     }
