@@ -6,7 +6,7 @@ COPY /src /src
 
 WORKDIR /src
 
-ENV PORT=${PORT:-80}
+ENV PORT=${PORT:-8080}
 
 COPY requirements.txt requirements.txt
 
