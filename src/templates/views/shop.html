@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 
+{% from "macros.html" import image, gallery, product %}
 
 {% block head %}
 <title>OLIVIA ZUO - SHOP</title>
@@ -9,6 +10,27 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/page/shop.css') }}">
 {% endblock %}
 
-{% block body %}
+{% block screen %}
 
+{% endblock %}
+
+{% block offscreen %}
+<div class="column-container">
+    <div class="section">
+        <div class="desktop-25 empty">
+            SHOP STILL WIP<br>
+            SHOPPING CART:
+        </div>
+        <div class="desktop-1-2 text">
+            <div id="products">
+                {% if shop_open == "True" %}
+                    Shop is open
+                {% else %}
+                    Shop is closed
+                {% endif %}
+            </div>
+        </div>
+        <div class="desktop-25 empty"></div>
+    </div>
+</div>
 {% endblock %}

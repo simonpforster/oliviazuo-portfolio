@@ -16,3 +16,17 @@
 </div>
 
 {% endmacro %}
+
+{% macro product(name, description, price, imagePath) %}
+
+<div class="product">
+    {{ image(imagePath) }}
+    <div class="head">
+        <div class="name">{{ name }}</div>
+        <div class="price">£{{ price / 100 }}</div>
+    </div>
+    <div class="description">{{ description }}</div>
+    <button>Add to cart</button>
+</div>
+
+{% endmacro %}

@@ -4,6 +4,7 @@ import os
 app = Flask(__name__)
 
 app.jinja_env.globals['image_resizer'] = os.getenv("IMAGE_RESIZER")
+app.jinja_env.globals['shop_open'] = os.getenv("SHOP_OPEN", "False")
 
 @app.route("/", methods=['GET'])
 def index():
