@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 
-{% from "macros.html" import image, gallery %}
+{% from "macros.html" import image, gallery, project %}
 
 {% block head %}
     <title>OLIVIA ZUO - PERSONAL</title>
@@ -16,16 +16,18 @@
 
 {% block offscreen %}
 <div class="column-container">
-    <div class="section" id="rerendered-memory">
-        <div class="desktop-25">
-            {{ image("/personal/2024/rerendered-memory/combine-scan.jpg") }}
-            <div class="spacing" style="height: 1.5rem;"></div>
-            {{ image("/personal/2024/rerendered-memory/poster-picture-printer.jpg") }}
-        </div>
-        <div class="desktop-1-2 text">
-            {{ image("/personal/2024/rerendered-memory/poster-scan.jpg") }}
+    <div class="section" id="rerendered-memory" style="display: flex; flex-direction: row;
+         flex-wrap: nowrap; overflow-x: visible;">
+        <div class="desktop-1-8">
             <div class="text">
-                <div class="highlight">RERENDERED MEMORY, 2024</div>
+                <div class="highlight">RERENDERED MEMORY</div>
+                <div>
+                    2024
+                </div>
+            </div>
+        </div>
+        <div class="desktop-2-8 text">
+            <div class="text">
                 <div>
                     Today, digital technologies are considered as a means of stepping backward - whether physically
                     reconstructing obsolete hardware or digitally regurgitating public information films, a
@@ -33,6 +35,7 @@
                     attraction to old technologies and the resurrection of faux-vintage aesthetics through new
                     mediums, often referred to as "tech-nostalgia".
                 </div>
+                <br>
                 <div>
                     By investigating the iterative process of digital images in screen devices, my aim is to explore
                     the transition from "technologies of memory" to "memory of technologies" within the context of
@@ -43,25 +46,18 @@
                 </div>
             </div>
         </div>
-        <div class="desktop-25 empty"></div>
+        {{ image("/personal/2024/rerendered-memory/combine-scan.jpg", fix = "height") }}
+        {{ image("/personal/2024/rerendered-memory/poster-picture-printer.jpg", fix = "height") }}
+        {{ image("/personal/2024/rerendered-memory/poster-scan.jpg", fix = "height") }}
     </div>
 
     <div class="section" id="spectral-archive">
-        <div class="desktop-15 empty"></div>
-        <div class="desktop-35">
-            {{ gallery("spectral-archive-gallery", [
-                "/personal/2023/spectral-archive/day-3-1.jpg",
-                "/personal/2023/spectral-archive/day-3-2.jpg",
-                "/personal/2023/spectral-archive/day-3-3.jpg",
-                "/personal/2023/spectral-archive/day-6-1.jpg",
-                "/personal/2023/spectral-archive/day-6-2.jpg",
-                "/personal/2023/spectral-archive/day-6-3.jpg",
-            ]) }}
+        <div class="desktop-1-8 text">
+            <div class="highlight">SPECTRAL ARCHIVE</div>
+            <div>2023</div>
         </div>
-        <div class="desktop-1-2 text">
-            {{ image("/personal/2023/spectral-archive/archive.jpg") }}
+        <div class="desktop-2-8 text">
             <div class="text">
-                <div class="highlight">SPECTRAL ARCHIVE, 2023</div>
                 <div>
                     is about the process of memory reconstruction by bridging the gap between my digital and
                     physical recollections.
@@ -72,6 +68,15 @@
                 </div>
             </div>
         </div>
+        {{ gallery("spectral-archive-gallery", [
+            "/personal/2023/spectral-archive/day-3-1.jpg",
+            "/personal/2023/spectral-archive/day-3-2.jpg",
+            "/personal/2023/spectral-archive/day-3-3.jpg",
+            "/personal/2023/spectral-archive/day-6-1.jpg",
+            "/personal/2023/spectral-archive/day-6-2.jpg",
+            "/personal/2023/spectral-archive/day-6-3.jpg",
+        ]) }}
+        {{ image("/personal/2023/spectral-archive/archive.jpg") }}
     </div>
 
     <div class="section" id="invisible-feast">

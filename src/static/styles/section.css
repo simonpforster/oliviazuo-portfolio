@@ -1,12 +1,16 @@
 .section {
     box-sizing: border-box;
-    display: inline-flex;
+    display: flex;
     padding: 0 0 8rem;
-    width: 100%;
-}
+    min-width: 100%;
+    overflow: auto;
+    height: 50rem;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
 
-div.highlight {
-    padding: 0.75rem 0 0.75rem;
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }
 
 .overlay-x {
@@ -60,10 +64,6 @@ div.highlight {
         position: sticky;
     }
 
-    .section {
-        flex-wrap: wrap;
-    }
-
     .section-reverse {
         flex-direction: row-reverse;
     }
@@ -114,6 +114,16 @@ div.highlight {
 
     .desktop-5 {
         width: 5%;
+    }
+
+    .desktop-1-8 {
+        min-width: 12.5dvw;
+        width: 12.5dvw;
+    }
+
+    .desktop-2-8 {
+        min-width: 25dvw;
+        width: 25dvw;
     }
 }
 
