@@ -108,10 +108,6 @@
         flex-wrap: nowrap;
     }
 
-    .text {
-        position: sticky;
-    }
-
     .section-reverse {
         flex-direction: row-reverse;
     }
@@ -187,10 +183,12 @@
 
     .grid-title {
         padding: 0.75rem;
+
+        order: 1;
     }
 
-    .text {
-        order: 1;
+    .grid-description {
+        order: 2;
     }
 
     .normal-1-2 {
