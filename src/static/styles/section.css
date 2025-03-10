@@ -9,6 +9,12 @@
     padding: 0.75rem;
 }
 
+.grid-title {
+    & .year {
+        color: rgba(0, 0, 0, 0.5);
+    }
+}
+
 .media-item {
     padding: 0.75rem;
 }
@@ -53,7 +59,11 @@
     .grid-title {
         grid-column-start: 1;
         grid-column-end: 2;
-        padding: 0.75rem 0.75rem 0.75rem 1.5rem;
+        padding-left: 0.75rem;
+
+        & > * {
+            padding: 0.75rem;
+        }
     }
 
     .grid-description {
@@ -183,7 +193,6 @@
 
     .grid-title {
         padding: 0.75rem;
-
         order: 1;
     }
 
