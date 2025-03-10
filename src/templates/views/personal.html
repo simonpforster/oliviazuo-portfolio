@@ -3,11 +3,11 @@
 {% from "macros.html" import image, gallery, project %}
 
 {% block head %}
-    <title>OLIVIA ZUO - PERSONAL</title>
-    <link rel="icon" type="image/x-icon"
-          href="https://image-resizer.simonpforster.com/oliviazuo-portfolio/elements/element-cyan.png?width=480">
+<title>OLIVIA ZUO - PERSONAL</title>
+<link rel="icon" type="image/x-icon"
+      href="https://image-resizer.simonpforster.com/oliviazuo-portfolio/elements/element-cyan.png?width=480">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/page/personal.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/page/personal.css') }}">
 {% endblock %}
 
 {% block screen %}
@@ -16,17 +16,12 @@
 
 {% block offscreen %}
 <div class="column-container">
-    <div class="section" id="rerendered-memory" style="display: flex; flex-direction: row;
-         flex-wrap: nowrap; overflow-x: visible;">
-        <div class="desktop-1-8">
-            <div class="text">
-                <div class="highlight">RERENDERED MEMORY</div>
-                <div>
-                    2024
-                </div>
-            </div>
+    <div class="section" id="rerendered-memory">
+        <div class="grid-title text">
+            <div class="highlight text">RERENDERED MEMORY</div>
+            <div class="text">2024</div>
         </div>
-        <div class="desktop-2-8 text">
+        <div class="grid-description text">
             <div class="text">
                 <div>
                     Today, digital technologies are considered as a means of stepping backward - whether physically
@@ -46,63 +41,89 @@
                 </div>
             </div>
         </div>
-        {{ image("/personal/2024/rerendered-memory/combine-scan.jpg", fix = "height") }}
-        {{ image("/personal/2024/rerendered-memory/poster-picture-printer.jpg", fix = "height") }}
-        {{ image("/personal/2024/rerendered-memory/poster-scan.jpg", fix = "height") }}
+        <div class="media-section">
+            <div class="media-item desktop-2-8">
+                {{ image("/personal/2024/rerendered-memory/combine-scan.jpg") }}
+            </div>
+            <div class="media-item desktop-2-8">
+                {{ image("/personal/2024/rerendered-memory/poster-picture-printer.jpg") }}
+            </div>
+            <div class="media-item desktop-3-8">
+                {{ image("/personal/2024/rerendered-memory/poster-scan.jpg") }}
+            </div>
+        </div>
     </div>
 
     <div class="section" id="spectral-archive">
-        <div class="desktop-1-8 text">
-            <div class="highlight">SPECTRAL ARCHIVE</div>
-            <div>2023</div>
+        <div class="grid-title text">
+            <div class="highlight text">SPECTRAL ARCHIVE</div>
+            <div class="text">2023</div>
         </div>
-        <div class="desktop-2-8 text">
+        <div class="grid-description text">
             <div class="text">
                 <div>
-                    is about the process of memory reconstruction by bridging the gap between my digital and
+                    Is about the process of memory reconstruction by bridging the gap between my digital and
                     physical recollections.
                 </div>
+                <br>
                 <div>
-                    it draws upon knowledge from memory-based records-keeping, aiming to interrogate the
+                    It draws upon knowledge from memory-based records-keeping, aiming to interrogate the
                     significance of archival documentation in the act of “recalling.”
                 </div>
             </div>
         </div>
-        {{ gallery("spectral-archive-gallery", [
-            "/personal/2023/spectral-archive/day-3-1.jpg",
-            "/personal/2023/spectral-archive/day-3-2.jpg",
-            "/personal/2023/spectral-archive/day-3-3.jpg",
-            "/personal/2023/spectral-archive/day-6-1.jpg",
-            "/personal/2023/spectral-archive/day-6-2.jpg",
-            "/personal/2023/spectral-archive/day-6-3.jpg",
-        ]) }}
-        {{ image("/personal/2023/spectral-archive/archive.jpg") }}
+        <div class="media-section">
+            <div class="media-item desktop-2-8">
+                {{ gallery("spectral-archive-gallery", [
+                "/personal/2023/spectral-archive/day-3-1.jpg",
+                "/personal/2023/spectral-archive/day-3-2.jpg",
+                "/personal/2023/spectral-archive/day-3-3.jpg",
+                "/personal/2023/spectral-archive/day-6-1.jpg",
+                "/personal/2023/spectral-archive/day-6-2.jpg",
+                "/personal/2023/spectral-archive/day-6-3.jpg",
+                ]) }}
+            </div>
+            <div class="media-item desktop-2-8">
+                {{ image("/personal/2023/spectral-archive/archive.jpg") }}
+            </div>
+        </div>
     </div>
 
     <div class="section" id="invisible-feast">
-        <div class="normal-1-2 text">
-            {{ gallery("invisible-feast-gallery", [
+        <div class="grid-title text">
+            <div class="highlight text">INVISIBLE FEAST</div>
+            <div class="text">2023</div>
+        </div>
+        <div class="grid-description text">
+            <div class="text">
+                <div>
+                    Discusses the diversity and possibilities of future dietary structures in the current
+                    context of the food crisis.
+                </div>
+                <br>
+                <div>
+                    By simulating a future in which extinct animals and sustainable protein sources are used as
+                    ingredients, efforts towards a “future-proof” diet are re-examined from an ironic
+                    perspective.
+                </div>
+            </div>
+        </div>
+        <div class="media-section">
+            <div class="media-item desktop-3-8">
+                {{ gallery("invisible-feast-gallery", [
                 "/personal/2023/invisible-feast/web-index.jpg",
                 "/personal/2023/invisible-feast/web-projects.png",
                 "/personal/2023/invisible-feast/web-journal.png",
                 "/personal/2023/invisible-feast/web-recipes-1.png",
                 "/personal/2023/invisible-feast/web-recipes-2.png",
                 "/personal/2023/invisible-feast/web-about.png",
-            ]) }}
-            <div class="text">
-                <div class="highlight">INVISIBLE FEAST, 2023</div>
-                <div>
-                    discusses the diversity and possibilities of future dietary structures in the current
-                    context of the food crisis.
-                </div>
-                <div>
-                    by simulating a future in which extinct animals and sustainable protein sources are used as
-                    ingredients, efforts towards a “future-proof” diet are re-examined from an ironic
-                    perspective.
-                </div>
+                ]) }}
+            </div>
+            <div class="media-item desktop-3-8">
+                {{ image("/personal/2023/invisible-feast/3-desert.png") }}
             </div>
         </div>
-        <div class="normal-1-2">
+        <div class="icon-section">
             <div class="slider">
                 <ul>
                     <li>
@@ -124,26 +145,26 @@
                 <div class="overlay-x"></div>
             </div>
             <div class="highlight" style="margin-left: auto; horiz-align: right;">SLIDE →</div>
-            {{ image("/personal/2023/invisible-feast/3-desert.png") }}
         </div>
     </div>
+
 
     <div class="section" id="the-visitor">
         <div class="desktop-30">
             {{ gallery("the-visitor-gallery-1", [
-                "/personal/2022/the-visitor/drawing-board-7.jpg",
-                "/personal/2022/the-visitor/drawing-board-6.jpg",
-                "/personal/2022/the-visitor/drawing-board-5.jpg",
-                "/personal/2022/the-visitor/drawing-board-4.jpg",
-                "/personal/2022/the-visitor/drawing-board-3.jpg",
-                "/personal/2022/the-visitor/drawing-board-2-2.jpg",
+            "/personal/2022/the-visitor/drawing-board-7.jpg",
+            "/personal/2022/the-visitor/drawing-board-6.jpg",
+            "/personal/2022/the-visitor/drawing-board-5.jpg",
+            "/personal/2022/the-visitor/drawing-board-4.jpg",
+            "/personal/2022/the-visitor/drawing-board-3.jpg",
+            "/personal/2022/the-visitor/drawing-board-2-2.jpg",
             ]) }}
         </div>
         <div class="desktop-1-2 text">
             {{ gallery("the-visitor-gallery-2", [
-                "/personal/2022/the-visitor/picture-booklet-1.jpg",
-                "/personal/2022/the-visitor/picture-booklet-2.jpg",
-                "/personal/2022/the-visitor/picture-booklet-3.jpg",
+            "/personal/2022/the-visitor/picture-booklet-1.jpg",
+            "/personal/2022/the-visitor/picture-booklet-2.jpg",
+            "/personal/2022/the-visitor/picture-booklet-3.jpg",
             ]) }}
             <div class="text">
                 <div class="highlight">THE VISITOR, 2022</div>
@@ -166,8 +187,8 @@
         <div class="desktop-15 empty"></div>
         <div class="desktop-35">
             {{ gallery("gutter-and-soul-gallery", [
-                "/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg",
-                "/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg",
+            "/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg",
+            "/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg",
             ]) }}
         </div>
         <div class="desktop-1-2 text">
@@ -189,8 +210,8 @@
     <div class="section" id="dialogue">
         <div class="desktop-1-2 text">
             {{ gallery("dialogue-gallery-1", [
-                "/personal/2022/dialogue/alphabet.jpg",
-                "/personal/2022/dialogue/poster-mockups.jpg",
+            "/personal/2022/dialogue/alphabet.jpg",
+            "/personal/2022/dialogue/poster-mockups.jpg",
             ]) }}
             <div class="text">
                 <div class="highlight">DIALOGUE, 2022</div>
@@ -206,8 +227,8 @@
         </div>
         <div class="desktop-35">
             {{ gallery("dialogue-gallery-2", [
-                "/personal/2022/dialogue/installation-1.jpg",
-                "/personal/2022/dialogue/installation-2.jpg",
+            "/personal/2022/dialogue/installation-1.jpg",
+            "/personal/2022/dialogue/installation-2.jpg",
             ]) }}
         </div>
         <div class="desktop-15 empty"></div>
@@ -217,8 +238,8 @@
         <div class="desktop-15 empty"></div>
         <div class="desktop-35 text">
             {{ gallery("another-romance-gallery", [
-                "/personal/2021/another-romance/installation-render-1.jpg",
-                "/personal/2021/another-romance/installation-render-3.jpg",
+            "/personal/2021/another-romance/installation-render-1.jpg",
+            "/personal/2021/another-romance/installation-render-3.jpg",
             ]) }}
             <div class="spacing" style="height: 1.5rem;"></div>
             {{ image("/personal/2021/another-romance/installation-picture.jpg") }}
@@ -248,10 +269,10 @@
     <div class="section" id="obloom">
         <div class="desktop-1-2">
             {{ gallery("obloom-gallery-1", [
-                "/personal/2021/obloom/interface-1.jpg",
-                "/personal/2021/obloom/interface-2.jpg",
-                "/personal/2021/obloom/interface-3.jpg",
-                "/personal/2021/obloom/interface-4.jpg",
+            "/personal/2021/obloom/interface-1.jpg",
+            "/personal/2021/obloom/interface-2.jpg",
+            "/personal/2021/obloom/interface-3.jpg",
+            "/personal/2021/obloom/interface-4.jpg",
             ]) }}
         </div>
         <div class="desktop-25">
@@ -259,8 +280,8 @@
             {{ image("/personal/2021/obloom/floppy-disc.jpg") }}
             <div class="spacing" style="height: 1.5rem;"></div>
             {{ gallery("obloom-gallery-2", [
-                "/personal/2021/obloom/posters-1.jpg",
-                "/personal/2021/obloom/posters-2.jpg",
+            "/personal/2021/obloom/posters-1.jpg",
+            "/personal/2021/obloom/posters-2.jpg",
             ]) }}
         </div>
         <div class="desktop-25 text">
@@ -297,9 +318,9 @@
         </div>
         <div class="desktop-35">
             {{ gallery("utopia-gallery", [
-                "/personal/2020/utopia/artboard-1-copy-2.jpg",
-                "/personal/2020/utopia/artboard-1-copy-1.jpg",
-                "/personal/2020/utopia/artboard-1-copy-5.jpg",
+            "/personal/2020/utopia/artboard-1-copy-2.jpg",
+            "/personal/2020/utopia/artboard-1-copy-1.jpg",
+            "/personal/2020/utopia/artboard-1-copy-5.jpg",
             ]) }}
         </div>
     </div>
