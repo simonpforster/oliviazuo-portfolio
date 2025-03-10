@@ -44,5 +44,5 @@ jobs:
           cache-to: type=gha,mode=max
           file: Dockerfile
           push: true
-          tags: ${{ env.IMAGE_TAG_LATEST }},${{ env.IMAGE_TAG_VERSION }}, ${{ github.event.pull_request.number }}
+          tags: ${{ env.IMAGE_TAG_LATEST }},${{ env.IMAGE_TAG_VERSION }},${{ github.event.pull_request.number }}
           provenance: false
