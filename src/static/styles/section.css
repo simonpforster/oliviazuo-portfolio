@@ -64,6 +64,10 @@
             .media-section {
                 grid-column-start: 4;
             }
+
+            .icon-section {
+                grid-column-start: 4;
+            }
         }
 
         &:not(:has(.grid-description)) {
@@ -72,6 +76,10 @@
             }
 
             .media-section {
+                grid-column-start: 3;
+            }
+
+            .icon-section {
                 grid-column-start: 3;
             }
         }
@@ -132,7 +140,6 @@
         grid-row-start: 3;
         grid-row-end: 4;
 
-        grid-column-start: 4;
         grid-column-end: 9;
     }
 

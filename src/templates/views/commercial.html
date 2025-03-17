@@ -3,12 +3,11 @@
 {% from "macros.html" import image, gallery %}
 
 {% block head %}
-    <title>OLIVIA ZUO - COMMERCIAL</title>
-    <link rel="icon" type="image/x-icon"
-          href="https://image-resizer.simonpforster.com/oliviazuo-portfolio/elements/element-blue.png?width=480">
+<title>OLIVIA ZUO - COMMERCIAL</title>
+<link rel="icon" type="image/x-icon"
+      href="https://image-resizer.simonpforster.com/oliviazuo-portfolio/elements/element-blue.png?width=480">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/page/commercial.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/mobile-gallery-slider.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='styles/page/commercial.css') }}">
 
 {% endblock %}
 
@@ -30,9 +29,13 @@
 
             <div class="media-section">
                 <div class="media-item desktop-2-8">
-                    <div style="width: 60%; margin-left: auto; margin-right: 0;">{{ image("/commercial/nike/icon-3.png") }}</div>
+                    <div style="width: 60%; margin-left: auto; margin-right: 0;">{{ image("/commercial/nike/icon-3.png")
+                        }}
+                    </div>
                     <div style="width: 80%; rotate: 5deg;">{{ image("/commercial/nike/icon-1.png") }}</div>
-                    <div style="width: 50%; margin-left: auto; margin-right: 0;">{{ image("/commercial/nike/icon-2.png") }}</div>
+                    <div style="width: 50%; margin-left: auto; margin-right: 0;">{{ image("/commercial/nike/icon-2.png")
+                        }}
+                    </div>
                 </div>
                 <div class="media-item desktop-4-8">
                     {{ gallery("nike-big-bang-gallery", [
@@ -45,58 +48,65 @@
         </div>
 
         <div class="section" id="new-balance">
-            <div class="desktop-30 empty"></div>
-            <div class="desktop-10 mobile-slider-x" id="new-balance-illustrations">
-                <ul>
-                    <li>
-                        {{ image("/commercial/new-balance/illustration-monitor.png") }}
-                    </li>
-                    <li>
-                        {{ image("/commercial/new-balance/illustration-megaphone.png") }}
-                    </li>
-                    <li>
-                        {{ image("/commercial/new-balance/illustration-clapperboard.png") }}
-                    </li>
-                    <li>
-                        {{ image("/commercial/new-balance/illustration-laptop.png") }}
-                    </li>
-                    <li>
-                        {{ image("/commercial/new-balance/illustration-lightbulb.png") }}
-                    </li>
-                </ul>
-                <div class="mobile-overlay-x"></div>
+            <div class="grid-title">
+                <div class="highlight">New Balance - Shanghai Content Factory</div>
+                <div>2023</div>
+                <div class="types">
+                    <div>Collaboration</div>
+                    <div>Illustration Design</div>
+                    <div>Type Design</div>
+                </div>
             </div>
-            <div class="desktop-60 text">
-                {{ gallery("gallery-new-balance", [
+            <div class="media-section">
+                <div class="media-item desktop-3-8">
+                    {{ gallery("gallery-new-balance", [
                     "/commercial/new-balance/picture-shoot.jpg",
                     "/commercial/new-balance/picture-box-stickers.jpg",
                     "/commercial/new-balance/picture-shoe.jpg",
-                ], "height") }}
-                <div class="text">
-                    <div class="highlight">
-                        NEW BALANCE
-                    </div>
-                    <div>
-                        Shanghai Content Factory, 2023
-                    </div>
+                    ], "height") }}
+                </div>
+            </div>
+            <div class="icon-section">
+                <div class="slider" id="new-balance-illustrations">
+                    <ul>
+                        <li>
+                            {{ image("/commercial/new-balance/illustration-monitor.png") }}
+                        </li>
+                        <li>
+                            {{ image("/commercial/new-balance/illustration-megaphone.png") }}
+                        </li>
+                        <li>
+                            {{ image("/commercial/new-balance/illustration-clapperboard.png") }}
+                        </li>
+                        <li>
+                            {{ image("/commercial/new-balance/illustration-laptop.png") }}
+                        </li>
+                        <li>
+                            {{ image("/commercial/new-balance/illustration-lightbulb.png") }}
+                        </li>
+                    </ul>
+                    <div class="overlay-x"></div>
                 </div>
             </div>
         </div>
 
         <div class="section" id="budweiser-creative-x">
-            <div class="desktop-1-2 text">
-                <img class="static"
-                     src="https://storage.googleapis.com/image-resizer_europe-west1/oliviazuo-portfolio/commercial/budweiser/annual-creative-x-awards/target.gif"
-                    fetchpriority="low">
-                <div class="text">
-                    <div class="highlight">BUDWEISER</div>
-                    <div>
-                        Annual Creative-X Awards Ceremoy, 2021
-                    </div>
+            <div class="grid-title">
+                <div class="highlight">Budweiser - Annual Creative-X Awards Ceremony</div>
+                <div>2021</div>
+                <div class="types">
+                    <div>Illustration Design</div>
+                    <div>Creative Design</div>
                 </div>
             </div>
-            <div class="desktop-25">
-                {{ gallery("budweiser-creative-x-gallery", [
+            <div class="media-section">
+                <div class="media-item desktop-3-8">
+                    <img class="static"
+                         src="https://storage.googleapis.com/image-resizer_europe-west1/oliviazuo-portfolio/commercial/budweiser/annual-creative-x-awards/target.gif"
+                         fetchpriority="low">
+                </div>
+                <div class="media-item desktop-3-8">
+                    {{ gallery("budweiser-creative-x-gallery", [
                     "/commercial/budweiser/annual-creative-x-awards/1-creative-brand-strategy.jpg",
                     "/commercial/budweiser/annual-creative-x-awards/1-scale-and-adapt.jpg",
                     "/commercial/budweiser/annual-creative-x-awards/2-creative-execution.jpg",
@@ -105,63 +115,73 @@
                     "/commercial/budweiser/annual-creative-x-awards/3-smart-drinking.jpg",
                     "/commercial/budweiser/annual-creative-x-awards/4-draftline-of-the-year.jpg",
                     "/commercial/budweiser/annual-creative-x-awards/4-grand-prix.jpg",
-                ]) }}
+                    ]) }}
+                </div>
             </div>
-            <div class="desktop-25 empty"></div>
         </div>
 
         <div class="section" id="budweiser-unmet-gala">
-            <div class="desktop-15 empty"></div>
-            <div class="desktop-35 text">
-                {{ gallery("budweiser-creative-unmet-gala", [
-                    "/commercial/budweiser/unmet-gala/zoom-bg-balcony.png",
-                    "/commercial/budweiser/unmet-gala/zoom-bg-kitchen.png",
-                ]) }}
-                <div class="text">
-                    <div class="highlight">BUDWEISER</div>
-                    <div>
-                        Unmet Gala, 2022
-                    </div>
+            <div class="grid-title">
+                <div class="highlight">Budweiser - Unmet Gala</div>
+                <div>2022</div>
+                <div class="types">
+                    <div>Illustration Design</div>
+                    <div>Creative Design</div>
                 </div>
             </div>
-            <div class="desktop-1-2">
-                {{ image(
+            <div class="media-section">
+                <div class="media-item desktop-3-8">
+                    {{ gallery("budweiser-creative-unmet-gala", [
+                    "/commercial/budweiser/unmet-gala/zoom-bg-balcony.png",
+                    "/commercial/budweiser/unmet-gala/zoom-bg-kitchen.png",
+                    ]) }}
+                </div>
+                <div class="media-item desktop-3-8">
+                    {{ image(
                     "/commercial/budweiser/unmet-gala/zoom-bg-bedroom.png"
-                ) }}
+                    ) }}
+                </div>
             </div>
         </div>
 
         <div class="section" id="nyu-shanghai-opening-fall">
-            <div class="desktop-40">
-                {{ image("/commercial/nyu-shanghai/opening-fall-2022/cover.jpg") }}
-            </div>
-            <div class="desktop-1-2 text">
-                {{ gallery("nyu-shanghai-opening-fall-gallery", [
-                    "/commercial/nyu-shanghai/opening-fall-2022/pages-18-19.png",
-                    "/commercial/nyu-shanghai/opening-fall-2022/pages-spread-21.png",
-                ]) }}
-                <div class="text">
-                    <div class="highlight">NYU SHANGHAI</div>
-                    <div>
-                        Opening Fall, 2022
-                    </div>
+            <div class="grid-title">
+                <div class="highlight">NYU Shanghai - Opening Fall</div>
+                <div>2022</div>
+                <div class="types">
+                    <div>Editorial Design</div>
+                    <div>Collaboration</div>
                 </div>
             </div>
-            <div class="desktop-10 empty"></div>
+            <div class="media-section">
+                <div class="media-item desktop-3-8">
+                    {{ image("/commercial/nyu-shanghai/opening-fall-2022/cover.jpg") }}
+                </div>
+                <div class="media-item desktop-3-8">
+                    {{ gallery("nyu-shanghai-opening-fall-gallery", [
+                    "/commercial/nyu-shanghai/opening-fall-2022/pages-18-19.png",
+                    "/commercial/nyu-shanghai/opening-fall-2022/pages-spread-21.png",
+                    ]) }}
+                </div>
+            </div>
         </div>
 
         <div class="section" id="nyu-shanghai-10th-anniversary">
-            <div class="desktop-25 text">
-                {{ image("/commercial/nyu-shanghai/10th-anniversary/cover.png") }}
-                <div class="text">
-                    <div class="highlight">NYU SHANGHAI</div>
-                    <div>
-                        10th Anniversary Special Edition, 2022
-                    </div>
+            <div class="grid-title">
+                <div class="highlight">NYU Shanghai - 10th Anniversary Special Edition</div>
+                <div>2022</div>
+                <div class="types">
+                    <div>Type Design</div>
+                    <div>Editorial Design</div>
+                    <div>Infographics</div>
                 </div>
             </div>
-            <div class="desktop-55 ">
-                {{ gallery("nyu-shanghai-10th-anniversary-gallery", [
+            <div class="media-section">
+                <div class="media-item desktop-3-8">
+                    {{ image("/commercial/nyu-shanghai/10th-anniversary/cover.png") }}
+                </div>
+                <div class="media-item desktop-3-8">
+                    {{ gallery("nyu-shanghai-10th-anniversary-gallery", [
                     "/commercial/nyu-shanghai/10th-anniversary/development-spread.png",
                     "/commercial/nyu-shanghai/10th-anniversary/development-pages.png",
                     "/commercial/nyu-shanghai/10th-anniversary/research-spread.png",
@@ -172,61 +192,72 @@
                     "/commercial/nyu-shanghai/10th-anniversary/exchange-pages.png",
                     "/commercial/nyu-shanghai/10th-anniversary/prospects-spread.png",
                     "/commercial/nyu-shanghai/10th-anniversary/prospects-pages.png",
-                ]) }}
+                    ]) }}
+                </div>
             </div>
-            <div class="desktop-20 empty"></div>
         </div>
 
         <div class="section" id="omo">
-            <div class="desktop-40 text">
-                {{ image("/commercial/omo/packaging-grey-bg.jpg") }}
-                <div class="text">
-                    <div class="highlight">OMO</div>
-                    <div>
-                        Floor Cleaner Machine Formula
-                    </div>
+            <div class="grid-title">
+                <div class="highlight">OMO - Floor Cleaner Machine Formula</div>
+                <div>2021</div>
+                <div class="types">
+                    <div>Packaging Design</div>
+                    <div>Type Design</div>
                 </div>
             </div>
-            <div class="desktop-30 ">
-                {{ image("/commercial/omo/ad.jpg") }}
+            <div class="media-section">
+                <div class="media-item desktop-3-8">
+                    {{ image("/commercial/omo/packaging-grey-bg.jpg") }}
+                </div>
+                <div class="media-item desktop-3-8">
+                    {{ image("/commercial/omo/ad.jpg") }}
+                </div>
             </div>
-            <div class="desktop-30 empty"></div>
         </div>
 
         <div class="section" id="peets-coffee-pure-blend">
-            <div class="desktop-40 empty"></div>
-            <div class="desktop-35 text">
-                {{ image("/commercial/peets-coffee/pure-blend/PET-packaging-picture.jpg") }}
-                <div class="text">
-                    <div class="highlight">Peet's Coffee</div>
-                    <div>
-                        Pure Blend, 2022
-                    </div>
+            <div class="grid-title">
+                <div class="highlight">Peet's Coffee - Pure Blend</div>
+                <div>2023</div>
+                <div class="types">
+                    <div>Packaging Design</div>
+                    <div>Type Design</div>
                 </div>
             </div>
-            <div class="desktop-25">
-                {{ image("/commercial/peets-coffee/pure-blend/PET-packaging-schematic-2.png") }}
-                {{ image("/commercial/peets-coffee/pure-blend/PET-packaging-schematic-1.png") }}
+            <div class="media-section">
+                <div class="media-item desktop-3-8">
+                    {{ image("/commercial/peets-coffee/pure-blend/PET-packaging-picture.jpg") }}
+                </div>
+                <div class="media-item desktop-3-8">
+                    {{ gallery("peets-coffee-pure-blend-gallery", [
+                    "/commercial/peets-coffee/pure-blend/PET-packaging-schematic-2.png",
+                    "/commercial/peets-coffee/pure-blend/PET-packaging-schematic-1.png",
+                    ]) }}
+                </div>
             </div>
         </div>
 
         <div class="section" id="peets-coffee-arcteryx">
-            <div class="desktop-35 text">
-                {{ image("/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg") }}
-                <div class="text">
-                    <div class="highlight">PEET’S COFFEE x ARC’TERYX</div>
-                    <div>
-                        Pop-up, 2023
-                    </div>
+            <div class="grid-title">
+                <div class="highlight">Peet's Coffee x ARC'TERYX - Pop-up</div>
+                <div>2023</div>
+                <div class="types">
+                    <div>Packaging Design</div>
+                    <div>Illustration Design</div>
                 </div>
             </div>
-            <div class="desktop-25">
-                {{ gallery("peets-coffee-arcteryx-gallery", [
+            <div class="media-section">
+                <div class="media-item desktop-3-8">
+                    {{ image("/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg") }}
+                </div>
+                <div class="media-item desktop-3-8">
+                    {{ gallery("peets-coffee-arcteryx-gallery", [
                     "/commercial/peets-coffee/peets-coffee-x-arcteryx/1-cans.jpg",
                     "/commercial/peets-coffee/peets-coffee-x-arcteryx/2-cans.jpg",
-                ]) }}
+                    ]) }}
+                </div>
             </div>
-            <div class="desktop-40 empty"></div>
         </div>
     </div>
 </div>
