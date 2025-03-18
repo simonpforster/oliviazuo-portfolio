@@ -17,7 +17,6 @@ app.jinja_env.globals['image_resizer'] = image_resizer
 app.jinja_env.globals['shop_open'] = os.getenv("SHOP_OPEN", "False")
 
 db = firestore.Client()
-
 collection_ref = db.collection('projects')
 query = collection_ref.where('owner', '==', 'Olivia Zuo')
 results = query.stream()
