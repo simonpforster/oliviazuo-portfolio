@@ -49,6 +49,13 @@
     pointer-events: none;
 }
 
+.reference-section {
+    & a {
+        color: rgba(0, 0, 0, 0.5);
+        text-decoration-color: rgba(0, 0, 0, 0.5);
+    }
+}
+
 @media screen and (min-width: 701px) {
     .section {
         overflow-x: visible;
@@ -92,9 +99,14 @@
         grid-column-start: 1;
 
         padding-left: 0.75rem;
-        padding-bottom: 1.5rem;
 
-        & > * {
+        & > .essentials {
+            & > * {
+                padding: 0.75rem;
+            }
+        }
+
+        & > .reference-section {
             padding: 0.75rem;
         }
     }
@@ -242,6 +254,16 @@
     .grid-title {
         padding: 0.75rem;
         order: 1;
+
+        display: flex;
+
+        flex-flow: row nowrap;
+
+        & .reference-section {
+            margin-right: 0;
+            margin-left: auto;
+            width: fit-content;
+        }
     }
 
     .grid-description {
