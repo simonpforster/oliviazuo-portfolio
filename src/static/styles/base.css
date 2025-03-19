@@ -1,3 +1,8 @@
+:root {
+    --grey: rgba(0, 0, 0, 0.5);
+}
+
+
 html {
     line-height: 1.25;
     letter-spacing: 0;
@@ -6,9 +11,8 @@ html {
     font-weight: 420;
     font-style: normal;
     font-family: "Font 1", sans-serif;
-    font-variation-settings:
-        "slnt" 0,
-        "MONO" 0.25;
+    font-variation-settings: "slnt" 0,
+    "MONO" 0.25;
     scroll-behavior: smooth;
 }
 
@@ -104,7 +108,7 @@ hr {
 
 figcaption {
     font-size: 0.85rem;
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--grey);
     margin: 0.25rem 0 0.25rem;
     visibility: hidden;
 
@@ -154,7 +158,7 @@ a {
 }
 
 #footer #trademark-footer {
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--grey);
 }
 
 main {
