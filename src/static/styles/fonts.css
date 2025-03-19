@@ -1,7 +1,7 @@
 @font-face {
     font-display: block;
     font-family: "Font 1";
-    src: url("/static/fonts/abc-gaisyr/ABCGaisyrEdu-Book.otf") format("opentype");
+    src: url("/static/fonts/abc-gaisyr/ABCGaisyrEdu-Regular.otf") format("opentype");
     font-style: normal;
     font-weight: normal;
 }
