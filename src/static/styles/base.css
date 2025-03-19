@@ -109,7 +109,7 @@ figcaption {
     visibility: hidden;
 
     &::before {
-        content: "▲ ";
+        content: "△ ";
     }
 }
 
