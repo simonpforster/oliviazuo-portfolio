@@ -13,7 +13,7 @@
 
 .grid-title {
     & .year {
-        color: rgba(0, 0, 0, 0.5);
+        color: var(--grey);
     }
 }
 
@@ -53,8 +53,8 @@
 
 .reference-section {
     & a {
-        color: rgba(0, 0, 0, 0.5);
-        text-decoration-color: rgba(0, 0, 0, 0.5);
+        color: var(--grey);
+        text-decoration-color: var(--grey);
     }
 }
 

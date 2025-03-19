@@ -5,20 +5,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, height=device-height">
 
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/fonts.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/modal.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/section.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/gallery-slider.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/grids.css') }}">
-    <style>
-        @font-face {
-            font-display: block;
-            font-family: "Font";
-            src: url("{{ url_for('static', filename='fonts/font.woff2') }}") format("woff2-variations");
-            font-style: normal;
-            font-weight: 200 1000;
-        }
-    </style>
+
     <script type="text/javascript">const config = {"imageResizer":"{{ image_resizer }}"}</script>
     <script src="{{ url_for('static', filename='js/image.js') }}" type="module"></script>
     <script src="{{ url_for('static', filename='js/solid-gallery.js') }}" type="module"></script>

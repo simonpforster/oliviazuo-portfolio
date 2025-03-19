@@ -1,0 +1,15 @@
+@font-face {
+    font-display: block;
+    font-family: "Font 1";
+    src: url("/static/fonts/abc-gaisyr/ABCGaisyrEdu-Book.otf") format("opentype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-display: block;
+    font-family: "Font 1";
+    src: url("/static/fonts/abc-gaisyr/ABCGaisyrEdu-Bold.otf") format("opentype");
+    font-style: normal;
+    font-weight: bold;
+}
