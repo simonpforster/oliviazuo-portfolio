@@ -15,6 +15,16 @@
     & .year {
         color: var(--grey);
     }
+
+    & > .essentials {
+        & > * {
+            padding: 0.75rem;
+        }
+    }
+
+    & > .reference-section {
+        padding: 0.75rem;
+    }
 }
 
 .media-item {
@@ -101,16 +111,6 @@
         grid-column-start: 1;
 
         padding-left: 0.75rem;
-
-        & > .essentials {
-            & > * {
-                padding: 0.75rem;
-            }
-        }
-
-        & > .reference-section {
-            padding: 0.75rem;
-        }
     }
 
     .grid-description {
@@ -253,7 +253,6 @@
     }
 
     .grid-title {
-        padding: 0.75rem;
         order: 1;
 
         display: flex;
