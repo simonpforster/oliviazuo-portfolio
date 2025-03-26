@@ -53,11 +53,11 @@ async fn main() {
     // Define templates
     hbs.register_template_file("base", "templates/base.hbs")
         .expect("Failed to register index template");
-    hbs.register_template_file("index", "templates/index.hbs")
+    hbs.register_template_file("index", "templates/views/index.hbs")
         .expect("Failed to register index template");
-    hbs.register_template_file("personal", "templates/personal.hbs")
+    hbs.register_template_file("personal", "templates/views/personal.hbs")
         .expect("Failed to register index template");
-    hbs.register_template_file("commercial", "templates/commercial.hbs")
+    hbs.register_template_file("commercial", "templates/views/commercial.hbs")
         .expect("Failed to register index template");
 
 
