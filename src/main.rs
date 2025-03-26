@@ -57,8 +57,8 @@ async fn main() {
         .expect("Failed to register index template");
     hbs.register_template_file("personal", "templates/personal.hbs")
         .expect("Failed to register index template");
-    // hbs.register_template_file("commercial", "templates/commercial.hbs")
-    //     .expect("Failed to register index template");
+    hbs.register_template_file("commercial", "templates/commercial.hbs")
+        .expect("Failed to register index template");
 
 
     // Create shared application state
@@ -68,7 +68,7 @@ async fn main() {
     let app = Router::new()
         .route("/", get(index_handler))
         .route("/personal", get(personal_handler))
-        .route("/commercial", get(index_handler))
+        .route("/commercial", get(commercial_handler))
         .route("/portfolio.pdf", get(Redirect::permanent(&pdf_portfolio))) // to be turned into a proxy at a later date
         .nest_service("/static", ServeDir::new("static"))
         .with_state(state)
