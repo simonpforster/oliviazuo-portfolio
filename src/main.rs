@@ -38,6 +38,8 @@ async fn main() {
     // Create and register templates
     let mut hbs = Handlebars::new();
 
+    hbs.set_dev_mode(true);
+
     // Define image helper
     hbs.register_template_file("image-template", "templates/components/image.hbs")
         .expect("Failed to register image-template template");
@@ -53,8 +55,8 @@ async fn main() {
         .expect("Failed to register index template");
     hbs.register_template_file("index", "templates/index.hbs")
         .expect("Failed to register index template");
-    // hbs.register_template_file("personal", "templates/personal.hbs")
-    //     .expect("Failed to register index template");
+    hbs.register_template_file("personal", "templates/personal.hbs")
+        .expect("Failed to register index template");
     // hbs.register_template_file("commercial", "templates/commercial.hbs")
     //     .expect("Failed to register index template");
 
@@ -65,7 +67,7 @@ async fn main() {
     // Setup our application with routes
     let app = Router::new()
         .route("/", get(index_handler))
-        .route("/personal", get(index_handler))
+        .route("/personal", get(personal_handler))
         .route("/commercial", get(index_handler))
         .route("/portfolio.pdf", get(Redirect::permanent(&pdf_portfolio))) // to be turned into a proxy at a later date
         .nest_service("/static", ServeDir::new("static"))
