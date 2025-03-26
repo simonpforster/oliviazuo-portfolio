@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta name=description content="Olivia Zuo's design portfolio.">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/fonts.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/modal.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/section.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/gallery-slider.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/grids.css') }}">
+
+    <script type="text/javascript">const config = {"imageResizer": "{{ image_resizer }}"}</script>
+    <script src="{{ url_for('static', filename='js/image.js') }}" type="module"></script>
+    <script src="{{ url_for('static', filename='js/solid-gallery.js') }}" type="module"></script>
+    <script>
+        !function (t, e) {
+            var o, n, p, r;
+            e.__SV || (window.posthog = e, e._i = [], e.init = function (i, s, a) {
+                function g(t, e) {
+                    var o = e.split(".");
+                    2 == o.length && (t = t[o[0]], e = o[1]), t[e] = function () {
+                        t.push([e].concat(Array.prototype.slice.call(arguments, 0)))
+                    }
+                }
+
+                (p = t.createElement("script")).type = "text/javascript", p.crossOrigin = "anonymous", p.async = !0, p.src = s.api_host.replace(".i.posthog.com", "-assets.i.posthog.com") + "/static/array.js", (r = t.getElementsByTagName("script")[0]).parentNode.insertBefore(p, r);
+                var u = e;
+                for (void 0 !== a ? u = e[a] = [] : a = "posthog", u.people = u.people || [], u.toString = function (t) {
+                    var e = "posthog";
+                    return "posthog" !== a && (e += "." + a), t || (e += " (stub)"), e
+                }, u.people.toString = function () {
+                    return u.toString(1) + ".people (stub)"
+                }, o = "init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures on onFeatureFlags onSessionId getSurveys getActiveMatchingSurveys renderSurvey canRenderSurvey identify setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug getPageViewId captureTraceFeedback captureTraceMetric".split(" "), n = 0; n < o.length; n++) g(u, o[n]);
+                e._i.push([i, s, a])
+            }, e.__SV = 1)
+        }(document, window.posthog || []);
+        posthog.init('phc_b2KfLxxH2oV7t2pzzlBFuKKOBlWJOSnwQybjFqt7XqR', {
+            api_host: 'https://eu.i.posthog.com',
+            person_profiles: 'always',
+        })
+    </script>
+
+    {% block head %}{% endblock %}
+</head>
+<body>
+<div id="modal">
+    <div class="modal-content">
+        <img src="" id="modal-image" fix="width" class="pixel loaded"/>
+    </div>
+</div>
+<div id="screen">
+    <div class="header">
+        <div class="wide-4 dropdown fill" id="index">
+            <a class="title heading highlight" href="../src/templates">OLIVIA ZUO</a>
+            <br>
+            <div class="dropdown-content">
+                <p>
+                    Graphic Designer, Researcher<br>
+                    Based in London
+                </p>
+                <p>
+                    BA Advertising, BNU<br>
+                    MA Graphic Media Design, UAL
+                </p>
+                <p>
+                    My current research focus lies in media memory and the interplay between individuality and
+                    emotion.<br>
+                    <br>
+                    I specialise in integrating complex concepts using interdisciplinary visual language.
+                </p>
+            </div>
+        </div>
+        <div class="wide-4 dropdown fill" id="personal">
+            <a class="heading highlight" href="./personal">PERSONAL PROJECTS</a>
+            <div class="dropdown-content">
+                <p>
+                    <a class="highlight" href="./personal#alwfav-8">2025</a><br>
+                    <a href="./personal#alwfav-8">A Line which Forms a Volume 8</a><br>
+                </p>
+                <p>
+                    <a class="highlight" href="./personal#rerendered-memory">2024</a><br>
+                    <a href="./personal#rerendered-memory">Rerendered Memory</a><br>
+                </p>
+                <p>
+                    <a class="highlight" href="./personal#spectral-archive">2023</a><br>
+                    <a href="./personal#spectral-archive">Spectral Archive</a><br>
+                    <a href="./personal#invisible-feast">Invisible Feast</a><br>
+                </p>
+                <p>
+                    <a class="highlight" href="./personal#the-visitor">2022</a><br>
+                    <a href="./personal#the-visitor">The Visitor</a><br>
+                    <a href="./personal#gutter-and-soul">Gutter and Soul</a><br>
+                    <a href="./personal#dialogue">Dialogue</a><br>
+                </p>
+                <p>
+                    <a class="highlight" href="./personal#another-romance">2021</a><br>
+                    <a href="./personal#another-romance">Another Romance</a><br>
+                    <a href="./personal#obloom">Obloom</a><br>
+                </p>
+                <p>
+                    <a class="highlight" href="./personal#utopia">2020</a><br>
+                    <a href="./personal#utopia">Utopia</a><br>
+                </p>
+            </div>
+        </div>
+        <div class="wide-4 dropdown fill" id="commercial">
+            <a class="heading highlight" href="./commercial">COMMERCIAL PROJECTS</a>
+            <div class="dropdown-content">
+                <p>
+                    <a class="highlight" href="./commercial#nike-big-bang">NIKE</a><br>
+                    <a href="./commercial#nike-big-bang">The Big Bang Network</a><br>
+                </p>
+                <p>
+                    <a class="highlight" href="./commercial#new-balance">NEW BALANCE</a><br>
+                    <a href="./commercial#new-balance">Shanghai Content Factory</a><br>
+                </p>
+                <p>
+                    <a class="highlight" href="./commercial#budweiser-creative-x">BUDWEISWER</a><br>
+                    <a href="./commercial#budweiser-creative-x">Annual Creative-X Awards Ceremony</a><br>
+                    <a href="./commercial#budweiser-unmet-gala">Unmet Gala<br>
+                </p>
+                <p>
+                    <a class="highlight" href="./commercial#nyu-shanghai-opening-fall">NYU SHANGHAI</a><br>
+                    <a href="./commercial#nyu-shanghai-opening-fall">Opening Fall 2022</a><br>
+                    <a href="./commercial#nyu-shanghai-10th-anniversary">10th Anniversary Special Edition</a><br>
+                </p>
+                <p>
+                    <a class="highlight" href="./commercial#omo">OMO</a><br>
+                    <a href="./commercial#omo">Floor Cleaning Formula</a><br>
+                </p>
+                <p>
+                    <a class="highlight" href="./commercial#peets-coffee-pure-blend">PEET’S COFFEE</a><br>
+                    <a href="./commercial#peets-coffee-pure-blend">Pure Blend Packaging</a><br>
+                    <a href="./commercial#peets-coffee-arcteryx">Peet’s Coffee x ARC’TERYX Pop-up</a><br>
+                </p>
+            </div>
+        </div>
+        <div class="slim-4 dropdown fill" id="pdf">
+            <a class="heading" href="./portfolio.pdf" target="_blank">PDF PORTFOLIO</a>
+            <div style="flex-grow: 1; overflow-wrap: break-word;">
+                <p>
+                    <a href="mailto:oliviazuo0428@gmail.com">oliviazuo0428@gmail.com</a><br>
+                    <a href="https://www.instagram.com/l1v.isliving/">@l1v.isliving</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    {% block screen %} {% endblock %}
+</div>
+
+<div id="offscreen">
+    {% block offscreen %} {% endblock %}
+</div>
+
+<div id="footer">
+    <div class="section-divider"></div>
+    <div class="column-container">
+        <hr>
+        <div id="rail" class="pure-g">
+            <div class="footer-1-2">
+                <div id="mailto-footer" class="footer-left">
+                    <a href="mailto:oliviazuo0428@gmail.com">EMAIL</a>
+                </div>
+                <div id="instagram-footer" class="footer-right">
+                    <a href="https://www.instagram.com/l1v.isliving/">INSTAGRAM</a>
+                </div>
+            </div>
+            <div class="footer-1-2">
+                <div id="vimeo-footer" class="footer-left">
+                    <a href="https://vimeo.com/user146109949">VIMEO</a>
+                </div>
+                <div id="trademark-footer" class="footer-right">
+                    © OLIVIA ZUO, 2024
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+

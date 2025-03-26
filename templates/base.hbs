@@ -3,18 +3,18 @@
 <head>
     <meta name=description content="Olivia Zuo's design portfolio.">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, height=device-height">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/fonts.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/base.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/modal.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/section.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/gallery-slider.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/grids.css') }}">
+    <link rel="stylesheet" href="/static/styles/fonts.css">
+    <link rel="stylesheet" href="/static/styles/base.css">
+    <link rel="stylesheet" href="/static/styles/modal.css">
+    <link rel="stylesheet" href="/static/styles/section.css">
+    <link rel="stylesheet" href="/static/styles/gallery-slider.css">
+    <link rel="stylesheet" href="/static/styles/grids.css">
 
     <script type="text/javascript">const config = {"imageResizer": "{{ image_resizer }}"}</script>
-    <script src="{{ url_for('static', filename='js/image.js') }}" type="module"></script>
-    <script src="{{ url_for('static', filename='js/solid-gallery.js') }}" type="module"></script>
+    <script src="/static/js/image.js" type="module"></script>
+    <script src="/static/js/solid-gallery.js" type="module"></script>
     <script>
         !function (t, e) {
             var o, n, p, r;
@@ -42,8 +42,7 @@
             person_profiles: 'always',
         })
     </script>
-
-    {% block head %}{% endblock %}
+    {{>  head}}
 </head>
 <body>
 <div id="modal">
@@ -120,7 +119,7 @@
                 <p>
                     <a class="highlight" href="./commercial#budweiser-creative-x">BUDWEISWER</a><br>
                     <a href="./commercial#budweiser-creative-x">Annual Creative-X Awards Ceremony</a><br>
-                    <a href="./commercial#budweiser-unmet-gala">Unmet Gala<br>
+                    <a href="./commercial#budweiser-unmet-gala">Unmet Gala</a><br>
                 </p>
                 <p>
                     <a class="highlight" href="./commercial#nyu-shanghai-opening-fall">NYU SHANGHAI</a><br>
@@ -148,11 +147,11 @@
             </div>
         </div>
     </div>
-    {% block screen %} {% endblock %}
+    {{> screen}}
 </div>
 
 <div id="offscreen">
-    {% block offscreen %} {% endblock %}
+    {{>  offscreen}}
 </div>
 
 <div id="footer">

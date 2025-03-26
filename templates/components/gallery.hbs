@@ -1,0 +1,7 @@
+<div class="gallery" id="{{ id }}" fix="{{ fix }}">
+    <div class="arrow-left-container"><img class="static arrow-left" src="/static/icons/arrow.svg" alt="gallery arrow pointing left"></div>
+    <div class="arrow-right-container"><img class="static arrow-right" src="/static/icons/arrow.svg" alt="gallery arrow pointing right"></div>
+    {{#each paths}}
+        {{ image path=this }}
+    {{/each}}
+</div>

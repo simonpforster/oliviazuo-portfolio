@@ -7,13 +7,7 @@
 
 {% macro gallery(id, paths, fix = "width") %}
 
-<div class="gallery" id="{{ id }}" fix="{{ fix }}">
-    <div class="arrow-left-container"><img class="static arrow-left" src="{{ url_for('static', filename='icons/arrow.svg') }}"></div>
-    <div class="arrow-right-container"><img class="static arrow-right" src="{{ url_for('static', filename='icons/arrow.svg') }}"></div>
-    {% for path in paths %}
-        {{ image(path) }}
-    {% endfor %}
-</div>
+
 
 {% endmacro %}
 
