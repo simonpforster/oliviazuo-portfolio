@@ -84,14 +84,14 @@ function closeModal() {
     modalController = new AbortController();
     modal.style.display = "none";
     modalImage.setAttribute("path", "");
-    modalImage.classList.add("pixel");
+    modalImage.classList.add("pixel-modal");
     modalImage.src = "";
 }
 
 function openModal(path) {
     modal.style.display = "block";
     modalImage.setAttribute("path", path);
-    modalImage.classList.add("pixel");
+    modalImage.classList.add("pixel-modal");
     updateModalSrc(4, modalController);
 }
 
@@ -115,7 +115,7 @@ function updateModalSrc(width, controller) {
                     parseInt(window.getComputedStyle(modalImage).width) ||
                     (modalImage.width > 0 && modalImage.width < width)
                 ) {
-                    modalImage.classList.remove("pixel");
+                    modalImage.classList.remove("pixel-modal");
                     modalImage.src = config.imageResizer + path;
                 } else {
                     updateModalSrc(width * 2, controller);

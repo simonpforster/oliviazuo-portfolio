@@ -189,7 +189,7 @@ img {
     object-fit: contain;
     display: block;
 
-    &.pixel {
+    &.pixel, &.pixel-modal {
         image-rendering: pixelated;
     }
 }
