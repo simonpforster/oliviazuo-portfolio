@@ -1,10 +1,10 @@
 # Olivia Zuo's Portfolio
 
-You can find it at https://www.oliviazuo.com
+![](https://skillicons.dev/icons?i=rust,docker,gcp&theme=dark)
 
-# Running the server
+Check out the website live at [oliviazuo.co.uk](https://www.oliviazuo.co.uk)
 
-## Locally
+# Running the server locally
 ```
 set -a
 source .env
