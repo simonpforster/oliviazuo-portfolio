@@ -6,6 +6,8 @@ You can find it at https://www.oliviazuo.com
 
 ## Locally
 ```
+set -a
 source .env
-flask --app "src/router" --debug run
+set +a
+cargo run
 ```

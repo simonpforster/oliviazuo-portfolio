@@ -2,5 +2,4 @@
 .env
 database/*
 *.DS_Store
-.venv
-__pycache__
+/target

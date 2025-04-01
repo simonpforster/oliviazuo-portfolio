@@ -1,15 +1,24 @@
 # syntax=docker/dockerfile:1
+FROM rust:1.85.1-bullseye AS builder
 
-FROM python:3.13-slim-bookworm
+ADD . .
 
-COPY /src /src
+ENV RUSTFLAGS="-C target-cpu=haswell -C opt-level=3"
 
-WORKDIR /src
+RUN cargo build --release
+
+FROM rust:1.85.1-slim-bullseye AS runner
+
+COPY --from=builder --chown=65534 /target/release/oliviazuo-portfolio /usr/local/bin
+ADD --chown=65534 /templates /templates
+ADD --chown=65534 /static /static
+
+ENV RUST_BACKTRACE=full
 
 ENV PORT=${PORT:-8080}
 
-COPY requirements.txt requirements.txt
+EXPOSE $PORT
 
-RUN pip3 install -r requirements.txt
+USER 65534
 
-CMD ["sh", "-c", "python3 -m flask --app 'src/router' run --host=0.0.0.0 --port=${PORT}"]
+CMD ["/usr/local/bin/oliviazuo-portfolio"]

@@ -1,9 +1,6 @@
 services:
-  flask-server:
-    platform: linux/amd64
+  rust-server:
     build: .
     ports:
       - "8080:8080"
     env_file: ".env"
-    volumes:
-      - /var/database
