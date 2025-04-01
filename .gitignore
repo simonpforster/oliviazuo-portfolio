@@ -2,9 +2,4 @@
 .env
 database/*
 *.DS_Store
-.venv
-__pycache__
-
-# Added by cargo
-
 /target
