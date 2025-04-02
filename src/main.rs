@@ -71,7 +71,6 @@ async fn main() {
         .route("/portfolio.pdf", get(Redirect::permanent(&pdf_portfolio))) // to be turned into a proxy at a later date
         .nest_service("/static", ServeDir::new("static"))
         .with_state(state)
-        .layer(TraceLayer::new_for_http())
         .layer(middleware::from_fn(extract_context));
 
     // Run our application
