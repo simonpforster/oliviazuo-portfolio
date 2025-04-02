@@ -17,6 +17,7 @@ use tower_http::{
     services::ServeDir,
     trace::TraceLayer,
 };
+use tracing::instrument;
 use components::image::Image;
 use components::gallery::Gallery;
 use crate::observability::init_tracing;
@@ -82,6 +83,7 @@ async fn main() {
     axum::serve(listener, app).await.unwrap();
 }
 
+#[instrument]
 async fn index_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse {
     let data = json!({
         "image_resizer": state.image_resizer,
@@ -97,6 +99,7 @@ async fn index_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse 
     }
 }
 
+#[instrument]
 async fn personal_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse {
     let data = json!({
         "image_resizer": state.image_resizer,
@@ -112,6 +115,7 @@ async fn personal_handler(State(state): State<Arc<AppState>>) -> impl IntoRespon
     }
 }
 
+#[instrument]
 async fn commercial_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse {
     let data = json!({
         "image_resizer": state.image_resizer,

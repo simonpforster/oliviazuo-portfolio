@@ -1,6 +1,7 @@
 use handlebars::{Context, Handlebars, Helper, HelperDef, HelperResult, Output, RenderContext};
 use std::env;
 use serde_json::json;
+use tracing::instrument;
 
 pub(crate) struct Image {
     image_resizer: String,
@@ -16,6 +17,8 @@ impl Image {
 
 
 impl HelperDef for Image {
+
+    #[instrument]
     fn call<'reg: 'rc, 'rc>(&self,
                             helper: &Helper,
                             hbs: &Handlebars,

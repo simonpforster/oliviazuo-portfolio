@@ -1,5 +1,6 @@
 use handlebars::{Context, Handlebars, Helper, HelperDef, HelperResult, Output, RenderContext};
 use serde_json::json;
+use tracing::instrument;
 
 pub(crate) struct Gallery;
 
@@ -10,6 +11,8 @@ impl Gallery {
 }
 
 impl HelperDef for Gallery {
+
+    #[instrument]
     fn call<'reg: 'rc, 'rc>(&self,
                             helper: &Helper,
                             hbs: &Handlebars,
