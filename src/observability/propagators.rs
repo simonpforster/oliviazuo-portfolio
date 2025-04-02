@@ -4,12 +4,11 @@ use axum::middleware::Next;
 use axum::response::Response;
 use opentelemetry::propagation::{Extractor, Injector};
 use std::convert::Infallible;
-use opentelemetry::trace::{FutureExt, SpanBuilder};
-use tracing::{info, instrument, Instrument, Span};
+use tracing::{instrument, Instrument, Span};
 use tracing_opentelemetry::OpenTelemetrySpanExt;
 
 #[instrument]
-pub async fn extract_context(mut req: Request, next: Next) -> Result<Response, Infallible> {
+pub async fn extract_context(req: Request, next: Next) -> Result<Response, Infallible> {
     let parent_context: opentelemetry::Context = opentelemetry::global::get_text_map_propagator(|propagator| {
         propagator.extract(&AxumHeaderExtractor(req.headers()))
     });

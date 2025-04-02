@@ -1,15 +1,12 @@
 mod components;
 mod observability;
 
-use axum::{extract::{Path, State}, http::StatusCode, middleware, response::{Html, IntoResponse}, routing::{get, get_service}, Router};
+use axum::{extract::State, http::StatusCode, middleware, response::{Html, IntoResponse}, routing::get, Router};
 use handlebars::Handlebars;
 use serde_json::json;
-use std::{collections::HashMap, env, net::SocketAddr, sync::Arc};
+use std::{env, net::SocketAddr, sync::Arc};
 use axum::response::Redirect;
-use tower_http::{
-    services::ServeDir,
-    trace::TraceLayer,
-};
+use tower_http::services::ServeDir;
 use tracing::{info, instrument, warn};
 use components::image::Image;
 use components::gallery::Gallery;
