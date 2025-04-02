@@ -1,13 +1,7 @@
 mod components;
 mod observability;
 
-use axum::{
-    extract::{Path, State},
-    http::StatusCode,
-    response::{Html, IntoResponse},
-    routing::{get, get_service},
-    Router,
-};
+use axum::{extract::{Path, State}, http::StatusCode, middleware, response::{Html, IntoResponse}, routing::{get, get_service}, Router};
 use handlebars::Handlebars;
 use serde_json::json;
 use std::{collections::HashMap, env, net::SocketAddr, sync::Arc};
@@ -17,9 +11,11 @@ use tower_http::{
     trace::TraceLayer,
 };
 use tracing::{info, instrument, warn};
+use tracing_stackdriver::layer;
 use components::image::Image;
 use components::gallery::Gallery;
 use crate::observability::init_tracing;
+use crate::observability::propagators::extract_context;
 
 // App state that will be shared across all routes
 #[derive(Debug)]
@@ -76,7 +72,8 @@ async fn main() {
         .route("/portfolio.pdf", get(Redirect::permanent(&pdf_portfolio))) // to be turned into a proxy at a later date
         .nest_service("/static", ServeDir::new("static"))
         .with_state(state)
-        .layer(TraceLayer::new_for_http());
+        .layer(TraceLayer::new_for_http())
+        .layer(middleware::from_fn(extract_context));
 
     // Run our application
     let addr = SocketAddr::from(([0, 0, 0, 0], port));
