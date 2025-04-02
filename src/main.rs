@@ -16,7 +16,7 @@ use tower_http::{
     services::ServeDir,
     trace::TraceLayer,
 };
-use tracing::instrument;
+use tracing::{info, instrument, warn};
 use components::image::Image;
 use components::gallery::Gallery;
 use crate::observability::init_tracing;
@@ -34,9 +34,12 @@ async fn main() {
     // Initialize tracing for nice logging
     let _ = init_tracing().await;
 
-    let image_resizer: String = env::var("IMAGE_RESIZER").unwrap();
-    let pdf_portfolio: String = env::var("PDF_PORTFOLIO").unwrap();
-    let port: u16 = env::var("PORT").unwrap_or("8080".into()).parse::<u16>().unwrap();
+    let image_resizer: String = env::var("IMAGE_RESIZER").expect("env var IMAGE_RESIZER not configured");
+    let pdf_portfolio: String = env::var("PDF_PORTFOLIO").expect("env var PDF_PORTFOLIO not configured");
+    let port: u16 = env::var("PORT").unwrap_or_else(|_| {
+        warn!("env var PORT not configured, defaulting to 8080");
+        "8080".into()
+    }).parse::<u16>().expect("env var PORT must be a valid number");
 
     // Create and register templates
     let mut hbs = Handlebars::new();
