@@ -14,8 +14,9 @@ pub async fn extract_context(mut req: Request, next: Next) -> Result<Response, I
         propagator.extract(&AxumHeaderExtractor(req.headers()))
     });
 
-    Span::current().set_parent(parent_context);
+    info!("Extracted parent context: {:?}", parent_context);
 
+    Span::current().set_parent(parent_context);
 
     Ok(next.run(req).in_current_span().await)
 }
