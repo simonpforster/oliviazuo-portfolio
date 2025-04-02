@@ -1,17 +1,23 @@
-use std::convert::Infallible;
 use axum::extract::Request;
 use axum::http::{HeaderMap, HeaderName};
 use axum::middleware::Next;
 use axum::response::Response;
 use opentelemetry::propagation::{Extractor, Injector};
-use opentelemetry::trace::FutureExt;
+use std::convert::Infallible;
+use opentelemetry::trace::{FutureExt, SpanBuilder};
+use tracing::{info, instrument, Instrument, Span};
+use tracing_opentelemetry::OpenTelemetrySpanExt;
 
+#[instrument]
 pub async fn extract_context(mut req: Request, next: Next) -> Result<Response, Infallible> {
     let parent_context: opentelemetry::Context = opentelemetry::global::get_text_map_propagator(|propagator| {
         propagator.extract(&AxumHeaderExtractor(req.headers()))
     });
 
-    Ok(next.run(req).with_context(parent_context).await)
+    Span::current().set_parent(parent_context);
+
+
+    Ok(next.run(req).in_current_span().await)
 }
 
 pub struct AxumHeaderInjector<'a>(pub &'a mut HeaderMap);
