@@ -71,7 +71,8 @@ async fn main() {
         .route("/portfolio.pdf", get(Redirect::permanent(&pdf_portfolio))) // to be turned into a proxy at a later date
         .nest_service("/static", ServeDir::new("static"))
         .with_state(state)
-        .layer(middleware::from_fn(extract_context));
+        .layer(middleware::from_fn(extract_context))
+        .layer(TraceLayer::new_for_http());
 
     // Run our application
     let addr = SocketAddr::from(([0, 0, 0, 0], port));
