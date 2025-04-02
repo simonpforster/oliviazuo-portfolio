@@ -12,7 +12,7 @@ use tracing_subscriber::filter::ParseError;
 use tracing_subscriber::layer::SubscriberExt;
 use tracing_subscriber::{EnvFilter, Registry};
 
-pub async fn init_tracing() -> Result<(), ParseError> {
+pub async fn init_tracing(service_name: String) -> Result<(), ParseError> {
 
     let authorizer = opentelemetry_stackdriver::GcpAuthorizer::new()
         .await
@@ -28,10 +28,10 @@ pub async fn init_tracing() -> Result<(), ParseError> {
     let provider = TracerProvider::builder()
         .with_batch_exporter(stackdriver_tracer, Tokio)
         .with_sampler(Sampler::ParentBased(Box::new(Sampler::TraceIdRatioBased(1.0))))
-        .with_span_processor(CustomSpanProcessor::new())
+        .with_span_processor(CustomSpanProcessor::new(service_name.clone()))
         .build();
 
-    let tracer = provider.tracer("oliviazuo-portfolio");
+    let tracer = provider.tracer(service_name.clone());
 
     let otel_layer = tracing_opentelemetry::layer().with_tracer(tracer);
     let stackdriver_layer =
@@ -53,23 +53,24 @@ pub async fn init_tracing() -> Result<(), ParseError> {
 
 
 #[derive(Debug)]
-pub struct CustomSpanProcessor {}
+pub struct CustomSpanProcessor {
+    service_name: String
+}
 
 impl CustomSpanProcessor {
-    pub fn new() -> Self {
-        CustomSpanProcessor {}
+    pub fn new(service_name: String) -> Self {
+        CustomSpanProcessor { service_name }
     }
 }
 
 const GCP_SERVICE_NAME_ATTRIBUTE: &str = "service.name";
 
-const SERVICE_NAME: &str = "oliviazuo-portfolio";
-
 impl SpanProcessor for CustomSpanProcessor {
     fn on_start(&self, span: &mut Span, _cx: &Context) {
+        let name: String = self.service_name.clone();
         span.set_attribute(KeyValue::new(
             GCP_SERVICE_NAME_ATTRIBUTE,
-            SERVICE_NAME,
+            name,
         ));
     }
 
