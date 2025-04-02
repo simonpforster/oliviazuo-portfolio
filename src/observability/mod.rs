@@ -31,7 +31,7 @@ pub async fn init_tracing() -> Result<(), ParseError> {
         .with_span_processor(CustomSpanProcessor::new())
         .build();
 
-    let tracer = provider.tracer("image-resizer");
+    let tracer = provider.tracer("oliviazuo-portfolio");
 
     let otel_layer = tracing_opentelemetry::layer().with_tracer(tracer);
     let stackdriver_layer =
