@@ -1,6 +1,5 @@
 use handlebars::{Context, Handlebars, Helper, HelperDef, HelperResult, Output, RenderContext};
 use serde_json::json;
-use tracing::instrument;
 
 pub(crate) struct Gallery;
 
@@ -16,7 +15,7 @@ impl HelperDef for Gallery {
                             helper: &Helper,
                             hbs: &Handlebars,
                             _: &Context,
-                            rc: &mut RenderContext,
+                            _rc: &mut RenderContext,
                             out: &mut dyn Output) -> HelperResult {
 
         let id = helper.hash().get("id")

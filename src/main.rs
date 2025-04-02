@@ -9,7 +9,6 @@ use axum::{
     Router,
 };
 use handlebars::Handlebars;
-use serde::{Deserialize, Serialize};
 use serde_json::json;
 use std::{collections::HashMap, env, net::SocketAddr, sync::Arc};
 use axum::response::Redirect;
@@ -23,6 +22,7 @@ use components::gallery::Gallery;
 use crate::observability::init_tracing;
 
 // App state that will be shared across all routes
+#[derive(Debug)]
 struct AppState {
     hbs: Handlebars<'static>,
     image_resizer: String,

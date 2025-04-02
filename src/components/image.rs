@@ -1,7 +1,5 @@
 use handlebars::{Context, Handlebars, Helper, HelperDef, HelperResult, Output, RenderContext};
-use std::env;
 use serde_json::json;
-use tracing::instrument;
 
 pub(crate) struct Image {
     image_resizer: String,
@@ -22,7 +20,7 @@ impl HelperDef for Image {
                             helper: &Helper,
                             hbs: &Handlebars,
                             _: &Context,
-                            rc: &mut RenderContext,
+                            _rc: &mut RenderContext,
                             out: &mut dyn Output) -> HelperResult {
 
         let path = helper.hash().get("path")
