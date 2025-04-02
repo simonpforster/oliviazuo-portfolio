@@ -1,5 +1,4 @@
 pub mod propagators;
-mod custom;
 
 use opentelemetry::{Context, KeyValue};
 use opentelemetry::trace::{Span as _, TraceResult, TracerProvider as _};
