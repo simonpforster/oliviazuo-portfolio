@@ -1,4 +1,5 @@
 mod components;
+mod observability;
 
 use axum::{
     extract::{Path, State},
@@ -18,6 +19,7 @@ use tower_http::{
 };
 use components::image::Image;
 use components::gallery::Gallery;
+use crate::observability::init_tracing;
 
 // App state that will be shared across all routes
 struct AppState {
@@ -29,7 +31,7 @@ struct AppState {
 #[tokio::main]
 async fn main() {
     // Initialize tracing for nice logging
-    tracing_subscriber::fmt::init();
+    let _ = init_tracing().await;
 
     let image_resizer: String = env::var("IMAGE_RESIZER").unwrap();
     let pdf_portfolio: String = env::var("PDF_PORTFOLIO").unwrap();
