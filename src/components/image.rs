@@ -18,7 +18,6 @@ impl Image {
 
 impl HelperDef for Image {
 
-    #[instrument]
     fn call<'reg: 'rc, 'rc>(&self,
                             helper: &Helper,
                             hbs: &Handlebars,
