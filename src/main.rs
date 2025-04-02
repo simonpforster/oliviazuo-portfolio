@@ -11,7 +11,6 @@ use tower_http::{
     trace::TraceLayer,
 };
 use tracing::{info, instrument, warn};
-use tracing_stackdriver::layer;
 use components::image::Image;
 use components::gallery::Gallery;
 use crate::observability::init_tracing;
