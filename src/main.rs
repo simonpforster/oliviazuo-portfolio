@@ -1,25 +1,20 @@
 mod components;
+mod observability;
 
-use axum::{
-    extract::{Path, State},
-    http::StatusCode,
-    response::{Html, IntoResponse},
-    routing::{get, get_service},
-    Router,
-};
+use axum::{extract::State, http::StatusCode, middleware, response::{Html, IntoResponse}, routing::get, Router};
 use handlebars::Handlebars;
-use serde::{Deserialize, Serialize};
 use serde_json::json;
-use std::{collections::HashMap, env, net::SocketAddr, sync::Arc};
+use std::{env, net::SocketAddr, sync::Arc};
 use axum::response::Redirect;
-use tower_http::{
-    services::ServeDir,
-    trace::TraceLayer,
-};
+use tower_http::services::ServeDir;
+use tracing::{info, instrument, warn};
 use components::image::Image;
 use components::gallery::Gallery;
+use crate::observability::init_tracing;
+use crate::observability::propagators::extract_context;
 
 // App state that will be shared across all routes
+#[derive(Debug)]
 struct AppState {
     hbs: Handlebars<'static>,
     image_resizer: String,
@@ -29,11 +24,14 @@ struct AppState {
 #[tokio::main]
 async fn main() {
     // Initialize tracing for nice logging
-    tracing_subscriber::fmt::init();
+    let _ = init_tracing().await;
 
-    let image_resizer: String = env::var("IMAGE_RESIZER").unwrap();
-    let pdf_portfolio: String = env::var("PDF_PORTFOLIO").unwrap();
-    let port: u16 = env::var("PORT").unwrap_or("8080".into()).parse::<u16>().unwrap();
+    let image_resizer: String = env::var("IMAGE_RESIZER").expect("env var IMAGE_RESIZER not configured");
+    let pdf_portfolio: String = env::var("PDF_PORTFOLIO").expect("env var PDF_PORTFOLIO not configured");
+    let port: u16 = env::var("PORT").unwrap_or_else(|_| {
+        warn!("env var PORT not configured, defaulting to 8080");
+        "8080".into()
+    }).parse::<u16>().expect("env var PORT must be a valid number");
 
     // Create and register templates
     let mut hbs = Handlebars::new();
@@ -70,16 +68,17 @@ async fn main() {
         .route("/portfolio.pdf", get(Redirect::permanent(&pdf_portfolio))) // to be turned into a proxy at a later date
         .nest_service("/static", ServeDir::new("static"))
         .with_state(state)
-        .layer(TraceLayer::new_for_http());
+        .layer(middleware::from_fn(extract_context));
 
     // Run our application
     let addr = SocketAddr::from(([0, 0, 0, 0], port));
-    tracing::info!("listening on {}", addr);
+    info!("listening on {}", addr);
     // run our app with hyper, listening globally on port 3000
     let listener = tokio::net::TcpListener::bind(addr).await.unwrap();
     axum::serve(listener, app).await.unwrap();
 }
 
+#[instrument]
 async fn index_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse {
     let data = json!({
         "image_resizer": state.image_resizer,
@@ -95,6 +94,7 @@ async fn index_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse 
     }
 }
 
+#[instrument]
 async fn personal_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse {
     let data = json!({
         "image_resizer": state.image_resizer,
@@ -110,6 +110,7 @@ async fn personal_handler(State(state): State<Arc<AppState>>) -> impl IntoRespon
     }
 }
 
+#[instrument]
 async fn commercial_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse {
     let data = json!({
         "image_resizer": state.image_resizer,

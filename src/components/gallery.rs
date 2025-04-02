@@ -10,11 +10,12 @@ impl Gallery {
 }
 
 impl HelperDef for Gallery {
+
     fn call<'reg: 'rc, 'rc>(&self,
                             helper: &Helper,
                             hbs: &Handlebars,
                             _: &Context,
-                            rc: &mut RenderContext,
+                            _rc: &mut RenderContext,
                             out: &mut dyn Output) -> HelperResult {
 
         let id = helper.hash().get("id")
