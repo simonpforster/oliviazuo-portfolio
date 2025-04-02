@@ -4,16 +4,14 @@ use axum::http::{HeaderMap, HeaderName};
 use axum::middleware::Next;
 use axum::response::Response;
 use opentelemetry::propagation::{Extractor, Injector};
-
+use opentelemetry::trace::FutureExt;
 
 pub async fn extract_context(mut req: Request, next: Next) -> Result<Response, Infallible> {
-    let parent_context = opentelemetry::global::get_text_map_propagator(|propagator| {
+    let parent_context: opentelemetry::Context = opentelemetry::global::get_text_map_propagator(|propagator| {
         propagator.extract(&AxumHeaderExtractor(req.headers()))
     });
 
-    req.extensions_mut().insert(parent_context);
-
-    Ok(next.run(req).await)
+    Ok(next.run(req).with_context(parent_context).await)
 }
 
 pub struct AxumHeaderInjector<'a>(pub &'a mut HeaderMap);
