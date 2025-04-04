@@ -23,8 +23,12 @@ struct AppState {
 
 #[tokio::main]
 async fn main() {
+
+    let service_name: String = env::var("K_SERVICE").unwrap_or("oliviazuo-portfolio".into());
+    let gcp_project_id: String = env::var("GCP_PROJECT_ID").expect("env var GCP_PROJECT_ID not configured");
+
     // Initialize tracing for nice logging
-    let _ = init_tracing().await;
+    let _ = init_tracing(service_name, gcp_project_id).await;
 
     let image_resizer: String = env::var("IMAGE_RESIZER").expect("env var IMAGE_RESIZER not configured");
     let pdf_portfolio: String = env::var("PDF_PORTFOLIO").expect("env var PDF_PORTFOLIO not configured");
