@@ -12,7 +12,9 @@ use tracing_subscriber::filter::ParseError;
 use tracing_subscriber::layer::SubscriberExt;
 use tracing_subscriber::{EnvFilter, Registry};
 
-pub async fn init_tracing(service_name: String) -> Result<(), ParseError> {
+pub async fn init_tracing(service_name: String, gcp_project_id: String) -> Result<(), ParseError> {
+
+
 
     let authorizer = opentelemetry_stackdriver::GcpAuthorizer::new()
         .await
@@ -36,7 +38,7 @@ pub async fn init_tracing(service_name: String) -> Result<(), ParseError> {
     let otel_layer = tracing_opentelemetry::layer().with_tracer(tracer);
     let stackdriver_layer =
         tracing_stackdriver::layer().with_cloud_trace(CloudTraceConfiguration {
-            project_id: "listen-and-learn-411214".to_string(),
+            project_id: gcp_project_id.into(),
         });
 
 
