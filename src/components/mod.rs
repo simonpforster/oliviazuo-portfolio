@@ -1,2 +1,3 @@
-pub(crate) mod image;
-pub(crate) mod gallery;
+pub mod image;
+pub mod gallery;
+pub mod projects;

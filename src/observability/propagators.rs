@@ -1,9 +1,9 @@
 use axum::extract::Request;
-use axum::http::{HeaderMap, HeaderName};
 use axum::middleware::Next;
 use axum::response::Response;
-use opentelemetry::propagation::{Extractor, Injector};
+use opentelemetry::propagation::Extractor;
 use std::convert::Infallible;
+use http::HeaderMap;
 use tracing::{instrument, Instrument, Span};
 use tracing_opentelemetry::OpenTelemetrySpanExt;
 
@@ -16,16 +16,6 @@ pub async fn extract_context(req: Request, next: Next) -> Result<Response, Infal
     Span::current().set_parent(parent_context);
 
     Ok(next.run(req).in_current_span().await)
-}
-
-pub struct AxumHeaderInjector<'a>(pub &'a mut HeaderMap);
-
-impl<'a> Injector for AxumHeaderInjector<'a> {
-    fn set(&mut self, key: &str, value: String) {
-        if let Ok(header_name) = key.parse::<HeaderName>() {
-            self.0.insert(header_name, value.parse().unwrap());
-        }
-    }
 }
 
 pub struct AxumHeaderExtractor<'a>(pub &'a HeaderMap);

@@ -1,17 +1,22 @@
-mod components;
-mod observability;
+pub mod components;
+pub mod observability;
+pub mod repository;
 
 use axum::{extract::State, http::StatusCode, middleware, response::{Html, IntoResponse}, routing::get, Router};
 use handlebars::Handlebars;
 use serde_json::json;
 use std::{env, net::SocketAddr, sync::Arc};
 use axum::response::Redirect;
+use firestore::FirestoreDb;
 use tower_http::services::ServeDir;
 use tracing::{info, instrument, warn};
 use components::image::Image;
 use components::gallery::Gallery;
+use crate::components::projects::project_description::ProjectDescription;
+use crate::components::projects::project_tags::ProjectTags;
 use crate::observability::init_tracing;
 use crate::observability::propagators::extract_context;
+use crate::repository::project_repository::ProjectRepository;
 
 // App state that will be shared across all routes
 #[derive(Debug)]
@@ -23,12 +28,11 @@ struct AppState {
 
 #[tokio::main]
 async fn main() {
-
     let service_name: String = env::var("K_SERVICE").unwrap_or("oliviazuo-portfolio".into());
     let gcp_project_id: String = env::var("GCP_PROJECT_ID").expect("env var GCP_PROJECT_ID not configured");
 
     // Initialize tracing for nice logging
-    let _ = init_tracing(service_name, gcp_project_id).await;
+    let _ = init_tracing(service_name, gcp_project_id.clone()).await;
 
     let image_resizer: String = env::var("IMAGE_RESIZER").expect("env var IMAGE_RESIZER not configured");
     let pdf_portfolio: String = env::var("PDF_PORTFOLIO").expect("env var PDF_PORTFOLIO not configured");
@@ -36,6 +40,14 @@ async fn main() {
         warn!("env var PORT not configured, defaulting to 8080");
         "8080".into()
     }).parse::<u16>().expect("env var PORT must be a valid number");
+
+    // Init DB
+    let db: FirestoreDb = FirestoreDb::new(&gcp_project_id).await.expect("Could not initiate DB client");
+
+    let proj_repo = ProjectRepository::new(db);
+    proj_repo.fill_cache().await;
+
+    let thingy = Arc::new(proj_repo);
 
     // Create and register templates
     let mut hbs = Handlebars::new();
@@ -50,6 +62,12 @@ async fn main() {
         .expect("Failed to register image-template template");
     hbs.register_helper("gallery", Box::new(Gallery::new()));
 
+    // Define description helper
+    hbs.register_helper("project_description", Box::new(ProjectDescription::new(thingy.clone())));
+
+    hbs.register_helper("project_tags", Box::new(ProjectTags::new(thingy.clone())));
+
+
     // Define templates
     hbs.register_template_file("base", "templates/base.hbs")
         .expect("Failed to register index template");
@@ -60,11 +78,10 @@ async fn main() {
     hbs.register_template_file("commercial", "templates/views/commercial.hbs")
         .expect("Failed to register index template");
 
-
     // Create shared application state
     let state = Arc::new(AppState { hbs, image_resizer });
 
-    // Setup our application with routes
+    // Set up our application with routes
     let app = Router::new()
         .route("/", get(index_handler))
         .route("/personal", get(personal_handler))
