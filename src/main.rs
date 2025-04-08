@@ -43,12 +43,10 @@ async fn main() {
     // Init DB
     let db: FirestoreDb = FirestoreDb::new(&gcp_project_id).await.expect("Could not initiate DB client");
 
-    let proj_repo = ProjectRepository::new(db);
-
-    let thingy = Arc::new(proj_repo);
+    let project_repository = Arc::new(ProjectRepository::new(db));
 
     // Start a background task to refresh the repository every 5 minutes
-    tokio::spawn(refresh_cache(thingy.clone()));
+    tokio::spawn(refresh_cache(project_repository.clone()));
 
 
     // Create and register templates
@@ -67,7 +65,7 @@ async fn main() {
     // Define details helper
     hbs.register_template_file("details-template", "templates/components/details.hbs")
         .expect("Failed to register image-template template");
-    hbs.register_helper("details", Box::new(ProjectDetails::new(thingy.clone())));
+    hbs.register_helper("details", Box::new(ProjectDetails::new(project_repository.clone())));
 
 
     // Define templates
