@@ -6,7 +6,7 @@ use futures_core::stream::BoxStream;
 use futures_util::TryStreamExt;
 use serde::{Deserialize, Serialize};
 use tokio::time;
-use tracing::info;
+use tracing::{error, info};
 
 #[derive(Debug)]
 pub struct ProjectRepository {
@@ -20,7 +20,6 @@ pub async fn refresh_cache(repo: Arc<ProjectRepository>) {
     loop {
         interval.tick().await;
         repo.fill_cache().await;
-        info!("Content cache refreshed");
     }
 }
 
@@ -50,8 +49,11 @@ impl ProjectRepository {
             Ok(projects) => {
                 let mut cache = self.cache.write().unwrap();
                 *cache = projects;
+                info!("Project cache refreshed");
             }
-            Err(_) => {}
+            Err(_) => {
+                error!("Could not refresh project cache");
+            }
         }
     }
 
