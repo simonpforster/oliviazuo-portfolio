@@ -12,9 +12,7 @@ use tower_http::services::ServeDir;
 use tracing::{info, instrument, warn};
 use components::image::Image;
 use components::gallery::Gallery;
-use crate::components::projects::project_description::ProjectDescription;
 use crate::components::projects::project_details::ProjectDetails;
-use crate::components::projects::project_tags::ProjectTags;
 use crate::observability::init_tracing;
 use crate::observability::propagators::extract_context;
 use crate::repository::project_repository::ProjectRepository;
@@ -63,10 +61,7 @@ async fn main() {
         .expect("Failed to register image-template template");
     hbs.register_helper("gallery", Box::new(Gallery::new()));
 
-    // Define description helper
-    hbs.register_helper("project_description", Box::new(ProjectDescription::new(thingy.clone())));
-    hbs.register_helper("project_tags", Box::new(ProjectTags::new(thingy.clone())));
-
+    // Define details helper
     hbs.register_template_file("details-template", "templates/components/details.hbs")
         .expect("Failed to register image-template template");
     hbs.register_helper("details", Box::new(ProjectDetails::new(thingy.clone())));

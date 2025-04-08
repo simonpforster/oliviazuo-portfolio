@@ -1,8 +1,7 @@
-use std::sync::Arc;
 use crate::repository::project_repository::ProjectRepository;
 use handlebars::{Context, Handlebars, Helper, HelperDef, HelperResult, Output, RenderContext};
 use serde_json::json;
-use tracing_subscriber::fmt::format;
+use std::sync::Arc;
 
 pub(crate) struct ProjectDetails {
     project_repository: Arc<ProjectRepository>,
