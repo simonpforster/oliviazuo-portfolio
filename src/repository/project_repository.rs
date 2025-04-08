@@ -87,7 +87,7 @@ pub struct Project {
     pub(crate) year: u16,
     #[serde(rename = "type")]
     project_type: String,
-    pub references: Option<HashMap<String, String>>,
-    pub description: Option<String>,
-    pub tags: Vec<String>,
+    pub(crate) references: Option<HashMap<String, String>>,
+    pub(crate) description: Option<String>,
+    pub(crate) tags: Vec<String>,
 }
