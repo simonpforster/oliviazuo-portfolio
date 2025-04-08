@@ -32,8 +32,7 @@ async fn index_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse 
         Err(err) => (
             StatusCode::INTERNAL_SERVER_ERROR,
             format!("Template error: {}", err),
-        )
-            .into_response(),
+        ).into_response(),
     }
 }
 
@@ -48,8 +47,7 @@ async fn personal_handler(State(state): State<Arc<AppState>>) -> impl IntoRespon
         Err(err) => (
             StatusCode::INTERNAL_SERVER_ERROR,
             format!("Template error: {}", err),
-        )
-            .into_response(),
+        ).into_response(),
     }
 }
 
@@ -64,7 +62,6 @@ async fn commercial_handler(State(state): State<Arc<AppState>>) -> impl IntoResp
         Err(err) => (
             StatusCode::INTERNAL_SERVER_ERROR,
             format!("Template error: {}", err),
-        )
-            .into_response(),
+        ).into_response(),
     }
 }
