@@ -15,7 +15,7 @@ use components::gallery::Gallery;
 use crate::components::projects::project_details::ProjectDetails;
 use crate::observability::init_tracing;
 use crate::observability::propagators::extract_context;
-use crate::repository::project_repository::ProjectRepository;
+use crate::repository::project_repository::{refresh_cache, ProjectRepository};
 
 // App state that will be shared across all routes
 #[derive(Debug)]
@@ -47,6 +47,10 @@ async fn main() {
     proj_repo.fill_cache().await;
 
     let thingy = Arc::new(proj_repo);
+
+    // Start a background task to refresh the repository every 5 minutes
+    tokio::spawn(refresh_cache(thingy.clone()));
+
 
     // Create and register templates
     let mut hbs = Handlebars::new();

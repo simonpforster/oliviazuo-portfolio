@@ -1,14 +1,27 @@
 use std::collections::HashMap;
-use std::sync::RwLock;
+use std::sync::{Arc, RwLock};
+use std::time::Duration;
 use firestore::{path, FirestoreDb, FirestoreQueryDirection, FirestoreResult};
 use futures_core::stream::BoxStream;
 use futures_util::TryStreamExt;
 use serde::{Deserialize, Serialize};
+use tokio::time;
+use tracing::info;
 
 #[derive(Debug)]
 pub struct ProjectRepository {
     db: FirestoreDb,
     cache: RwLock<Vec<Project>>
+}
+
+pub async fn refresh_cache(repo: Arc<ProjectRepository>) {
+    let mut interval = time::interval(Duration::from_secs(300));
+
+    loop {
+        interval.tick().await;
+        repo.fill_cache().await;
+        info!("Content cache refreshed");
+    }
 }
 
 impl ProjectRepository {
