@@ -20,11 +20,11 @@ impl HelperDef for ProjectTags {
                             _: &Context,
                             _rc: &mut RenderContext,
                             out: &mut dyn Output) -> HelperResult {
-        let project_name = helper.hash().get("project_name")
+        let project_id: &str = helper.hash().get("project_id")
             .and_then(|v| v.value().as_str())
-            .unwrap_or("");
+            .expect("No project id defined.");
 
-        let description = self.project_repository.get_project(project_name).unwrap();
+        let description = self.project_repository.get_project(project_id).unwrap();
 
         let _ = &description.tags.iter().for_each(|d| {
             out.write(&format!("<div>{}</div>", d)).unwrap();

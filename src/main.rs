@@ -13,6 +13,7 @@ use tracing::{info, instrument, warn};
 use components::image::Image;
 use components::gallery::Gallery;
 use crate::components::projects::project_description::ProjectDescription;
+use crate::components::projects::project_details::ProjectDetails;
 use crate::components::projects::project_tags::ProjectTags;
 use crate::observability::init_tracing;
 use crate::observability::propagators::extract_context;
@@ -64,8 +65,11 @@ async fn main() {
 
     // Define description helper
     hbs.register_helper("project_description", Box::new(ProjectDescription::new(thingy.clone())));
-
     hbs.register_helper("project_tags", Box::new(ProjectTags::new(thingy.clone())));
+
+    hbs.register_template_file("details-template", "templates/components/details.hbs")
+        .expect("Failed to register image-template template");
+    hbs.register_helper("details", Box::new(ProjectDetails::new(thingy.clone())));
 
 
     // Define templates
