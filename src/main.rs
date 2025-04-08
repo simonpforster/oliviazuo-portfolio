@@ -44,7 +44,6 @@ async fn main() {
     let db: FirestoreDb = FirestoreDb::new(&gcp_project_id).await.expect("Could not initiate DB client");
 
     let proj_repo = ProjectRepository::new(db);
-    proj_repo.fill_cache().await;
 
     let thingy = Arc::new(proj_repo);
 

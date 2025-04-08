@@ -1,3 +1,4 @@
+use std::io::Error;
 use crate::repository::project_repository::ProjectRepository;
 use handlebars::{Context, Handlebars, Helper, HelperDef, HelperResult, Output, RenderContext};
 use serde_json::json;
@@ -42,21 +43,27 @@ impl HelperDef for ProjectDetails {
         out.write(&rendered)?;
 
         // optional references
-        let _ = project.references.map(|references| {
-            let _ = out.write("<div class='reference-section'>");
+        match project.references {
+            Some(references) => {
+                out.write("<div class='reference-section'>")?;
 
-            references.iter().for_each(|reference| {
-                let _ = out.write(&format!("<div><a href='{}'>{}</a></div>", reference.1, reference.0));
-            });
+                let _ = references.iter().map(|reference| -> Result<(), Error> {
+                    out.write(&format!("<div><a href='{}'>{}</a></div>", reference.1, reference.0))
+                }).collect::<Vec<Result<(), Error>>>();
 
-            let _ = out.write("</div>");
-        });
+                out.write("</div>")?;
+            }
+            _ => {}
+        }
         out.write("</div>")?;
 
         // optional description
-        let _ = project.description.map(|description| {
-            let _ = out.write(&format!("<div class='grid-description'>{}</div>", description));
-        });
+        match project.description {
+            Some(description) => {
+                out.write(&format!("<div class='grid-description'>{}</div>", description))?;
+            }
+            _ => {}
+        }
 
         Ok(())
     }
