@@ -32,14 +32,17 @@ impl HelperDef for ProjectDetails {
         let data_details = json!({
             "project_id": project.project_id,
             "project_name": project.project_name,
-            "year": project.year
+            "year": project.year,
+            "tags": project.tags
         });
 
         out.write("<div class='grid-title'>")?;
 
+        // essentials
         let rendered = hbs.render("details-template", &data_details)?;
         out.write(&rendered)?;
 
+        // optional references
         let _ = project.references.map(|references| {
             let _ = out.write("<div class='reference-section'>");
 
@@ -49,10 +52,9 @@ impl HelperDef for ProjectDetails {
 
             let _ = out.write("</div>");
         });
-
         out.write("</div>")?;
 
-
+        // optional description
         let _ = project.description.map(|description| {
             let _ = out.write(&format!("<div class='grid-description'>{}</div>", description));
         });
