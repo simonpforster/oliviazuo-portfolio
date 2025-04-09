@@ -1,4 +1,3 @@
-use std::io::Error;
 use crate::repository::project_repository::ProjectRepository;
 use handlebars::{Context, Handlebars, Helper, HelperDef, HelperResult, Output, RenderContext};
 use serde_json::json;
