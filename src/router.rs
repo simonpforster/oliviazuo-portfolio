@@ -24,7 +24,7 @@ pub(crate) fn router(pdf_portfolio: String, state: Arc<AppState>) -> Router {
 #[instrument]
 async fn index_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse {
     let data = json!({
-        "image_resizer": state.image_resizer,
+        "imageResizer": state.image_resizer,
     });
 
     match state.hbs.render("index", &data) {
@@ -39,7 +39,7 @@ async fn index_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse 
 #[instrument]
 async fn personal_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse {
     let data = json!({
-        "image_resizer": state.image_resizer,
+        "imageResizer": state.image_resizer,
     });
 
     match state.hbs.render("personal", &data) {
@@ -54,7 +54,7 @@ async fn personal_handler(State(state): State<Arc<AppState>>) -> impl IntoRespon
 #[instrument]
 async fn commercial_handler(State(state): State<Arc<AppState>>) -> impl IntoResponse {
     let data = json!({
-        "image_resizer": state.image_resizer,
+        "imageResizer": state.image_resizer,
     });
 
     match state.hbs.render("commercial", &data) {

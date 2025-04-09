@@ -34,7 +34,7 @@ impl HelperDef for Image {
         let data = json!({
             "path": path,
             "fix": fix,
-            "image_resizer": self.image_resizer,
+            "imageResizer": self.image_resizer,
         });
 
         let image_tag: String = hbs.render("image-template", &data)?;

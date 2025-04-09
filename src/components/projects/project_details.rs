@@ -29,8 +29,7 @@ impl HelperDef for ProjectDetails {
 
 
         let data_details = json!({
-            "project_id": project.project_id,
-            "project_name": project.project_name,
+            "projectName": project.project_name,
             "year": project.year,
             "tags": project.tags,
             "references": project.references,
