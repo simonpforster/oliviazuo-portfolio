@@ -33,37 +33,15 @@ impl HelperDef for ProjectDetails {
             "project_id": project.project_id,
             "project_name": project.project_name,
             "year": project.year,
-            "tags": project.tags
+            "tags": project.tags,
+            "references": project.references,
+            "description": project.description,
         });
-
-        out.write("<div class='grid-title'>")?;
 
         // essentials
         let rendered = hbs.render("details-template", &data_details)?;
         out.write(&rendered)?;
 
-        // optional references
-        match project.references {
-            Some(references) => {
-                out.write("<div class='reference-section'>")?;
-
-                let _ = references.iter().map(|reference| -> Result<(), Error> {
-                    out.write(&format!("<div><a href='{}'>{}</a></div>", reference.1, reference.0))
-                }).collect::<Vec<Result<(), Error>>>();
-
-                out.write("</div>")?;
-            }
-            _ => {}
-        }
-        out.write("</div>")?;
-
-        // optional description
-        match project.description {
-            Some(description) => {
-                out.write(&format!("<div class='grid-description'>{}</div>", description))?;
-            }
-            _ => {}
-        }
 
         Ok(())
     }
