@@ -1,9 +1,28 @@
-<div class="essentials">
-    <div class="highlight">{{ project_name }}</div>
-    <div class="year">{{ year }}</div>
-    <div class="tags">
-        {{#each tags}}
-            <div>{{ this }}</div>
-        {{/each}}
+<div class="grid-title">
+    <div class="essentials">
+        <div class="highlight">{{ project_name }}</div>
+        <div class="year">{{ year }}</div>
+        <div class="tags">
+            {{#each tags}}
+                <div>{{ this }}</div>
+            {{/each}}
+        </div>
     </div>
+
+{{#if references }}
+    <div class="reference-section">
+    {{#each references }}
+        <div>
+            <a href="{{ this }}">{{ @key }}</a>
+        </div>
+    {{/each}}
+    </div>
+{{/if}}
+
 </div>
+
+{{#if description }}
+    <div class="grid-description">
+        {{{ description }}}
+    </div>
+{{/if}}
