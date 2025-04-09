@@ -3,19 +3,15 @@ pub mod observability;
 pub mod repository;
 mod router;
 
-use axum::{extract::State, http::StatusCode, middleware, response::{Html, IntoResponse}, routing::get, Router};
+use axum::Router;
 use handlebars::Handlebars;
-use serde_json::json;
 use std::{env, net::SocketAddr, sync::Arc};
-use axum::response::Redirect;
 use firestore::FirestoreDb;
-use tower_http::services::ServeDir;
-use tracing::{info, instrument, warn};
+use tracing::{info, warn};
 use components::image::Image;
 use components::gallery::Gallery;
 use crate::components::projects::project_details::ProjectDetails;
 use crate::observability::init_tracing;
-use crate::observability::propagators::extract_context;
 use crate::repository::project_repository::{refresh_cache, ProjectRepository};
 
 // App state that will be shared across all routes

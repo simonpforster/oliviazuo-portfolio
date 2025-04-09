@@ -32,6 +32,8 @@ svg {
 
 figure {
     margin: 0;
+    break-inside: avoid;
+    padding: 0 0.75rem 0;
 }
 
 .gallery {

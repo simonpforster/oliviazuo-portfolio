@@ -24,6 +24,12 @@
     align-content: flex-start;
 }
 
+.column-container {
+    padding: 0;
+    margin: 0;
+    column-gap: 0;
+}
+
 @media screen and (min-width: 701px) {
 
     .wide-4, .slim-4, .normal-1-6, .normal-2-6, .footer-1-6, .footer-2-6 {
@@ -43,10 +49,7 @@
     }
 
     .column-container {
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        flex-flow: column;
+        column-count: 6;
     }
 
     .normal-1-6, .footer-1-6 {
@@ -82,6 +85,10 @@
         flex-flow: column;
         align-content: flex-start;
         width: 100%;
+    }
+
+    .column-container {
+        column-count: 2;
     }
 
     .wide-4, .slim-4 {
