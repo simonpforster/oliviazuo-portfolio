@@ -90,18 +90,6 @@
         box-sizing: border-box;
     }
 
-    .normal-1-6, .normal-2-6 {
-        display: flex;
-        flex-direction: column;
-        vertical-align: baseline;
-        text-rendering: auto;
-        box-sizing: border-box;
-    }
-
-    .normal-1-6 {
-        width: 50%;
-    }
-
     #footer {
         overflow-wrap: break-word;
     }
