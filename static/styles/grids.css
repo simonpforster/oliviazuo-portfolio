@@ -25,6 +25,7 @@
 }
 
 .column-container {
+    padding: 0;
     margin: 0;
     column-gap: 0;
 }
@@ -48,9 +49,7 @@
     }
 
     .column-container {
-        padding: 0;
         column-count: 6;
-        column-gap: 0;
     }
 
     .normal-1-6, .footer-1-6 {
