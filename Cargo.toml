@@ -15,6 +15,8 @@ tracing-subscriber = { version = "0.3.19", features = ["fmt", "env-filter", "jso
 http = "1.3.1"
 futures-core = "0.3.31"
 futures-util = "0.3.31"
+reqwest = { version = "0.12.15", features = ["json"] }
+
 
 opentelemetry = "0.27.1"
 opentelemetry_sdk = { version = "0.27.1", features = ["rt-tokio"] }
@@ -22,4 +24,3 @@ tracing-opentelemetry = "0.28.0"
 opentelemetry-stdout = "0.27.0"
 tracing-stackdriver = { version = "0.10.0", features = ["opentelemetry"] }
 opentelemetry-stackdriver = { version = "0.24.0" }
-reqwest = "0.12.15"

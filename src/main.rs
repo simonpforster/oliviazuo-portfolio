@@ -6,7 +6,6 @@ mod router;
 use axum::Router;
 use handlebars::Handlebars;
 use std::{env, net::SocketAddr, sync::Arc};
-use firestore::FirestoreDb;
 use tracing::{info, warn};
 use components::image::Image;
 use components::gallery::Gallery;
@@ -58,7 +57,7 @@ async fn main() {
     // Define details helper
     hbs.register_template_file("details-template", "templates/components/details.hbs")
         .expect("Failed to register image-template template");
-    hbs.register_helper("details", Box::new(ProjectDetails::new(project_repository.clone())));
+    hbs.register_helper("details", Box::new(ProjectDetails::new(portfolio_manager_service.clone())));
 
 
     // Define templates

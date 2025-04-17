@@ -1,6 +1,5 @@
 use std::sync::{Arc, RwLock};
 use std::time::Duration;
-use firestore::{path, FirestoreQueryDirection, FirestoreResult};
 use futures_core::stream::BoxStream;
 use tokio::time;
 use tracing::{error, info};
