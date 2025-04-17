@@ -54,7 +54,7 @@ impl PortfolioManagerService {
 
 
     async fn fetch_projects_from_portfolio_manager(&self) -> Option<Vec<Project>> {
-        reqwest::get(&self.portfolio_manager_url)
+        reqwest::get(format!("{}{}", &self.portfolio_manager_url, "/v1/owners/Olivia%20Zuo/projects"))
             .await
             .unwrap()
             .json()
