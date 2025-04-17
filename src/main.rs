@@ -12,7 +12,7 @@ use components::image::Image;
 use components::gallery::Gallery;
 use crate::components::projects::project_details::ProjectDetails;
 use crate::observability::init_tracing;
-use crate::repository::project_repository::{refresh_cache, ProjectRepository};
+use crate::repository::portfolio_manager_service::{refresh_cache, PortfolioManagerService};
 
 // App state that will be shared across all routes
 #[derive(Debug)]
@@ -31,20 +31,16 @@ async fn main() {
     let _ = init_tracing(service_name, gcp_project_id.clone()).await;
 
     let image_resizer: String = env::var("IMAGE_RESIZER").expect("env var IMAGE_RESIZER not configured");
+    let portfolio_manager: String = env::var("PORTFOLIO_MANAGER").expect("env var IMAGE_RESIZER not configured");
     let pdf_portfolio: String = env::var("PDF_PORTFOLIO").expect("env var PDF_PORTFOLIO not configured");
     let port: u16 = env::var("PORT").unwrap_or_else(|_| {
         warn!("env var PORT not configured, defaulting to 8080");
         "8080".into()
     }).parse::<u16>().expect("env var PORT must be a valid number");
 
-    // Init DB
-    let db: FirestoreDb = FirestoreDb::new(&gcp_project_id).await.expect("Could not initiate DB client");
+    let portfolio_manager_service = Arc::new(PortfolioManagerService::new(portfolio_manager));
 
-    let project_repository = Arc::new(ProjectRepository::new(db));
-
-    // Start a background task to refresh the repository every 5 minutes
-    tokio::spawn(refresh_cache(project_repository.clone()));
-
+    tokio::spawn(refresh_cache(portfolio_manager_service.clone()));
 
     // Create and register templates
     let mut hbs = Handlebars::new();
