@@ -1,15 +1,15 @@
-use crate::repository::project_repository::ProjectRepository;
 use handlebars::{Context, Handlebars, Helper, HelperDef, HelperResult, Output, RenderContext};
 use serde_json::json;
 use std::sync::Arc;
+use crate::repository::portfolio_manager_service::PortfolioManagerService;
 
 pub(crate) struct ProjectDetails {
-    project_repository: Arc<ProjectRepository>,
+    portfolio_manager_service: Arc<PortfolioManagerService>,
 }
 
 impl ProjectDetails {
-    pub(crate) fn new(project_repository: Arc<ProjectRepository>) -> ProjectDetails {
-        ProjectDetails { project_repository }
+    pub(crate) fn new(portfolio_manager_service: Arc<PortfolioManagerService>) -> ProjectDetails {
+        ProjectDetails { portfolio_manager_service }
     }
 }
 
@@ -25,7 +25,7 @@ impl HelperDef for ProjectDetails {
             .and_then(|v| v.value().as_str())
             .expect("No project id defined.");
 
-        let project = self.project_repository.get_project(project_id).unwrap();
+        let project = self.portfolio_manager_service.get_project(project_id).unwrap();
 
 
         let data_details = json!({
