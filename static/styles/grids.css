@@ -28,6 +28,12 @@
     padding: 0;
     margin: 0;
     column-gap: 0;
+    width: 50%;
+}
+
+#index-container {
+    display: flex;
+    flex-direction: row;
 }
 
 @media screen and (min-width: 701px) {
@@ -49,7 +55,7 @@
     }
 
     .column-container {
-        column-count: 6;
+        column-count: 3;
     }
 
     .footer-left {
@@ -79,7 +85,7 @@
     }
 
     .column-container {
-        column-count: 2;
+        column-count: 1;
     }
 
     .wide-4, .slim-4 {
