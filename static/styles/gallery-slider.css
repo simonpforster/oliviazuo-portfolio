@@ -36,6 +36,7 @@
 
 .slider ul li img {
     height: 100%;
+    width: auto;
 }
 
 .slider ul li::marker {
