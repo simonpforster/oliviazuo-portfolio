@@ -16,10 +16,23 @@
     {{/inline}}
 
     {{#* inline "offscreen"}}
-        <div class="column-container">
-            <!-- Personal: Spectral Archive -->
-            <figure>
-                {{ gallery id="spectral-archive" paths=[
+        <div id="index-container">
+            <div class="column-container">
+                <!-- Personal: ALWFAV 8 -->
+                <a href="./personal#alwfav-8">
+                    <figure>
+                        {{ image path="/personal/2025/alwfav-8/scan-cover.jpg" }}
+                        {{ gallery id="alwfav-8" paths=[
+                            "/personal/2025/alwfav-8/scan-rerendered-memory-with-cover.jpg",
+                            "/personal/2025/alwfav-8/scan-conversation.jpg"
+                        ] }}
+                        <figcaption>A Line which Forms a Volume 8</figcaption>
+                    </figure>
+                </a>
+                <!-- Personal: Spectral Archive -->
+                <a href="./personal#spectral-archive">
+                    <figure>
+                        {{ gallery id="spectral-archive" paths=[
                             "/personal/2023/spectral-archive/day-3-1.jpg",
                             "/personal/2023/spectral-archive/day-3-2.jpg",
                             "/personal/2023/spectral-archive/day-3-3.jpg",
@@ -27,30 +40,38 @@
                             "/personal/2023/spectral-archive/day-6-2.jpg",
                             "/personal/2023/spectral-archive/day-6-3.jpg"
                         ] }}
-                {{ image path="/personal/2023/spectral-archive/archive.jpg" }}
-                <figcaption>Spectral Archive</figcaption>
-            </figure>
-            <!-- Commercial: Nike Big Bang Network -->
-            <figure>
-                {{ image path="/commercial/nike/background-1.jpg" }}
-                {{ image path="/commercial/nike/background-2.jpg" }}
-                {{ image path="/commercial/nike/background-3.jpg" }}
-                <figcaption>Nike Big Bang Network</figcaption>
-            </figure>
-            <!-- Commercial: NYU Shanghai Opening Fall 2022 -->
-            <figure>
-                {{ image path="/commercial/nyu-shanghai/opening-fall-2022/cover.jpg" }}
-                <figcaption>NYU SH Opening Fall 2022</figcaption>
-            </figure>
-            <!-- Commercial: NYU SH 10th Anniversary -->
-            <figure>
-                {{ image path="/commercial/nyu-shanghai/10th-anniversary/cover.png" }}
-                <figcaption>NYU SH 10th Anniversary</figcaption>
-            </figure>
-            <!-- Personal: The Visitor -->
-            <figure>
-                {{ image path="/personal/2022/the-visitor/picture-booklet-1.jpg" }}
-                {{ gallery id="the-visitor" paths=[
+                        {{ image path="/personal/2023/spectral-archive/archive.jpg" }}
+                        <figcaption>Spectral Archive</figcaption>
+                    </figure>
+                </a>
+                <!-- Commercial: Nike Big Bang Network -->
+                <a href="./commercial#nike-big-bang-network">
+                    <figure>
+                        {{ image path="/commercial/nike/background-1.jpg" }}
+                        {{ image path="/commercial/nike/background-2.jpg" }}
+                        {{ image path="/commercial/nike/background-3.jpg" }}
+                        <figcaption>Nike Big Bang Network</figcaption>
+                    </figure>
+                </a>
+                <!-- Commercial: NYU Shanghai Opening Fall 2022 -->
+                <a href="./commercial#nyu-shanghai-opening-fall">
+                    <figure>
+                        {{ image path="/commercial/nyu-shanghai/opening-fall-2022/cover.jpg" }}
+                        <figcaption>NYU SH Opening Fall 2022</figcaption>
+                    </figure>
+                </a>
+                <!-- Commercial: NYU SH 10th Anniversary -->
+                <a href="./commercial#nyu-shanghai-10th-anniversary">
+                    <figure>
+                        {{ image path="/commercial/nyu-shanghai/10th-anniversary/cover.png" }}
+                        <figcaption>NYU SH 10th Anniversary</figcaption>
+                    </figure>
+                </a>
+                <!-- Personal: The Visitor -->
+                <a href="./personal#the-visitor">
+                    <figure>
+                        {{ image path="/personal/2022/the-visitor/picture-booklet-1.jpg" }}
+                        {{ gallery id="the-visitor" paths=[
                         "/personal/2022/the-visitor/drawing-board-2-2.jpg",
                         "/personal/2022/the-visitor/drawing-board-3.jpg",
                         "/personal/2022/the-visitor/drawing-board-4.jpg",
@@ -58,86 +79,116 @@
                         "/personal/2022/the-visitor/drawing-board-6.jpg",
                         "/personal/2022/the-visitor/drawing-board-7.jpg"
                     ] }}
-                {{ image path="/personal/2022/the-visitor/picture-booklet-2.jpg" }}
-                <figcaption>The Visitor</figcaption>
-            </figure>
-            <!-- Personal: Utopia -->
-            <figure>
-                {{ gallery id="utopia" paths=[
+                        {{ image path="/personal/2022/the-visitor/picture-booklet-2.jpg" }}
+                        <figcaption>The Visitor</figcaption>
+                    </figure>
+                </a>
+                <!-- Personal: Utopia -->
+                <a href="./personal#utopia">
+                    <figure>
+                        {{ gallery id="utopia" paths=[
                         "/personal/2020/utopia/artboard-1-copy-2.jpg",
                         "/personal/2020/utopia/artboard-1-copy-3.jpg",
                         "/personal/2020/utopia/artboard-1-copy-4.jpg"
                     ] }}
-                {{ image path="/personal/2020/utopia/artboard-2.jpg" }}
-                <figcaption>Utopia</figcaption>
-            </figure>
-            <!-- Personal: Invisible Feast-->
-            <figure>
-                {{ image path="/personal/2023/invisible-feast/3-desert.png" }}
-                {{ image path="/personal/2023/invisible-feast/collection-web.png" }}
-                <figcaption>Invisible Feast</figcaption>
-            </figure>
-            <!-- Commercial: Peet's Coffee Pure Blend-->
-            <figure>
-                {{ image path="/commercial/peets-coffee/pure-blend/PET-packaging-picture.jpg" }}
-                <figcaption>Peet's Coffee Pure Blend</figcaption>
-            </figure>
-            <!-- Commercial: Peet's Coffee x ARC'TERYX-->
-            <figure>
-                {{ image path="/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg" }}
-                <figcaption>Peet's Coffee x ARC'TERYX</figcaption>
-            </figure>
-            <!-- Commercial: New Balance SCF -->
-            <figure>
-                {{ gallery id="gallery-new-balance" paths=[
+                        {{ image path="/personal/2020/utopia/artboard-2.jpg" }}
+                        <figcaption>Utopia</figcaption>
+                    </figure>
+                </a>
+                <!-- Personal: Invisible Feast-->
+                <a href="./personal#invisible-feast">
+                    <figure>
+                        {{ image path="/personal/2023/invisible-feast/3-desert.png" }}
+                        {{ image path="/personal/2023/invisible-feast/collection-web.png" }}
+                        <figcaption>Invisible Feast</figcaption>
+                    </figure>
+                </a>
+                <!-- Commercial: Peet's Coffee Pure Blend-->
+                <a href="./commercial#peets-coffee-pure-blend">
+                    <figure>
+                        {{ image path="/commercial/peets-coffee/pure-blend/PET-packaging-picture.jpg" }}
+                        <figcaption>Peet's Coffee Pure Blend</figcaption>
+                    </figure>
+                </a>
+                <!-- Commercial: Peet's Coffee x ARC'TERYX-->
+                <a href="./commercial#peets-coffee-arcteryx">
+                    <figure>
+                        {{ image path="/commercial/peets-coffee/peets-coffee-x-arcteryx/3-cans.jpg" }}
+                        <figcaption>Peet's Coffee x ARC'TERYX</figcaption>
+                    </figure>
+                </a>
+                <!-- Commercial: New Balance SCF -->
+                <a href="./commercial#new-balance">
+                    <figure>
+                        {{ gallery id="gallery-new-balance" paths=[
                         "/commercial/new-balance/picture-shoe.jpg",
                         "/commercial/new-balance/picture-stand-stickers.jpg",
                         "/commercial/new-balance/picture-garnish-station.jpg"
                     ] fix="height" }}
-                {{ image path="/commercial/new-balance/picture-shoot.jpg" }}
-                <figcaption>New Balance SCF</figcaption>
-            </figure>
-            <!-- Personal: Gutter and Soul -->
-            <figure>
-                {{ image path="/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg" }}
-                {{ image path="/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg" }}
-                {{ image path="/personal/2022/gutter-and-soul/phase-3-the-dive.jpg" }}
-                {{ image path="/personal/2022/gutter-and-soul/phase-4-wishful-thinking.jpg" }}
-                {{ image path="/personal/2022/gutter-and-soul/phase-5-dream-comes-true.jpg" }}
-                <figcaption>Gutter and Soul</figcaption>
-            </figure>
-            <!-- Commercial: OMO Floor Cleaner Machine Formula -->
-            <figure>
-                {{ image path="/commercial/omo/packaging-white-bg.jpg" }}
-                <figcaption>OMO Floor Cleaner Machine Formula</figcaption>
-            </figure>
-            <!-- Personal: Dialogue -->
-            <figure>
-                {{ gallery id="dialogue" paths=[
+                        {{ image path="/commercial/new-balance/picture-shoot.jpg" }}
+                        <figcaption>New Balance SCF</figcaption>
+                    </figure>
+                </a>
+            </div>
+            <div class="column-container">
+                <!-- Personal: Rerendered Memory -->
+                <a href="./personal#rerendered-memory">
+                    <figure>
+                        {{ image path="/personal/2024/rerendered-memory/combine-scan.jpg" }}
+                        {{ image path="/personal/2024/rerendered-memory/poster-picture-printer.jpg" }}
+                        <figcaption>Rerendered Memory</figcaption>
+                    </figure>
+                </a>
+                <!-- Personal: Gutter and Soul -->
+                <a href="./personal#gutter-and-soul">
+                    <figure>
+                        {{ image path="/personal/2022/gutter-and-soul/phase-1-make-a-wish.jpg" }}
+                        {{ image path="/personal/2022/gutter-and-soul/phase-2-cemeteryland.jpg" }}
+                        {{ image path="/personal/2022/gutter-and-soul/phase-3-the-dive.jpg" }}
+                        {{ image path="/personal/2022/gutter-and-soul/phase-4-wishful-thinking.jpg" }}
+                        {{ image path="/personal/2022/gutter-and-soul/phase-5-dream-comes-true.jpg" }}
+                        <figcaption>Gutter and Soul</figcaption>
+                    </figure>
+                </a>
+                <!-- Commercial: OMO Floor Cleaner Machine Formula -->
+                <a href="./commercial#omo">
+                    <figure>
+                        {{ image path="/commercial/omo/packaging-white-bg.jpg" }}
+                        <figcaption>OMO Floor Cleaner Machine Formula</figcaption>
+                    </figure>
+                </a>
+                <!-- Personal: Dialogue -->
+                <a href="./personal#dialogue">
+                    <figure>
+                        {{ gallery id="dialogue" paths=[
                         "/personal/2022/dialogue/poster-1-cyan.png",
                         "/personal/2022/dialogue/poster-2-black.png",
                         "/personal/2022/dialogue/poster-3-red.png",
                         "/personal/2022/dialogue/poster-4-pink.png"
                     ] }}
-                {{ image path="/personal/2022/dialogue/picture.jpeg" }}
-                <figcaption>Dialogue</figcaption>
-            </figure>
-            <!-- Personal: Obloom -->
-            <figure>
-                {{ gallery id="obloom" paths=[
+                        {{ image path="/personal/2022/dialogue/picture.jpeg" }}
+                        <figcaption>Dialogue</figcaption>
+                    </figure>
+                </a>
+                <!-- Personal: Obloom -->
+                <a href="./personal#obloom">
+                    <figure>
+                        {{ gallery id="obloom" paths=[
                         "/personal/2021/obloom/interface-1.jpg",
                         "/personal/2021/obloom/interface-2.jpg",
                         "/personal/2021/obloom/interface-3.jpg",
                         "/personal/2021/obloom/interface-4.jpg"
                     ] }}
-                {{ image path="/personal/2021/obloom/compact-disc.jpg" }}
-                {{ image path="/personal/2021/obloom/floppy-disc.jpg" }}
-                {{ image path="/personal/2021/obloom/cassette-tape.jpg" }}
-                <figcaption>Obloom</figcaption>
-            </figure>
-            <!-- Commercial: Budweiser Annual Creative-X Awards Ceremony -->
-            <figure>
-                {{ gallery id="bacac" paths=[
+                        {{ image path="/personal/2021/obloom/compact-disc.jpg" }}
+                        {{ image path="/personal/2021/obloom/floppy-disc.jpg" }}
+                        {{ image path="/personal/2021/obloom/cassette-tape.jpg" }}
+                        <figcaption>Obloom</figcaption>
+                    </figure>
+                </a>
+                <!-- Commercial: Budweiser Annual Creative-X Awards Ceremony -->
+                <a href="./commercial#budweiser-creative-x">
+                    <figure>
+                        {{ gallery id="bacac" paths=[
                         "/commercial/budweiser/annual-creative-x-awards/1-creative-brand-strategy.jpg",
                         "/commercial/budweiser/annual-creative-x-awards/1-scale-and-adapt.jpg",
                         "/commercial/budweiser/annual-creative-x-awards/2-creative-execution.jpg",
@@ -148,28 +199,36 @@
                         "/commercial/budweiser/annual-creative-x-awards/4-draftline-of-the-year.jpg",
                         "/commercial/budweiser/annual-creative-x-awards/4-grand-prix.jpg"
                     ] }}
-                {{ image path="/commercial/budweiser/annual-creative-x-awards/picture.jpg" }}
-                <figcaption>Budweiser Annual Creative-X Awards Ceremony</figcaption>
-            </figure>
-            <!-- Personal: Another Romance -->
-            <figure>
-                {{ image path="/personal/2021/another-romance/marble-screen.jpg" }}
-                {{ image path="/personal/2021/another-romance/installation-picture.jpg" }}
-                <figcaption>Another Romance</figcaption>
-            </figure>
-            <!-- Commercial: Budweiser Unmet Gala -->
-            <figure>
-                {{ image path="/commercial/budweiser/unmet-gala/invitation.jpg" }}
-                <figcaption>Budweiser Unmet Gala</figcaption>
-            </figure>
-            <!-- Commercial: Budweiser Zoom Background -->
-            <figure>
-                {{ image path="/commercial/budweiser/unmet-gala/zoom-bg-kitchen.png" }}
-                {{ image path="/commercial/budweiser/unmet-gala/zoom-bg-bedroom.png" }}
-                {{ image path="/commercial/budweiser/unmet-gala/zoom-bg-living-room.png" }}
-                {{ image path="/commercial/budweiser/unmet-gala/zoom-bg-balcony.png" }}
-                <figcaption>Budweiser Zoom Background</figcaption>
-            </figure>
+                        {{ image path="/commercial/budweiser/annual-creative-x-awards/picture.jpg" }}
+                        <figcaption>Budweiser Annual Creative-X Awards Ceremony</figcaption>
+                    </figure>
+                </a>
+                <!-- Personal: Another Romance -->
+                <a href="./personal#another-romance">
+                    <figure>
+                        {{ image path="/personal/2021/another-romance/marble-screen.jpg" }}
+                        {{ image path="/personal/2021/another-romance/installation-picture.jpg" }}
+                        <figcaption>Another Romance</figcaption>
+                    </figure>
+                </a>
+                <!-- Commercial: Budweiser Unmet Gala -->
+                <a href="./commercial#budweiser-unmet-gala">
+                    <figure>
+                        {{ image path="/commercial/budweiser/unmet-gala/invitation.jpg" }}
+                        <figcaption>Budweiser Unmet Gala</figcaption>
+                    </figure>
+                </a>
+                <!-- Commercial: Budweiser Zoom Background -->
+                <a href="./commercial#budweiser-unmet-gala">
+                    <figure>
+                        {{ image path="/commercial/budweiser/unmet-gala/zoom-bg-kitchen.png" }}
+                        {{ image path="/commercial/budweiser/unmet-gala/zoom-bg-bedroom.png" }}
+                        {{ image path="/commercial/budweiser/unmet-gala/zoom-bg-living-room.png" }}
+                        {{ image path="/commercial/budweiser/unmet-gala/zoom-bg-balcony.png" }}
+                        <figcaption>Budweiser Zoom Background</figcaption>
+                    </figure>
+                </a>
+            </div>
         </div>
         <div style="height: 8rem;"></div>
     {{/inline}}

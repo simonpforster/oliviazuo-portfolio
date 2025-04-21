@@ -34,6 +34,7 @@ figure {
     margin: 0;
     break-inside: avoid;
     padding: 0 0.75rem 0;
+    pointer-events: none;
 }
 
 .gallery {
@@ -110,6 +111,7 @@ hr {
 figcaption {
     font-size: 0.85rem;
     color: var(--grey);
+    text-decoration-color: var(--grey);
     margin: 0.25rem 0 0.25rem;
     visibility: hidden;
 
