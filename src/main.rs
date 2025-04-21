@@ -44,8 +44,6 @@ async fn main() {
     // Create and register templates
     let mut hbs = Handlebars::new();
 
-    hbs.set_dev_mode(true);
-
     // Define image helper
     hbs.register_template_file("image-template", "templates/components/image.hbs")
         .expect("Failed to register image-template template");
