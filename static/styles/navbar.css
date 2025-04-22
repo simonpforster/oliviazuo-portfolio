@@ -31,30 +31,56 @@ nav {
 
     nav .dropdown {
         &:not(:hover) .dropdown-content {
-            display: none;
-        }
-
-        & .dropdown-content p a:not(.highlight) {
             opacity: 0;
             height: 0;
+            max-height: 0;
             visibility: hidden;
-            transition: opacity 0.3s ease-in-out;
+        }
+
+        &:hover .dropdown-content {
+
+        }
+
+        & .dropdown-content {
+            height: 0;
+
+            & p a.highlight {
+                opacity: 0;
+                height: 0;
+                max-height: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+            }
+
+            & p a:not(.highlight) {
+                opacity: 0;
+                height: 0;
+                max-height: 0;
+                visibility: hidden;
+                transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
+            }
         }
 
         &:hover {
             & .dropdown-content {
-                display: block;
+                height: auto;
+
+                & p a.highlight {
+                    opacity: 1;
+                    height: auto;
+                    max-height: 1rem;
+                    visibility: visible;
+                }
 
                 & p:has(a:hover) {
 
                     a:not(.highlight) {
-                        visibility: visible;
                         opacity: 1;
                         height: auto;
+                        max-height: 1rem;
+                        visibility: visible;
                     }
-
                 }
-
             }
         }
     }
