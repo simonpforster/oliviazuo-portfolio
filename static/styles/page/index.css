@@ -19,7 +19,7 @@
 
 @media screen and (max-width: 700px) {
     #screen {
-        height: 100svh;
+        height: fit-content;
     }
 
     .header #index {
@@ -28,6 +28,10 @@
 
     .header .dropdown:not(#index) {
         height: fit-content;
+    }
+
+    .header #personal {
+        margin-top: auto;
     }
 
     .dropdown-content {
