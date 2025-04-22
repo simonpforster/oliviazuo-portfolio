@@ -2,6 +2,7 @@
 nav {
     padding: 1.5rem;
     box-sizing: border-box;
+    z-index: 998;
 
     & .dropdown-content p a {
         display: block;
@@ -12,6 +13,7 @@ nav {
 @media screen and (max-width: 700px) {
     nav {
         min-height: 90svh;
+        position: absolute;
     }
 }
 
@@ -22,7 +24,6 @@ nav {
         position: fixed;
         transition: 0.3s ease-in-out;
         padding: 1.5rem;
-        z-index: 998;
     }
 
     nav.hide {
@@ -30,29 +31,11 @@ nav {
     }
 
     nav .dropdown {
-        &:not(:hover) .dropdown-content {
-            opacity: 0;
-            height: 0;
-            max-height: 0;
-            visibility: hidden;
-        }
-
-        &:hover .dropdown-content {
-
-        }
 
         & .dropdown-content {
             height: 0;
 
-            & p a.highlight {
-                opacity: 0;
-                height: 0;
-                max-height: 0;
-                visibility: hidden;
-                transition: opacity 0.3s ease-in-out, max-height 0.3s ease-in-out;
-            }
-
-            & p a:not(.highlight) {
+            & p a {
                 opacity: 0;
                 height: 0;
                 max-height: 0;
@@ -65,21 +48,11 @@ nav {
             & .dropdown-content {
                 height: auto;
 
-                & p a.highlight {
+                & p a {
                     opacity: 1;
                     height: auto;
                     max-height: 1rem;
                     visibility: visible;
-                }
-
-                & p:has(a:hover) {
-
-                    a:not(.highlight) {
-                        opacity: 1;
-                        height: auto;
-                        max-height: 1rem;
-                        visibility: visible;
-                    }
                 }
             }
         }

@@ -26,7 +26,7 @@
     }
 
     #screen {
-        display: none;
+        height: 90svh;
     }
 
     .header #personal {

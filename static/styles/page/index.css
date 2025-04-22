@@ -15,11 +15,21 @@
     #screen {
         height: 100svh;
     }
+
+    #bio {
+        width: 27%;
+        padding-top: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 700px) {
+    #bio {
+        padding-top: 1.5rem;
+        height: 90svh;
+    }
+
     #screen {
-        height: fit-content;
+        height: 90svh;
     }
 
     .header #index {
