@@ -37,6 +37,12 @@ figure {
     pointer-events: none;
 }
 
+a:has(figure) {
+    &:hover {
+        text-decoration: none;
+    }
+}
+
 .gallery {
     position: relative;
     width: 100%;
@@ -137,6 +143,8 @@ a {
         text-underline-offset: 0.1rem;
     }
 }
+
+
 
 #screen {
     box-sizing: border-box;
