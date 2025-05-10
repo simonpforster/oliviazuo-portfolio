@@ -1,5 +1,9 @@
-:root {
-    --grey: rgba(0, 0, 0, 0.5);
+@font-face {
+    font-display: block;
+    font-family: "Font";
+    src: url("../fonts/Font.woff2") format("woff2-variations");
+    font-style: normal;
+    font-weight: 200 1000;
 }
 
 html {
@@ -9,7 +13,7 @@ html {
     font-size: 0.95rem;
     font-weight: 420;
     font-style: normal;
-    font-family: "Font 1", sans-serif;
+    font-family: "Font", sans-serif;
     font-variation-settings:
         "slnt" 0,
         "MONO" 0.25;
@@ -33,65 +37,46 @@ svg {
 
 figure {
     margin: 0;
-    break-inside: avoid;
-    padding: 0 0.75rem 0;
-    pointer-events: none;
-}
-
-a:has(figure) {
-    &:hover {
-        text-decoration: none;
-    }
 }
 
 .gallery {
     position: relative;
     width: 100%;
+}
 
-    & img {
-        display: none;
-        max-width: 100%;
-        max-height: 100%;
-    }
+.gallery img {
+    display: none;
+    max-width: 100%;
+    max-height: 100%;
+}
 
-    & div.arrow-left-container,
-    & div.arrow-right-container {
-        width: 20%;
-        height: 100%;
-        position: absolute;
+.gallery .arrow-left-container,
+.gallery .arrow-right-container {
+    width: 20%;
+    height: 100%;
+    position: absolute;
+}
 
-        &:hover {
-            cursor: pointer;
-        }
-    }
+.gallery .arrow-left-container {
+    left: 0;
+}
+.gallery .arrow-right-container {
+    right: 0;
+}
 
-    & div.arrow-left-container {
-        left: 0;
-    }
-
-    & div.arrow-right-container {
-        right: 0;
-    }
-
-    & img.arrow-left,
-    & img.arrow-right {
-        display: none;
-        position: absolute;
-        top: 47%;
-        opacity: 0.9;
-        z-index: 2;
-        width: 25%;
-        user-select: none;
-        -moz-user-select: none;
-        -webkit-user-drag: none;
-        -webkit-user-select: none;
-        -ms-user-select: none;
-    }
-
-    &#gallery-new-balance img:not(.static) {
-        object-fit: cover;
-        height: 100%;
-    }
+.gallery .arrow-left,
+.gallery .arrow-right {
+    display: none;
+    position: absolute;
+    top: 47%;
+    opacity: 0.9;
+    z-index: 2;
+    width: 25%;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
 }
 
 @media screen and (min-width: 701px) {
@@ -117,24 +102,13 @@ hr {
 
 figcaption {
     font-size: 0.85rem;
-    color: var(--grey);
-    text-decoration-color: var(--grey);
+    color: rgba(0, 0, 0, 0.5);
     margin: 0.25rem 0 0.25rem;
     visibility: hidden;
-
-    &::before {
-        content: "△ ";
-    }
-}
-
-section {
-    z-index: 4;
-    position: relative;
 }
 
 a {
-    -webkit-text-stroke: 0.2rem #fff;
-    paint-order: stroke fill markers;
+    /* paint-order: stroke fill markers; */
     font-size: 0.95rem;
     font-weight: 400;
     margin: 0;
@@ -143,11 +117,13 @@ a {
     text-decoration-color: black;
     color: inherit;
 
-    &:hover {
-        text-decoration-line: underline;
-        text-decoration-style: solid;
-        text-underline-offset: 0.1rem;
-    }
+    /* -webkit-text-stroke: 0.2rem #fff; */
+}
+
+a:hover {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-underline-offset: 0.1rem;
 }
 
 #screen {
@@ -173,7 +149,7 @@ a {
 }
 
 #footer #trademark-footer {
-    color: var(--grey);
+    color: rgba(0, 0, 0, 0.5);
 }
 
 main {
@@ -196,6 +172,14 @@ hr {
     overflow: visible;
 }
 
+img.pixel {
+    image-rendering: pixelated;
+}
+
+/*#new-balance img {*/
+/*    object-fit: cover;*/
+/*}*/
+
 img {
     border-style: none;
     overflow-clip-margin: border-box;
@@ -204,11 +188,6 @@ img {
     height: auto;
     object-fit: contain;
     display: block;
-
-    &.pixel,
-    &.pixel-modal {
-        image-rendering: pixelated;
-    }
 }
 
 legend {
@@ -235,6 +214,18 @@ legend {
 
 .header {
     flex-grow: 1;
+    padding: 0;
+    height: 100%;
+}
+
+@media screen and (min-width: 700px) {
+    .dropdown-content {
+        visibility: hidden;
+    }
+
+    .dropdown:hover .dropdown-content {
+        visibility: visible;
+    }
 }
 
 @media screen and (max-width: 700px) {

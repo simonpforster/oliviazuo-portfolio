@@ -1,4 +1,5 @@
-#personal .highlight, #offscreen .highlight  {
+#personal .highlight,
+#offscreen .highlight {
     color: rgba(29, 200, 177, 0.85);
     text-decoration-color: rgba(29, 200, 177, 0.85);
 }
@@ -9,7 +10,7 @@
 
 @media screen and (min-width: 701px) {
     #screen {
-        height: 70svh;
+        height: 9rem;
     }
 }
 

@@ -1,7 +1,7 @@
 .section {
     box-sizing: border-box;
     display: grid;
-    padding: 0 0 8rem;
+    margin: 0 0 8rem;
     min-width: 100%;
 }
 
@@ -43,8 +43,9 @@
     bottom: 0;
     background: rgba(255, 255, 255, 0);
     /*box-shadow: inset 0 0 10px rgba(255, 255, 255, 1); !* Inset shadow *!*/
-    box-shadow: inset 3rem 0 3rem white,
-    inset -3rem 0 3rem white; /* Inset shadow */
+    box-shadow:
+        inset 3rem 0 3rem white,
+        inset -3rem 0 3rem white; /* Inset shadow */
     pointer-events: none; /* Ensure clicks go through to the image */
 }
 
@@ -56,8 +57,9 @@
     bottom: 0;
     background: rgba(255, 255, 255, 0);
     /*box-shadow: inset 0 0 10px rgba(255, 255, 255, 1); !* Inset shadow *!*/
-    box-shadow: inset 0 3rem 3rem white,
-    inset 0 -3rem 3rem white;
+    box-shadow:
+        inset 0 3rem 3rem white,
+        inset 0 -3rem 3rem white;
     pointer-events: none;
 }
 
@@ -121,7 +123,6 @@
         grid-column-end: 4;
 
         padding-left: 0.75rem;
-
     }
 
     .media-section {
