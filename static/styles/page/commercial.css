@@ -1,4 +1,5 @@
-#commercial .highlight, #offscreen .highlight{
+#commercial .highlight,
+#offscreen .highlight {
     color: rgb(0, 0, 255);
     text-decoration-color: rgb(0, 0, 255);
 }
@@ -13,7 +14,7 @@
 
 @media screen and (min-width: 701px) {
     #screen {
-        height: 70svh;
+        height: 9rem;
     }
 }
 
@@ -26,7 +27,7 @@
     }
 
     #screen {
-        height: 80svh;
+        height: 90svh;
     }
 
     .header #index {
@@ -40,6 +41,10 @@
 
     .header .dropdown:not(#commercial, #index) {
         height: fit-content;
+    }
+
+    nav #personal {
+        margin-top: auto;
     }
 
     .dropdown-content {

@@ -1,4 +1,6 @@
-#index .highlight, #offscreen .highlight, #archive-arrow {
+#index .highlight,
+#offscreen .highlight,
+#archive-arrow {
     color: rgb(255, 59, 228);
     text-decoration-color: rgb(255, 59, 228);
 }
@@ -15,11 +17,21 @@
     #screen {
         height: 100svh;
     }
+
+    #bio {
+        width: 27%;
+        padding-top: 1.5rem;
+    }
 }
 
 @media screen and (max-width: 700px) {
+    #bio {
+        padding-top: 1.5rem;
+        height: 90svh;
+    }
+
     #screen {
-        height: 100svh;
+        height: 90svh;
     }
 
     .header #index {
@@ -28,6 +40,10 @@
 
     .header .dropdown:not(#index) {
         height: fit-content;
+    }
+
+    .header #personal {
+        margin-top: auto;
     }
 
     .dropdown-content {

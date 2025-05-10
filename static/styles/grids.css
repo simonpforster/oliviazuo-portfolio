@@ -12,7 +12,8 @@
     width: 100%;
 }
 
-.footer-left, .footer-right {
+.footer-left,
+.footer-right {
     padding: 0 0.75rem 0;
 }
 
@@ -37,8 +38,8 @@
 }
 
 @media screen and (min-width: 701px) {
-
-    .wide-4, .slim-4 {
+    .wide-4,
+    .slim-4 {
         display: flex;
         flex-direction: column;
         vertical-align: baseline;
@@ -74,6 +75,11 @@
     #mailto-footer {
         margin-left: auto;
     }
+
+    #trademark-footer {
+        margin-right: auto;
+        width: 66%;
+    }
 }
 
 @media screen and (max-width: 700px) {
@@ -88,7 +94,8 @@
         column-count: 1;
     }
 
-    .wide-4, .slim-4 {
+    .wide-4,
+    .slim-4 {
         display: flex;
         flex-direction: column;
         vertical-align: baseline;
@@ -106,6 +113,10 @@
 
     .footer-right {
         box-sizing: border-box;
+        margin-left: auto;
+    }
+
+    #trademark-footer {
         margin-left: auto;
     }
 }

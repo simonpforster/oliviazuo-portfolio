@@ -2,7 +2,6 @@
     --grey: rgba(0, 0, 0, 0.5);
 }
 
-
 html {
     line-height: 1.25;
     letter-spacing: 0;
@@ -11,7 +10,9 @@ html {
     font-weight: 420;
     font-style: normal;
     font-family: "Font 1", sans-serif;
-    font-variation-settings: "slnt" 0, "MONO" 0.25;
+    font-variation-settings:
+        "slnt" 0,
+        "MONO" 0.25;
     scroll-behavior: smooth;
 }
 
@@ -126,6 +127,11 @@ figcaption {
     }
 }
 
+section {
+    z-index: 4;
+    position: relative;
+}
+
 a {
     -webkit-text-stroke: 0.2rem #fff;
     paint-order: stroke fill markers;
@@ -143,8 +149,6 @@ a {
         text-underline-offset: 0.1rem;
     }
 }
-
-
 
 #screen {
     box-sizing: border-box;
@@ -168,8 +172,16 @@ a {
     padding: 0.5rem 0 0.5rem;
 }
 
-#footer #trademark-footer {
+#mailto-footer,
+#instagram-footer,
+#trademark-footer {
+    box-sizing: border-box;
+}
+
+footer #trademark-footer {
     color: var(--grey);
+    padding: 0 0.75rem 0;
+    text-align: end;
 }
 
 main {
@@ -201,7 +213,8 @@ img {
     object-fit: contain;
     display: block;
 
-    &.pixel, &.pixel-modal {
+    &.pixel,
+    &.pixel-modal {
         image-rendering: pixelated;
     }
 }
@@ -230,18 +243,6 @@ legend {
 
 .header {
     flex-grow: 1;
-    padding: 0;
-    height: 100%;
-}
-
-@media screen and (min-width: 700px) {
-    .dropdown-content {
-        visibility: hidden;
-    }
-
-    .dropdown:hover .dropdown-content {
-        visibility: visible;
-    }
 }
 
 @media screen and (max-width: 700px) {
@@ -251,5 +252,9 @@ legend {
 
     #offscreen {
         max-width: 900px;
+    }
+
+    #pointer {
+        z-index: 999;
     }
 }
