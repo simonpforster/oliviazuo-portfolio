@@ -172,6 +172,12 @@ a {
     padding: 0.5rem 0 0.5rem;
 }
 
+#mailto-footer,
+#instagram-footer,
+#trademark-footer {
+    box-sizing: border-box;
+}
+
 footer #trademark-footer {
     color: var(--grey);
     padding: 0 0.75rem 0;
