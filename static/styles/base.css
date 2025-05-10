@@ -176,6 +176,11 @@ a {
 #instagram-footer,
 #trademark-footer {
     box-sizing: border-box;
+    font-size: 0.85rem;
+
+    & a {
+        font-size: 0.85rem;
+    }
 }
 
 footer #trademark-footer {
