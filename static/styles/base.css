@@ -247,4 +247,8 @@ legend {
     #offscreen {
         max-width: 900px;
     }
+
+    #pointer {
+        z-index: 999;
+    }
 }
