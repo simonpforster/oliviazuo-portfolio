@@ -172,8 +172,10 @@ a {
     padding: 0.5rem 0 0.5rem;
 }
 
-#footer #trademark-footer {
+footer #trademark-footer {
     color: var(--grey);
+    padding: 0 0.75rem 0;
+    text-align: end;
 }
 
 main {
