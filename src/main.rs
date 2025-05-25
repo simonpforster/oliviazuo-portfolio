@@ -2,6 +2,7 @@ pub mod components;
 pub mod observability;
 pub mod repository;
 mod router;
+mod security;
 
 use axum::Router;
 use handlebars::Handlebars;
@@ -12,6 +13,7 @@ use components::gallery::Gallery;
 use crate::components::projects::project_details::ProjectDetails;
 use crate::observability::init_tracing;
 use crate::repository::portfolio_manager_service::{refresh_cache, PortfolioManagerService};
+use crate::security::gcp_identity::IdentityProvider;
 
 // App state that will be shared across all routes
 #[derive(Debug)]
@@ -37,7 +39,9 @@ async fn main() {
         "8080".into()
     }).parse::<u16>().expect("env var PORT must be a valid number");
 
-    let portfolio_manager_service = Arc::new(PortfolioManagerService::new(portfolio_manager));
+    let gcp_provider = Arc::new(IdentityProvider::new().await);
+
+    let portfolio_manager_service = Arc::new(PortfolioManagerService::new(portfolio_manager, gcp_provider));
 
     tokio::spawn(refresh_cache(portfolio_manager_service.clone()));
 
@@ -69,7 +73,7 @@ async fn main() {
         .expect("Failed to register index template");
     hbs.register_template_file("commercial", "templates/views/commercial.hbs")
         .expect("Failed to register index template");
-
+    
     // Create shared application state
     let state = Arc::new(AppState { hbs, image_resizer });
 
