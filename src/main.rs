@@ -39,7 +39,7 @@ async fn main() {
         "8080".into()
     }).parse::<u16>().expect("env var PORT must be a valid number");
 
-    let gcp_provider = Arc::new(IdentityProvider::new().await);
+    let gcp_provider = Arc::new(IdentityProvider::new(&portfolio_manager).await);
 
     let portfolio_manager_service = Arc::new(PortfolioManagerService::new(portfolio_manager, gcp_provider));
 
