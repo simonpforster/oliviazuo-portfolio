@@ -1,12 +1,16 @@
+use crate::repository::Project;
+use crate::security::gcp_identity::IdentityProvider;
 use std::sync::{Arc, RwLock};
 use std::time::Duration;
+use http::header::AUTHORIZATION;
 use tokio::time;
 use tracing::{error, info};
-use crate::repository::Project;
 
 pub struct PortfolioManagerService {
     portfolio_manager_url: String,
     cache: RwLock<Vec<Project>>,
+    gcp_provider: Arc<IdentityProvider>,
+    reqwest_client: reqwest::Client,
 }
 
 pub async fn refresh_cache(service: Arc<PortfolioManagerService>) {
@@ -19,10 +23,12 @@ pub async fn refresh_cache(service: Arc<PortfolioManagerService>) {
 }
 
 impl PortfolioManagerService {
-    pub fn new(portfolio_manager_url: String) -> Self {
+    pub fn new(portfolio_manager_url: String, gcp_provider: Arc<IdentityProvider>) -> Self {
         PortfolioManagerService {
             portfolio_manager_url,
             cache: RwLock::new(Vec::new()),
+            gcp_provider,
+            reqwest_client: reqwest::Client::new(),
         }
     }
 
@@ -30,7 +36,9 @@ impl PortfolioManagerService {
         self.cache.read().unwrap().iter().find_map(|p| {
             if p.project_id == project_id {
                 Some(p.clone())
-            } else { None }
+            } else {
+                None
+            }
         })
     }
 
@@ -52,12 +60,22 @@ impl PortfolioManagerService {
         }
     }
 
-
     async fn fetch_projects_from_portfolio_manager(&self) -> Option<Vec<Project>> {
-        reqwest::get(format!("{}{}", &self.portfolio_manager_url, "/v1/owners/Olivia%20Zuo/projects"))
+        let url = format!(
+            "{}/v1/owners/{}/projects",
+            &self.portfolio_manager_url, "Olivia%20Zuo"
+        );
+
+        let auth_header = format!("Bearer {}", &self.gcp_provider.id_token);
+        
+        self.reqwest_client
+            .get(&url)
+            .header(AUTHORIZATION, auth_header)
+            .send()
             .await
             .unwrap()
             .json()
-            .await.ok()
+            .await
+            .ok()
     }
 }
