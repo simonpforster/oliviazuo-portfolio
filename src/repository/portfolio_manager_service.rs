@@ -11,6 +11,7 @@ pub struct PortfolioManagerService {
     cache: RwLock<Vec<Project>>,
     gcp_provider: Arc<IdentityProvider>,
     reqwest_client: reqwest::Client,
+    username: String,
 }
 
 pub async fn refresh_cache(service: Arc<PortfolioManagerService>) {
@@ -23,12 +24,13 @@ pub async fn refresh_cache(service: Arc<PortfolioManagerService>) {
 }
 
 impl PortfolioManagerService {
-    pub fn new(portfolio_manager_url: String, gcp_provider: Arc<IdentityProvider>) -> Self {
+    pub fn new(portfolio_manager_url: String, username: String, gcp_provider: Arc<IdentityProvider>) -> Self {
         PortfolioManagerService {
             portfolio_manager_url,
             cache: RwLock::new(Vec::new()),
             gcp_provider,
             reqwest_client: reqwest::Client::new(),
+            username
         }
     }
 
@@ -63,7 +65,7 @@ impl PortfolioManagerService {
     async fn fetch_projects_from_portfolio_manager(&self) -> Option<Vec<Project>> {
         let url = format!(
             "{}/v1/owners/{}/projects",
-            &self.portfolio_manager_url, "Olivia%20Zuo"
+            &self.portfolio_manager_url, &self.username
         );
 
         let auth_header = format!("Bearer {}", &self.gcp_provider.id_token);

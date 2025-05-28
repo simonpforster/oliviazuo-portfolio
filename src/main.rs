@@ -34,6 +34,9 @@ async fn main() {
     let image_resizer: String = env::var("IMAGE_RESIZER").expect("env var IMAGE_RESIZER not configured");
     let portfolio_manager: String = env::var("PORTFOLIO_MANAGER").expect("env var IMAGE_RESIZER not configured");
     let pdf_portfolio: String = env::var("PDF_PORTFOLIO").expect("env var PDF_PORTFOLIO not configured");
+    let lilypad_username: String = env::var("LILYPAD_USERNAME").expect("env var LILYPAD_USERNAME not configured");
+    
+    
     let port: u16 = env::var("PORT").unwrap_or_else(|_| {
         warn!("env var PORT not configured, defaulting to 8080");
         "8080".into()
@@ -41,7 +44,7 @@ async fn main() {
 
     let gcp_provider = Arc::new(IdentityProvider::new(&portfolio_manager).await);
 
-    let portfolio_manager_service = Arc::new(PortfolioManagerService::new(portfolio_manager, gcp_provider));
+    let portfolio_manager_service = Arc::new(PortfolioManagerService::new(portfolio_manager, lilypad_username, gcp_provider));
 
     tokio::spawn(refresh_cache(portfolio_manager_service.clone()));
 
